@@ -1,0 +1,5 @@
+mariadb:
+    root_password: afuprocks
+    user: afup
+    password: afup
+    database: haphpy
