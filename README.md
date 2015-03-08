@@ -27,3 +27,10 @@ composer install
 Accessing the web app
 
 http://haphpy-birthday.dev
+
+## Database
+
+* root password: __afuprocks__
+* database: __haphpy__
+* user: __afup__
+* password: __afup__
