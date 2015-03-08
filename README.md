@@ -45,3 +45,17 @@ The fallback locale is `en` (english), as this site is intended to gather PHP us
 To add a supported locale:
 * change the `accepted_languages` value in your `parameters.yml(.dist)`
 * supply the correct localized files for entries located in `@AppBundle/Resources/translations`
+
+## Contributing
+
+Before commiting, be sure to run your tests:
+
+```
+bin/phpunit -v -c app/ src
+```
+
+and to check your Coding Standards:
+
+```
+bin/coke
+```
