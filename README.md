@@ -34,3 +34,14 @@ http://haphpy-birthday.dev
 * database: __haphpy__
 * user: __afup__
 * password: __afup__
+
+
+## Language
+
+The only page where the locale is not enforced is on the `/` URL. When requested, that URL will try to find the best language available and redirect to `/{locale}/`.
+
+The fallback locale is `en` (english), as this site is intended to gather PHP users from all around the world.
+
+To add a supported locale:
+* change the `accepted_languages` value in your `parameters.yml(.dist)`
+* supply the correct localized files for entries located in `@AppBundle/Resources/translations`

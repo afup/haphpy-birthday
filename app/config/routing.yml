@@ -1,3 +1,7 @@
-app:
+app_root:
     resource: @AppBundle
     type:     annotation
+
+app:
+    resource: "@AppBundle/Resources/config/routing.yml"
+    type:     be_simple_i18n
