@@ -6,10 +6,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
+/**
+ * Default Controller
+ */
 class DefaultController extends Controller
 {
     /**
      * @Template()
+     *
+     * @return array for template
      */
     public function indexAction()
     {
@@ -21,7 +26,10 @@ class DefaultController extends Controller
     /**
      * In case root path is asked, redirect to best localized home page
      * (Not sure is the best logical behavior)
+     *
      * @Route("/", name="redirect")
+     *
+     * @return Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function redirectAction()
     {

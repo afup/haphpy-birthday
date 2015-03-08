@@ -20,7 +20,9 @@
         "sensio/framework-extra-bundle": "~3.0,>=3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
         "phpunit/phpunit": "~4.5",
-        "besimple/i18n-routing-bundle": "~2.3"
+        "besimple/i18n-routing-bundle": "~2.3",
+        "m6web/coke": "~1.2",
+        "m6web/Symfony2-coding-standard": "~1.1"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
