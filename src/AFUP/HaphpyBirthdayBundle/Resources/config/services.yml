@@ -1,0 +1,4 @@
+services:
+#    app.example:
+#        class: AFUP\HaphpyBirthdayBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
