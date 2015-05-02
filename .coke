@@ -1,0 +1,17 @@
+# Command used to launch PHP CodeSniffer (optional - default: phpcs)
+# command=phpcs
+
+# Path used to load Standards (optional)
+# standard-path=path/to/PHPCS/Standards/
+
+# Standard used by PHP CodeSniffer (required)
+standard=vendor/m6web/symfony2-coding-standard/Symfony2
+
+# Verbose mode (optional - default: false)
+# verbose=true
+
+# White list of files and directories (optional)
+src
+# test.php
+
+# Black list of files and directories (optional)
