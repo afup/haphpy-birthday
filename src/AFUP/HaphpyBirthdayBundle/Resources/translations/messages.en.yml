@@ -1,1 +1,41 @@
-Hello: Hi
+head:
+    title: HaPHPy 20th Birthday to you PHP!
+
+general:
+    title: Celebrating 20 years of PHP!
+
+content:
+    celebrating:
+        title: Celebrating 20 years of PHP
+        paragraph: >
+            We use it everyday for professional and personal projects. A huge part of world's website lean on this
+            language. We decided to take advantage of this 20<sup>th</sup> anniversary to pay tribute to the PHP
+            language and its community. We want to show to the invested people how grateful we are.
+
+    video:
+        title: The anniversary video
+        paragraph: >
+            In order to gather the international community in a collaborative and shared event, we thought of a special
+            video. A short movie collecting photographs and videos in which PHP users can praise the language at their
+            will.
+
+    contribute:
+        title: How to contribute!
+        paragraph: >
+            Share amongst other contributors a 3 seconds video or a simple picture. Communicate your thoughts, show your
+            passion for the language or simply show off your commitment using a sign, a disguise or whatever you feel will
+            express your emotions. Every positive film, photographs or drawing will be included in the final cut.
+            Uploaded files will be edited altogether as a huge patchwork in a celebrating video.
+
+        not_inspired: >
+            Still not convinced? Have a look at the following video to catch the spirit of some who already shared to the
+            project.
+
+    wanna_be_in:
+        title: Wanna be in?
+        paragraph: >
+            Just log in with your GitHub account and upload your contribution.
+
+    authentication:
+        button:
+            label: GitHub Authentication

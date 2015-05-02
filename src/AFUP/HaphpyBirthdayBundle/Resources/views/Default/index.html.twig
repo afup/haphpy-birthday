@@ -1,1 +1,42 @@
-{{ 'Hello'|trans }} {{ name }}!
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h3>{{ 'content.celebrating.title'|trans|raw }}</h3>
+                <p>{{ 'content.celebrating.paragraph'|trans|raw }}</p>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <h3>{{ 'content.video.title'|trans|raw }}</h3>
+                <p>{{ 'content.video.paragraph'|trans|raw }}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>{{ 'content.contribute.title'|trans|raw }}</h3>
+                <p>{{ 'content.contribute.paragraph'|trans|raw }}</p>
+                <p>{{ 'content.contribute.not_inspired'|trans|raw }}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="video" style="height:550px;background:gray;">
+                    Vidéo
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h3>{{ 'content.wanna_be_in.title'|trans|raw }}</h3>
+                <p>{{ 'content.wanna_be_in.paragraph'|trans|raw }}</p>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <button class="btn btn-ghost btn-success">{{ 'content.authentication.button.label'|trans|raw }}</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

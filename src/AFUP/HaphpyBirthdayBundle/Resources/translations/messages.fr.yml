@@ -1,1 +1,41 @@
-Hello: Bonjour
+head:
+    title: HaPHPy 20th Birthday to you PHP!
+
+general:
+    title: On a pas tous les jours 20 ans !
+
+content:
+    celebrating:
+        title: Célébrons 20 ans de PHP…
+        paragraph: >
+            Nous l'utilisons quotidiennement, dans un environnement professionnel ou pour construire des projets
+            personnels, c'est pourquoi nous souhaitons profiter de cet anniversaire pour rendre hommage au langage PHP
+            et à sa communauté. Une grande majorité des sites du web repose sur ce langage. La communauté et les gens
+            qui se sont investit pour faire de PHP ce qu'il est aujourd'hui méritent d'être félicités et remerciés.
+
+    video:
+        title: La vidéo anniversaire
+        paragraph: >
+            Afin de rassembler la communauté internationale dans un événement commun et collaboratif pour célébrer cet
+            anniversaire, nous proposons la création d'une vidéo commémorative. Un film de quelques minutes rassemblant
+            les contributions vidéos ou photos des utilisateurs de PHP qui veulent lui rendre hommage.
+
+    contribute:
+        title: Comment contribuer
+        paragraph: >
+            Partagez avec les autres contributeurs une courte vidéo de 3 secondes ou un image. Faîtes passer un message,
+            montrez votre amour pour le langage, révéler votre investissement avec une pancarte, un déguisement ou simplement
+            un hello… Toutes les vidéos positives seront intégrées au montage final.
+            Les fichiers uploadés seront montés ensemble tel un grand patchwork dans un film commémoratif aux côtés des autres vidéos.
+        not_inspired: >
+            Pas inspirez ! Jettez un œil à la vidéo ci-dessous pour voir ce que les autres personnes impliquées dans le
+            projet ont pu partager.
+
+    wanna_be_in:
+        title: Je veux en être !
+        paragraph: >
+            Connecte-toi avec ton compte GitHub et upload le fichier.
+
+    authentication:
+        button:
+            label: Authentification GitHub
