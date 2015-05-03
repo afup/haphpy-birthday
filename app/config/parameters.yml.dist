@@ -23,3 +23,6 @@ parameters:
     accepted_languages:
         - fr
         - en
+
+    # Third party authentication
+    github_secret:     githubClientSecret

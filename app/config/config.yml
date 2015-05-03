@@ -80,4 +80,4 @@ hwi_oauth:
         github:
             type:          github
             client_id:     c57426d2c766b5ddf0e9
-            client_secret: 4d68014d2646952e6cc528aa645257df72daf16e
+            client_secret: "%github_secret%"
