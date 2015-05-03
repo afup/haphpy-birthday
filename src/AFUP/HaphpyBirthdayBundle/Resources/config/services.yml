@@ -1,4 +1,4 @@
 services:
-#    app.example:
-#        class: AFUP\HaphpyBirthdayBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    haphpy.user_provider:
+       class: AFUP\HaphpyBirthdayBundle\Model\UserProvider
+       arguments: [@session]

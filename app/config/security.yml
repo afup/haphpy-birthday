@@ -1,12 +1,29 @@
 security:
     providers:
-        in_memory:
-            memory: ~
+        haphpy_user_provider:
+            id: haphpy.user_provider
 
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt|error)|css|images|js)/
             security: false
 
+        secured_area:
+            pattern: ^/
+            anonymous: ~
+            oauth:
+                resource_owners:
+                    github:   "/login/check-github"
+                login_path:   /login
+                use_forward:  false
+                failure_path: /login
+
+                oauth_user_provider:
+                    service: haphpy.user_provider
+
         default:
             anonymous: ~
+
+    access_control:
+        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }

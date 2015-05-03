@@ -1,3 +1,21 @@
+hwi_oauth_redirect:
+    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
+    prefix:   /connect
+
+hwi_oauth_login:
+    resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
+    prefix:   /login
+
+github_login:
+    pattern:  /login/check-github
+
+github_connect:
+    path:     /connect/github
+
+logout:
+    pattern:  /logout
+    defaults: { _controller: AppBundle:Default:logout }
+
 app_root:
     resource: @AppBundle
     type:     annotation

@@ -35,7 +35,15 @@
                 <p>{{ 'content.wanna_be_in.paragraph'|trans|raw }}</p>
             </div>
             <div class="col-sm-12 col-md-6">
-                <button class="btn btn-ghost btn-success">{{ 'content.authentication.button.label'|trans|raw }}</button>
+                {% if user is not null %}
+                    <a href="{{ path('logout') }}" class="btn btn-ghost btn-default">
+                        {{ user.username }}
+                    </a>
+                {% else %}
+                    <a href="{{ path('github_connect') }}" class="btn btn-ghost btn-success">
+                        {{ 'content.authentication.button.label'|trans|raw }}
+                    </a>
+                {% endif %}
             </div>
         </div>
     </div>

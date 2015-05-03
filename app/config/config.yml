@@ -73,3 +73,11 @@ swiftmailer:
     spool:     { type: memory }
 
 be_simple_i18n_routing: ~
+
+hwi_oauth:
+    firewall_name: secured_area
+    resource_owners:
+        github:
+            type:          github
+            client_id:     c57426d2c766b5ddf0e9
+            client_secret: 4d68014d2646952e6cc528aa645257df72daf16e
