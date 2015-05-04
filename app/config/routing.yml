@@ -13,8 +13,7 @@ github_connect:
     path:     /connect/github
 
 logout:
-    pattern:  /logout
-    defaults: { _controller: AppBundle:Default:logout }
+    path:  /logout
 
 app_root:
     resource: @AppBundle

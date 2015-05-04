@@ -20,6 +20,9 @@ security:
 
                 oauth_user_provider:
                     service: haphpy.user_provider
+            logout:
+                path:   /logout
+                target: /
 
         default:
             anonymous: ~

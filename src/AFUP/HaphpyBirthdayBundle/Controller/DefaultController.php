@@ -45,5 +45,4 @@ class DefaultController extends Controller
 
         return $this->redirect($this->generateUrl('haphpy_index', array('locale' => $locale)));
     }
-
 }
