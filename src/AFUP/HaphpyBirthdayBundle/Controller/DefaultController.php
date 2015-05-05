@@ -2,9 +2,12 @@
 
 namespace AFUP\HaphpyBirthdayBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use AFUP\HaphpyBirthdayBundle\Form\Type\ContributionType;
+use AFUP\HaphpyBirthdayBundle\Model\Contribution;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Default Controller
@@ -16,12 +19,31 @@ class DefaultController extends Controller
      *
      * @return array for template
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        $user = $this->getUser();
+        $user  = $this->getUser();
+        $contribution = new Contribution();
+        if ($user) {
+            $contribution->setAuthProvider($user->getResourceOwner());
+            $contribution->setIdentifier($user->getUsername());
+        }
+
+        $formContribution = $this->get('haphpy.form.contribution_converter')->getFormContribution($contribution);
+
+
+        $form = $this->createForm(new ContributionType(), $formContribution);
+
+        $form->handleRequest($request);
+
+        if ($user && $form->isValid()) {
+            // perform some action, such as saving the task to the database
+
+            dump($formContribution);die;
+        }
 
         return [
             'user' => $user,
+            'form' => $form->createView(),
         ];
     }
 

@@ -1,0 +1,14 @@
+{{ form_start(form) }}
+
+{{ form_label(form.file) }}
+{{ form_errors(form.file) }}
+{{ form_widget(form.file) }}
+
+<div class="form-group">
+    {{ form_label(form.websiteCreditWanted, 'website_credit_wanted.choose') }}
+    {{ form_errors(form.websiteCreditWanted) }}
+    {{ form_widget(form.websiteCreditWanted) }}
+</div>
+
+<input type="submit" name="submit" value="send" class="btn button-success"/>
+{{ form_end(form) }}

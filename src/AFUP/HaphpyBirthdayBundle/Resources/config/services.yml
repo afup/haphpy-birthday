@@ -1,4 +1,7 @@
 services:
     haphpy.user_provider:
-       class: AFUP\HaphpyBirthdayBundle\Model\UserProvider
-       arguments: [@session]
+        class: AFUP\HaphpyBirthdayBundle\Model\UserProvider
+        arguments: [@session]
+
+    haphpy.form.contribution_converter:
+        class: AFUP\HaphpyBirthdayBundle\Form\Converter\ContributionConverter
