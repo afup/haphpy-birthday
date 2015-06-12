@@ -1,10 +1,22 @@
 {%- block choice_widget_expanded -%}
     <div {{ block('widget_container_attributes') }}>
     {%- for child in form %}
-        <div>
-            {{- form_widget(child, {'disabled': disabled}) -}}
-            {{- form_label(child) -}}
+        <div class="haphpy-radio">
+            <div class="haphpy-radio-widget">{{- form_widget(child, {'disabled': disabled}) -}}</div>
+            <div class="haphpy-radio-label">{{- form_label(child) -}}</div>
         </div>
     {% endfor -%}
     </div>
 {%- endblock choice_widget_expanded -%}
+
+{% block form_errors %}
+    {% spaceless %}
+        {% if errors|length > 0 %}
+        <ul class="error-list">
+            {% for error in errors %}
+                <li class="alert alert-danger">{{ error.message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    {% endspaceless %}
+{% endblock form_errors %}

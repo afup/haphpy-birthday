@@ -1,8 +1,16 @@
 head:
     title: HaPHPy 20th Birthday to you PHP!
 
-general:
-    title: On a pas tous les jours 20 ans !
+step:
+    authenticate:
+        title: Identifie-toi
+        logged_in: >
+            Actuellement authentifié via %authProvider% en tant que %username%
+        logout: Se déconnecter
+    file:
+        title: Choisis une video ou image
+    submit:
+        title: Envoie ta contribution
 
 content:
     celebrating:
@@ -31,11 +39,6 @@ content:
             Pas inspirez ! Jettez un œil à la vidéo ci-dessous pour voir ce que les autres personnes impliquées dans le
             projet ont pu partager.
 
-    wanna_be_in:
-        title: Je veux en être !
-        paragraph: >
-            Connecte-toi avec ton compte GitHub et upload le fichier.
-
     authentication:
         button:
             label: Authentification GitHub
@@ -49,3 +52,5 @@ website_credit_wanted:
 form:
     notice:
         submission_success: Nous vous remercions pour votre contribution !
+    submit:
+        label: Envoyer
