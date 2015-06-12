@@ -1,4 +1,4 @@
-# HaPHPy Birthday
+![haphpy-birthday](https://cloud.githubusercontent.com/assets/5421942/8129742/720530c2-110c-11e5-870c-1c293960d87a.png)
 
 HaPHPy Birthday is about creating a community video celebrating 20 years of the PHP language and its users involvement.
 
