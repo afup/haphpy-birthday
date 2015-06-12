@@ -1,0 +1,10 @@
+{%- block choice_widget_expanded -%}
+    <div {{ block('widget_container_attributes') }}>
+    {%- for child in form %}
+        <div>
+            {{- form_widget(child, {'disabled': disabled}) -}}
+            {{- form_label(child) -}}
+        </div>
+    {% endfor -%}
+    </div>
+{%- endblock choice_widget_expanded -%}

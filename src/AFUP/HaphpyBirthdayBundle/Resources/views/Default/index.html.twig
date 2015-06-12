@@ -44,12 +44,12 @@
                     <a href="{{ path('logout') }}" class="btn btn-ghost btn-default">
                         {{ user.username }}
                     </a>
-                    {% include 'AppBundle::form.html.twig' with {form: form} only %}
                 {% else %}
                     <a href="{{ path('github_connect') }}" class="btn btn-ghost btn-success">
                         {{ 'content.authentication.button.label'|trans|raw }}
                     </a>
                 {% endif %}
+                {% include 'AppBundle::form.html.twig' %}
             </div>
         </div>
     </div>
