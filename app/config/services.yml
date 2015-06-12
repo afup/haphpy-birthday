@@ -3,7 +3,9 @@
 parameters:
 #    parameter_name: value
 
-services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+# services:
+#     haphpy.command.generate_contributions:
+#         class: AFUP\HaphpyBirthdayBundle\Command\GenerateContributionsCommand
+#         arguments: ['%contributed_media.root_dir%']
+#         tags:
+#             -  { name: console.command }
