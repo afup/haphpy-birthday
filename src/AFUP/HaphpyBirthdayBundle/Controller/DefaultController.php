@@ -2,12 +2,13 @@
 
 namespace AFUP\HaphpyBirthdayBundle\Controller;
 
+use AFUP\HaphpyBirthdayBundle\Entity\Contribution;
 use AFUP\HaphpyBirthdayBundle\Form\Type\ContributionType;
-use AFUP\HaphpyBirthdayBundle\Model\Contribution;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Default Controller
@@ -15,30 +16,40 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
+     * @param Request $request
+     *
      * @Template()
      *
      * @return array for template
      */
     public function indexAction(Request $request)
     {
-        $user  = $this->getUser();
-        $contribution = new Contribution();
-        if ($user) {
-            $contribution->setAuthProvider($user->getResourceOwner());
-            $contribution->setIdentifier($user->getUsername());
-        }
+        $user         = $this->getUser();
+        $contribution = $this->getOrGenerateContribution($user);
 
-        $formContribution = $this->get('haphpy.form.contribution_converter')->getFormContribution($contribution);
-
+        $formContribution = $this->get('haphpy.form.contribution_converter')
+            ->getFormContribution($contribution);
 
         $form = $this->createForm(new ContributionType(), $formContribution);
-
         $form->handleRequest($request);
 
         if ($user && $form->isValid()) {
-            // perform some action, such as saving the task to the database
+            $this->persistMedia($contribution, $formContribution->file);
 
-            dump($formContribution);die;
+            $contribution->setModifiedAt(new \DateTime());
+            $this->get('haphpy.form.contribution_converter')
+                ->updateEntityFromFormContribution($contribution, $formContribution);
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($contribution);
+            $entityManager->flush();
+
+            $this->addFlash(
+                'notice',
+                'form.notice.submission_success'
+            );
+
+            return $this->redirectToRoute('haphpy_index', ['locale' => $request->getLocale()]);
         }
 
         return [
@@ -49,7 +60,7 @@ class DefaultController extends Controller
 
     /**
      * In case root path is asked, redirect to best localized home page
-     * (Not sure is the best logical behavior)
+     * (Not sure it is the best logical behavior)
      *
      * @Route("/", name="redirect")
      *
@@ -66,5 +77,53 @@ class DefaultController extends Controller
         }
 
         return $this->redirect($this->generateUrl('haphpy_index', array('locale' => $locale)));
+    }
+
+    /**
+     * get a contribution depending on user
+     * If none yet create one
+     *
+     * @param UserInterface $user Current user
+     *
+     * @return Contribution
+     */
+    private function getOrGenerateContribution(UserInterface $user = null)
+    {
+        if ($user) {
+            $contribution = $this
+                ->getDoctrine()
+                ->getEntityManager()
+                ->getRepository('AFUP\HaphpyBirthdayBundle\Entity\Contribution')
+                ->findOneBy([
+                    'authProvider' => $user->getAuthProvider(),
+                    'identifier'   => $user->getUsername()
+                ]);
+
+            if ($contribution) {
+                return $contribution;
+            }
+
+            $contribution = new Contribution();
+            $contribution->setAuthProvider($user->getAuthProvider());
+            $contribution->setIdentifier($user->getUsername());
+
+            return $contribution;
+        }
+
+        return new Contribution();
+    }
+
+    /**
+     * Persist a media contribution at location of the path
+     *
+     * @param Contribution $contribution
+     * @param \SPLFileInfo $file
+     */
+    public function persistMedia(Contribution $contribution, \SPLFileInfo $file)
+    {
+        $path = $this->get('haphpy.path_generator')
+            ->generateAbsolutePath($contribution, $file);
+
+        $this->get('haphpy.media_persister')->persist($path, $file);
     }
 }

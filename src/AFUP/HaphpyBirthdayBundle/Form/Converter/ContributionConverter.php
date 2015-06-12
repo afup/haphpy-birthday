@@ -2,9 +2,8 @@
 
 namespace AFUP\HaphpyBirthdayBundle\Form\Converter;
 
+use AFUP\HaphpyBirthdayBundle\Entity\Contribution as EntityContribution;
 use AFUP\HaphpyBirthdayBundle\Form\Model\Contribution as FormContribution;
-use AFUP\HaphpyBirthdayBundle\Model\Contribution as ModelContribution;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * User
@@ -13,23 +12,34 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class ContributionConverter
 {
-    public static function getFormContribution(ModelContribution $modelContribution)
+    /**
+     * Create a Contribution instance for form handling
+     *
+     * @param EntityContribution $entityContribution
+     *
+     * @return FormContribution [description]
+     */
+    public static function getFormContribution(EntityContribution $entityContribution)
     {
         $formContribution = new FormContribution();
 
-        $formContribution->websiteCreditWanted = $modelContribution->isWebsiteCreditWanted();
-        $formContribution->videoCreditWanted = $modelContribution->isVideoCreditWanted();
+        $formContribution->websiteCreditWanted = $entityContribution->isWebsiteCreditWanted();
+        $formContribution->videoCreditWanted   = $entityContribution->isVideoCreditWanted();
 
         return $formContribution;
     }
 
-    public static function updateModelFromFormContribution(ModelContribution $modelContribution)
-    {
-        $formContribution = new FormContribution();
-
-        $formContribution->websiteCreditWanted = $modelContribution->isWebsiteCreditWanted();
-        $formContribution->videoCreditWanted = $modelContribution->isVideoCreditWanted();
-
-        
+    /**
+     * Update the EntityContribution depending on FormContribution
+     *
+     * @param EntityContribution $entityContribution
+     * @param FormContribution   $formContribution
+     */
+    public static function updateEntityFromFormContribution(
+        EntityContribution $entityContribution,
+        FormContribution   $formContribution
+    ) {
+        $entityContribution->setWebsiteCreditWanted($formContribution->websiteCreditWanted);
+        $entityContribution->setVideoCreditWanted($formContribution->videoCreditWanted);
     }
 }

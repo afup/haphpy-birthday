@@ -14,28 +14,28 @@ class User extends OAuthUser
     /**
      * @var string
      */
-     private $resourceOwner;
+     private $authProvider;
 
     /**
      * Get the value of Resource Owner
      *
      * @return string
      */
-    public function getResourceOwner()
+    public function getAuthProvider()
     {
-        return $this->resourceOwner;
+        return $this->authProvider;
     }
 
     /**
      * Set the value of Resource Owner
      *
-     * @param string $resourceOwner
+     * @param string $authProvider
      *
      * @return self
      */
-    public function setResourceOwner($resourceOwner)
+    public function setAuthProvider($authProvider)
     {
-        $this->resourceOwner = $resourceOwner;
+        $this->authProvider = $authProvider;
 
         return $this;
     }

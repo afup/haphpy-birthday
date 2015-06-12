@@ -1,0 +1,21 @@
+AFUP\HaphpyBirthdayBundle\Entity\Contribution:
+    type: entity
+    table: contribution
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        authProvider:
+            type:   string
+            length: 100
+            column: auth_provider
+        identifier:
+            type:   string
+            length: 255
+        createdAt:
+            type:   datetime
+            column: created_at
+        modifiedAt:
+            type:   datetime
+            column: modified_at

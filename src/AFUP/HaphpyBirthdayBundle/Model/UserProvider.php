@@ -37,7 +37,7 @@ class UserProvider extends OAuthUserProvider
         $user = new User($username);
 
         if ($username === $this->session->get('username')) {
-            $user->setResourceOwner($this->session->get('owner'));
+            $user->setAuthProvider($this->session->get('owner'));
         }
 
         return $user;
@@ -48,10 +48,10 @@ class UserProvider extends OAuthUserProvider
      */
     public function loadUserByOAuthUserResponse(UserResponseInterface $response)
     {
-        $resourceOwnerName = $response->getResourceOwner()->getName();
-        $username          = $response->getResponse()['login'];
+        $authProviderName = $response->getResourceOwner()->getName();
+        $username         = $response->getResponse()['login'];
 
-        $this->session->set('owner', $resourceOwnerName);
+        $this->session->set('owner', $authProviderName);
         $this->session->set('username', $username);
 
         return $this->loadUserByUsername($username);

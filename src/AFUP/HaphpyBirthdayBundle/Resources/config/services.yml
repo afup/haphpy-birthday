@@ -5,3 +5,10 @@ services:
 
     haphpy.form.contribution_converter:
         class: AFUP\HaphpyBirthdayBundle\Form\Converter\ContributionConverter
+
+    haphpy.path_generator:
+        class: AFUP\HaphpyBirthdayBundle\Service\PathGenerator
+        arguments: ['%contribution_dir%']
+
+    haphpy.media_persister:
+        class: AFUP\HaphpyBirthdayBundle\Service\MediaPersister

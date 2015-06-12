@@ -42,6 +42,10 @@ content:
 
 
 website_credit_wanted:
-    yes:    Oui, je souhaite être crédité sur le site de l'anniversaire
+    yes:    "Oui, je souhaite être crédité sur le site de l'anniversaire"
     no:     Merci mais je préfère rester anonyme
-    choose: Afficher mon pseudo sur le site ?
+    choose: "Afficher mon pseudo sur le site ?"
+
+form:
+    notice:
+        submission_success: Nous vous remercions pour votre contribution !

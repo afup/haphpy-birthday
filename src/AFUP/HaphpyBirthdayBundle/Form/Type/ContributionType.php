@@ -6,9 +6,16 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-
+/**
+ * ContributionType
+ *
+ * @author Faun <woecifaun@gmail.com>
+ */
 class ContributionType extends AbstractType
 {
+    /**
+     * {@inheritdoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -19,10 +26,12 @@ class ContributionType extends AbstractType
                     0 => 'website_credit_wanted.no',
                     1 => 'website_credit_wanted.yes',
                 ],
-            ])
-        ;
+            ]);
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
@@ -30,6 +39,9 @@ class ContributionType extends AbstractType
         ));
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getName()
     {
         return 'contribution';

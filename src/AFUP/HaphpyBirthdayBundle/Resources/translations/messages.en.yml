@@ -44,3 +44,7 @@ website_credit_wanted:
     yes:    Yes, I want to be credited on this anniversary website
     no:     No, I prefer to stay anonymous
     choose: Credit me on the website?
+
+form:
+    notice:
+        submission_success: Thank you for your contribution!
