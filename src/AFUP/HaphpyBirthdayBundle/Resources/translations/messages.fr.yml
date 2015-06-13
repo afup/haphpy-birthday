@@ -43,13 +43,13 @@ content:
         button:
             label: Authentification GitHub
 
-
-website_credit_wanted:
-    yes:    "Oui, je souhaite être crédité sur le site de l'anniversaire"
-    no:     Merci mais je préfère rester anonyme
-    choose: "Afficher mon pseudo sur le site ?"
-
 form:
+    credit_wanted:
+        yes: >
+            Oui, je souhaite que mon nom apparaisse dans le générique de la vidéo
+            et sur la liste des contributeurs affichée sur ce site
+        no:     Merci mais je préfère rester anonyme
+        choose: "Souhaitez vous être créditer ?"
     notice:
         submission_success: Nous vous remercions pour votre contribution !
     submit:

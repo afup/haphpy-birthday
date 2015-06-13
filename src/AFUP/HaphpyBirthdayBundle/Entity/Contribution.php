@@ -36,18 +36,11 @@ class Contribution
     private $identifier;
 
     /**
-     * Whether or not the person wants to be credited on the website
+     * Whether or not the person wants to be credited
      *
      * @var bool
      */
-    private $websiteCreditWanted;
-
-    /**
-     * Whether or not the person wants to be credited on video credits
-     *
-     * @var bool
-     */
-    private $videoCreditWanted;
+    private $creditWanted;
 
     /**
      * The time assets was uploaded
@@ -153,49 +146,25 @@ class Contribution
     }
 
     /**
-     * Get the value of Whether or not the person wants to be credited on the website
+     * Get whether or not the person wants to be credited
      *
      * @return bool
      */
-    public function isWebsiteCreditWanted()
+    public function isCreditWanted()
     {
-        return $this->websiteCreditWanted;
+        return $this->creditWanted;
     }
 
     /**
-     * Set the value of Whether or not the person wants to be credited on the website
+     * Set whether or not the person wants to be credited
      *
-     * @param bool $websiteCreditWanted
+     * @param bool $creditWanted
      *
      * @return self
      */
-    public function setWebsiteCreditWanted($websiteCreditWanted)
+    public function setCreditWanted($creditWanted)
     {
-        $this->websiteCreditWanted = $websiteCreditWanted;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of Whether or not the person wants to be credited on video credits
-     *
-     * @return bool
-     */
-    public function isVideoCreditWanted()
-    {
-        return $this->videoCreditWanted;
-    }
-
-    /**
-     * Set the value of Whether or not the person wants to be credited on video credits
-     *
-     * @param bool $videoCreditWanted
-     *
-     * @return self
-     */
-    public function setVideoCreditWanted($videoCreditWanted)
-    {
-        $this->videoCreditWanted = $videoCreditWanted;
+        $this->creditWanted = $creditWanted;
 
         return $this;
     }

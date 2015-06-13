@@ -29,10 +29,5 @@ class Contribution
     /**
      * @Assert\NotNull()
      */
-    public $websiteCreditWanted;
-
-    /**
-     * Assert\NotNull()
-     */
-    // public $videoCreditWanted;
+    public $creditWanted;
 }

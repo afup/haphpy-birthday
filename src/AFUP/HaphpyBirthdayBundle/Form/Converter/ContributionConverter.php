@@ -23,8 +23,7 @@ class ContributionConverter
     {
         $formContribution = new FormContribution();
 
-        $formContribution->websiteCreditWanted = $entityContribution->isWebsiteCreditWanted();
-        $formContribution->videoCreditWanted   = $entityContribution->isVideoCreditWanted();
+        $formContribution->creditWanted = $entityContribution->isCreditWanted();
 
         return $formContribution;
     }
@@ -39,7 +38,6 @@ class ContributionConverter
         EntityContribution $entityContribution,
         FormContribution   $formContribution
     ) {
-        $entityContribution->setWebsiteCreditWanted($formContribution->websiteCreditWanted);
-        $entityContribution->setVideoCreditWanted($formContribution->videoCreditWanted);
+        $entityContribution->setCreditWanted($formContribution->creditWanted);
     }
 }

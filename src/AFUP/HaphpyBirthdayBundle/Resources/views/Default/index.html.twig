@@ -45,7 +45,6 @@
                     <span class="haphpy-step-number" style="background-color:{{ color }};">2</span>
                     <span style="color:{{ color }};">{{ 'step.file.title'|trans }}</span>
                 </h3>
-                {{ form_label(form.file) }}
                 {{ form_errors(form.file) }}
                 {{ form_widget(form.file, {disabled: user ? false : true}) }}
             </div>
@@ -56,9 +55,9 @@
                     <span style="color:{{ color }};">{{ 'step.submit.title'|trans }}</span>
                 </h3>
                 <div class="form-group">
-                    {{ form_label(form.websiteCreditWanted, 'website_credit_wanted.choose') }}
-                    {{ form_errors(form.websiteCreditWanted, {attr: {class: 'error-list'}}) }}
-                    {{ form_widget(form.websiteCreditWanted, {disabled: user ? false : true}) }}
+                    {{ form_label(form.creditWanted, 'form.credit_wanted.choose') }}
+                    {{ form_errors(form.creditWanted, {attr: {class: 'error-list'}}) }}
+                    {{ form_widget(form.creditWanted, {disabled: user ? false : true}) }}
                 </div>
 
                 <div class="text-center">

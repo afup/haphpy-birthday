@@ -40,25 +40,22 @@ ul.error-list {
 }
 
 .haphpy-radio {
-    display: table-row;
+    display: flex;
+    align-items: center;
     margin-bottom: 1em;
 }
 
-.haphpy-radio > div {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.haphpy-radio-widget {
-    padding-right: 0.5em;
-}
-
-.haphpy-radio-widget input {
+.haphpy-radio input {
     cursor: pointer;
 }
 
-.haphpy-radio-label label {
-    margin-bottom: 0;
+.haphpy-radio input:checked+label {
+    color: #000000; /* black highlights better in elaostrap */
+}
+
+.haphpy-radio label {
+    padding-left: 0.5em;
     font-weight: 400;
     cursor: pointer;
+    margin: 0;
 }
