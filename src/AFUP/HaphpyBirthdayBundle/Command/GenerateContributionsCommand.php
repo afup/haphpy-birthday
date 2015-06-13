@@ -2,20 +2,28 @@
 
 namespace AFUP\HaphpyBirthdayBundle\Command;
 
+use AFUP\HaphpyBirthdayBundle\Service\ContributionPersister;
+use AFUP\HaphpyBirthdayBundle\Entity\Contribution;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\HttpFoundation\File\File;
 
+/**
+ * Generate fake contribution entities and media
+ *
+ * @author Faun <woecifaun@gmail.com>
+ */
 class GenerateContributionsCommand extends Command
 {
     /**
-     * Folder containing users contributions
+     * Contribution Persister
      *
-     * @var string
+     * @var ContributionPersister
      */
-    private $contributionsRootDir;
+    private $contributionPersister;
 
     /**
      * Unit block for name building
@@ -25,8 +33,8 @@ class GenerateContributionsCommand extends Command
     private $syllables = [
         'ma',
         'te',
-        'bi',
         'ko',
+        'pi',
     ];
 
     /**
@@ -69,15 +77,18 @@ class GenerateContributionsCommand extends Command
     /**
      * Construct
      *
-     * @param string $contributionsRootDir
+     * @param ContributionPersister $contributionPersister
      */
-    public function __construct($contributionsRootDir)
+    public function __construct(ContributionPersister $contributionPersister)
     {
         parent::__construct();
 
-        $this->contributionsRootDir = $contributionsRootDir;
+        $this->contributionPersister = $contributionPersister;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     protected function configure()
     {
         $this
@@ -87,42 +98,56 @@ class GenerateContributionsCommand extends Command
                 'quantity',
                 InputArgument::OPTIONAL,
                 'How many fake contributions do you want to generate?'
-            )
-        ;
+            );
     }
 
+    /**
+     * {@inheritdoc}
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $quantity = $input->getArgument('quantity') ? : 100;
-        $names = $this->generateNames();
+        $properties = $this->generateProperties();
 
         if ($quantity) {
-            shuffle($names);
-            $names = array_slice($names, 0, $quantity);
+            shuffle($properties);
+            $properties = array_slice($properties, 0, $quantity);
         }
 
-        foreach ($names as $name) {
-            fopen($name, 'w');
-            $output->writeln($this->contributionsRootDir." : ".$quantity." : ".$name);
+        $path = '/var/haphpy/contributions/fake.jpg';
+
+        foreach ($properties as $tmpContribution) {
+            $contribution = new Contribution();
+            $contribution->setAuthProvider($tmpContribution['authProvider']);
+            $contribution->setIdentifier($tmpContribution['identifier']);
+            $contribution->setCreditWanted($tmpContribution['creditWanted']);
+
+            fopen($path, 'w');
+            $file = new File($path);
+
+            $this->contributionPersister->persist($contribution, $file);
         }
     }
 
-    private function generateNames()
+    /**
+     * Generate properties ready to be set on Contributions
+     *
+     * @return array already formatted properties
+     */
+    private function generateProperties()
     {
-        $names = [];
+        $properties = [];
 
         foreach ($this->syllables as $syl1) {
             foreach ($this->syllables as $syl2) {
                 foreach ($this->syllables as $syl3) {
                     foreach ($this->syllables as $syl4) {
                         foreach ($this->authProviders as $provider) {
-                            $names[] =
-                                $this->contributionsRootDir.'/'
-                                .$syl1.$syl2.$syl3.$syl4
-                                .'@'.$provider
-                                .'-'.$this->credits[array_rand($this->credits)]
-                                .'-'.$this->moderation[array_rand($this->moderation)]
-                                .'.'.$this->extensions[array_rand($this->extensions)]
+                            $properties[] = [
+                                'identifier'   => $syl1.$syl2.$syl3.$syl4,
+                                'authProvider' => $provider,
+                                'creditWanted' => array_rand([true, false])
+                            ]
                             ;
                         }
                     }
@@ -130,16 +155,6 @@ class GenerateContributionsCommand extends Command
             }
         }
 
-        return $names;
-    }
-
-    public function cleanDirectory($directory)
-    {
-        $files = glob('path/to/temp/*');
-        foreach($files as $file){
-            if (is_file($file)) {
-                unlink($file);
-            }
-        }
+        return $properties;
     }
 }
