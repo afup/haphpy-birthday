@@ -34,15 +34,10 @@ class DefaultController extends Controller
         $form->handleRequest($request);
 
         if ($user && $form->isValid()) {
-            $this->persistMedia($contribution, $formContribution->file);
-
-            $contribution->setModifiedAt(new \DateTime());
             $this->get('haphpy.form.contribution_converter')
                 ->updateEntityFromFormContribution($contribution, $formContribution);
-
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($contribution);
-            $entityManager->flush();
+            $this->get('haphpy.contribution_persister')
+                ->persist($contribution, $formContribution->file);
 
             $this->addFlash(
                 'notice',
@@ -81,7 +76,7 @@ class DefaultController extends Controller
 
     /**
      * get a contribution depending on user
-     * If none yet create one
+     * If none yet, create one
      *
      * @param UserInterface $user Current user
      *
@@ -111,19 +106,5 @@ class DefaultController extends Controller
         }
 
         return new Contribution();
-    }
-
-    /**
-     * Persist a media contribution at location of the path
-     *
-     * @param Contribution $contribution
-     * @param \SPLFileInfo $file
-     */
-    public function persistMedia(Contribution $contribution, \SPLFileInfo $file)
-    {
-        $path = $this->get('haphpy.path_generator')
-            ->generateAbsolutePath($contribution, $file);
-
-        $this->get('haphpy.media_persister')->persist($path, $file);
     }
 }

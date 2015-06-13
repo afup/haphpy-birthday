@@ -10,5 +10,6 @@ services:
         class: AFUP\HaphpyBirthdayBundle\Service\PathGenerator
         arguments: ['%contribution_dir%']
 
-    haphpy.media_persister:
-        class: AFUP\HaphpyBirthdayBundle\Service\MediaPersister
+    haphpy.contribution_persister:
+        class: AFUP\HaphpyBirthdayBundle\Service\ContributionPersister
+        arguments: [@doctrine.orm.entity_manager, @haphpy.path_generator]
