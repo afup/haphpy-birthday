@@ -20,11 +20,11 @@ class ContributionType extends AbstractType
     {
         $builder
             ->add('file')
-            ->add('websiteCreditWanted', 'choice', [
+            ->add('creditWanted', 'choice', [
                 'expanded'    => true,
                 'choices'     => [
-                    0 => 'website_credit_wanted.no',
-                    1 => 'website_credit_wanted.yes',
+                    0 => 'form.credit_wanted.no',
+                    1 => 'form.credit_wanted.yes',
                 ],
             ]);
     }

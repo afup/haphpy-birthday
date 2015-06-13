@@ -13,6 +13,9 @@ AFUP\HaphpyBirthdayBundle\Entity\Contribution:
         identifier:
             type:   string
             length: 255
+        creditWanted:
+            type:   boolean
+            column: credit_wanted
         createdAt:
             type:   datetime
             column: created_at

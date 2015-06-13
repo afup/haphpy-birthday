@@ -43,12 +43,11 @@ content:
         button:
             label: GitHub Authentication
 
-website_credit_wanted:
-    yes:    Yes, I want to be credited on this anniversary website
-    no:     No, I prefer to stay anonymous
-    choose: Credit me on the website?
-
 form:
+    credit_wanted:
+        yes:    Yes, I want my name to appear in the video credits and on this website contributors list
+        no:     No, I prefer to stay anonymous
+        choose: Do you want to be credited?
     notice:
         submission_success: Thank you for your contribution!
     submit:
