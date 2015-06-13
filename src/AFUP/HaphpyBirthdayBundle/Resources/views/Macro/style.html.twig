@@ -1,0 +1,15 @@
+{% macro color() %}{% spaceless %}
+    {% set colors = [
+        '#19d175',
+        '#f34141',
+        '#00b8e6',
+        '#ffad33',
+        '#ad5cff',
+        '#4775ff',
+        '#e65cb8',
+        '#8ae62e',
+        '#a6a6a6',
+        '#44576a'
+    ] %}
+    {{ random(colors) }}
+{% endspaceless %}{% endmacro %}

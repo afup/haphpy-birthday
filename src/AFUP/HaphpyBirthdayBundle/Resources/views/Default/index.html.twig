@@ -1,22 +1,90 @@
 {% extends 'AppBundle::base.html.twig' %}
 
+{% form_theme form 'AppBundle:Form:fields.html.twig' %}
+
+{% import "AppBundle:Macro:style.html.twig" as haphpy %}
+
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-12">
+                {% for flashMessage in app.session.flashbag.get('notice') %}
+                    <div class="alert alert-success">
+                        {{ flashMessage|trans|raw }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row">
+            {{ form_start(form) }}
+            <div class="col-sm-12 col-md-4 haphpy-step">
+                <h3>
+                    {% set color = haphpy.color %}
+                    <span class="haphpy-step-number" style="background-color:{{ color }};">1</span>
+                    <span style="color:{{ color }};">{{ 'step.authenticate.title'|trans }}</span>
+                </h3>
+                {% if user is not null %}
+                    {{ 'step.authenticate.logged_in'|trans({
+                        '%authProvider%': user.authProvider,
+                        '%username%': user.username
+                    })}}
+                    <div class="text-center">
+                        <a href="{{ path('logout') }}" class="btn btn-ghost btn-default">
+                            {{ 'step.authenticate.logout'|trans }}
+                        </a>
+                    </div>
+                {% else %}
+                    <a href="{{ path('github_connect') }}" class="btn btn-ghost btn-success">
+                        {{ 'content.authentication.button.label'|trans|raw }}
+                    </a>
+                {% endif %}
+            </div>
+            <div class="col-sm-12 col-md-4 haphpy-step">
+                <h3>
+                    {% set color = haphpy.color %}
+                    <span class="haphpy-step-number" style="background-color:{{ color }};">2</span>
+                    <span style="color:{{ color }};">{{ 'step.file.title'|trans }}</span>
+                </h3>
+                {{ form_label(form.file) }}
+                {{ form_errors(form.file) }}
+                {{ form_widget(form.file, {disabled: user ? false : true}) }}
+            </div>
+            <div class="col-sm-12 col-md-4 haphpy-step">
+                <h3>
+                    {% set color = haphpy.color %}
+                    <span class="haphpy-step-number" style="background-color:{{ color }};">3</span>
+                    <span style="color:{{ color }};">{{ 'step.submit.title'|trans }}</span>
+                </h3>
+                <div class="form-group">
+                    {{ form_label(form.websiteCreditWanted, 'website_credit_wanted.choose') }}
+                    {{ form_errors(form.websiteCreditWanted, {attr: {class: 'error-list'}}) }}
+                    {{ form_widget(form.websiteCreditWanted, {disabled: user ? false : true}) }}
+                </div>
+
+                <div class="text-center">
+                    <input type="submit" name="submit" value="{{ 'form.submit.label'|trans }}" class="btn btn-primary" {{ user ? '' : ' disabled' }}/>
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
                 <h3>{{ 'content.celebrating.title'|trans|raw }}</h3>
                 <p>{{ 'content.celebrating.paragraph'|trans|raw }}</p>
             </div>
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-4">
                 <h3>{{ 'content.video.title'|trans|raw }}</h3>
                 <p>{{ 'content.video.paragraph'|trans|raw }}</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <h3>{{ 'content.contribute.title'|trans|raw }}</h3>
+                <p>{{ 'content.contribute.paragraph'|trans|raw }}</p>
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-12">
-                <h3>{{ 'content.contribute.title'|trans|raw }}</h3>
-                <p>{{ 'content.contribute.paragraph'|trans|raw }}</p>
                 <p>{{ 'content.contribute.not_inspired'|trans|raw }}</p>
             </div>
         </div>
@@ -26,30 +94,6 @@
                 <div class="video" style="height:550px;background:gray;">
                     Vidéo
                 </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12 col-md-6">
-                <h3>{{ 'content.wanna_be_in.title'|trans|raw }}</h3>
-                <p>{{ 'content.wanna_be_in.paragraph'|trans|raw }}</p>
-            </div>
-            <div class="col-sm-12 col-md-6">
-                {% for flashMessage in app.session.flashbag.get('notice') %}
-                    <div class="alert alert-success">
-                        {{ flashMessage|trans|raw }}
-                    </div>
-                {% endfor %}
-                {% if user is not null %}
-                    <a href="{{ path('logout') }}" class="btn btn-ghost btn-default">
-                        {{ user.username }}
-                    </a>
-                    {% include 'AppBundle::form.html.twig' with {form: form} only %}
-                {% else %}
-                    <a href="{{ path('github_connect') }}" class="btn btn-ghost btn-success">
-                        {{ 'content.authentication.button.label'|trans|raw }}
-                    </a>
-                {% endif %}
             </div>
         </div>
     </div>

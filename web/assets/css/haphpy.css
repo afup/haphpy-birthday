@@ -1,0 +1,64 @@
+/** header **/
+
+header#header {
+    padding: 5%;
+}
+
+#haphpy-logo {
+    width: 100%;
+}
+
+/** Steps */
+.haphpy-step {
+    position: relative;
+}
+
+.haphpy-step-number {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: lime;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    margin-left: -0.5em;
+}
+
+@media screen and (max-width: 767px) {
+    .haphpy-step-number {
+        margin-left: 0;
+    }
+}
+.haphpy-step h3 {
+    line-height: 2em;
+    text-transform: none;
+}
+
+/** Form **/
+ul.error-list {
+    padding: 0;
+}
+
+.haphpy-radio {
+    display: table-row;
+    margin-bottom: 1em;
+}
+
+.haphpy-radio > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.haphpy-radio-widget {
+    padding-right: 0.5em;
+}
+
+.haphpy-radio-widget input {
+    cursor: pointer;
+}
+
+.haphpy-radio-label label {
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}

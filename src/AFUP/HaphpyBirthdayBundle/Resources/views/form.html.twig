@@ -1,14 +1,15 @@
-{{ form_start(form) }}
+{% form_theme form 'AppBundle:Form:fields.html.twig' %}
 
+{{ form_start(form) }}
 {{ form_label(form.file) }}
 {{ form_errors(form.file) }}
-{{ form_widget(form.file) }}
+{{ form_widget(form.file, {disabled: user ? false : true}) }}
 
 <div class="form-group">
     {{ form_label(form.websiteCreditWanted, 'website_credit_wanted.choose') }}
     {{ form_errors(form.websiteCreditWanted) }}
-    {{ form_widget(form.websiteCreditWanted) }}
+    {{ form_widget(form.websiteCreditWanted, {disabled: user ? false : true}) }}
 </div>
 
-<input type="submit" name="submit" value="send" class="btn button-success"/>
+<input type="submit" name="submit" value="send" class="btn button-success" {{ user ? '' : 'disabled' }}/>
 {{ form_end(form) }}
