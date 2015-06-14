@@ -54,6 +54,26 @@ class DefaultController extends Controller
     }
 
     /**
+     * @param Request $request
+     *
+     * @Template()
+     *
+     * @return array for template
+     */
+    public function contributionsAction(Request $request)
+    {
+        $user          = $this->getUser();
+        $contributions = $this
+            ->get('haphpy.contribution_repository')
+            ->findPublicContributionsAlphabetically();
+
+        return [
+            'user'          => $user,
+            'contributions' => $contributions,
+        ];
+    }
+
+    /**
      * In case root path is asked, redirect to best localized home page
      * (Not sure it is the best logical behavior)
      *

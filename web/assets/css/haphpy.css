@@ -1,4 +1,17 @@
-/** header **/
+/** General **/
+.haphpy-icon-github:before {
+    content: "\f09b";
+}
+
+.haphpy-icon-facebook:before {
+    content: "\f082";
+}
+
+.haphpy-icon-twitter:before {
+    content: "\f099";
+}
+
+/** Header **/
 
 header#header {
     padding: 5%;
@@ -58,4 +71,9 @@ ul.error-list {
     font-weight: 400;
     cursor: pointer;
     margin: 0;
+}
+
+/** Contributions **/
+.contribution span {
+    margin-right: 0.5em;
 }

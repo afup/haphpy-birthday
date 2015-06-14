@@ -1,5 +1,6 @@
 AFUP\HaphpyBirthdayBundle\Entity\Contribution:
     type: entity
+    repositoryClass: AFUP\HaphpyBirthdayBundle\Entity\ContributionRepository
     table: contribution
     id:
         id:

@@ -54,3 +54,6 @@ form:
         submission_success: Nous vous remercions pour votre contribution !
     submit:
         label: Envoyer
+
+contributions:
+    contributors_list: Liste des contributeurs publics

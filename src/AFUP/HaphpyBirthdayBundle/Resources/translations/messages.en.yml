@@ -52,3 +52,6 @@ form:
         submission_success: Thank you for your contribution!
     submit:
         label: send
+
+contributions:
+    contributors_list: List of Public Contributors

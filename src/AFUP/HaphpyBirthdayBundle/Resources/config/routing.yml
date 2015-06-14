@@ -3,3 +3,9 @@ haphpy_index:
         en: "/en/"
         fr: "/fr/"
     defaults: { _controller: AppBundle:Default:index }
+
+haphpy_contributions:
+    locales:
+        en: "/en/contributions"
+        fr: "/fr/contributions"
+    defaults: { _controller: AppBundle:Default:contributions }
