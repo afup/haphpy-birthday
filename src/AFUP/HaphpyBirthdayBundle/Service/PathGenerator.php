@@ -47,6 +47,6 @@ class PathGenerator
             .DIRECTORY_SEPARATOR
             .$contribution->getIdentifier()
             .'.'
-            .$file->guessExtension();
+            .($file->guessExtension() ? : $file->getExtension());
     }
 }
