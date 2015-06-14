@@ -11,20 +11,20 @@ It aims at gathering a maximun of videos or pictures from the community in order
 
 ## Install
 
-You need landrush to be installed
+You need landrush to be installed.
 
-```
+```shell
 vagrant up
 ```
 
-In your guest machine run the following command
-```
+In your guest machine run the following command:
+```shell
 composer install
 ```
 
 ## Usage
 
-Accessing the web app
+Accessing the web pages
 
 http://haphpy-birthday.dev
 
@@ -35,6 +35,31 @@ http://haphpy-birthday.dev
 * user: __afup__
 * password: __afup__
 
+
+## Generating fake contributions for development
+
+Checkout the `dev/generate-contributions` branch in your repository.
+```shell
+git checkout dev/generate-contributions
+```
+
+In the guest machine, move to /vagrant directory then run the following command
+```shell
+php app/console haphpy:contributions:generate <quantity>
+```
+the optional `quantity` parameter can be set up to 768. It defaults to 100.
+
+> :warning: Currently, the command does not clean either the database or the file system from old contributions.
+
+> Here are the commands to run in your guest machine:
+```shell
+rm -rf /var/haphpy/contributions/*/*
+```
+And for the database
+```shell
+mysql -u afup -p -e 'DELETE FROM contribution' haphpy
+```
+password: __afup__
 
 ## Language
 
@@ -50,12 +75,12 @@ To add a supported locale:
 
 Before commiting, be sure to run your tests:
 
-```
+```shell
 bin/phpunit -v -c app/ src
 ```
 
 and to check your Coding Standards:
 
-```
+```shell
 bin/coke
 ```
