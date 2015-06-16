@@ -22,21 +22,12 @@ In your guest machine run the following command:
 composer install
 ```
 
-## Usage
+#### Building database structure
+```shell
+php app/console doctrine:schema:update --force
+```
 
-Accessing the web pages
-
-http://haphpy-birthday.dev
-
-## Database
-
-* root password: __afuprocks__
-* database: __haphpy__
-* user: __afup__
-* password: __afup__
-
-
-## Generating fake contributions for development
+#### Generating fake contributions for development
 
 Checkout the `dev/generate-contributions` branch in your repository.
 ```shell
@@ -60,6 +51,20 @@ And for the database
 mysql -u afup -p -e 'DELETE FROM contribution' haphpy
 ```
 password: __afup__
+
+## Usage
+
+Accessing the web pages
+
+http://haphpy-birthday.dev
+
+## Database
+
+* root password: __afuprocks__
+* database: __haphpy__
+* user: __afup__
+* password: __afup__
+
 
 ## Language
 
