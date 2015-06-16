@@ -11,6 +11,11 @@
     content: "\f099";
 }
 
+/** Menu **/
+#login-state span.fa {
+    margin-right: 0.4em;
+}
+
 /** Header **/
 
 header#header {

@@ -6,6 +6,31 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/haphpy.css" />
     </head>
     <body>
+        <div id="mobile-nav">
+            <div class="mobile-nav-title">{{ 'menu.mobile.navigation'|trans }}</div>
+            <nav>
+            </nav>
+        </div>
+        <div class="navbar fixed">
+            <div class="navbar-inner">
+                <nav id="login-state" class="pull-left">
+                    {% if user %}
+                        <span class="fa haphpy-icon-{{ user.authProvider }}"></span>{{ user.username }}{{ ''}}
+                    {% endif %}
+                </nav>
+                <nav id="main-nav" class="pull-right">
+                    <ul>
+                        <li><a href="{{ path('haphpy_index') }}">{{ 'menu.index.label'|trans }}</a></li>
+                        <li><a href="{{ path('haphpy_contributions') }}">{{ 'menu.contributions.label'|trans }}</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="mobile-nav-toggle">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </a>
+            </div>
+        </div>
         <header id="header">
             <img src="/assets/images/haphpy-birthday.svg" id="haphpy-logo">
         </header>

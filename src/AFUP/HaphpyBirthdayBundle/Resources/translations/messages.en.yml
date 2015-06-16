@@ -1,6 +1,14 @@
 head:
     title: HaPHPy 20th Birthday to you PHP!
 
+menu:
+    index:
+        label: Contribute!
+    contributions:
+        label: Contributors
+    mobile:
+        navigation: navigation
+
 step:
     authenticate:
         title: Authenticate
