@@ -19,6 +19,10 @@
 /** Header **/
 
 header#header {
+    padding: 80px 0 0 0;
+}
+
+header#header div {
     padding: 5%;
 }
 
