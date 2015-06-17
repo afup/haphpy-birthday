@@ -70,10 +70,12 @@ about:
     final_video:
         title: Final Video
         text: >
-            <p>The final video is intended to be 3 to 5 minutes long.
-            It will be available on the afup's Youtube.</p>
-            <p>The premiere will be held during the opening keynote of the Forum PHP in Paris,
-            on the 23<sup>th</sup> September 2015.</p>
+            <p>The final video is intended to be 3 to 5 minutes long.</p>
+            <p><strong>The premiere scheduled to take place during the opening keynote
+            of the Forum PHP in Paris, on the 23<sup>th</sup> September 2015.</strong></p>
+            <p>It then will be hosted on the afup's Youtube and viewable on this website.
+            It will also be downloadable.</p>
+
         specs:
             title: Specifications of the released video
             format:
@@ -126,9 +128,31 @@ about:
                     <li>1920px × 1080px minimum</li>
                     <li>Aspect Ratio: 16 × 9</li>
                 </ul>
+
     licence:
         title: Licencing
-        text: TO DO
+        text: TO DO (Licencing of the project, licencing of the vidéo)
+
+    helping:
+        title: Helping on the project
+        coding:
+            title: Coding
+            text: >
+                <p>Any help or improvement on the project is welcome.</p>
+                <p>The project code is available on the dedicated GitHub repository.</p>
+        translating:
+            title: Translations
+            text: >
+                <p>In order to expand the visibility of the project around the globe,
+                we made the project multilingual from the beginning.</p>
+                <p>Adding translations to this project is easy. Instructions can be found
+                on the GitHub repository.</p>
+        communicating:
+            title: Communication
+            text: >
+                <p>Don't hesitate to share the project with your friends as well as on the social networks.</p>
+                <p>Hashtag: #20YearsOfPHP</p>
+
     thanks:
         title: Acknowledgements
         elaostrap: >

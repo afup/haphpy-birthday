@@ -18,7 +18,7 @@ step:
             Actuellement authentifié via %authProvider% en tant que %username%
         logout: Se déconnecter
     file:
-        title: Choisis une video ou image
+        title: Choisis une vidéo ou image
     submit:
         title: Envoie ta contribution
 
@@ -46,7 +46,7 @@ content:
             un hello… Toutes les vidéos positives seront intégrées au montage final.
             Les fichiers uploadés seront montés ensemble tel un grand patchwork dans un film commémoratif aux côtés des autres vidéos.
         not_inspired: >
-            Pas inspirez ! Jettez un œil à la vidéo ci-dessous pour voir ce que les autres personnes impliquées dans le
+            Pas inspiré ! Jettez un œil à la vidéo ci-dessous pour voir ce que les autres personnes impliquées dans le
             projet ont pu partager.
 
     authentication:
@@ -72,10 +72,12 @@ about:
     final_video:
         title: Vidéo commemorative
         text: >
-            <p>La vidéo commemorative finale est prévue pour durer de 3 à 5 minutes.
-            Elle sera disponible en vision sur le Youtube de l'afup.</p>
-            <p>La première se tiendra durant la keynote d'ouverture du Forum PHP à Paris,
-            le 23 septembre 2015.</p>
+            <p>La vidéo commemorative finale est prévue pour durer de 3 à 5 minutes.</p>
+            <p><strong>La première se tiendra durant la keynote d'ouverture du Forum PHP à Paris,
+            le 23 septembre 2015.</strong></p>
+            <p>La vidéo sera alors hébergé sur le compte YouTube de l'afup et visible sur ce site.
+            Elle sera également disponible au téléchargement.</p>
+
         specs:
             title: Propriétés de la vidéo commemorative finale
             format:
@@ -128,9 +130,31 @@ about:
                     <li>1920px × 1080px minimum</li>
                     <li>Proportions : 16 × 9</li>
                 </ul>
+
     licence:
         title: Licencing
-        text: TO DO
+        text: TO DO (Licencing of the project, licencing of the vidéo)
+
+    helping:
+        title: Apporter votre aide au projet
+        coding:
+            title: Code
+            text: >
+                <p>Toute aide sur le projet est bienvenue.</p>
+                <p>Le code du projet est disponible sur le dépôt GitHub dédié.</p>
+        translating:
+            title: Traductions
+            text: >
+                <p>Dans le but d'avoir un projet d'envergure internationale, le projet
+                a été pensé multilingue dès le départ.</p>
+                <p>Ajouter des traductions au projet est simple. Toutes les instructions
+                pour la traduction sont disponibles sur le dépôt GitHub.</p>
+        communicating:
+            title: Communication
+            text: >
+                <p>N'hésitez pas à parler du projet à vos amis ou sur les réseaux sociaux.</p>
+                <p>Hashtag: #20YearsOfPHP</p>
+
     thanks:
         title: Remerciements
         elaostrap: >
