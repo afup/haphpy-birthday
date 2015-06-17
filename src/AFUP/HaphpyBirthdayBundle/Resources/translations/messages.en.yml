@@ -1,3 +1,7 @@
+haphpy:
+    date_format:
+        full: 'd/m/Y, H:i:s T'
+
 head:
     title: HaPHPy 20th Birthday to you PHP!
 

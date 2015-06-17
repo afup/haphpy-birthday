@@ -21,11 +21,14 @@ parameters:
 
     # Accepted language for the site
     accepted_languages:
-        - fr
         - en
+        - fr
 
     # Third party authentication
     github_secret:     githubClientSecret
 
     # media directory for contributions storage
-    contribution_dir: /var/haphpy/contributions
+    contribution_dir:  /var/haphpy/contributions
+
+    # Limit date for media contribution
+    limit_date: '2015-10-31 23:59:59 UTC'

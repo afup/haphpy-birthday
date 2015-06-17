@@ -11,6 +11,10 @@
     content: "\f099";
 }
 
+.text-highlight {
+    color: #f34141;
+}
+
 /** Menu **/
 #login-state span.fa {
     margin-right: 0.4em;

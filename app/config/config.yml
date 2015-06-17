@@ -29,6 +29,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        limit_date: "%limit_date%"
 
 # Assetic Configuration
 assetic:
