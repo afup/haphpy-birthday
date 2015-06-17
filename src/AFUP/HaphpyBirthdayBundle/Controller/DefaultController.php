@@ -74,6 +74,22 @@ class DefaultController extends Controller
     }
 
     /**
+     * @param Request $request
+     *
+     * @Template()
+     *
+     * @return array for template
+     */
+    public function aboutAction(Request $request)
+    {
+        $user = $this->getUser();
+
+        return [
+            'user' => $user,
+        ];
+    }
+
+    /**
      * In case root path is asked, redirect to best localized home page
      * (Not sure it is the best logical behavior)
      *

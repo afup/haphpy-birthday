@@ -9,3 +9,9 @@ haphpy_contributions:
         en: "/en/contributions"
         fr: "/fr/contributions"
     defaults: { _controller: AppBundle:Default:contributions }
+
+haphpy_about:
+    locales:
+        en: "/en/about"
+        fr: "/fr/a-propos"
+    defaults: { _controller: AppBundle:Default:about }

@@ -6,6 +6,8 @@ menu:
         label: Contribute!
     contributions:
         label: Contributors
+    about:
+        label: About
     mobile:
         navigation: navigation
 
@@ -63,3 +65,72 @@ form:
 
 contributions:
     contributors_list: List of Public Contributors
+
+about:
+    final_video:
+        title: Final Video
+        text: >
+            <p>The final video is intended to be 3 to 5 minutes long.
+            It will be available on the afup's Youtube.</p>
+            <p>The premiere will be held during the opening keynote of the Forum PHP in Paris,
+            on the 23<sup>th</sup> September 2015.</p>
+        specs:
+            title: Specifications of the released video
+            format:
+                title: Format
+                value: 1080p (1920px × 1080px)
+            frame_rate:
+                title: Frame Rate
+                value: 30fps
+            interlacing:
+                title: Interlacing
+                value: progressive
+            video_codec:
+                title: Video Codec
+                value: h264
+            audio_codec:
+                title: Audio Codec
+                value: AAC
+
+    uploaded_assets:
+        title: Uploaded Assets
+        limit: >
+            <p>Contributions can be uploaded before the %limit_date%.</p>
+        respect: >
+            <p>Expected media from contributors should show positive feelings toward
+            the PHP language and its community.</p>
+            <p>Contributions media must present a natural respect to other people.</p>
+        ad_free: >
+            <p>As the final commemorative video will be ad free, business
+            vendors are not allowed to use this project as a commercial support.</p>
+            <p>Any company may upload a Contribution with its official social network account,
+            but the media must not contain direct advertisement to the company. For instance,
+            the media cannot just be the company branding logo.</p>
+        specs:
+            title: Contributions media requirements
+            video_title: Videos
+            video: >
+                <p>Please provide video with the minimum following properties:</p>
+                <ul>
+                    <li>5 seconds maximum</li>
+                    <li>Full HD (1920px × 1080px)</li>
+                    <li>Minimum Frame Rate: 25fps</li>
+                    <li>Video Codec: h264 or any open codec.</li>
+                    <li>Sound of uploaded video will be replaced/dimmed by global soundtrack</li>
+                </ul>
+            picture_title: Pictures
+            picture: >
+                <p>Please provide picture with the minimum following properties:</p>
+                <ul>
+                    <li>Type: JPEG, PNG</li>
+                    <li>1920px × 1080px minimum</li>
+                    <li>Aspect Ratio: 16 × 9</li>
+                </ul>
+    licence:
+        title: Licencing
+        text: TO DO
+    thanks:
+        title: Acknowledgements
+        elaostrap: >
+            <p>Style based on <a href="https://github.com/JeremyFagis/ElaoStrap">elaostrap</a>
+            by Jeremy Fagis.</p>

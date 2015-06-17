@@ -6,6 +6,8 @@ menu:
         label: Participer !
     contributions:
         label: Contributeurs
+    about:
+        label: À propos
     mobile:
         navigation: navigation
 
@@ -65,3 +67,72 @@ form:
 
 contributions:
     contributors_list: Liste des contributeurs publics
+
+about:
+    final_video:
+        title: Vidéo commemorative
+        text: >
+            <p>La vidéo commemorative finale est prévue pour durer de 3 à 5 minutes.
+            Elle sera disponible en vision sur le Youtube de l'afup.</p>
+            <p>La première se tiendra durant la keynote d'ouverture du Forum PHP à Paris,
+            le 23 septembre 2015.</p>
+        specs:
+            title: Propriétés de la vidéo commemorative finale
+            format:
+                title: Format
+                value: 1080p (1920px × 1080px)
+            frame_rate:
+                title: Images par seconde
+                value: 30
+            interlacing:
+                title: Entrelacement
+                value: progressif
+            video_codec:
+                title: Codec vidéo
+                value: h264
+            audio_codec:
+                title: Codec audio
+                value: AAC
+
+    uploaded_assets:
+        title: Fichiers <i>uploadés</i>
+        limit: >
+            <p>Les Contributions peuvent être <i>uploadées</i> jusqu'à la date limite du %limit_date%.</p>
+        respect: >
+            <p>Les médias envoyés par les contributeurs au projet doivent exprimer de la gratitude
+            envers le langage PHP ainsi que sa communauté</p>
+            <p>Les Contributions doivent naturellement respecter tout le monde.</p>
+        ad_free: >
+            <p>La vidéo commemorative final ne contiendra pas de publicité. Les sociétés
+            ne sont pas autorisées à utiliser le présent projet comme support publicitaire.</p>
+            <p>Une société peut utiliser tout compte de réseau social pour télécharger une
+            Contribution mais le média envoyé ne peut contenir juste une publicité pour celle-ci.
+            Par exemple, la vidéo ou l'image fournie ne peut se limiter au logo de la compagnie.</p>
+        specs:
+            title: Caractéristiques des médias contribués
+            video_title: Vidéos
+            video: >
+                <p>Merci de fournir une vidéo avec les caractéristiques suivantes :</p>
+                <ul>
+                    <li>5 secondes maximum</li>
+                    <li>Full HD (1920px × 1080px)</li>
+                    <li>Fréquence d'images minimum: 25fps</li>
+                    <li>Codec vidéo: h264 ou tout codec ouvert.</li>
+                    <li>Le son de la vidéo pourra être remplacé/atténué par la piste son globale.</li>
+                </ul>
+            picture_title: Images
+            picture: >
+                <p>Merci de fournir une image avec les caractéristiques suivantes :</p>
+                <ul>
+                    <li>Type : JPEG, PNG</li>
+                    <li>1920px × 1080px minimum</li>
+                    <li>Proportions : 16 × 9</li>
+                </ul>
+    licence:
+        title: Licencing
+        text: TO DO
+    thanks:
+        title: Remerciements
+        elaostrap: >
+            <p>Style basé sur <a href="https://github.com/JeremyFagis/ElaoStrap">elaostrap</a>
+            par Jeremy Fagis.</p>

@@ -1,0 +1,72 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% import "AppBundle:Macro:style.html.twig" as haphpy %}
+
+{% block content %}
+    <div class="container">
+        <h3>{{ 'about.final_video.title'|trans }}</h3>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                {{ 'about.final_video.text'|trans|raw }}
+            </div>
+        </div>
+        <h4>{{ 'about.final_video.specs.title'|trans }}</h4>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <h5>{{ 'about.final_video.specs.format.title'|trans }}</h5>
+                {{ 'about.final_video.specs.format.value'|trans }}
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <h5>{{ 'about.final_video.specs.frame_rate.title'|trans }}</h5>
+                {{ 'about.final_video.specs.frame_rate.value'|trans }}
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <h5>{{ 'about.final_video.specs.interlacing.title'|trans }}</h5>
+                {{ 'about.final_video.specs.interlacing.value'|trans }}
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <h5>{{ 'about.final_video.specs.video_codec.title'|trans }}</h5>
+                {{ 'about.final_video.specs.video_codec.value'|trans }}
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <h5>{{ 'about.final_video.specs.audio_codec.title'|trans }}</h5>
+                {{ 'about.final_video.specs.audio_codec.value'|trans }}
+            </div>
+        </div>
+        <h3>{{ 'about.uploaded_assets.title'|trans|raw }}</h3>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                {{ 'about.uploaded_assets.limit'|trans|raw }}
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                {{ 'about.uploaded_assets.respect'|trans|raw }}
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                {{ 'about.uploaded_assets.ad_free'|trans|raw }}
+            </div>
+        </div>
+            <h4>{{ 'about.uploaded_assets.specs.title'|trans }}</h4>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <h5>{{ 'about.uploaded_assets.specs.video_title'|trans }}</h5>
+                {{ 'about.uploaded_assets.specs.video'|trans|raw }}
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <h5>{{ 'about.uploaded_assets.specs.picture_title'|trans }}</h5>
+                {{ 'about.uploaded_assets.specs.picture'|trans|raw }}
+            </div>
+        </div>
+        <h3>{{ 'about.licence.title'|trans }}</h3>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                {{ 'about.licence.text'|trans|raw }}
+            </div>
+        </div>
+        <h3>{{ 'about.thanks.title'|trans }}</h3>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                {{ 'about.thanks.elaostrap'|trans|raw }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
