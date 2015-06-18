@@ -39,6 +39,15 @@
         </header>
 
         <div class="container">
+            <div class="row">
+                <div id="gauge-contributors" class="col-sm-12 col-lg-6">
+                    <span>{{ gauge.amount }}</span> {{ 'gauge.contributions'|trans }}
+                </div>
+                <div id="gauge-remaining-days" class="col-sm-12 col-lg-6">
+                    {% set days = (limit_date|date('U') - 'now'|date('U'))|date('z')  %}
+                    <span>{{ days }} </span>{{ 'gauge.remaining_days'|trans }}
+                </div>
+            </div>
             <div id="gauge">
                 <div class="progress">
                     <div class="progress-bar progress-bar-danger progress-bar-striped active"
@@ -50,13 +59,15 @@
                     >
                     </div>
                 </div>
+                <div class="gauge-steps">
                 {% for step in gauge.steps %}
                     {% set step_percent = ((step.value / gauge.getStepsMaxValue) * 100)|round %}
                     <div class="gauge-step" style="left:{{ step_percent }}%;">
                         <span class="gauge-step-dot">&nbsp;</span>
-                        <span class="gauge-step-name">{{ step.name }}</span>
+                        <span class="gauge-step-name">{{ ('gauge.step.' ~ step.name)|trans }}</span>
                     </div>
                 {% endfor %}
+                </div>
             </div>
         </div>
 

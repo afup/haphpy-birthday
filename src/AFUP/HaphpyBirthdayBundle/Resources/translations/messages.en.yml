@@ -5,6 +5,14 @@ haphpy:
 head:
     title: HaPHPy 20th Birthday to you PHP!
 
+gauge:
+    contributions:  contributions so far
+    remaining_days: remaining days
+    step:
+        min: Let's do it!
+        joy: A Bliss
+        top: Heaven
+
 menu:
     index:
         label: Contribute!
