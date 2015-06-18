@@ -34,7 +34,37 @@ header#header div {
     width: 100%;
 }
 
-/** Steps */
+/** Gauge **/
+#gauge {
+    position: relative;
+    padding-top: 8px;
+}
+
+#gauge .progress {
+    border-radius: 4px;
+}
+
+.gauge-step {
+    position: absolute;
+    top: 0;
+    line-height: 24px;
+    margin-left: -12px;
+}
+
+.gauge-step-dot {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 8px;
+}
+
+.gauge-step-name {
+    padding: 20px 0 0 0;
+}
+/** Form Steps */
 .haphpy-step {
     position: relative;
 }

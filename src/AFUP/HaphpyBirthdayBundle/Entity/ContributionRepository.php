@@ -29,4 +29,17 @@ class ContributionRepository extends EntityRepository
             ->getQuery()
             ->getResult();
     }
+
+    /**
+     * Count contributions
+     *
+     * @return int
+     */
+    public function getContributionsQuantity()
+    {
+        return $this->createQueryBuilder('contribution')
+            ->select('count(contribution.id)')
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
 }

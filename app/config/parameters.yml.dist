@@ -32,3 +32,9 @@ parameters:
 
     # Limit date for media contribution
     limit_date: '2015-10-31 23:59:59 UTC'
+
+    # Expected steps and goal for the quantity of contributions
+    haphpy_steps:
+        - {name: min, value: 100}
+        - {name: joy, value: 250}
+        - {name: top, value: 500}

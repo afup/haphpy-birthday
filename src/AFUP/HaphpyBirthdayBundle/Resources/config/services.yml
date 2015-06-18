@@ -20,3 +20,7 @@ services:
         factory_method: getRepository
         arguments:
             - AFUP\HaphpyBirthdayBundle\Entity\Contribution
+
+    haphpy.gauge:
+        class: AFUP\HaphpyBirthdayBundle\Model\Gauge
+        arguments: [@haphpy.contribution_repository, "%haphpy_steps%"]

@@ -48,8 +48,9 @@ class DefaultController extends Controller
         }
 
         return [
-            'user' => $user,
-            'form' => $form->createView(),
+            'user'  => $user,
+            'form'  => $form->createView(),
+            'gauge' => $this->get('haphpy.gauge'),
         ];
     }
 
@@ -70,6 +71,7 @@ class DefaultController extends Controller
         return [
             'user'          => $user,
             'contributions' => $contributions,
+            'gauge' => $this->get('haphpy.gauge'),
         ];
     }
 
@@ -86,6 +88,7 @@ class DefaultController extends Controller
 
         return [
             'user' => $user,
+            'gauge' => $this->get('haphpy.gauge'),
         ];
     }
 

@@ -38,6 +38,28 @@
             </div>
         </header>
 
+        <div class="container">
+            <div id="gauge">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger progress-bar-striped active"
+                        data-placement="right"
+                        data-toggle="tooltip"
+                        title=""
+                        style="width:{{ gauge.percent }}%;"
+                        data-original-title="{{ gauge.amount }} contributions"
+                    >
+                    </div>
+                </div>
+                {% for step in gauge.steps %}
+                    {% set step_percent = ((step.value / gauge.getStepsMaxValue) * 100)|round %}
+                    <div class="gauge-step" style="left:{{ step_percent }}%;">
+                        <span class="gauge-step-dot">&nbsp;</span>
+                        <span class="gauge-step-name">{{ step.name }}</span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
         {% block content %}
 
         {% endblock %}
