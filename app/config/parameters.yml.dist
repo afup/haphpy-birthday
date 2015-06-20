@@ -38,3 +38,7 @@ parameters:
         - {name: min, value: 100}
         - {name: joy, value: 250}
         - {name: top, value: 500}
+
+    # PHP user groups config
+    pug_list: "%kernel.root_dir%/../src/AFUP/HaphpyBirthdayBundle/Resources/config/php-user-groups.yml"
+

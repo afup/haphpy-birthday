@@ -1,0 +1,91 @@
+---
+
+afup:
+    displayed_name: afup
+    full_name:      Association Française des Utilisateurs de PHP (French PHP Users Group)
+    parent:
+    picture:        afup.svg
+    website:        http://afaup.org
+    twitter:        afup
+    country:        France
+    city:           ~
+
+afup_bordeaux:
+    displayed_name: afup Bordeaux
+    full_name:      afup Bordeaux (Bordeaux PHP Users Group)
+    parent:         afup
+    picture:        afup.svg
+    website:        http://bordeaux.afup.org/
+    twitter:        ~
+    country:        France
+    city:           Bordeaux
+
+afup_lille:
+    displayed_name: afup Lille
+    full_name:      afup Lille (Lille PHP Users Group)
+    parent:         afup
+    picture:        afup.svg
+    website:        http://lille.afup.org/
+    twitter:        afup_lille
+    country:        France
+    city:           Lille
+
+afup_luxembourg:
+    displayed_name: afup Luxembourg
+    full_name:      afup Luxembourg (Luxembourg PHP Users Group)
+    parent:         afup
+    picture:        afup.svg
+    website:        http://luxembourg.afup.org/
+    twitter:        afup_luxembourg
+    country:        Luxembourg
+    city:           ~
+
+afup_lyon:
+    displayed_name: afup Lyon
+    full_name:      afup Lyon (Lyon PHP Users Group)
+    parent:         afup
+    picture:        afup-lyon.svg
+    website:        http://lyon.afup.org
+    twitter:        afup_lyon
+    country:        France
+    city:           Lyon
+
+afup_nantes:
+    displayed_name: afup Nantes
+    full_name:      afup Nantes (Nantes PHP Users Group)
+    parent:         afup
+    picture:        afup.svg
+    website:        http://nantes.afup.org
+    twitter:        ~
+    country:        France
+    city:           Nantes
+
+afup_orleans:
+    displayed_name: afup Orléans
+    full_name:      afup Orléans (Orléans PHP Users Group)
+    parent:         afup
+    picture:        afup.svg
+    website:        http://orleans.afup.org
+    twitter:        ~
+    country:        France
+    city:           Orléans
+
+afup_paris:
+    displayed_name: afup Paris
+    full_name:      afup Paris (Paris PHP Users Group)
+    parent:         afup
+    picture:        afup.svg
+    website:        http://paris.afup.org
+    twitter:        afup_paris
+    country:        France
+    city:           Paris
+
+afup_toulouse:
+    displayed_name: afup Toulouse
+    full_name:      afup Toulouse (Toulouse PHP Users Group)
+    parent:         afup
+    picture:        afup.svg
+    website:        http://toulouse.afup.org
+    twitter:        afup_toulouse
+    country:        France
+    city:           Paris

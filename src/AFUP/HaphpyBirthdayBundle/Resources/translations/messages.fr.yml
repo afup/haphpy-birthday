@@ -78,6 +78,7 @@ form:
         label: Envoyer
 
 contributions:
+    php_user_groups:   Groupe d'utilisateurs de PHP
     contributors_list: Liste des contributeurs publics
 
 about:

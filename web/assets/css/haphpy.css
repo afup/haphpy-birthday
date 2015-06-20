@@ -38,6 +38,7 @@ header#header div {
 #gauge-contributors, #gauge-remaining-days {
     color: #000000;
     text-align: center;
+    padding-bottom: 1em;
 }
 
 #gauge-contributors span, #gauge-remaining-days span {
@@ -164,6 +165,38 @@ ul.error-list {
     font-weight: 400;
     cursor: pointer;
     margin: 0;
+}
+
+/** User Groups **/
+.user-group {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom:1.2em;
+}
+
+.user-group-image {
+    width: 5em;
+    height: 5em;
+    position: relative;
+}
+
+.user-group-image img {
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.user-group-data {
+    width: calc(100% - 5em);
+    padding: 0 0 0 1em;
+}
+
+.user-group-data h4 {
+    line-height: 1.2;
+    margin: -0.2em 0 0 0;
 }
 
 /** Contributions **/

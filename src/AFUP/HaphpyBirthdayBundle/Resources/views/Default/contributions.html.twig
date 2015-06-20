@@ -2,8 +2,36 @@
 
 {% import "AppBundle:Macro:style.html.twig" as haphpy %}
 
-{% block content %}
+{% block content %}{% spaceless %}
     <div class="container">
+        <h3>{{ 'contributions.php_user_groups'|trans }}</h3>
+        <div class="row">
+            {% for group in userGroups|shuffle %}
+                <div class="col-sm-12 col-md-6 col-lg-4 user-group">
+                    <div class="user-group-image">
+                        <a href="{{ group.website }}">
+                            <img src="/assets/images/php-user-group/{{ group.picture }}">
+                        </a>
+                    </div>
+                    <div class="user-group-data">
+                        <h4 title="{{ group.full_name }}">
+                            <a href="{{ group.website }}">
+                                {{ group.displayed_name }}</h4>
+                            </a>
+                        <div class="user-group-location">
+                            {% if group.country %}
+                                <span>{{ group.country }}</span>{% if group.city %}, {{ group.city }}{% endif %}
+                            {% endif %}
+                        </div>
+                        {% if group.twitter %}
+                            <a href="https://twitter.com/{{ group.twitter }}" class="user-group-twitter">
+                                <span class="fa haphpy-icon-twitter"></span> {{ group.twitter }}
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
         <h3>{{ 'contributions.contributors_list'|trans }}</h3>
         <div class="row">
             {% for contribution in contributions %}
@@ -14,4 +42,4 @@
             {% endfor %}
         </div>
     </div>
-{% endblock %}
+{% endspaceless %}{% endblock %}

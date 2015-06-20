@@ -76,6 +76,7 @@ form:
         label: send
 
 contributions:
+    php_user_groups:   PHP User Groups
     contributors_list: List of Public Contributors
 
 about:
