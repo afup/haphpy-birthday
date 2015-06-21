@@ -41,4 +41,3 @@ parameters:
 
     # PHP user groups config
     pug_list: "%kernel.root_dir%/../src/AFUP/HaphpyBirthdayBundle/Resources/config/php-user-groups.yml"
-

@@ -143,6 +143,16 @@ about:
                     <li>1920px × 1080px minimum</li>
                     <li>Proportions : 16 × 9</li>
                 </ul>
+        examples:
+            title:            Exemples de contributions possibles
+            php_asset:        Contenu montrant des objets PHP
+            php_acronym:      Variation autour de l'acronyme PHP
+            message:          Message à la communauté
+            tribute:          Hommage à PHP
+            express_yourself: Exprimez-vous !
+            beyond:           >
+                Ou toute idée sortie de votre imagination pour célébrer le
+                20<sup>ième</sup> anniversaire de PHP ou sa communauté.
 
     licence:
         title: Licencing

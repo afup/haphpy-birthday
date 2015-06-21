@@ -84,7 +84,7 @@ about:
         title: Final Video
         text: >
             <p>The final video is intended to be 3 to 5 minutes long.</p>
-            <p><strong>The premiere scheduled to take place during the opening keynote
+            <p><strong>The premiere is scheduled to take place during the opening keynote
             of the Forum PHP in Paris, on the 23<sup>th</sup> September 2015.</strong></p>
             <p>It then will be hosted on the afup's Youtube and viewable on this website.
             It will also be downloadable.</p>
@@ -141,6 +141,16 @@ about:
                     <li>1920px × 1080px minimum</li>
                     <li>Aspect Ratio: 16 × 9</li>
                 </ul>
+        examples:
+            title:            Examples of media that can be part of the final video
+            php_asset:        Media showing a PHP Asset
+            php_acronym:      Variation of the PHP acronym
+            message:          Message to the PHP community
+            tribute:          Tribute to PHP
+            express_yourself: Express yourself!
+            beyond:           >
+                And anything your imagination can think of to celebrate the
+                20<sup>th</sup> PHP Birthday and its community.
 
     licence:
         title: Licencing

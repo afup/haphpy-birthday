@@ -15,6 +15,14 @@
     color: #f34141;
 }
 
+.fitting-image {
+    width: 100%;
+}
+
+video {
+    width: 100%;
+}
+
 /** Menu **/
 #login-state span.fa {
     margin-right: 0.4em;
