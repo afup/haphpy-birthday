@@ -47,6 +47,11 @@
                 </h3>
                 {{ form_errors(form.file) }}
                 {{ form_widget(form.file, {disabled: user ? false : true}) }}
+                <p>
+                    <a href="{{ path('haphpy_about') }}#contribution-examples">
+                        <span class="fa fa-lightbulb-o"></span> {{ 'step.file.contributions_examples'|trans }}
+                    </a>
+                </p>
             </div>
             <div class="col-sm-12 col-md-4 haphpy-step">
                 <h3>
@@ -79,20 +84,6 @@
             <div class="col-sm-12 col-md-4">
                 <h3>{{ 'content.contribute.title'|trans|raw }}</h3>
                 <p>{{ 'content.contribute.paragraph'|trans|raw }}</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <p>{{ 'content.contribute.not_inspired'|trans|raw }}</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="video" style="height:550px;background:gray;">
-                    Vidéo
-                </div>
             </div>
         </div>
     </div>

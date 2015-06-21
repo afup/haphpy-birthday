@@ -35,7 +35,9 @@ header#header {
 }
 
 header#header div {
-    padding: 5%;
+    padding: 2%;
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
 #haphpy-logo {

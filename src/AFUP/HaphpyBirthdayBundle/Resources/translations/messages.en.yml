@@ -30,7 +30,8 @@ step:
             Currently authenticated through %authProvider% as %username%
         logout: log out
     file:
-        title: Pick a video or picture
+        title:                  Pick a video or picture
+        contributions_examples: See some contributions examples
     submit:
         title: Submit your contribution
 

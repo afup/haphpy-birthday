@@ -30,7 +30,8 @@ step:
             Actuellement authentifié via %authProvider% en tant que %username%
         logout: Se déconnecter
     file:
-        title: Choisis une vidéo ou image
+        title:                  Choisis une vidéo ou image
+        contributions_examples: Voir des exemples de contributions
     submit:
         title: Envoie ta contribution
 
