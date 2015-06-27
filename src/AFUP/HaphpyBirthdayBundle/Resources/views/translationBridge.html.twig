@@ -7,9 +7,11 @@
         </a>
         <ul class="dropdown-menu">
             {% for locale,url in translation_bridge %}
-            <li>
-                <a href="{{ url }}">{{ locale }}</a>
-            </li>
+                {% if locale != app.request.getLocale() %}
+                <li>
+                    <a href="{{ url }}"  hreflang="{{ locale }}">{{ locale }}</a>
+                </li>
+                {% endif %}
             {% endfor %}
         </ul>
     </li>
