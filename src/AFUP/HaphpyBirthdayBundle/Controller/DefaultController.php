@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Yaml\Yaml;
+use Woecifaun\Bundle\TranslationBridgeBundle\Configuration\TranslationBridge;
 
 /**
  * Default Controller
@@ -20,6 +21,7 @@ class DefaultController extends Controller
      * @param Request $request
      *
      * @Template()
+     * @TranslationBridge()
      *
      * @return array for template
      */
@@ -59,6 +61,7 @@ class DefaultController extends Controller
      * @param Request $request
      *
      * @Template()
+     * @TranslationBridge()
      *
      * @return array for template
      */
@@ -84,6 +87,7 @@ class DefaultController extends Controller
      * @param Request $request
      *
      * @Template()
+     * @TranslationBridge()
      *
      * @return array for template
      */

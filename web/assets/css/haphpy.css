@@ -28,6 +28,10 @@ video {
     margin-right: 0.4em;
 }
 
+.translation-bridge-switcher ul.dropdown-menu {
+    min-width: 0;
+}
+
 /** Header **/
 
 header#header {

@@ -1,0 +1,17 @@
+{% spaceless %}
+{% if translation_bridge is defined and translation_bridge is not empty %}
+    <li class="dropdown translation-bridge-switcher">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            {{ app.request.getLocale() }}
+            <span class="fa fa-angle-down"></span>
+        </a>
+        <ul class="dropdown-menu">
+            {% for locale,url in translation_bridge %}
+            <li>
+                <a href="{{ url }}">{{ locale }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </li>
+{% endif %}
+{% endspaceless %}

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a9958a0048863a16349ece8894310cf7",
+    "hash": "97344381efad40134b5bf56f3503dae0",
     "packages": [
         {
             "name": "besimple/i18n-routing-bundle",
@@ -2892,6 +2892,52 @@
                 "templating"
             ],
             "time": "2015-06-06 23:31:24"
+        },
+        {
+            "name": "woecifaun/translation-bridge-bundle",
+            "version": "v0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/woecifaun/translation-bridge-bundle.git",
+                "reference": "06692f5a463d7c43085934b02596f479fa9c3150"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/woecifaun/translation-bridge-bundle/zipball/06692f5a463d7c43085934b02596f479fa9c3150",
+                "reference": "06692f5a463d7c43085934b02596f479fa9c3150",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Woecifaun\\Bundle\\TranslationBridgeBundle\\": ""
+                }
+            },
+            "license": [
+                "CC-BY-SA-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Woecifaun",
+                    "homepage": "no page yet",
+                    "email": "woecifaun@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "helper for translated related pages ",
+            "homepage": "https://github.com/woecifaun/translation-bridge-bundle",
+            "keywords": [
+                "bridge",
+                "translation"
+            ],
+            "support": {
+                "source": "https://github.com/woecifaun/translation-bridge-bundle/tree/v0.0.1",
+                "issues": "https://github.com/woecifaun/translation-bridge-bundle/issues"
+            },
+            "time": "2014-12-23 23:15:15"
         }
     ],
     "packages-dev": [

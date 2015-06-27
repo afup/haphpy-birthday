@@ -24,6 +24,9 @@ parameters:
         - en
         - fr
 
+    # Translation bridge bundle
+    woecifaun.translationBridge.appLocales: "%accepted_languages%"
+
     # Third party authentication
     github_secret:     githubClientSecret
 

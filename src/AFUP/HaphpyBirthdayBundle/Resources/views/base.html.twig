@@ -1,5 +1,7 @@
 <html>
     <head>
+        {% include 'WoecifaunTranslationBridgeBundle::alternates.html.twig' %}
+
         <title>{{ 'head.title'|trans }}</title>
         <link rel="stylesheet" type="text/css" href="/assets/css/elaostrap.css" />
         <link rel="stylesheet" type="text/css" href="/assets/font-awesome/css/font-awesome.min.css" />
@@ -23,6 +25,7 @@
                         <li><a href="{{ path('haphpy_index') }}">{{ 'menu.index.label'|trans }}</a></li>
                         <li><a href="{{ path('haphpy_contributions') }}">{{ 'menu.contributions.label'|trans }}</a></li>
                         <li><a href="{{ path('haphpy_about') }}">{{ 'menu.about.label'|trans }}</a></li>
+                        {% include 'AppBundle::translationBridge.html.twig' %}
                     </ul>
                 </nav>
                 <a href="#" class="mobile-nav-toggle">
