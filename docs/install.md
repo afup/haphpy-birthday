@@ -64,7 +64,8 @@ password: __afup__
 
 Accessing the web pages
 
-http://haphpy-birthday.dev/app_dev.php
+* prod like: [http://haphpy-birthday.dev](http://haphpy-birthday.dev)
+* dev (debug): [http://haphpy-birthday.dev/app_dev.php](http://haphpy-birthday.dev/app_dev.php)
 
 ## Database
 
