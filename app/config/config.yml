@@ -81,5 +81,5 @@ hwi_oauth:
     resource_owners:
         github:
             type:          github
-            client_id:     c57426d2c766b5ddf0e9
+            client_id:     "%github_client_id%"
             client_secret: "%github_secret%"
