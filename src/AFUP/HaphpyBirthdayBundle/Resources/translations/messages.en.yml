@@ -143,14 +143,14 @@ about:
                     <li>Aspect Ratio: 16 × 9</li>
                 </ul>
         examples:
-            title:            Examples of media that can be part of the final video
+            title:            Examples of media that can be part of the final movie
             php_asset:        Media showing a PHP Asset
             php_acronym:      Variation of the PHP acronym
             message:          Message to the PHP community
             tribute:          Tribute to PHP
             express_yourself: Express yourself!
             beyond:           >
-                And anything your imagination can think of to celebrate the
+                And anything you can imagine to celebrate the
                 20<sup>th</sup> PHP Birthday and its community.
 
     licence:
@@ -163,22 +163,25 @@ about:
             title: Coding
             text: >
                 <p>Any help or improvement on the project is welcome.</p>
-                <p>The project code is available on the dedicated GitHub repository.</p>
+                <p>The project code is available on the dedicated <a href="https://github.com/afup/haphpy-birthday"
+                class="differ">GitHub repository</a>.</p>
         translating:
             title: Translations
             text: >
                 <p>In order to expand the visibility of the project around the globe,
-                we made the project multilingual from the beginning.</p>
+                it has been designed to be multilingual from the beginning.</p>
                 <p>Adding translations to this project is easy. Instructions can be found
-                on the GitHub repository.</p>
+                on the <a href="https://github.com/afup/haphpy-birthday/blob/master/docs/languages-and-translations.md" class="differ">GitHub languages read me.</a></p>
         communicating:
             title: Communication
             text: >
+                <p>The project has a dedicated Twitter account:
+                <a href="https://twitter.com/haphpy20" class="differ">@haphpy20</a>.</p>
                 <p>Don't hesitate to share the project with your friends as well as on the social networks.</p>
                 <p>Hashtag: #20YearsOfPHP</p>
 
     thanks:
         title: Acknowledgements
-        elaostrap: >
-            <p>Style based on <a href="https://github.com/JeremyFagis/ElaoStrap">elaostrap</a>
-            by Jeremy Fagis.</p>
+        elaostrap: Style based on <a href="https://github.com/JeremyFagis/ElaoStrap" class="differ">elaostrap</a> by Jeremy Fagis.
+        php_ug:    PHP User groups were contacted thanks to <a href="http://php.ug/" class="differ">php.ug</a>.
+        fanzutti:  Examples with the help of <a href="http://www.florafanzutti.com" class="differ">Flora Fanzutti</a>.

@@ -79,7 +79,7 @@ form:
         label: Envoyer
 
 contributions:
-    php_user_groups:   Groupe d'utilisateurs de PHP
+    php_user_groups:   Groupes d'utilisateurs de PHP
     contributors_list: Liste des contributeurs publics
 
 about:
@@ -165,22 +165,26 @@ about:
             title: Code
             text: >
                 <p>Toute aide sur le projet est bienvenue.</p>
-                <p>Le code du projet est disponible sur le dépôt GitHub dédié.</p>
+                <p>Le code du projet est disponible sur le <a href="https://github.com/afup/haphpy-birthday"
+                class="differ">dépôt GitHub dédié</a>.</p>
         translating:
             title: Traductions
             text: >
                 <p>Dans le but d'avoir un projet d'envergure internationale, le projet
-                a été pensé multilingue dès le départ.</p>
-                <p>Ajouter des traductions au projet est simple. Toutes les instructions
-                pour la traduction sont disponibles sur le dépôt GitHub.</p>
+                a été conçu multilingue dès le départ.</p>
+                <p>L'ajout de traductions au projet est simple. Toutes les instructions
+                pour la traduction sont disponibles sur le
+                <a href="https://github.com/afup/haphpy-birthday/blob/master/docs/languages-and-translations.md" class="differ">
+                <i>read me</i> des langues</a>.</p>
         communicating:
             title: Communication
             text: >
+                <p>Le compte twitter du projet est <a href="https://twitter.com/haphpy20">@haphpy20</a></p>
                 <p>N'hésitez pas à parler du projet à vos amis ou sur les réseaux sociaux.</p>
                 <p>Hashtag: #20YearsOfPHP</p>
 
     thanks:
         title: Remerciements
-        elaostrap: >
-            <p>Style basé sur <a href="https://github.com/JeremyFagis/ElaoStrap">elaostrap</a>
-            par Jeremy Fagis.</p>
+        elaostrap: Style basé sur <a href="https://github.com/JeremyFagis/ElaoStrap" class="differ">elaostrap</a> par Jeremy Fagis.
+        php_ug:    Merci à <a href="http://php.ug/" class="differ">php.ug</a> pour la liste des Groupes d'Utilisateurs PHP.
+        fanzutti:  Exemples avec le concours technique de <a href="http://www.florafanzutti.com" class="differ">Flora Fanzutti</a>.

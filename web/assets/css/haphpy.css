@@ -23,6 +23,22 @@ video {
     width: 100%;
 }
 
+a.differ {
+    color: #333;
+}
+
+a.differ:hover {
+    color: #f34141;
+}
+
+a.stand-out {
+    color: #000;
+}
+
+a.stand-out:hover {
+    color: #f34141;
+}
+
 /** Menu **/
 #login-state span.fa {
     margin-right: 0.4em;
