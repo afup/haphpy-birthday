@@ -21,19 +21,17 @@ To be featured in the video, any PHP User Group (or similar) can submit a pull r
     * JPEG in square area
     * For PNG or JPEG, provide a picture which longest dimension is 100 pixels. For instance a portrait image will be 100px high and a landscape one will be 100px wide.
 
-3. If the picture you provided for the website is not in a SVG format, please send a raster image with the following specs to woecifaun [at] gmail [dot] com:
-  * 1920 × 1080 px
-  * white background
+3. If the picture you provided for the website is not in a SVG format, please send a raster image with the following dimensions (1920 × 1080 px) to woecifaun [at] gmail [dot] com.
 
 ### Communicating around the project
 
 A dedicated twitter account exist for the project: [@haphpy20](https://twitter.com/haphpy20)
 
-Following it and retweet can highly help to spread the information. Thanks in advance. 
+Following it and retweeting can highly help to spread the information. Thanks in advance. 
 
-Hashtag __#haphpy20__ can also be used.
+Hashtag __#haPHPy20__ can also be used.
 
-### Take part in the development of the website
+### Taking part in the development of the website
 
 Last but not the least any contribution, improvement or feedback about the website is welcome.
 * Don't hesitate to report any bad experience using the website through issues on this repository. 
