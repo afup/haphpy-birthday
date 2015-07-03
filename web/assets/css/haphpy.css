@@ -68,6 +68,16 @@ header#header div {
     width: 100%;
 }
 
+header h1 {
+    color: #000000;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+header h1 sup {
+    text-transform: none;
+}
+
 /** Gauge **/
 #gauge-contributors, #gauge-remaining-days {
     color: #000000;
