@@ -1,4 +1,5 @@
 haphpy:
+    punchline: Share a video to celebrate PHP 20<sup>th</sup> birthday
     date_format:
         full: 'd/m/Y, H:i:s T'
 

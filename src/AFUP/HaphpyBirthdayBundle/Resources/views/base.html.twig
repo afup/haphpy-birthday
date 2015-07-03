@@ -1,8 +1,10 @@
 <html>
     <head>
+        <meta charset="UTF-8" />
         {% include 'WoecifaunTranslationBridgeBundle::alternates.html.twig' %}
 
         <title>{{ 'head.title'|trans }}</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:100,400,300,700,900|Roboto+Condensed:400,300,700|Inconsolata:400' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="/assets/css/elaostrap.css" />
         <link rel="stylesheet" type="text/css" href="/assets/css/haphpy.css" />
     </head>
@@ -37,6 +39,7 @@
         <header id="header">
             <div>
                 <img src="/assets/images/haphpy-birthday.svg" id="haphpy-logo">
+                <h1>{{ 'haphpy.punchline'|trans|raw }}</h1>
             </div>
         </header>
 
