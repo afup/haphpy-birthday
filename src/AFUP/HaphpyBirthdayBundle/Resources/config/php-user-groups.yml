@@ -89,3 +89,13 @@ afup_toulouse:
     twitter:        afup_toulouse
     country:        France
     city:           Paris
+
+phpem:
+    displayed_name: PHPem
+    full_name:      PHP East Midlands
+    parent:         
+    picture:        phpem.svg
+    website:        http://phpem.uk
+    twitter:        PHPem
+    country:        UK
+    city:           ~
