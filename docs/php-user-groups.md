@@ -8,11 +8,11 @@ __The participation of the PHP User Groups to this project is essential__. As a 
 
 ### Contributing to the video
 
-To be featured in the video, any PHP User Group (or similar) can submit a pull request:
+To be featured in the video, any PHP User Group (or similar) can submit a [pull request](https://help.github.com/articles/using-pull-requests/):
 
 1. Add an entry with the users group information in `src/AFUP/HaphpyBirthdayBundle/Resources/config/php-user-groups.yml`
 
-2. Add a picture for the project website in `src/web/assets/images/php-user-group`
+2. Add a picture for the project website in `web/assets/images/php-user-group`
   * Image will be used on the contributions page in the user groups section
   * Image name must match information in the user group yaml file
   * Preferred formats are
