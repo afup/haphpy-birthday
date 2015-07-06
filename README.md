@@ -26,4 +26,3 @@ Any help is welcome in making the ~~world a better place~~ project better and be
 Don't hesitate to contact the team if you have any question or comment.
 * Email: team [at] haphpy-birthday [dot] net
 * Twitter: [@haPHPy20](https://twitter.com/haPHPy20)
-* 
