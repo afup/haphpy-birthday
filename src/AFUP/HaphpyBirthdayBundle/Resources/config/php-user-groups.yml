@@ -90,10 +90,20 @@ afup_toulouse:
     country:        France
     city:           Paris
 
+chiphp:
+    displayed_name: Chicago PHP
+    full_name:      Chicago PHP User Group
+    parent:         
+    picture:        chi-php.png
+    website:        http://www.meetup.com/Chicago-PHP-User-Group/
+    twitter:        ChiPHPUG
+    country:        USA
+    city:           Chicago
+
 phpem:
     displayed_name: PHPem
     full_name:      PHP East Midlands
-    parent:         
+    parent:
     picture:        phpem.svg
     website:        http://phpem.uk
     twitter:        PHPem
