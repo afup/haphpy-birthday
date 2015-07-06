@@ -20,3 +20,10 @@ Any help is welcome in making the ~~world a better place~~ project better and be
 * You can fork the repository and call for a pull request,
 * report a bug through issues,
 * Or simply make feedback about usability and feelings to woecifaun [at] gmail [dot] com.
+
+## Contacts
+
+Don't hesitate to contact the team if you have any question or comment.
+* Email: team [at] haphpy-birthday [dot] net
+* Twitter: [@haPHPy20](https://twitter.com/haPHPy20)
+* 
