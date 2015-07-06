@@ -99,3 +99,13 @@ phpem:
     twitter:        PHPem
     country:        UK
     city:           ~
+
+zgphp:
+    displayed_name: ZgPHP
+    full_name:      Zagreb PHP
+    parent:         
+    picture:        zgphp.svg
+    website:        http://zgphp.org/
+    twitter:        zgphp
+    country:        Croatia
+    city:           Zagreb
