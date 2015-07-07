@@ -93,12 +93,22 @@ afup_toulouse:
 chiphp:
     displayed_name: Chicago PHP
     full_name:      Chicago PHP User Group
-    parent:         
+    parent:         ~
     picture:        chi-php.png
     website:        http://www.meetup.com/Chicago-PHP-User-Group/
     twitter:        ChiPHPUG
     country:        USA
     city:           Chicago
+
+hampshire:
+    displayed_name: PHP Hampshire
+    full_name:      PHP Hampshire
+    parent:         ~
+    picture:        hampshire.png
+    website:        http://www.phphants.co.uk/
+    twitter:        phphants
+    country:        UK
+    city:           Hampshire
 
 phpem:
     displayed_name: PHPem
@@ -113,7 +123,7 @@ phpem:
 zgphp:
     displayed_name: ZgPHP
     full_name:      Zagreb PHP
-    parent:         
+    parent:         ~
     picture:        zgphp.svg
     website:        http://zgphp.org/
     twitter:        zgphp
