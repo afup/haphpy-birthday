@@ -10,7 +10,7 @@ gauge:
     contributions:  contributions
     remaining_days: jours restants
     step:
-        min: On la fait !
+        min: Go !
         joy: Génial
         top: Trop bon
 
@@ -42,8 +42,8 @@ content:
         paragraph: >
             Nous l'utilisons quotidiennement, dans un environnement professionnel ou pour construire des projets
             personnels, c'est pourquoi nous souhaitons profiter de cet anniversaire pour rendre hommage au langage PHP
-            et à sa communauté. Une grande majorité des sites du web repose sur ce langage. La communauté et les gens
-            qui se sont investit pour faire de PHP ce qu'il est aujourd'hui méritent d'être félicités et remerciés.
+            et à sa communauté. Une grande majorité des sites web repose sur ce langage. La communauté et les gens
+            qui se sont investis pour faire de PHP ce qu'il est aujourd'hui méritent d'être félicités et remerciés.
 
     video:
         title: La vidéo anniversaire
@@ -55,12 +55,12 @@ content:
     contribute:
         title: Comment contribuer
         paragraph: >
-            Partagez avec les autres contributeurs une courte vidéo de 3 secondes ou un image. Faîtes passer un message,
-            montrez votre amour pour le langage, révéler votre investissement avec une pancarte, un déguisement ou simplement
+            Partagez avec les autres contributeurs une courte vidéo de 3 secondes ou une image. Faîtes passer un message,
+            montrez votre amour pour le langage, révélez votre investissement avec une pancarte, un déguisement ou simplement
             un hello… Toutes les vidéos positives seront intégrées au montage final.
-            Les fichiers uploadés seront montés ensemble tel un grand patchwork dans un film commémoratif aux côtés des autres vidéos.
+            Les fichiers uploadés seront montés ensemble tel un grand patchwork dans un film commémoratif à côté des autres vidéos.
         not_inspired: >
-            Pas inspiré ! Jettez un œil à la vidéo ci-dessous pour voir ce que les autres personnes impliquées dans le
+            Pas inspiré ! Jetez un œil à la vidéo ci-dessous pour voir ce que les autres personnes impliquées dans le
             projet ont pu partager.
 
     authentication:
@@ -73,7 +73,7 @@ form:
             Oui, je souhaite que mon nom apparaisse dans le générique de la vidéo
             et sur la liste des contributeurs affichée sur ce site
         no:     Merci mais je préfère rester anonyme
-        choose: "Souhaitez vous être créditer ?"
+        choose: "Souhaitez-vous être crédité ?"
     notice:
         submission_success: Nous vous remercions pour votre contribution !
     submit:
@@ -85,16 +85,16 @@ contributions:
 
 about:
     final_video:
-        title: Vidéo commemorative
+        title: Vidéo commémorative
         text: >
-            <p>La vidéo commemorative finale est prévue pour durer de 3 à 5 minutes.</p>
+            <p>La vidéo commémorative finale est prévue pour durer de 3 à 5 minutes.</p>
             <p><strong>La première se tiendra durant la keynote d'ouverture du Forum PHP à Paris,
             le 23 novembre 2015.</strong></p>
-            <p>La vidéo sera alors hébergé sur le compte YouTube de l'afup et visible sur ce site.
+            <p>La vidéo sera alors hébergée sur le compte YouTube de l'Afup et visible sur ce site.
             Elle sera également disponible au téléchargement.</p>
 
         specs:
-            title: Propriétés de la vidéo commemorative finale
+            title: Propriétés de la vidéo commémorative finale
             format:
                 title: Format
                 value: 1080p (1920px × 1080px)
@@ -116,17 +116,17 @@ about:
         limit: >
             <p>Les Contributions peuvent être <i>uploadées</i> jusqu'à la date limite du %limit_date%.</p>
         respect: >
-            <p>Les médias envoyés par les contributeurs au projet doivent exprimer de la gratitude
-            envers le langage PHP ainsi que sa communauté</p>
+            <p>Les médias envoyés par les contributeurs au projet sont invités à exprimer de la gratitude
+            envers le langage PHP ainsi qu'à sa communauté</p>
             <p>Les Contributions doivent naturellement respecter tout le monde.</p>
         ad_free: >
-            <p>La vidéo commemorative final ne contiendra pas de publicité. Les sociétés
+            <p>La vidéo commémorative finale ne contiendra pas de publicité. Les sociétés
             ne sont pas autorisées à utiliser le présent projet comme support publicitaire.</p>
-            <p>Une société peut utiliser tout compte de réseau social pour télécharger une
-            Contribution mais le média envoyé ne peut contenir juste une publicité pour celle-ci.
+            <p>Une société peut utiliser, via le réseau social de son choix, une
+            contribution ; le média envoyé ne devra pas explicitement faire de la pubilicité en faveur de la société.
             Par exemple, la vidéo ou l'image fournie ne peut se limiter au logo de la compagnie.</p>
         specs:
-            title: Caractéristiques des médias contribués
+            title: Specs des médias
             video_title: Vidéos
             video: >
                 <p>Merci de fournir une vidéo avec les caractéristiques suivantes :</p>
