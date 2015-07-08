@@ -184,6 +184,9 @@ header h1 sup {
     line-height: 2em;
     text-transform: none;
 }
+.haphpy-step .btn {
+    margin-bottom: 1em;
+}
 
 /** Form **/
 ul.error-list {
