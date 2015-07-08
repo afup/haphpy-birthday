@@ -64,8 +64,12 @@ content:
             projet ont pu partager.
 
     authentication:
-        button:
-            label: Authentification GitHub
+        github:
+            button:
+                label: Authentification GitHub
+        twitter:
+            button:
+                label: Authentification Twitter
 
 form:
     credit_wanted:
