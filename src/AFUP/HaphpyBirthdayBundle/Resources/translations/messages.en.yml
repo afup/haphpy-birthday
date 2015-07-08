@@ -6,6 +6,9 @@ haphpy:
 head:
     title: HaPHPy 20th Birthday to you PHP!
 
+meta:
+    description: "Haphpy Birthday : a collaborative project to celebrate the 20 years of PHP by sharing a memorial video"
+
 gauge:
     contributions:  contributions so far
     remaining_days: remaining days
