@@ -12,6 +12,12 @@ github_login:
 github_connect:
     path:     /connect/github
 
+twitter_login:
+    pattern:  /login/check-twitter
+
+twitter_connect:
+    path:     /connect/twitter
+
 logout:
     path:  /logout
 

@@ -35,7 +35,10 @@
                     </div>
                 {% else %}
                     <a href="{{ path('github_connect') }}" class="btn btn-ghost btn-success">
-                        {{ 'content.authentication.button.label'|trans|raw }}
+                        {{ 'content.authentication.github.button.label'|trans|raw }}
+                    </a>
+                    <a href="{{ path('twitter_connect') }}" class="btn btn-ghost btn-success">
+                        {{ 'content.authentication.twitter.button.label'|trans|raw }}
                     </a>
                 {% endif %}
             </div>

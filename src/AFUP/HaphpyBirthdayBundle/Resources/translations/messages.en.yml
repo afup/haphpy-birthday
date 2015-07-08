@@ -67,8 +67,12 @@ content:
             project.
 
     authentication:
-        button:
-            label: GitHub Authentication
+        github:
+            button:
+                label: GitHub Authentification
+        twitter:
+            button:
+                label: Twitter Authentification
 
 form:
     credit_wanted:

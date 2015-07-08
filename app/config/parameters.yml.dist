@@ -27,9 +27,11 @@ parameters:
     # Translation bridge bundle
     woecifaun.translationBridge.appLocales: "%accepted_languages%"
 
-    # Third party authentication
-    github_client_id: ~
-    github_secret:    ~
+    # Third party authenticationm
+    github_client_id:   ~
+    github_secret:      ~
+    twitter_client_id:  ~
+    twitter_secret:     ~
 
     # media directory for contributions storage
     contribution_dir:  /var/haphpy/contributions
