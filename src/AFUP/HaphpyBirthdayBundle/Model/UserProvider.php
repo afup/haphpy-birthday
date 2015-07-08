@@ -49,7 +49,15 @@ class UserProvider extends OAuthUserProvider
     public function loadUserByOAuthUserResponse(UserResponseInterface $response)
     {
         $authProviderName = $response->getResourceOwner()->getName();
-        $username         = $response->getResponse()['login'];
+
+        switch ($authProviderName) {
+            case 'github':
+                $username = $response->getResponse()['login'];
+                break;
+            case 'twitter':
+                $username = $response->getResponse()['screen_name'];
+                break;
+        }
 
         $this->session->set('owner', $authProviderName);
         $this->session->set('username', $username);
