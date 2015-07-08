@@ -143,7 +143,7 @@ phppb:
     displayed_name: PHP-PB
     full_name:      PHP-PB (Paraíba PHP Users Group)
     parent:         ~
-    picture:        phppb.png
+    picture:        php-pb.svg
     website:        http://php-pb.net/
     twitter:        phppb
     country:        Brazil
