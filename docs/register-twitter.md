@@ -2,8 +2,6 @@
 
 :warning: Authorizing the app on Twitter requires your phone number to be activated in your Twitter account. :weary:
 
----
-
 :information_source: Twitter authorize your app on a single URL. Exemple provided here for http://haphpy-birthday.dev/
 
 If you plan to work on http://haphpy-birthday.dev/app_dev.php, just adapt the information provided.
@@ -23,7 +21,10 @@ If you plan to work on http://haphpy-birthday.dev/app_dev.php, just adapt the in
 ---
 
 Copy/paste helper :wink: :
-* Application name: __HaPHPy Birthday__
-* Homepage URL: __http://haphpy-birthday.dev__
-* Application description: __A commemorative and collaborative movie for the 20th anniversary of the PHP language.__
-* Authorization callback URL: __http://haphpy-birthday.dev/login/check-twitter__
+
+Twitter field | Value
+--------------|------
+Application name | __HaPHPy Birthday__
+Homepage URL | __http://haphpy-birthday.dev__
+Application description | __A commemorative and collaborative movie for the 20th anniversary of the PHP language.__
+Authorization callback URL | __http://haphpy-birthday.dev/login/check-twitter__
