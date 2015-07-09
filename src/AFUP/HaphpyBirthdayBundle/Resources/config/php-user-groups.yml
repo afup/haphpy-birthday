@@ -148,3 +148,12 @@ phppb:
     twitter:        phppb
     country:        Brazil
     city:           Joao Pessoa
+phpnw:
+    displayed_name: PHPNW
+    full_name:      PHP North West
+    parent:
+    picture:        phpnw.org.uk
+    website:        http://phpnw.org.uk
+    twitter:        PHPNW
+    country:        UK
+    city:           Manchester	
