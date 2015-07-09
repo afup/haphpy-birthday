@@ -130,6 +130,16 @@ phpem:
     country:        UK
     city:           ~
 
+phpnw:
+    displayed_name: PHPNW
+    full_name:      PHP North West
+    parent:
+    picture:        phpnw.svg
+    website:        http://phpnw.org.uk
+    twitter:        PHPNW
+    country:        UK
+    city:           Manchester
+
 sweetlakephp:
     displayed_name: SweetlakePHP
     full_name:      SweetlakePHP
