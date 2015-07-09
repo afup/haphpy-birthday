@@ -110,6 +110,16 @@ hampshire:
     country:        UK
     city:           Hampshire
 
+phppb:
+    displayed_name: PHP-PB
+    full_name:      PHP-PB (Paraíba PHP Users Group)
+    parent:         ~
+    picture:        php-pb.svg
+    website:        http://php-pb.net/
+    twitter:        phppb
+    country:        Brazil
+    city:           Joao Pessoa
+
 phpem:
     displayed_name: PHPem
     full_name:      PHP East Midlands
@@ -139,12 +149,3 @@ zgphp:
     twitter:        zgphp
     country:        Croatia
     city:           Zagreb
-phppb:
-    displayed_name: PHP-PB
-    full_name:      PHP-PB (Paraíba PHP Users Group)
-    parent:         ~
-    picture:        php-pb.svg
-    website:        http://php-pb.net/
-    twitter:        phppb
-    country:        Brazil
-    city:           Joao Pessoa

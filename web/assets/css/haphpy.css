@@ -218,7 +218,6 @@ ul.error-list {
 .user-group {
     display: flex;
     justify-content: space-between;
-    padding-bottom:1.2em;
 }
 
 .user-group-image {
