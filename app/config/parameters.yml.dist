@@ -32,6 +32,8 @@ parameters:
     github_secret:      ~
     twitter_client_id:  ~
     twitter_secret:     ~
+    facebook_client_id: ~
+    facebook_secret:    ~
 
     # media directory for contributions storage
     contribution_dir:  /var/haphpy/contributions
