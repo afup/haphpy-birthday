@@ -15,6 +15,7 @@ security:
                 resource_owners:
                     github:   "/login/check-github"
                     twitter:   "/login/check-twitter"
+                    facebook:   "/login/check-facebook"
                 login_path:   /login
                 use_forward:  false
                 failure_path: /login

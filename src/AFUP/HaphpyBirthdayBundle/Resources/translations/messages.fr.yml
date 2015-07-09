@@ -73,6 +73,9 @@ content:
         twitter:
             button:
                 label: Authentification Twitter
+        facebook:
+            button:
+                label: Authentification Facebook
 
 form:
     credit_wanted:

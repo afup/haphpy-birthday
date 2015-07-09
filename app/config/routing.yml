@@ -18,6 +18,12 @@ twitter_login:
 twitter_connect:
     path:     /connect/twitter
 
+facebook_login:
+    pattern:  /login/check-facebook
+
+facebook_connect:
+    path:     /connect/facebook
+
 logout:
     path:  /logout
 
