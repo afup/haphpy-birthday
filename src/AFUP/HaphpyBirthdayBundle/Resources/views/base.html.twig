@@ -22,7 +22,7 @@
             <div class="navbar-inner">
                 <nav id="login-state" class="pull-left">
                     {% if user %}
-                        <span class="fa haphpy-icon-{{ user.authProvider }}"></span>{{ user.username }}{{ ''}}
+                        <span class="fa haphpy-icon-{{ user.authProvider }}"></span>{{ user.visibleName }}{{ ''}}
                     {% endif %}
                 </nav>
                 <nav id="main-nav" class="pull-right">

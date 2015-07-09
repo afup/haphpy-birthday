@@ -26,7 +26,7 @@
                 {% if user is not null %}
                     {{ 'step.authenticate.logged_in'|trans({
                         '%authProvider%': user.authProvider,
-                        '%username%': user.username
+                        '%username%': user.visibleName
                     })}}
                     <div class="text-center">
                         <a href="{{ path('logout') }}" class="btn btn-ghost btn-default">
@@ -39,6 +39,9 @@
                     </a>
                     <a href="{{ path('twitter_connect') }}" class="btn btn-ghost btn-success">
                         {{ 'content.authentication.twitter.button.label'|trans|raw }}
+                    </a>
+                    <a href="{{ path('facebook_connect') }}" class="btn btn-ghost btn-success">
+                        {{ 'content.authentication.facebook.button.label'|trans|raw }}
                     </a>
                 {% endif %}
             </div>
