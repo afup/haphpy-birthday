@@ -28,12 +28,12 @@ parameters:
     woecifaun.translationBridge.appLocales: "%accepted_languages%"
 
     # Third party authenticationm
-    github_client_id:   ~
-    github_secret:      ~
-    twitter_client_id:  ~
-    twitter_secret:     ~
-    facebook_client_id: ~
-    facebook_secret:    ~
+    github_client_id:   fake_github_client_id
+    github_secret:      fake_github_secret
+    twitter_client_id:  fake_twitter_client_id
+    twitter_secret:     fake_twitter_secret
+    facebook_client_id: fake_facebook_client_id
+    facebook_secret:    fake_facebook_secret
 
     # media directory for contributions storage
     contribution_dir:  /var/haphpy/contributions
