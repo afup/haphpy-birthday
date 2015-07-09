@@ -14,7 +14,12 @@ class User extends OAuthUser
     /**
      * @var string
      */
-     private $authProvider;
+    private $authProvider;
+
+    /**
+     * @var string
+     */
+    private $visibleName;
 
     /**
      * Get the value of Resource Owner
@@ -36,6 +41,30 @@ class User extends OAuthUser
     public function setAuthProvider($authProvider)
     {
         $this->authProvider = $authProvider;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of visibleName.
+     *
+     * @return string
+     */
+    public function getVisibleName()
+    {
+        return $this->visibleName;
+    }
+
+    /**
+     * Sets the value of visibleName.
+     *
+     * @param string $visibleName
+     *
+     * @return self
+     */
+    public function setVisibleName($visibleName)
+    {
+        $this->visibleName = $visibleName;
 
         return $this;
     }
