@@ -9,7 +9,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Yaml\Yaml;
 use Woecifaun\Bundle\TranslationBridgeBundle\Configuration\TranslationBridge;
 
 /**
@@ -72,8 +71,10 @@ class DefaultController extends Controller
             ->get('haphpy.contribution_repository')
             ->findPublicContributionsAlphabetically();
 
-        $pug_list = $this->container->getParameter('pug_list');
-        $userGroups = Yaml::parse(file_get_contents($pug_list));
+        $userGroups = $this
+            ->get('haphpy.pugs')
+            ->getUserGroups()
+        ;
 
         return [
             'user'          => $user,

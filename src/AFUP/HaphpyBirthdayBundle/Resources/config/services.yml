@@ -21,6 +21,10 @@ services:
         arguments:
             - AFUP\HaphpyBirthdayBundle\Entity\Contribution
 
+    haphpy.pugs:
+        class: AFUP\HaphpyBirthdayBundle\Model\Pugs
+        arguments: ["%pug_list%"]
+
     haphpy.gauge:
         class: AFUP\HaphpyBirthdayBundle\Model\Gauge
-        arguments: [@haphpy.contribution_repository, "%haphpy_steps%"]
+        arguments: [@haphpy.contribution_repository, @haphpy.pugs, "%haphpy_steps%"]

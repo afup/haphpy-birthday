@@ -36,11 +36,12 @@ class Gauge
      * Construct
      *
      * @param ContributionRepository $contributionRepository
+     * @param Pugs                   $pugs
      * @param array                  $steps
      */
-    public function __construct(ContributionRepository $contributionRepository, $steps)
+    public function __construct(ContributionRepository $contributionRepository, Pugs $pugs, $steps)
     {
-        $this->amount  = $contributionRepository->getContributionsQuantity();
+        $this->amount  = $contributionRepository->getContributionsQuantity() + count($pugs->getUserGroups());
         $this->steps   = $steps;
     }
 
