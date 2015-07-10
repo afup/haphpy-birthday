@@ -41,6 +41,10 @@
             </div>
         </div>
         <header id="header">
+            {% if header_message %}
+              <div class="alert alert-warning">{{ header_message }}</div>
+            {% endif %}
+
             <div>
                 <img src="/assets/images/haphpy-birthday.svg" id="haphpy-logo">
                 <h1>{{ 'haphpy.punchline'|trans|raw }}</h1>
