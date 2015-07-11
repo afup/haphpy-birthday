@@ -13,3 +13,6 @@
 /vendor/
 /bin/
 /composer.phar
+
+# PHPStorm
+.idea/
