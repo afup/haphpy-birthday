@@ -78,6 +78,36 @@ header h1 sup {
     text-transform: none;
 }
 
+header#header #warning-message {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+header#header #warning-message div {
+    line-height: 1em;
+    -webkit-animation:progress-bar-stripes 2s linear infinite;
+    animation:progress-bar-stripes 2s linear infinite;
+    padding: 0.2em;
+    text-transform: none;
+}
+
+@media screen and (min-width: 361px) {
+    header#header #warning-message div {
+        position: absolute;
+        display: inline-block;
+        line-height: 1em;
+        top: 0.8em;
+        left: 6em;
+        border-radius: 0.1em;
+        padding: 0.2em;
+        text-transform: none;
+        transform: rotate(-7deg);
+        box-shadow: 0 10px 15px 6px rgba(0,0,0,0.3);
+    }
+}
+
 /** Gauge **/
 #gauge-contributors, #gauge-remaining-days {
     color: #000000;

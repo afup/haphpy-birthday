@@ -41,6 +41,12 @@
             </div>
         </div>
         <header id="header">
+            {% if warning_message %}
+                <div id="warning-message">
+                    <div class="progress-bar-info progress-bar-striped active">{{ warning_message }}</div>
+                </div>
+            {% endif %}
+
             <div>
                 <img src="/assets/images/haphpy-birthday.svg" id="haphpy-logo">
                 <h1>{{ 'haphpy.punchline'|trans|raw }}</h1>
