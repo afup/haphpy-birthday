@@ -23,6 +23,7 @@ parameters:
     accepted_languages:
         - en
         - fr
+        - es
 
     # Translation bridge bundle
     woecifaun.translationBridge.appLocales: "%accepted_languages%"
