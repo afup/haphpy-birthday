@@ -56,6 +56,9 @@ a.stand-out:hover {
 
 header#header {
     padding: 80px 0 0 0;
+    background: url(../images/sparkles.jpg) center center no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
 }
 
 header#header div {
@@ -109,6 +112,10 @@ header#header #warning-message div {
 }
 
 /** Gauge **/
+#gauge-section {
+    padding-top: 2em;
+}
+
 #gauge-contributors, #gauge-remaining-days {
     color: #000000;
     text-align: center;
@@ -190,6 +197,15 @@ header#header #warning-message div {
         content: '😍';
     }
 }
+
+/** Main content **/
+section.page-section {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background: center center no-repeat;
+    background-size: cover;
+}
+
 /** Form Steps */
 .haphpy-step {
     position: relative;
@@ -247,6 +263,10 @@ ul.error-list {
 }
 
 /** User Groups **/
+#php-user-groups {
+    background: white;
+}
+
 .user-group {
     display: flex;
     justify-content: space-between;
@@ -278,6 +298,20 @@ ul.error-list {
 }
 
 /** Contributions **/
+#contributions {
+    background-image: url(../images/galaxy.png);
+    color: #ddd;
+}
+
+#contributions h3 {
+    color: white;
+}
+
 .contribution span {
     margin-right: 0.5em;
+}
+
+/** Footer **/
+footer#footer {
+    margin-top: 0;
 }

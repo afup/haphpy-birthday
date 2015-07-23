@@ -3,138 +3,140 @@
 {% import "AppBundle:Macro:style.html.twig" as haphpy %}
 
 {% block content %}
-    <div class="container">
-        <h3>{{ 'about.final_video.title'|trans }}</h3>
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-                {{ 'about.final_video.text'|trans|raw }}
-            </div>
-        </div>
-        <h4>{{ 'about.final_video.specs.title'|trans }}</h4>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <h5>{{ 'about.final_video.specs.format.title'|trans }}</h5>
-                {{ 'about.final_video.specs.format.value'|trans }}
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <h5>{{ 'about.final_video.specs.frame_rate.title'|trans }}</h5>
-                {{ 'about.final_video.specs.frame_rate.value'|trans }}
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <h5>{{ 'about.final_video.specs.interlacing.title'|trans }}</h5>
-                {{ 'about.final_video.specs.interlacing.value'|trans }}
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <h5>{{ 'about.final_video.specs.video_codec.title'|trans }}</h5>
-                {{ 'about.final_video.specs.video_codec.value'|trans }}
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <h5>{{ 'about.final_video.specs.audio_codec.title'|trans }}</h5>
-                {{ 'about.final_video.specs.audio_codec.value'|trans }}
-            </div>
-        </div>
-        <h3>{{ 'about.uploaded_assets.title'|trans|raw }}</h3>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-4 text-highlight">
-                {% set limit_date = limit_date|date('haphpy.date_format.full'|trans) %}
-                {{ 'about.uploaded_assets.limit'|trans({'%limit_date%': limit_date})|raw }}
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                {{ 'about.uploaded_assets.respect'|trans|raw }}
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                {{ 'about.uploaded_assets.ad_free'|trans|raw }}
-            </div>
-        </div>
-        <h4>{{ 'about.uploaded_assets.specs.title'|trans }}</h4>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-6">
-                <h5>{{ 'about.uploaded_assets.specs.video_title'|trans }}</h5>
-                {{ 'about.uploaded_assets.specs.video'|trans|raw }}
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-6">
-                <h5>{{ 'about.uploaded_assets.specs.picture_title'|trans }}</h5>
-                {{ 'about.uploaded_assets.specs.picture'|trans|raw }}
-            </div>
-        </div>
-        <h4 id="contribution-examples">{{ 'about.uploaded_assets.examples.title'|trans }}</h4>
-        <div class="row">
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <h5>{{ 'about.uploaded_assets.examples.message'|trans }}</h5>
-                <div class="video-container">
-                    <video controls poster="/assets/images/ilovephp.jpg">
-                        <source src="/assets/videos/ilovephp.webm" type='video/webm;codecs="vp8, vorbis"'>
-                        <source src="/assets/videos/ilovephp.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                    </video>
+    <section class="page-section">
+        <div class="container">
+            <h3>{{ 'about.final_video.title'|trans }}</h3>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    {{ 'about.final_video.text'|trans|raw }}
                 </div>
             </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <h5>{{ 'about.uploaded_assets.examples.express_yourself'|trans }}</h5>
-                <div class="video-container">
-                    <img src="/assets/images/phpisart.png" class="fitting-image">
+            <h4>{{ 'about.final_video.specs.title'|trans }}</h4>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <h5>{{ 'about.final_video.specs.format.title'|trans }}</h5>
+                    {{ 'about.final_video.specs.format.value'|trans }}
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <h5>{{ 'about.final_video.specs.frame_rate.title'|trans }}</h5>
+                    {{ 'about.final_video.specs.frame_rate.value'|trans }}
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <h5>{{ 'about.final_video.specs.interlacing.title'|trans }}</h5>
+                    {{ 'about.final_video.specs.interlacing.value'|trans }}
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <h5>{{ 'about.final_video.specs.video_codec.title'|trans }}</h5>
+                    {{ 'about.final_video.specs.video_codec.value'|trans }}
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <h5>{{ 'about.final_video.specs.audio_codec.title'|trans }}</h5>
+                    {{ 'about.final_video.specs.audio_codec.value'|trans }}
                 </div>
             </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <h5>{{ 'about.uploaded_assets.examples.php_acronym'|trans }}</h5>
-                <div class="video-container">
-                    <video controls>
-                        <source src="/assets/videos/people.webm" type='video/webm;codecs="vp8, vorbis"'>
-                        <source src="/assets/videos/people.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                    </video>
+            <h3>{{ 'about.uploaded_assets.title'|trans|raw }}</h3>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4 text-highlight">
+                    {% set limit_date = limit_date|date('haphpy.date_format.full'|trans) %}
+                    {{ 'about.uploaded_assets.limit'|trans({'%limit_date%': limit_date})|raw }}
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    {{ 'about.uploaded_assets.respect'|trans|raw }}
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    {{ 'about.uploaded_assets.ad_free'|trans|raw }}
                 </div>
             </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <h5>{{ 'about.uploaded_assets.examples.tribute'|trans }}</h5>
-                <div class="video-container">
-                    <img src="/assets/images/phpbiscuits.jpg" class="fitting-image">
+            <h4>{{ 'about.uploaded_assets.specs.title'|trans }}</h4>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h5>{{ 'about.uploaded_assets.specs.video_title'|trans }}</h5>
+                    {{ 'about.uploaded_assets.specs.video'|trans|raw }}
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h5>{{ 'about.uploaded_assets.specs.picture_title'|trans }}</h5>
+                    {{ 'about.uploaded_assets.specs.picture'|trans|raw }}
                 </div>
             </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <h5>{{ 'about.uploaded_assets.examples.php_asset'|trans }}</h5>
-                <div class="video-container">
-                    <video controls poster="/assets/images/php-saved-my-life.jpg">
-                        <source src="/assets/videos/php-saved-my-life.webm" type='video/webm;codecs="vp8, vorbis"'>
-                        <source src="/assets/videos/php-saved-my-life.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                    </video>
+            <h4 id="contribution-examples">{{ 'about.uploaded_assets.examples.title'|trans }}</h4>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <h5>{{ 'about.uploaded_assets.examples.message'|trans }}</h5>
+                    <div class="video-container">
+                        <video controls poster="/assets/images/ilovephp.jpg">
+                            <source src="/assets/videos/ilovephp.webm" type='video/webm;codecs="vp8, vorbis"'>
+                            <source src="/assets/videos/ilovephp.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
+                        </video>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <h5>{{ 'about.uploaded_assets.examples.express_yourself'|trans }}</h5>
+                    <div class="video-container">
+                        <img src="/assets/images/phpisart.png" class="fitting-image">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <h5>{{ 'about.uploaded_assets.examples.php_acronym'|trans }}</h5>
+                    <div class="video-container">
+                        <video controls>
+                            <source src="/assets/videos/people.webm" type='video/webm;codecs="vp8, vorbis"'>
+                            <source src="/assets/videos/people.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
+                        </video>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <h5>{{ 'about.uploaded_assets.examples.tribute'|trans }}</h5>
+                    <div class="video-container">
+                        <img src="/assets/images/phpbiscuits.jpg" class="fitting-image">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <h5>{{ 'about.uploaded_assets.examples.php_asset'|trans }}</h5>
+                    <div class="video-container">
+                        <video controls poster="/assets/images/php-saved-my-life.jpg">
+                            <source src="/assets/videos/php-saved-my-life.webm" type='video/webm;codecs="vp8, vorbis"'>
+                            <source src="/assets/videos/php-saved-my-life.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
+                        </video>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <h5>…</h5>
+                    <div class="video-container">
+                        {{ 'about.uploaded_assets.examples.beyond'|trans|raw }}
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <h5>…</h5>
-                <div class="video-container">
-                    {{ 'about.uploaded_assets.examples.beyond'|trans|raw }}
+            <h3>{{ 'about.licence.title'|trans }}</h3>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    {{ 'about.licence.text'|trans|raw }}
+                </div>
+            </div>
+            <h3>{{ 'about.helping.title'|trans }}</h3>
+            <div class="row">
+                <div class="col-sm-12 col-md-64 col-lg-4">
+                    <h4>{{ 'about.helping.coding.title'|trans|raw }}</h4>
+                    {{ 'about.helping.coding.text'|trans|raw }}
+                </div>
+                <div class="col-sm-12 col-md-64 col-lg-4">
+                    <h4>{{ 'about.helping.translating.title'|trans|raw }}</h4>
+                    {{ 'about.helping.translating.text'|trans|raw }}
+                </div>
+                <div class="col-sm-12 col-md-64 col-lg-4">
+                    <h4>{{ 'about.helping.communicating.title'|trans|raw }}</h4>
+                    {{ 'about.helping.communicating.text'|trans|raw }}
+                </div>
+            </div>
+            <h3>{{ 'about.thanks.title'|trans }}</h3>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <ul>
+                        <li>{{ 'about.thanks.elaostrap'|trans|raw }}</li>
+                        <li>{{ 'about.thanks.php_ug'|trans|raw }}</li>
+                        <li>{{ 'about.thanks.fanzutti'|trans|raw }}</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <h3>{{ 'about.licence.title'|trans }}</h3>
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-                {{ 'about.licence.text'|trans|raw }}
-            </div>
-        </div>
-        <h3>{{ 'about.helping.title'|trans }}</h3>
-        <div class="row">
-            <div class="col-sm-12 col-md-64 col-lg-4">
-                <h4>{{ 'about.helping.coding.title'|trans|raw }}</h4>
-                {{ 'about.helping.coding.text'|trans|raw }}
-            </div>
-            <div class="col-sm-12 col-md-64 col-lg-4">
-                <h4>{{ 'about.helping.translating.title'|trans|raw }}</h4>
-                {{ 'about.helping.translating.text'|trans|raw }}
-            </div>
-            <div class="col-sm-12 col-md-64 col-lg-4">
-                <h4>{{ 'about.helping.communicating.title'|trans|raw }}</h4>
-                {{ 'about.helping.communicating.text'|trans|raw }}
-            </div>
-        </div>
-        <h3>{{ 'about.thanks.title'|trans }}</h3>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-6">
-                <ul>
-                    <li>{{ 'about.thanks.elaostrap'|trans|raw }}</li>
-                    <li>{{ 'about.thanks.php_ug'|trans|raw }}</li>
-                    <li>{{ 'about.thanks.fanzutti'|trans|raw }}</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    </section>
 {% endblock %}
