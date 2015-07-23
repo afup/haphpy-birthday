@@ -56,7 +56,9 @@
         <div class="container">
             <div class="row">
                 <div id="gauge-contributors" class="col-sm-12 col-lg-6">
-                    <span>{{ gauge.amount }}</span> {{ 'gauge.contributions'|trans }}
+                    <a href="{{ path('haphpy_contributions') }}" class="stand-out">
+                        <span>{{ gauge.amount }}</span> {{ 'gauge.contributions'|trans }}
+                    </a>
                 </div>
                 <div id="gauge-remaining-days" class="col-sm-12 col-lg-6">
                     {% set days = (limit_date|date('U') - 'now'|date('U'))|date('z')  %}
@@ -89,6 +91,24 @@
         {% block content %}
 
         {% endblock %}
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 no-padding-bottom">
+                        <a href="https://github.com/afup/haphpy-birthday">
+                            <span class="fa haphpy-icon-github"></span>
+                            {{ 'footer.github'|trans }}
+                        </a>
+                    </div>
+                    <div class="col-sm-6 no-padding-bottom text-right">
+                        <a href="https://github.com/afup/haphpy-birthday/graphs/contributors">
+                            {{ 'footer.by_community'|trans|raw }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <script src="/assets/js/main.js"></script>
     </body>

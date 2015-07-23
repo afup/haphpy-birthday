@@ -20,16 +20,6 @@ afup_bordeaux:
     country:        France
     city:           Bordeaux
 
-afup_lille:
-    displayed_name: afup Lille
-    full_name:      afup Lille (Lille PHP Users Group)
-    parent:         afup
-    picture:        afup.svg
-    website:        http://lille.afup.org/
-    twitter:        afup_lille
-    country:        France
-    city:           Lille
-
 afup_luxembourg:
     displayed_name: afup Luxembourg
     full_name:      afup Luxembourg (Luxembourg PHP Users Group)
@@ -59,16 +49,6 @@ afup_nantes:
     twitter:        ~
     country:        France
     city:           Nantes
-
-afup_orleans:
-    displayed_name: afup Orléans
-    full_name:      afup Orléans (Orléans PHP Users Group)
-    parent:         afup
-    picture:        afup.svg
-    website:        http://orleans.afup.org
-    twitter:        ~
-    country:        France
-    city:           Orléans
 
 afup_paris:
     displayed_name: afup Paris

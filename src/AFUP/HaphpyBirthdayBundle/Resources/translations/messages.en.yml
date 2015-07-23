@@ -89,7 +89,7 @@ form:
 
 contributions:
     php_user_groups:   PHP User Groups
-    contributors_list: List of Public Contributors
+    contributors_list: Public Contributors
 
 about:
     final_video:
@@ -189,10 +189,14 @@ about:
                 <p>The project has a dedicated Twitter account:
                 <a href="https://twitter.com/haphpy20" class="differ">@haphpy20</a>.</p>
                 <p>Don't hesitate to share the project with your friends as well as on the social networks.</p>
-                <p>Hashtag: #20YearsOfPHP</p>
+                <p>Hashtag: #haPHPy20</p>
 
     thanks:
         title: Acknowledgements
         elaostrap: Style based on <a href="https://github.com/JeremyFagis/ElaoStrap" class="differ">elaostrap</a> by Jeremy Fagis.
         php_ug:    PHP User groups were contacted thanks to <a href="http://php.ug/" class="differ">php.ug</a>.
         fanzutti:  Examples with the help of <a href="http://www.florafanzutti.com" class="differ">Flora Fanzutti</a>.
+
+footer:
+    github:       GitHub repository
+    by_community: Made by the PHP community with <span class="fa fa-heart"></span>

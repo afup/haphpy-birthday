@@ -118,9 +118,11 @@ header#header #warning-message div {
 #gauge-contributors span, #gauge-remaining-days span {
     font-size: 200%;
 }
+
 #gauge {
     position: relative;
     padding-top: 8px;
+    margin-bottom: 5em;
 }
 
 #gauge .progress {
