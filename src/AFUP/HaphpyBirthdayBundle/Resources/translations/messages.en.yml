@@ -34,6 +34,7 @@ menu:
         twitter:  Twitter
 
 step:
+    title: Upload your contribution!
     authenticate:
         title: Authenticate
         logged_in: >
@@ -46,31 +47,14 @@ step:
         title: Submit your contribution
 
 content:
-    celebrating:
-        title: Celebrating 20 years of PHP
-        paragraph: >
-            We use it everyday for professional and personal projects. A huge part of world's website lean on this
-            language. We decided to take advantage of this 20<sup>th</sup> anniversary to pay tribute to the PHP
-            language and its community. We want to show to the invested people how grateful we are.
-
-    video:
-        title: The anniversary video
-        paragraph: >
-            In order to gather the international community in a collaborative and shared event, we thought of a special
-            video. A short movie collecting photographs and videos in which PHP users can praise the language at their
-            will.
-
-    contribute:
-        title: How to contribute!
-        paragraph: >
-            Share amongst other contributors a 3 seconds video or a simple picture. Communicate your thoughts, show your
-            passion for the language or simply show off your commitment using a sign, a disguise or whatever you feel will
-            express your emotions. Every positive film, photographs or drawing will be included in the final cut.
-            Uploaded files will be edited altogether as a huge patchwork in a celebrating video.
-
-        not_inspired: >
-            Still not convinced? Have a look at the following video to catch the spirit of some who already shared to the
-            project.
+    introduction: >
+        <p>HaPHPy Birthday is a collaborative movie <span class="highlight-special">celebrating 20 years of
+        the PHP language</span> and its users involvement.</p>
+        <p>Before the 30th of October, <span class="highlight-special">upload a very short video</span>
+        or picture showing how much you love PHP or its community. Media can be selfies, placards,
+        group photos, self expression, fun pics…<br />anything imaginable and positive.</p>
+        <p>Eventually, people contributions will be <span class="highlight-special">gathered
+        in a short mosaic movie</span> released under a Creative&nbsp;Commons&nbsp;Licence.</p>
 
     authentication:
         github:

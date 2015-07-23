@@ -19,6 +19,11 @@
     width: 100%;
 }
 
+.highlight-special {
+    border-bottom: solid rgba(255,64,64,0.7);
+    box-shadow: inset 0 -6px 0 rgba(255,64,64,0.7);
+}
+
 video {
     width: 100%;
 }
@@ -67,8 +72,14 @@ header#header div {
     margin: 0 auto;
 }
 
-#haphpy-logo {
+#haphpy-logo img {
     width: 100%;
+}
+
+@media screen and (max-width: 360px) {
+    #haphpy-logo {
+        display: none;
+    }
 }
 
 header h1 {
@@ -206,7 +217,23 @@ section.page-section {
     background-size: cover;
 }
 
-/** Form Steps */
+section h2 {
+    font-weight: 100;
+}
+
+/** Home Page */
+#introduction {
+    background-image: url(../images/galaxy.png);
+    color: #ddd;
+    font-size: 150%;
+    text-align: center;
+}
+
+#introduction p {
+    margin: 2em 0;
+    line-height: 1.5em;
+}
+
 .haphpy-step {
     position: relative;
 }
@@ -260,6 +287,19 @@ ul.error-list {
     font-weight: 400;
     cursor: pointer;
     margin: 0;
+}
+
+#examples {
+    color: #dddddd;
+    background-image: url(../images/galaxy_core.png);
+}
+
+#examples h2 {
+    color: white;
+}
+
+#examples h5 {
+    color: #dddddd;
 }
 
 /** User Groups **/

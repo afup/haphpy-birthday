@@ -34,6 +34,7 @@ menu:
         twitter:  Twitter
 
 step:
+    title: Envoyer votre contribution !
     authenticate:
         title: Identifie-toi
         logged_in: >
@@ -46,31 +47,15 @@ step:
         title: Envoie ta contribution
 
 content:
-    celebrating:
-        title: Célébrons 20 ans de PHP…
-        paragraph: >
-            Nous l'utilisons quotidiennement, dans un environnement professionnel ou pour construire des projets
-            personnels, c'est pourquoi nous souhaitons profiter de cet anniversaire pour rendre hommage au langage PHP
-            et à sa communauté. Une grande majorité des sites web repose sur ce langage. La communauté et les gens
-            qui se sont investis pour faire de PHP ce qu'il est aujourd'hui méritent d'être félicités et remerciés.
-
-    video:
-        title: La vidéo anniversaire
-        paragraph: >
-            Afin de rassembler la communauté internationale dans un événement commun et collaboratif pour célébrer cet
-            anniversaire, nous proposons la création d'une vidéo commémorative. Un film de quelques minutes rassemblant
-            les contributions vidéos ou photos des utilisateurs de PHP qui veulent lui rendre hommage.
-
-    contribute:
-        title: Comment contribuer
-        paragraph: >
-            Partagez avec les autres contributeurs une courte vidéo de 3 secondes ou une image. Faîtes passer un message,
-            montrez votre amour pour le langage, révélez votre investissement avec une pancarte, un déguisement ou simplement
-            un hello… Toutes les vidéos positives seront intégrées au montage final.
-            Les fichiers uploadés seront montés ensemble tel un grand patchwork dans un film commémoratif à côté des autres vidéos.
-        not_inspired: >
-            Pas inspiré ! Jetez un œil à la vidéo ci-dessous pour voir ce que les autres personnes impliquées dans le
-            projet ont pu partager.
+    introduction: >
+        <p>HaPHPy Birthday est une vidéo collaborative <span class="highlight-special">commémorant les 20 ans
+        du langage PHP</span> ainsi que l'investissement de ses utilisateurs.</p>
+        <p>Jusqu'au 31 octobre, <span class="highlight-special">envoyez une courte vidéo</span>
+        ou une image montrant votre amour pour PHP ou sa communauté. Les médias peuvent être des <i>selfies</i>,
+        pancartes, photos de groupe, expressions personnelles, images drôles…<br />Tout ce qui est positif est
+        bienvenue.</p>
+        <p>Finalement, les contributions seront <span class="highlight-special">rassemblées dans une petite
+        vidéo mosaïque</span> sous licence Creative&nbsp;Commons.</p>
 
     authentication:
         github:
