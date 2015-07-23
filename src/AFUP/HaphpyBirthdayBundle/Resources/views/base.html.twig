@@ -20,13 +20,45 @@
         </div>
         <div class="navbar fixed">
             <div class="navbar-inner">
-                <nav id="login-state" class="pull-left">
-                    {% if user %}
-                        <span class="fa haphpy-icon-{{ user.authProvider }}"></span>{{ user.visibleName }}{{ ''}}
-                    {% endif %}
-                </nav>
+                <a href="{{ path('haphpy_index') }}" class="navbar-logo">HaPHPy Birthday</a>
                 <nav id="main-nav" class="pull-right">
                     <ul>
+                        <li class="dropdown">
+                            {% if user is not null%}
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <span class="fa haphpy-icon-{{ user.authProvider }}"></span>
+                                    {{ user.visibleName }}
+                                    <span class="fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ path('logout') }}">{{ 'menu.user.logout'|trans }}</a>
+                                    </li>
+                                </ul>
+                            {% else %}
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <span class="fa fa-user"></span>
+                                    {{ 'menu.user.login'|trans }}
+                                    <span class="fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ path('github_connect') }}">
+                                            <span class="fa haphpy-icon-github"></span>
+                                            {{ 'menu.user.github'|trans }}
+                                        </a>
+                                        <a href="{{ path('twitter_connect') }}">
+                                            <span class="fa haphpy-icon-twitter"></span>
+                                            {{ 'menu.user.twitter'|trans }}
+                                        </a>
+                                        <a href="{{ path('facebook_connect') }}">
+                                            <span class="fa haphpy-icon-facebook"></span>
+                                            {{ 'menu.user.facebook'|trans }}
+                                        </a>
+                                    </li>
+                                </ul>
+                            {% endif %}
+                        </li>
                         <li><a href="{{ path('haphpy_index') }}">{{ 'menu.index.label'|trans }}</a></li>
                         <li><a href="{{ path('haphpy_contributions') }}">{{ 'menu.contributions.label'|trans }}</a></li>
                         <li><a href="{{ path('haphpy_about') }}">{{ 'menu.about.label'|trans }}</a></li>

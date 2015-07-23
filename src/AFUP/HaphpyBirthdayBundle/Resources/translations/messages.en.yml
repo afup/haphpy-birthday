@@ -26,6 +26,12 @@ menu:
         label: About
     mobile:
         navigation: navigation
+    user:
+        login:    Log in
+        logout:   Log out
+        facebook: Facebook
+        github:   GitHub
+        twitter:  Twitter
 
 step:
     authenticate:
