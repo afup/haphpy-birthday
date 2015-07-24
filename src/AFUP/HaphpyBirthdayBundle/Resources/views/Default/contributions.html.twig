@@ -2,14 +2,16 @@
 
 {% import "AppBundle:Macro:style.html.twig" as haphpy %}
 
+{% block title %}{{ parent() }} - {{ 'contributions.title'|trans }}{% endblock %}
+
 {% block content %}{% spaceless %}
-    <section id="contributions" class="page-section">
+    <section id="contributions" class="page-section dark-background">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <h3>
+                    <h2>
                         {{ contributions|length }} {{ 'contributions.contributors_list'|trans }}
-                    </h3>
+                    </h2>
                 </div>
             </div>
 
@@ -28,9 +30,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <h3>
+                    <h2>
                         {{ userGroups|length }} {{ 'contributions.php_user_groups'|trans }}
-                    </h3>
+                    </h2>
                 </div>
             </div>
             <div class="row">

@@ -3,11 +3,11 @@
         <meta charset="UTF-8" />
         {% include 'WoecifaunTranslationBridgeBundle::alternates.html.twig' %}
 
-        <title>{{ 'head.title'|trans }}</title>
+        <title>{% block title %}{{ 'head.title'|trans }}{% endblock %}</title>
         <link href='http://fonts.googleapis.com/css?family=Roboto:100,400,300,700,900|Roboto+Condensed:400,300,700|Inconsolata:400' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="/assets/css/elaostrap.css" />
         <link rel="stylesheet" type="text/css" href="/assets/css/haphpy.css" />
-        <meta name="description" content="{{ 'meta.description'|trans }}" />
+        <meta name="description" content="{{ 'head.description'|trans }}" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
         <meta name="format-detection" content="telephone=no">
@@ -23,6 +23,25 @@
                 <a href="{{ path('haphpy_index') }}" class="navbar-logo">HaPHPy Birthday</a>
                 <nav id="main-nav" class="pull-right">
                     <ul>
+                        <li><a href="{{ path('haphpy_index') ~ '#contribute' }}">{{ 'menu.index.label'|trans }}</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                {{ 'menu.contributions.label'|trans }}
+                                <span class="fa fa-angle-down"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="{{ path('haphpy_contributions') ~ '#contributions' }}">
+                                        {{ 'menu.contributions.people'|trans }}
+                                    </a>
+                                    <a href="{{ path('haphpy_contributions') ~ '#php-user-groups' }}">
+                                        {{ 'menu.contributions.pugs'|trans }}
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ path('haphpy_about') }}">{{ 'menu.about.label'|trans }}</a></li>
+                        {% include 'AppBundle::translationBridge.html.twig' %}
                         <li class="dropdown">
                             {% if user is not null%}
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -37,7 +56,6 @@
                                 </ul>
                             {% else %}
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <span class="fa fa-user"></span>
                                     {{ 'menu.user.login'|trans }}
                                     <span class="fa fa-angle-down"></span>
                                 </a>
@@ -59,10 +77,6 @@
                                 </ul>
                             {% endif %}
                         </li>
-                        <li><a href="{{ path('haphpy_index') }}">{{ 'menu.index.label'|trans }}</a></li>
-                        <li><a href="{{ path('haphpy_contributions') }}">{{ 'menu.contributions.label'|trans }}</a></li>
-                        <li><a href="{{ path('haphpy_about') }}">{{ 'menu.about.label'|trans }}</a></li>
-                        {% include 'AppBundle::translationBridge.html.twig' %}
                     </ul>
                 </nav>
                 <a href="#" class="mobile-nav-toggle">
@@ -100,7 +114,7 @@
                 </div>
                 <div id="gauge">
                     <div class="progress">
-                        <div class="progress-bar progress-bar-danger progress-bar-striped active"
+                        <div class="progress-bar progress-bar-info progress-bar-striped active"
                             data-placement="right"
                             data-toggle="tooltip"
                             title=""
@@ -129,13 +143,16 @@
         <footer id="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 no-padding-bottom">
+                    <div class="col-sm-4 no-padding-bottom">
                         <a href="https://github.com/afup/haphpy-birthday">
                             <span class="fa haphpy-icon-github"></span>
                             {{ 'footer.github'|trans }}
                         </a>
                     </div>
-                    <div class="col-sm-6 no-padding-bottom text-right">
+                    <div class="col-sm-4 no-padding-bottom text-center">
+                        <span class="fa fa-envelope"></span>team<span class="arobase">haphpy-birthday.net</span>
+                    </div>
+                    <div class="col-sm-4 no-padding-bottom text-right">
                         <a href="https://github.com/afup/haphpy-birthday/graphs/contributors">
                             {{ 'footer.by_community'|trans|raw }}
                         </a>

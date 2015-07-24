@@ -1,27 +1,27 @@
 haphpy:
-    punchline: Share a video to celebrate PHP 20<sup>th</sup> birthday
+    punchline: Add your contribution to the commemorative movie celebrating 20 years of PHP
     date_format:
         full: 'd/m/Y, H:i:s T'
 
 head:
-    title: HaPHPy 20th Birthday to you PHP!
-
-meta:
-    description: "Haphpy Birthday : a collaborative project to celebrate the 20 years of PHP by sharing a memorial video"
+    title:       HaPHPy Birthday
+    description: Haphpy Birthday: A collaborative movie gathering gratefulness media for the 20th PHP birthday.
 
 gauge:
     contributions:  contributions so far
     remaining_days: remaining days
     step:
-        min: Let's do it!
-        joy: A Bliss
-        top: Heaven
+        min: 👍
+        joy: 🎉
+        top: 😍
 
 menu:
     index:
         label: Contribute!
     contributions:
-        label: Contributors
+        label:  Contributors
+        people: People
+        pugs:   PHP User Groups
     about:
         label: About
     mobile:
@@ -38,7 +38,7 @@ step:
     authenticate:
         title: Authenticate
         logged_in: >
-            Currently authenticated through %authProvider% as %username%
+            Currently authenticated as <span class="fa haphpy-icon-%authProvider%"></span>&nbsp;%username%
         logout: log out
     file:
         title:                  Pick a video or picture
@@ -88,15 +88,17 @@ form:
     submit:
         label: send
 
+# Contributions page
 contributions:
+    title:             Contributors and PHP User Groups
     php_user_groups:   PHP User Groups
     contributors_list: Public Contributors
 
+# About page
 about:
+    title: General information
     final_video:
-        premiere: >
-            The premiere is scheduled to take place during the opening keynote
-            of the Forum&nbsp;PHP in Paris, on the 23<sup>th</sup> November 2015.
+        premiere: The premiere is scheduled for the 23<sup>th</sup> November 2015, at the Forum&nbsp;PHP in Paris.
         specs: >
             <p>The final video is intended to be 3 to 5 minutes long.</p>
             <p>The rendered format will be 1080p25 mp4 video, having the following specs: 1920px × 1080px,

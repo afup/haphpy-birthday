@@ -1,27 +1,29 @@
 haphpy:
-    punchline: Célèbre 20 ans de PHP en partageant une vidéo commémorative
+    punchline: Ajoutez votre contribution à la vidéo collaborative célébrant 20 ans de PHP
     date_format:
         full: 'd/m/Y, H:i:s T'
 
 head:
-    title: HaPHPy 20th Birthday to you PHP!
-
-meta:
-    description: "Haphpy Birthday : un project collaboratif dans le but de célèbre les 20 ans de PHP en partageant une vidéo commémorative"
+    title:       HaPHPy Birthday
+    description: >
+        Haphpy Birthday : La vidéo collaborative rassemblant des medias pleins de reconnaissance
+        pour les 20 ans de PHP.
 
 gauge:
     contributions:  contributions
     remaining_days: jours restants
     step:
-        min: Go !
-        joy: Génial
-        top: Trop bon
+        min: 👍
+        joy: 🎉
+        top: 😍
 
 menu:
     index:
         label: Participer !
     contributions:
-        label: Contributeurs
+        label:  Contributeurs
+        people: Personnes
+        pugs:   Groupes d'utilisateurs PHP
     about:
         label: À propos
     mobile:
@@ -38,7 +40,7 @@ step:
     authenticate:
         title: Identifie-toi
         logged_in: >
-            Actuellement authentifié via %authProvider% en tant que %username%
+            Actuellement authentifié en tant que <br /><span class="fa haphpy-icon-%authProvider%"></span> %username%
         logout: Se déconnecter
     file:
         title:                  Choisis une vidéo ou image
@@ -46,7 +48,9 @@ step:
     submit:
         title: Envoie ta contribution
 
+# Home page
 index:
+    title:        Contribuez !
     introduction: >
         <p>HaPHPy Birthday est une vidéo collaborative <span class="highlight-special">commémorant les 20 ans
         du langage PHP</span> ainsi que l'investissement de ses utilisateurs.</p>
@@ -91,15 +95,17 @@ form:
     submit:
         label: Envoyer
 
+# Contributions page
 contributions:
+    title:             "Contributeurs & Groupes d'utilisateurs PHP"
     php_user_groups:   groupes d'utilisateurs de PHP
     contributors_list: contributeurs publics
 
+# About page
 about:
+    title: Informations générales
     final_video:
-        premiere: >
-            La première se tiendra durant la keynote d'ouverture du Forum&nbsp;PHP à Paris,
-            le 23 novembre 2015.
+        premiere: La première se tiendra le 23 novembre 2015, lors du Forum&nbsp;PHP à Paris.
         specs: >
             <p>La durée de la vidéo créée sera comprise entre 3 et 5 minutes.</p>
             <p>La vidéo sera générée en 1080p25 mp4 , avec les caractéristiques suivantes : 1920px × 1080px,
@@ -116,7 +122,7 @@ about:
 
     contributions:
         limit: >
-            Les contributions peuvent être <i>uploadées</i> jusqu'à la date limite du %limit_date%.
+            Les contributions peuvent être <i>uploadées</i> jusqu'au %limit_date%.
         respect: >
             <p>Les médias envoyés par les contributeurs au projet sont invités à exprimer de la gratitude
             envers le langage PHP ainsi qu'à sa communauté</p>

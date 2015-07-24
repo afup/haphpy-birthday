@@ -44,6 +44,10 @@ a.stand-out:hover {
     color: #f34141;
 }
 
+.arobase:before {
+    content: "@";
+}
+
 /** Menu **/
 #login-state span.fa {
     margin-right: 0.4em;
@@ -76,7 +80,7 @@ header#header div {
     width: 100%;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 767px) {
     #haphpy-logo {
         display: none;
     }
@@ -86,11 +90,19 @@ header h1 {
     color: #000000;
     font-weight: 100;
     font-size: 30px;
+    margin: 0 0 2em 0;
+}
+
+@media screen and (max-width: 767px) {
+    header h1 {
+        margin: 1em 0;
+    }
 }
 
 header h1 sup {
     text-transform: none;
 }
+
 
 header#header #warning-message {
     position: relative;
@@ -181,34 +193,6 @@ header#header #warning-message div {
     white-space: nowrap;
 }
 
-
-@media screen and (max-width: 767px) {
-    .gauge-step-name {
-        display: none;
-    }
-
-    .gauge-step-dot:after {
-        display: inline;
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 16px 24px 0 0;
-        white-space: nowrap;
-    }
-
-    .gauge-steps div:nth-of-type(1) .gauge-step-dot:after {
-        content: '👍';
-    }
-
-    .gauge-steps div:nth-of-type(2) .gauge-step-dot:after {
-        content: '🎉';
-    }
-
-    .gauge-steps div:nth-of-type(3) .gauge-step-dot:after {
-        content: '😍';
-    }
-}
-
 /** Main content **/
 section.page-section {
     padding-top: 2em;
@@ -259,7 +243,6 @@ section h2 {
     width: 2em;
     height: 2em;
     border-radius: 50%;
-    background-color: lime;
     color: white;
     text-align: center;
     display: inline-block;
@@ -278,6 +261,20 @@ section h2 {
 }
 .haphpy-step .btn {
     margin-bottom: 1em;
+}
+
+/** Authentication **/
+a.auth-button span{
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    color: white;
+    background: red;
+    text-align: center;
+    display: inline-block;
+    line-height: 2em;
+    font-size: 180%;
+    margin-top: 2em;
 }
 
 /** Form **/
@@ -376,12 +373,14 @@ ul.error-list {
 #final-video h2 {
     text-align: center;
     text-transform: none;
+    margin: 2em 0;
 }
 
 #about-contributions h2 {
     color: #f34141;
     text-align: center;
     text-transform: none;
+    margin: 2em 0;
 }
 
 #about-misc {

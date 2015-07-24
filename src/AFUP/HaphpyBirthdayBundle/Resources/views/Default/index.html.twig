@@ -4,6 +4,8 @@
 
 {% import "AppBundle:Macro:style.html.twig" as haphpy %}
 
+{% block title %}{{ parent() }} - {{ 'index.title'|trans }}{% endblock %}
+
 {% block content %}
     <section class="page-section" id="introduction">
         <div class="container">
@@ -14,7 +16,7 @@
             </div>
         </div>
     </section>
-    <section class="page-section">
+    <section class="page-section" id="contribute">
         <div class="container">
             <h2>{{ 'step.title'|trans }}</h2>
             <div class="row">
@@ -28,33 +30,31 @@
             </div>
             <div class="row">
                 {{ form_start(form) }}
-                <div class="col-sm-12 col-md-4 haphpy-step">
+                <div class="col-sm-12 col-md-4 haphpy-step ">
                     <h3>
                         {% set color = haphpy.color %}
                         <span class="haphpy-step-number" style="background-color:{{ color }};">1</span>
                         <span style="color:{{ color }};">{{ 'step.authenticate.title'|trans }}</span>
                     </h3>
-                    {% if user is not null %}
-                        {{ 'step.authenticate.logged_in'|trans({
-                            '%authProvider%': user.authProvider,
-                            '%username%': user.visibleName
-                        })}}
-                        <div class="text-center">
-                            <a href="{{ path('logout') }}" class="btn btn-ghost btn-default">
-                                {{ 'step.authenticate.logout'|trans }}
+                    <div class="text-center">
+                        {% if user is not null %}
+                            {{ 'step.authenticate.logged_in'|trans({
+                                    '%authProvider%': user.authProvider,
+                                    '%username%': user.visibleName
+                                })|raw
+                            }}
+                        {% else %}
+                            <a href="{{ path('github_connect') }}" class="auth-button">
+                                <span class="fa haphpy-icon-github" style="background-color:#201f1f;"></span>
                             </a>
-                        </div>
-                    {% else %}
-                        <a href="{{ path('github_connect') }}" class="btn btn-ghost btn-success">
-                            {{ 'index.authentication.github.button.label'|trans|raw }}
-                        </a>
-                        <a href="{{ path('twitter_connect') }}" class="btn btn-ghost btn-success">
-                            {{ 'index.authentication.twitter.button.label'|trans|raw }}
-                        </a>
-                        <a href="{{ path('facebook_connect') }}" class="btn btn-ghost btn-success">
-                            {{ 'index.authentication.facebook.button.label'|trans|raw }}
-                        </a>
-                    {% endif %}
+                            <a href="{{ path('twitter_connect') }}" class="auth-button">
+                                <span class="fa haphpy-icon-twitter" style="background-color:#55acee;"></span>
+                            </a>
+                            <a href="{{ path('facebook_connect') }}" class="auth-button">
+                                <span class="fa haphpy-icon-facebook" style="background-color:#3b5998;"></span>
+                            </a>
+                        {% endif %}
+                    </div>
                 </div>
                 <div class="col-sm-12 col-md-4 haphpy-step">
                     <h3>
@@ -64,11 +64,6 @@
                     </h3>
                     {{ form_errors(form.file) }}
                     {{ form_widget(form.file, {disabled: user ? false : true}) }}
-                    <p>
-                        <a href="{{ path('haphpy_about') }}#contribution-examples">
-                            <span class="fa fa-lightbulb-o"></span> {{ 'step.file.contributions_examples'|trans }}
-                        </a>
-                    </p>
                 </div>
                 <div class="col-sm-12 col-md-4 haphpy-step">
                     <h3>

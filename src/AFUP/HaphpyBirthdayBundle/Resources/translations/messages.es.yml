@@ -1,27 +1,27 @@
 haphpy:
-    punchline: Comparte un video para celebrar el 20<sup>o</sup> cumpleaños de PHP
+    punchline: Add your contribution to the commemorative movie celebrating 20 years of PHP
     date_format:
         full: 'd/m/Y, H:i:s T'
 
 head:
-    title: HaPHPy 20th Birthday to you PHP!
-
-meta:
-    description: "Haphpy Birthday : un proyecto colaborativo para celebrar los 20 años de PHP compartiendo un video conmemorativo"
+    title:       HaPHPy 20th Birthday to you PHP!
+    description: Haphpy Birthday: A collaborative movie gathering gratefulness media for the 20th PHP birthday.
 
 gauge:
     contributions:  contribuciones hasta ahora
     remaining_days: días faltantes
     step:
-        min: ¡Hagámoslo!
-        joy: La felicidad
-        top: El cielo
+        min: 👍
+        joy: 🎉
+        top: 😍
 
 menu:
     index:
         label: ¡Contribuye!
     contributions:
-        label: Contribuidores
+        label:  Contribuidores
+        people: People
+        pugs:   PHP User Groups
     about:
         label: Acerca de
     mobile:
@@ -46,7 +46,9 @@ step:
     submit:
         title: Envía tu contribución
 
+# Home page
 index:
+    title:        Contribute!
     introduction: >
         <p>HaPHPy Birthday is a collaborative movie <span class="highlight-special">celebrating 20 years of
         the PHP language</span> and its users involvement.</p>
@@ -88,15 +90,17 @@ form:
     submit:
         label: enviar
 
+# Contributions page
 contributions:
+    title:             Contribuidores  y grupos de usuarios PHP
     php_user_groups:   grupos de usuarios PHP
     contributors_list: contribuidores públicos
 
+# About page
 about:
+    title: General information
     final_video:
-        premiere: >
-            The premiere is scheduled to take place during the opening keynote
-            of the Forum&nbsp;PHP in Paris, on the 23<sup>th</sup> November 2015.
+        premiere: The premiere is scheduled for the 23<sup>th</sup> November 2015, at the Forum&nbsp;PHP in Paris.
         text: >
         specs: >
             <p>Se espera que el tamaño final del video tenga una duración de 3 a 5 minutos.</p>
