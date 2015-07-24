@@ -1,33 +1,40 @@
 haphpy:
-    punchline: Comparte un video para celebrar el 20<sup>o</sup> cumpleaños de PHP
+    punchline: Add your contribution to the commemorative movie celebrating 20 years of PHP
     date_format:
         full: 'd/m/Y, H:i:s T'
 
 head:
-    title: HaPHPy 20th Birthday to you PHP!
-
-meta:
-    description: "Haphpy Birthday : un proyecto colaborativo para celebrar los 20 años de PHP compartiendo un video conmemorativo"
+    title:       HaPHPy 20th Birthday to you PHP!
+    description: Haphpy Birthday: A collaborative movie gathering gratefulness media for the 20th PHP birthday.
 
 gauge:
     contributions:  contribuciones hasta ahora
     remaining_days: días faltantes
     step:
-        min: ¡Hagámoslo!
-        joy: La felicidad
-        top: El cielo
+        min: 👍
+        joy: 🎉
+        top: 😍
 
 menu:
     index:
         label: ¡Contribuye!
     contributions:
-        label: Contribuidores
+        label:  Contribuidores
+        people: People
+        pugs:   PHP User Groups
     about:
         label: Acerca de
     mobile:
         navigation: navegación
+    user:
+        login:    Log in
+        logout:   Log out
+        facebook: Facebook
+        github:   GitHub
+        twitter:  Twitter
 
 step:
+    title: Upload your contribution!
     authenticate:
         title: Autentícate
         logged_in: >
@@ -39,32 +46,17 @@ step:
     submit:
         title: Envía tu contribución
 
-content:
-    celebrating:
-        title: Celebrando 20 años de PHP
-        paragraph: >
-            Lo usamos todos los días para proyectos profesionales y personales. Una gran parte de los sitios Web del mundo usan este
-            lenguaje. Decidimos aprovechar este 20<sup>o</sup> aniversario para hacer un tributo al lenguaje PHP
-            y su comunidad. Queremos mostrar a las personas cuan agradecidos estamos.
-
-    video:
-        title: El video de aniversario
-        paragraph: >
-            A fin de reunir a la comunidad internacional en un evento colaborativo y compartido, pensamos en un video
-            especial. Una pequeña película recolectando fotos y videos en los que los usuarios de PHP puedan alabar al lenguaje
-            a su voluntad.
-
-    contribute:
-        title: ¡Cómo contribuir!
-        paragraph: >
-            Comparte junto con otros contribuidores un video de 3 segundos o una foto sencilla. Comunica tus pensamientos, muestra tu
-            pasión por el lenguaje o simplemente muestra tu compromiso usando una señal, un disfraz o cualquier cosa que sientas que
-            exprese tus emociones. Todos las películas positivas, fotografías o dibujos se incluirán en el corte final.
-            Los archivos que subas se editarán juntos como un gran mosaico en un video de celebración.
-
-        not_inspired: >
-            ¿Todavía no estás convencido? Echa un vistazo al siguiente video para que captures el espíritu de quienes ya compartieron con el
-            proyecto.
+# Home page
+index:
+    title:        Contribute!
+    introduction: >
+        <p>HaPHPy Birthday is a collaborative movie <span %highlight1%>celebrating 20 years of
+        the PHP language</span> and its users involvement.</p>
+        <p>Before the 30th of October, <span %highlight2%>upload a very short video</span>
+        or picture showing how much you love PHP or its community. Media can be selfies, placards,
+        group photos, self expression, fun pics…<br />anything imaginable and positive.</p>
+        <p>Eventually, people contributions will be <span %highlight3%>gathered
+        in a short mosaic movie</span> released under a Creative&nbsp;Commons&nbsp;Licence.</p>
 
     authentication:
         github:
@@ -77,6 +69,17 @@ content:
             button:
                 label: Autenticación con Facebook
 
+    examples:
+        title:            Ejemplos de archivos que pueden ser parte de la película final
+        php_asset:        Archivos mostrando un objeto de PHP
+        php_acronym:      Variación del acrónimo de PHP
+        message:          Mensaje a la comunidad de PHP
+        tribute:          Tributo a PHP
+        express_yourself: ¡Exprésate!
+        beyond:           >
+            Y cualquier cosa que puedas imaginar para celebrar
+            el 20<sup>o</sup> cumpleaños de PHP y su comunidad.
+
 form:
     credit_wanted:
         yes:    Si, quiero que mi nombre aparezca en los créditos del video y en la lista de contribuidores de este sitio
@@ -87,54 +90,43 @@ form:
     submit:
         label: enviar
 
+# Contributions page
 contributions:
-    php_user_groups:   Grupos de usuarios PHP
-    contributors_list: Lista de Contribuidores Públicos
+    title:             Contribuidores  y grupos de usuarios PHP
+    php_user_groups:   grupos de usuarios PHP
+    contributors_list: contribuidores públicos
 
+# About page
 about:
+    title: General information
     final_video:
-        title: Video final
+        premiere: The premiere is scheduled for the 23<sup>th</sup> November 2015, at the Forum&nbsp;PHP in Paris.
         text: >
+        specs: >
             <p>Se espera que el tamaño final del video tenga una duración de 3 a 5 minutos.</p>
-            <p><strong>El estreno está programado para llevarse a cabo durante el discurso de apertura
-             del Foro PHP en París, el 23 de Noviembre de 2015.</strong></p>
-            <p>Después se alojará en el canal de Youtube de afup y estará visible en el sitio Web.
-            También será descargable.</p>
+            <p>The rendered format will be 1080p25 mp4 video, having the following specs: 1920px × 1080px,
+            25fps, progressive scan, h264 video codec and AAC audio codec.</p>
+        availability: >
+            <p>Después se alojará en el canal de
+            <a href="https://www.youtube.com/user/afupPHP" class="differ">Youtube de afup</a>
+            y estará visible en el sitio Web. También será descargable.</p>
+        licence: >
+            <p>To prevent the use of people contributions, the final movie will be released under a
+            <a class="differ" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+            Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
 
-        specs:
-            title: Especificaciones del video a publicar
-            format:
-                title: Formato
-                value: 1080p (1920px × 1080px)
-            frame_rate:
-                title: Cuadros por segundo
-                value: 30fps
-            interlacing:
-                title: Entrelazado
-                value: progresivo
-            video_codec:
-                title: Codec de Video
-                value: h264
-            audio_codec:
-                title: Codec de Audio
-                value: AAC
-
-    uploaded_assets:
-        title: Archivos subidos
+    contributions:
         limit: >
             <p>Las contribuciones se pueden subir antes del %limit_date%.</p>
         respect: >
             <p>Los archivos de los contribuidores deberán mostrar sentimientos positivos hacia
             el lenguaje PHP y su comunidad.</p>
-            <p>Los archivos contribuidos deben mostrar un respeto natural hacia otras personas.</p>
-        ad_free: >
             <p>Como el video conmemorativo final no tendrá anuncios, no está permitido
             que las marcas comerciales usen este proyecto como apoyo publicitario.</p>
             <p>Cualquier empresa puede subir una contribución con su cuenta oficial de redes sociales,
             pero su archivo no debe contener publicidad directa para la empresa. Por ejemplo,
             el archivo no puede ser sólo el logo de la compañía.</p>
         specs:
-            title: Requerimientos de los archivos contribuidos
             video_title: Videos
             video: >
                 <p>Por favor proporciona un video con los siguientes requerimientos mínimos:</p>
@@ -153,20 +145,6 @@ about:
                     <li>1920px × 1080px mínimo</li>
                     <li>Relación de aspecto: 16 × 9</li>
                 </ul>
-        examples:
-            title:            Ejemplos de archivos que pueden ser parte de la película final
-            php_asset:        Archivos mostrando un objeto de PHP
-            php_acronym:      Variación del acrónimo de PHP
-            message:          Mensaje a la comunidad de PHP
-            tribute:          Tributo a PHP
-            express_yourself: ¡Exprésate!
-            beyond:           >
-                Y cualquier cosa que puedas imaginar para celebrar
-                el 20<sup>o</sup> cumpleaños de PHP y su comunidad.
-
-    licence:
-        title: Licencia
-        text: TO DO (Licencia para el proyecto, licencia para el video)
 
     helping:
         title: Ayuda con el proyecto
@@ -189,10 +167,14 @@ about:
                 <p>El proyecto tiene una cuenta de Twitter:
                 <a href="https://twitter.com/haphpy20" class="differ">@haphpy20</a>.</p>
                 <p>No dudes en compartir el proyecto con tus amigos así como en redes sociales.</p>
-                <p>Hashtag: #20YearsOfPHP</p>
+                <p>Hashtag: #haPHPy20</p>
 
     thanks:
         title: Reconocimientos
         elaostrap: El estilo está basado en <a href="https://github.com/JeremyFagis/ElaoStrap" class="differ">elaostrap</a> de Jeremy Fagis.
         php_ug:    Los grupos de usuario de PHP fueron contactados gracias a <a href="http://php.ug/" class="differ">php.ug</a>.
         fanzutti:  Ejemplos con la ayuda de <a href="http://www.florafanzutti.com" class="differ">Flora Fanzutti</a>.
+
+footer:
+    github: Repositorio en GitHub
+    by_community: Made by the PHP community with <span class="fa fa-heart"></span>
