@@ -46,7 +46,7 @@ step:
     submit:
         title: Envoie ta contribution
 
-content:
+index:
     introduction: >
         <p>HaPHPy Birthday est une vidéo collaborative <span class="highlight-special">commémorant les 20 ans
         du langage PHP</span> ainsi que l'investissement de ses utilisateurs.</p>
@@ -68,6 +68,17 @@ content:
             button:
                 label: Authentification Facebook
 
+    examples:
+        title:            Exemples de contributions possibles
+        php_asset:        Contenu montrant des objets PHP
+        php_acronym:      Variation autour de l'acronyme PHP
+        message:          Message à la communauté
+        tribute:          Hommage à PHP
+        express_yourself: Exprimez-vous !
+        beyond:           >
+            Ou toute idée sortie de votre imagination pour célébrer le
+            20<sup>ième</sup> anniversaire de PHP ou sa communauté.
+
 form:
     credit_wanted:
         yes: >
@@ -86,48 +97,35 @@ contributions:
 
 about:
     final_video:
-        title: Vidéo commémorative
-        text: >
-            <p>La vidéo commémorative finale est prévue pour durer de 3 à 5 minutes.</p>
-            <p><strong>La première se tiendra durant la keynote d'ouverture du Forum PHP à Paris,
-            le 23 novembre 2015.</strong></p>
-            <p>La vidéo sera alors hébergée sur le compte YouTube de l'Afup et visible sur ce site.
-            Elle sera également disponible au téléchargement.</p>
+        premiere: >
+            La première se tiendra durant la keynote d'ouverture du Forum&nbsp;PHP à Paris,
+            le 23 novembre 2015.
+        specs: >
+            <p>La durée de la vidéo créée sera comprise entre 3 et 5 minutes.</p>
+            <p>La vidéo sera générée en 1080p25 mp4 , avec les caractéristiques suivantes : 1920px × 1080px,
+            25fps, sans entrelacement, codecs video h264 et audio AAC.</p>
+        availability: >
+            <p>Suite à la première diffusion, la vidéo sera hébergée sur le
+            <a href="https://www.youtube.com/user/afupPHP" class="differ">Youtube de l'afup</a>.
+            Elle sera également visible et téléchargeable sur ce site.</p>
+        licence: >
+            <p>Afin de prévenir de l'utilisation abusive des contributions des participants,
+            la vidéo commémorative sera diffusée sous
+            <a class="differ" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+            Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
 
-        specs:
-            title: Propriétés de la vidéo commémorative finale
-            format:
-                title: Format
-                value: 1080p (1920px × 1080px)
-            frame_rate:
-                title: Images par seconde
-                value: 30
-            interlacing:
-                title: Entrelacement
-                value: progressif
-            video_codec:
-                title: Codec vidéo
-                value: h264
-            audio_codec:
-                title: Codec audio
-                value: AAC
-
-    uploaded_assets:
-        title: Fichiers <i>uploadés</i>
+    contributions:
         limit: >
-            <p>Les Contributions peuvent être <i>uploadées</i> jusqu'à la date limite du %limit_date%.</p>
+            Les contributions peuvent être <i>uploadées</i> jusqu'à la date limite du %limit_date%.
         respect: >
             <p>Les médias envoyés par les contributeurs au projet sont invités à exprimer de la gratitude
             envers le langage PHP ainsi qu'à sa communauté</p>
-            <p>Les Contributions doivent naturellement respecter tout le monde.</p>
-        ad_free: >
             <p>La vidéo commémorative finale ne contiendra pas de publicité. Les sociétés
             ne sont pas autorisées à utiliser le présent projet comme support publicitaire.</p>
             <p>Une société peut utiliser, via le réseau social de son choix, une
             contribution ; le média envoyé ne devra pas explicitement faire de la pubilicité en faveur de la société.
             Par exemple, la vidéo ou l'image fournie ne peut se limiter au logo de la compagnie.</p>
         specs:
-            title: Specs des médias
             video_title: Vidéos
             video: >
                 <p>Merci de fournir une vidéo avec les caractéristiques suivantes :</p>
@@ -146,20 +144,6 @@ about:
                     <li>1920px × 1080px minimum</li>
                     <li>Proportions : 16 × 9</li>
                 </ul>
-        examples:
-            title:            Exemples de contributions possibles
-            php_asset:        Contenu montrant des objets PHP
-            php_acronym:      Variation autour de l'acronyme PHP
-            message:          Message à la communauté
-            tribute:          Hommage à PHP
-            express_yourself: Exprimez-vous !
-            beyond:           >
-                Ou toute idée sortie de votre imagination pour célébrer le
-                20<sup>ième</sup> anniversaire de PHP ou sa communauté.
-
-    licence:
-        title: Licencing
-        text: TO DO (Licencing of the project, licencing of the vidéo)
 
     helping:
         title: Apporter votre aide au projet
@@ -181,7 +165,7 @@ about:
         communicating:
             title: Communication
             text: >
-                <p>Le compte twitter du projet est <a href="https://twitter.com/haphpy20">@haphpy20</a></p>
+                <p>Le compte twitter du projet est <a href="https://twitter.com/haphpy20" class="differ">@haphpy20</a></p>
                 <p>N'hésitez pas à parler du projet à vos amis ou sur les réseaux sociaux.</p>
                 <p>Hashtag : #haPHPy20</p>
 
@@ -189,7 +173,13 @@ about:
         title: Remerciements
         elaostrap: Style basé sur <a href="https://github.com/JeremyFagis/ElaoStrap" class="differ">elaostrap</a> par Jeremy Fagis.
         php_ug:    Merci à <a href="http://php.ug/" class="differ">php.ug</a> pour la liste des Groupes d'Utilisateurs PHP.
-        fanzutti:  Exemples avec le concours technique de <a href="http://www.florafanzutti.com" class="differ">Flora Fanzutti</a>.
+        galaxy:    >
+            Illustrations d'arrière plan des dépendances dans Composer par
+            <a href="https://github.com/anvaka" class="differ"><span class="fa haphpy-icon-github"></span> Andrei Kashcha</a>
+            et son projet
+            <a href="https://anvaka.github.io/pm/#/galaxy/composer?cx=7031&cy=-1&cz=2428&lx=-0.0759&ly=0.5682&lz=0.0225&lw=0.8191&ml=150&s=1.75&l=1&v=2015-07-20T04-26-49Z"
+            class="differ">Code Galaxies Vizualization</a>.
+        fanzutti:  Exemples de contributions avec le concours technique de <a href="http://www.florafanzutti.com" class="differ">Flora Fanzutti</a>.
 
 footer:
     github: Dépôt GitHub

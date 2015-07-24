@@ -46,7 +46,7 @@ step:
     submit:
         title: Envía tu contribución
 
-content:
+index:
     introduction: >
         <p>HaPHPy Birthday is a collaborative movie <span class="highlight-special">celebrating 20 years of
         the PHP language</span> and its users involvement.</p>
@@ -67,6 +67,17 @@ content:
             button:
                 label: Autenticación con Facebook
 
+    examples:
+        title:            Ejemplos de archivos que pueden ser parte de la película final
+        php_asset:        Archivos mostrando un objeto de PHP
+        php_acronym:      Variación del acrónimo de PHP
+        message:          Mensaje a la comunidad de PHP
+        tribute:          Tributo a PHP
+        express_yourself: ¡Exprésate!
+        beyond:           >
+            Y cualquier cosa que puedas imaginar para celebrar
+            el 20<sup>o</sup> cumpleaños de PHP y su comunidad.
+
 form:
     credit_wanted:
         yes:    Si, quiero que mi nombre aparezca en los créditos del video y en la lista de contribuidores de este sitio
@@ -83,48 +94,35 @@ contributions:
 
 about:
     final_video:
-        title: Video final
+        premiere: >
+            The premiere is scheduled to take place during the opening keynote
+            of the Forum&nbsp;PHP in Paris, on the 23<sup>th</sup> November 2015.
         text: >
+        specs: >
             <p>Se espera que el tamaño final del video tenga una duración de 3 a 5 minutos.</p>
-            <p><strong>El estreno está programado para llevarse a cabo durante el discurso de apertura
-             del Foro PHP en París, el 23 de Noviembre de 2015.</strong></p>
-            <p>Después se alojará en el canal de Youtube de afup y estará visible en el sitio Web.
-            También será descargable.</p>
+            <p>The rendered format will be 1080p25 mp4 video, having the following specs: 1920px × 1080px,
+            25fps, progressive scan, h264 video codec and AAC audio codec.</p>
+        availability: >
+            <p>Después se alojará en el canal de
+            <a href="https://www.youtube.com/user/afupPHP" class="differ">Youtube de afup</a>
+            y estará visible en el sitio Web. También será descargable.</p>
+        licence: >
+            <p>To prevent the use of people contributions, the final movie will be released under a
+            <a class="differ" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+            Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
 
-        specs:
-            title: Especificaciones del video a publicar
-            format:
-                title: Formato
-                value: 1080p (1920px × 1080px)
-            frame_rate:
-                title: Cuadros por segundo
-                value: 30fps
-            interlacing:
-                title: Entrelazado
-                value: progresivo
-            video_codec:
-                title: Codec de Video
-                value: h264
-            audio_codec:
-                title: Codec de Audio
-                value: AAC
-
-    uploaded_assets:
-        title: Archivos subidos
+    contributions:
         limit: >
             <p>Las contribuciones se pueden subir antes del %limit_date%.</p>
         respect: >
             <p>Los archivos de los contribuidores deberán mostrar sentimientos positivos hacia
             el lenguaje PHP y su comunidad.</p>
-            <p>Los archivos contribuidos deben mostrar un respeto natural hacia otras personas.</p>
-        ad_free: >
             <p>Como el video conmemorativo final no tendrá anuncios, no está permitido
             que las marcas comerciales usen este proyecto como apoyo publicitario.</p>
             <p>Cualquier empresa puede subir una contribución con su cuenta oficial de redes sociales,
             pero su archivo no debe contener publicidad directa para la empresa. Por ejemplo,
             el archivo no puede ser sólo el logo de la compañía.</p>
         specs:
-            title: Requerimientos de los archivos contribuidos
             video_title: Videos
             video: >
                 <p>Por favor proporciona un video con los siguientes requerimientos mínimos:</p>
@@ -143,20 +141,6 @@ about:
                     <li>1920px × 1080px mínimo</li>
                     <li>Relación de aspecto: 16 × 9</li>
                 </ul>
-        examples:
-            title:            Ejemplos de archivos que pueden ser parte de la película final
-            php_asset:        Archivos mostrando un objeto de PHP
-            php_acronym:      Variación del acrónimo de PHP
-            message:          Mensaje a la comunidad de PHP
-            tribute:          Tributo a PHP
-            express_yourself: ¡Exprésate!
-            beyond:           >
-                Y cualquier cosa que puedas imaginar para celebrar
-                el 20<sup>o</sup> cumpleaños de PHP y su comunidad.
-
-    licence:
-        title: Licencia
-        text: TO DO (Licencia para el proyecto, licencia para el video)
 
     helping:
         title: Ayuda con el proyecto

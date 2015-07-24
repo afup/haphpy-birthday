@@ -46,7 +46,7 @@ step:
     submit:
         title: Submit your contribution
 
-content:
+index:
     introduction: >
         <p>HaPHPy Birthday is a collaborative movie <span class="highlight-special">celebrating 20 years of
         the PHP language</span> and its users involvement.</p>
@@ -67,6 +67,17 @@ content:
             button:
                 label: Facebook Authentification
 
+    examples:
+        title:            Examples of media that can be part of the final movie
+        php_asset:        Media showing a PHP Asset
+        php_acronym:      Variation of the PHP acronym
+        message:          Message to the PHP community
+        tribute:          Tribute to PHP
+        express_yourself: Express yourself!
+        beyond:           >
+            And anything you can imagine to celebrate the
+            20<sup>th</sup> PHP Birthday and its community.
+
 form:
     credit_wanted:
         yes:    Yes, I want my name to appear in the video credits and on this website contributors list
@@ -83,48 +94,34 @@ contributions:
 
 about:
     final_video:
-        title: Final Video
-        text: >
+        premiere: >
+            The premiere is scheduled to take place during the opening keynote
+            of the Forum&nbsp;PHP in Paris, on the 23<sup>th</sup> November 2015.
+        specs: >
             <p>The final video is intended to be 3 to 5 minutes long.</p>
-            <p><strong>The premiere is scheduled to take place during the opening keynote
-            of the Forum PHP in Paris, on the 23<sup>th</sup> November 2015.</strong></p>
-            <p>It then will be hosted on the afup's Youtube and viewable on this website.
+            <p>The rendered format will be 1080p25 mp4 video, having the following specs: 1920px × 1080px,
+            25fps, progressive scan, h264 video codec and AAC audio codec.</p>
+        availability: >
+            <p>Following the premiere, it then will be hosted on the
+            <a href="https://www.youtube.com/user/afupPHP" class="differ">afup's Youtube</a> and viewable on this website.
             It will also be downloadable.</p>
+        licence: >
+            <p>To prevent the use of people contributions, the final movie will be released under a
+            <a class="differ" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+            Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
 
-        specs:
-            title: Specifications of the released video
-            format:
-                title: Format
-                value: 1080p (1920px × 1080px)
-            frame_rate:
-                title: Frame Rate
-                value: 30fps
-            interlacing:
-                title: Interlacing
-                value: progressive
-            video_codec:
-                title: Video Codec
-                value: h264
-            audio_codec:
-                title: Audio Codec
-                value: AAC
-
-    uploaded_assets:
-        title: Uploaded Assets
+    contributions:
         limit: >
-            <p>Contributions can be uploaded before the %limit_date%.</p>
+            Contributions can be uploaded before the %limit_date%.
         respect: >
             <p>Expected media from contributors should show positive feelings toward
             the PHP language and its community.</p>
-            <p>Contributions media must present a natural respect to other people.</p>
-        ad_free: >
             <p>As the final commemorative video will be ad free, business
             vendors are not allowed to use this project as a commercial support.</p>
             <p>Any company may upload a Contribution with its official social network account,
             but the media must not contain direct advertisement to the company. For instance,
             the media cannot just be the company branding logo.</p>
         specs:
-            title: Contributions media requirements
             video_title: Videos
             video: >
                 <p>Please provide video with the minimum following properties:</p>
@@ -143,20 +140,6 @@ about:
                     <li>1920px × 1080px minimum</li>
                     <li>Aspect Ratio: 16 × 9</li>
                 </ul>
-        examples:
-            title:            Examples of media that can be part of the final movie
-            php_asset:        Media showing a PHP Asset
-            php_acronym:      Variation of the PHP acronym
-            message:          Message to the PHP community
-            tribute:          Tribute to PHP
-            express_yourself: Express yourself!
-            beyond:           >
-                And anything you can imagine to celebrate the
-                20<sup>th</sup> PHP Birthday and its community.
-
-    licence:
-        title: Licencing
-        text: TO DO (Licencing of the project, licencing of the vidéo)
 
     helping:
         title: Helping on the project
@@ -185,7 +168,13 @@ about:
         title: Acknowledgements
         elaostrap: Style based on <a href="https://github.com/JeremyFagis/ElaoStrap" class="differ">elaostrap</a> by Jeremy Fagis.
         php_ug:    PHP User groups were contacted thanks to <a href="http://php.ug/" class="differ">php.ug</a>.
-        fanzutti:  Examples with the help of <a href="http://www.florafanzutti.com" class="differ">Flora Fanzutti</a>.
+        galaxy:    >
+            Background illustrations of Composer dependencies thanks to
+            <a href="https://github.com/anvaka" class="differ"><span class="fa haphpy-icon-github"></span> Andrei Kashcha</a>
+            with his awesome work of
+            <a href="https://anvaka.github.io/pm/#/galaxy/composer?cx=7031&cy=-1&cz=2428&lx=-0.0759&ly=0.5682&lz=0.0225&lw=0.8191&ml=150&s=1.75&l=1&v=2015-07-20T04-26-49Z"
+            class="differ">Code Galaxies Vizualization</a>.
+        fanzutti:  Contribution examples with the help of <a href="http://www.florafanzutti.com" class="differ">Flora Fanzutti</a>.
 
 footer:
     github:       GitHub repository

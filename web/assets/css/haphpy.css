@@ -217,6 +217,23 @@ section.page-section {
     background-size: cover;
 }
 
+section.dark-background {
+    color: #ccc;
+}
+
+section.dark-background h2,
+section.dark-background h4 {
+    color: #ffffff;
+}
+
+section a.differ {
+    color: #ffffff;
+}
+
+section a.differ:hover {
+    color: #f34141;
+}
+
 section h2 {
     font-weight: 100;
 }
@@ -290,8 +307,8 @@ ul.error-list {
 }
 
 #examples {
-    color: #dddddd;
-    background-image: url(../images/galaxy_core.png);
+    color: #ddd;
+    background-image: url(../images/code.jpg);
 }
 
 #examples h2 {
@@ -299,7 +316,7 @@ ul.error-list {
 }
 
 #examples h5 {
-    color: #dddddd;
+    color: #ddd;
 }
 
 /** User Groups **/
@@ -349,6 +366,39 @@ ul.error-list {
 
 .contribution span {
     margin-right: 0.5em;
+}
+
+/** About Page **/
+#final-video {
+    background-image: url(../images/galaxy_core.png);
+}
+
+#final-video h2 {
+    text-align: center;
+    text-transform: none;
+}
+
+#about-contributions h2 {
+    color: #f34141;
+    text-align: center;
+    text-transform: none;
+}
+
+#about-misc {
+    background-image: url(../images/galaxy.png);
+}
+
+/** License **/
+#creative-commons-icons {
+    text-align: center;
+}
+
+#creative-commons-icons svg {
+    width: 80%;
+}
+
+.cc-icon {
+    fill: #ddd;
 }
 
 /** Footer **/
