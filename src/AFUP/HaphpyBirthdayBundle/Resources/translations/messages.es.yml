@@ -50,12 +50,12 @@ step:
 index:
     title:        Contribute!
     introduction: >
-        <p>HaPHPy Birthday is a collaborative movie <span class="highlight-special">celebrating 20 years of
+        <p>HaPHPy Birthday is a collaborative movie <span %highlight1%>celebrating 20 years of
         the PHP language</span> and its users involvement.</p>
-        <p>Before the 30th of October, <span class="highlight-special">upload a very short video</span>
+        <p>Before the 30th of October, <span %highlight2%>upload a very short video</span>
         or picture showing how much you love PHP or its community. Media can be selfies, placards,
         group photos, self expression, fun pics…<br />anything imaginable and positive.</p>
-        <p>Eventually, people contributions will be <span class="highlight-special">gathered
+        <p>Eventually, people contributions will be <span %highlight3%>gathered
         in a short mosaic movie</span> released under a Creative&nbsp;Commons&nbsp;Licence.</p>
 
     authentication:

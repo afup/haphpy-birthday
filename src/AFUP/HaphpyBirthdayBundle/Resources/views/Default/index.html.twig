@@ -11,7 +11,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-12">
-                    {{ 'index.introduction'|trans|raw }}
+                    {% set highlight1 = haphpy.highlight %}
+                    {% set highlight2 = haphpy.highlight %}
+                    {% set highlight3 = haphpy.highlight %}
+                    {{ 'index.introduction'|trans(
+                            {
+                                '%highlight1%': highlight1,
+                                '%highlight2%': highlight2,
+                                '%highlight3%': highlight3,
+                            }
+                        )|raw
+                    }}
                 </div>
             </div>
         </div>

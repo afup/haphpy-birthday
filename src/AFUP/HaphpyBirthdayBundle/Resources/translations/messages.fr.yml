@@ -52,13 +52,13 @@ step:
 index:
     title:        Contribuez !
     introduction: >
-        <p>HaPHPy Birthday est une vidéo collaborative <span class="highlight-special">commémorant les 20 ans
+        <p>HaPHPy Birthday est une vidéo collaborative <span %highlight1%>commémorant les 20 ans
         du langage PHP</span> ainsi que l'investissement de ses utilisateurs.</p>
-        <p>Jusqu'au 31 octobre, <span class="highlight-special">envoyez une courte vidéo</span>
-        ou une image montrant votre amour pour PHP ou sa communauté. Les médias peuvent être des <i>selfies</i>,
-        pancartes, photos de groupe, expressions personnelles, images drôles…<br />Tout ce qui est positif est
+        <p>Jusqu'au 31 octobre, <span %highlight2%>envoyez une courte vidéo</span>
+        ou une image montrant votre amour pour le PHP ou sa communauté. Les médias peuvent être des <i>selfies</i>,
+        pancartes, photos de groupe, expressions personnelles, images drôles… Tout message positif est
         bienvenue.</p>
-        <p>Finalement, les contributions seront <span class="highlight-special">rassemblées dans une petite
+        <p>Finalement, les contributions seront <span %highlight3%>rassemblées dans une petite
         vidéo mosaïque</span> sous licence Creative&nbsp;Commons.</p>
 
     authentication:
