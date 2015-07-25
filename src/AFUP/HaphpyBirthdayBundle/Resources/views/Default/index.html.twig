@@ -17,12 +17,18 @@
         </div>
         <div class="row">
             {{ form_start(form) }}
+            {{ form_errors(form) }}
+
+            {{ form_widget(form._token) }}
+
             <div class="col-sm-12 col-md-4 haphpy-step">
+                {% if contribution.isNew %}
                 <h3>
                     {% set color = haphpy.color %}
                     <span class="haphpy-step-number" style="background-color:{{ color }};">1</span>
                     <span style="color:{{ color }};">{{ 'step.authenticate.title'|trans }}</span>
                 </h3>
+                {% endif %}
                 {% if user is not null %}
                     {{ 'step.authenticate.logged_in'|trans({
                         '%authProvider%': user.authProvider,
@@ -46,6 +52,7 @@
                 {% endif %}
             </div>
             <div class="col-sm-12 col-md-4 haphpy-step">
+                {% if contribution.isNew %}
                 <h3>
                     {% set color = haphpy.color %}
                     <span class="haphpy-step-number" style="background-color:{{ color }};">2</span>
@@ -58,8 +65,12 @@
                         <span class="fa fa-lightbulb-o"></span> {{ 'step.file.contributions_examples'|trans }}
                     </a>
                 </p>
+                {% else %}
+                    <h3>{{ 'step.submitted.thanks'|trans }}</h3>
+                {% endif %}
             </div>
             <div class="col-sm-12 col-md-4 haphpy-step">
+                {% if contribution.isNew %}
                 <h3>
                     {% set color = haphpy.color %}
                     <span class="haphpy-step-number" style="background-color:{{ color }};">3</span>
@@ -74,8 +85,13 @@
                 <div class="text-center">
                     <input type="submit" name="submit" value="{{ 'form.submit.label'|trans }}" class="btn btn-primary" {{ user ? '' : ' disabled' }}/>
                 </div>
+                {% else %}
+                    <div class="text-center">
+                        <a href="{{ path('haphpy_delete') }}" class="btn btn-primary">{{ 'step.submitted.remove_button'|trans }}</a>
+                    </div>
+                {% endif %}
+
             </div>
-            {{ form_end(form) }}
         </div>
 
         <div class="row">

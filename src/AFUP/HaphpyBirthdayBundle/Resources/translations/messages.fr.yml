@@ -38,6 +38,10 @@ step:
         contributions_examples: Voir des exemples de contributions
     submit:
         title: Envoie ta contribution
+    submitted:
+        remove_button: Supprimer ma contribution
+        thanks: Vous avez déjà contribué, merci !
+
 
 content:
     celebrating:

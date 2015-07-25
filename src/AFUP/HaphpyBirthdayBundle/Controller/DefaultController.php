@@ -50,10 +50,28 @@ class DefaultController extends Controller
         }
 
         return [
-            'user'  => $user,
-            'form'  => $form->createView(),
-            'gauge' => $this->get('haphpy.gauge'),
+            'user'         => $user,
+            'form'         => $form->createView(),
+            'gauge'        => $this->get('haphpy.gauge'),
+            'contribution' => $contribution,
         ];
+    }
+
+    /**
+     * @param Request $request
+     *
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function deleteAction(Request $request)
+    {
+        $user         = $this->getUser();
+        $contribution = $this->getOrGenerateContribution($user);
+
+        if (!$contribution->isNew()) {
+            $this->get('haphpy.contribution_persister')->remove($contribution);
+        }
+
+        return $this->redirectToRoute('haphpy_index', ['locale' => $request->getLocale()]);
     }
 
     /**

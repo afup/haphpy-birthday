@@ -15,3 +15,9 @@ haphpy_about:
         en: "/en/about"
         fr: "/fr/a-propos"
     defaults: { _controller: AppBundle:Default:about }
+
+haphpy_delete:
+    locales:
+        en: "/delete"
+        fr: "/delete"
+    defaults: { _controller: AppBundle:Default:delete }
