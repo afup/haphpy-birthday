@@ -40,13 +40,11 @@ class PathGenerator
      */
     public function generateAbsolutePath(Contribution $contribution, File $file)
     {
-        return
-            $this->directory
-            .DIRECTORY_SEPARATOR
-            .$contribution->getAuthProvider()
-            .DIRECTORY_SEPARATOR
-            .$contribution->getIdentifier()
-            .'.'
-            .($file->guessExtension() ? : $file->getExtension());
+        $path  = $this->directory.DIRECTORY_SEPARATOR;
+        $path .= $contribution->getAuthProvider().DIRECTORY_SEPARATOR;
+        $path .= $contribution->getIdentifier();
+        $path .= '.'.($file->guessExtension() ? : $file->getExtension());
+
+        return $path;
     }
 }

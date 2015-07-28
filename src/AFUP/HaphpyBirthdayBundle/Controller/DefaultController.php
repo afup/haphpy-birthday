@@ -140,7 +140,7 @@ class DefaultController extends Controller
                 ->getRepository('AFUP\HaphpyBirthdayBundle\Entity\Contribution')
                 ->findOneBy([
                     'authProvider' => $user->getAuthProvider(),
-                    'identifier'   => $user->getUsername()
+                    'identifier'   => $user->getUsername(),
                 ]);
 
             if ($contribution) {

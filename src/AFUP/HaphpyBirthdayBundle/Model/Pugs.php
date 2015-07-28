@@ -25,6 +25,6 @@ class Pugs
      */
     public function getUserGroups()
     {
-       return $this->userGroups;
+        return $this->userGroups;
     }
 }
