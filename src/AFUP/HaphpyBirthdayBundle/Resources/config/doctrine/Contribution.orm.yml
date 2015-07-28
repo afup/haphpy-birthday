@@ -14,6 +14,9 @@ AFUP\HaphpyBirthdayBundle\Entity\Contribution:
         identifier:
             type:   string
             length: 255
+        fileName:
+            type:   string
+            length: 255
         creditWanted:
             type:   boolean
             column: credit_wanted

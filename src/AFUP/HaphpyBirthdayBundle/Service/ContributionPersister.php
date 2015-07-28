@@ -47,10 +47,29 @@ class ContributionPersister
     {
         // File
         $path = $this->pathGenerator->generateAbsolutePath($contribution, $file);
+        $relativePath = $this->pathGenerator->generateRelativePath($contribution, $file);
         $file->move(dirname($path), basename($path));
 
         // Data persistence
         $contribution->setModifiedAt(new \DateTime());
+        $contribution->setFileName($relativePath);
+
+        $this->entityManager->persist($contribution);
+        $this->entityManager->flush();
+    }
+
+    /**
+     * @param Contribution $contribution
+     */
+    public function remove(Contribution $contribution)
+    {
+        if ($contribution->isNew()) {
+            return;
+        }
+
+        unlink($this->pathGenerator->generateAbsolutePath($contribution));
+        $contribution->setFileName(null);
+
         $this->entityManager->persist($contribution);
         $this->entityManager->flush();
     }

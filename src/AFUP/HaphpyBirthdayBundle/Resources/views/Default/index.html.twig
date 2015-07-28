@@ -40,12 +40,19 @@
             </div>
             <div class="row">
                 {{ form_start(form) }}
+                {{ form_errors(form) }}
+
+                {{ form_widget(form._token) }}
+
                 <div class="col-sm-12 col-md-4 haphpy-step ">
+                    {% if contribution.isNew %}
                     <h3>
                         {% set color = haphpy.color %}
                         <span class="haphpy-step-number" style="background-color:{{ color }};">1</span>
                         <span style="color:{{ color }};">{{ 'step.authenticate.title'|trans }}</span>
                     </h3>
+                    {% endif %}
+
                     <div class="text-center">
                         {% if user is not null %}
                             {{ 'step.authenticate.logged_in'|trans({
@@ -66,32 +73,43 @@
                         {% endif %}
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-4 haphpy-step">
-                    <h3>
-                        {% set color = haphpy.color %}
-                        <span class="haphpy-step-number" style="background-color:{{ color }};">2</span>
-                        <span style="color:{{ color }};">{{ 'step.file.title'|trans }}</span>
-                    </h3>
-                    {{ form_errors(form.file) }}
-                    {{ form_widget(form.file, {disabled: user ? false : true}) }}
-                </div>
-                <div class="col-sm-12 col-md-4 haphpy-step">
-                    <h3>
-                        {% set color = haphpy.color %}
-                        <span class="haphpy-step-number" style="background-color:{{ color }};">3</span>
-                        <span style="color:{{ color }};">{{ 'step.submit.title'|trans }}</span>
-                    </h3>
-                    <div class="form-group">
-                        {{ form_label(form.creditWanted, 'form.credit_wanted.choose') }}
-                        {{ form_errors(form.creditWanted, {attr: {class: 'error-list'}}) }}
-                        {{ form_widget(form.creditWanted, {disabled: user ? false : true}) }}
-                    </div>
 
-                    <div class="text-center">
-                        <input type="submit" name="submit" value="{{ 'form.submit.label'|trans }}" class="btn btn-primary" {{ user ? '' : ' disabled' }}/>
-                    </div>
+                <div class="col-sm-12 col-md-4 haphpy-step">
+                    {% if contribution.isNew %}
+                        <h3>
+                            {% set color = haphpy.color %}
+                            <span class="haphpy-step-number" style="background-color:{{ color }};">2</span>
+                            <span style="color:{{ color }};">{{ 'step.file.title'|trans }}</span>
+                        </h3>
+                        {{ form_errors(form.file) }}
+                        {{ form_widget(form.file, {disabled: user ? false : true}) }}
+                    {% else %}
+                        <h3>{{ 'step.submitted.thanks'|trans }}</h3>
+                    {% endif %}
                 </div>
-                {{ form_end(form) }}
+
+                <div class="col-sm-12 col-md-4 haphpy-step">
+                    {% if contribution.isNew %}
+                        <h3>
+                            {% set color = haphpy.color %}
+                            <span class="haphpy-step-number" style="background-color:{{ color }};">3</span>
+                            <span style="color:{{ color }};">{{ 'step.submit.title'|trans }}</span>
+                        </h3>
+                        <div class="form-group">
+                            {{ form_label(form.creditWanted, 'form.credit_wanted.choose') }}
+                            {{ form_errors(form.creditWanted, {attr: {class: 'error-list'}}) }}
+                            {{ form_widget(form.creditWanted, {disabled: user ? false : true}) }}
+                        </div>
+
+                        <div class="text-center">
+                            <input type="submit" name="submit" value="{{ 'form.submit.label'|trans }}" class="btn btn-primary" {{ user ? '' : ' disabled' }}/>
+                        </div>
+                    {% else %}
+                        <div class="text-center">
+                            <a href="{{ path('haphpy_delete') }}" class="btn btn-primary">{{ 'step.submitted.remove_button'|trans }}</a>
+                        </div>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </section>

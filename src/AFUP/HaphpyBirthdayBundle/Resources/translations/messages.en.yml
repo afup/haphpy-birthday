@@ -45,6 +45,9 @@ step:
         contributions_examples: See some contributions examples
     submit:
         title: Submit your contribution
+    submitted:
+        remove_button: Remove my contribution
+        thanks: You have already contributed, thanks !
 
 #Home Page
 index:
