@@ -67,7 +67,7 @@ class DefaultController extends Controller
         $user         = $this->getUser();
         $contribution = $this->getOrGenerateContribution($user);
 
-        if (!$contribution->isNew()) {
+        if ($contribution->getFileName()) {
             $this->get('haphpy.contribution_persister')->remove($contribution);
         }
 

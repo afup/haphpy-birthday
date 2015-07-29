@@ -265,13 +265,4 @@ class Contribution
 
         return $this;
     }
-
-    /**
-     * @return bool
-     */
-    public function isNew()
-    {
-        return strlen($this->getFileName()) == 0;
-    }
-
 }

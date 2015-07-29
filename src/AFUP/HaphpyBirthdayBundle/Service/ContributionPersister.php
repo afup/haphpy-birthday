@@ -63,14 +63,13 @@ class ContributionPersister
      */
     public function remove(Contribution $contribution)
     {
-        if ($contribution->isNew()) {
+        if (!$contribution->getFileName()) {
             return;
         }
 
         unlink($this->pathGenerator->generateAbsolutePath($contribution));
-        $contribution->setFileName(null);
-
-        $this->entityManager->persist($contribution);
+        
+        $this->entityManager->remove($contribution);
         $this->entityManager->flush();
     }
 }
