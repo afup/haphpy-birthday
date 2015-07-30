@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Woecifaun\Bundle\TranslationBridgeBundle\Configuration\TranslationBridge;
 
@@ -49,12 +50,43 @@ class DefaultController extends Controller
             return $this->redirectToRoute('haphpy_index', ['locale' => $request->getLocale()]);
         }
 
+        $contributionFile = $this->get('haphpy.contribution_persister')->getFileInfo($contribution);
+
+
         return [
-            'user'         => $user,
-            'form'         => $form->createView(),
-            'gauge'        => $this->get('haphpy.gauge'),
-            'contribution' => $contribution,
+            'user'              => $user,
+            'form'              => $form->createView(),
+            'gauge'             => $this->get('haphpy.gauge'),
+            'contribution'      => $contribution,
+            'contribution_file' => $contributionFile,
         ];
+    }
+
+    /**
+     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+     *
+     * @return Response
+     */
+    public function viewContributionAction()
+    {
+        $user             = $this->getUser();
+        $contribution     = $this->getOrGenerateContribution($user);
+        $contributionFile = $this->get('haphpy.contribution_persister')->getFileInfo($contribution);
+
+        if (null === $contributionFile) {
+            throw $this->createNotFoundException();
+        }
+
+        $response = new Response();
+
+        $response->headers->set('Cache-Control', 'private');
+        $response->headers->set('Content-type', $contributionFile->getMTime());
+        $response->headers->set('Content-length', $contributionFile->getSize());
+        $response->sendHeaders();
+
+        $response->setContent(readfile($contributionFile->getRealPath()));
+
+        return $response;
     }
 
     /**

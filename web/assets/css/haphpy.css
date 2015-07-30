@@ -234,6 +234,10 @@ section h2 {
     position: relative;
 }
 
+.haphpy-step-2 img {
+    width: 100%;
+}
+
 .haphpy-step-number {
     width: 2em;
     height: 2em;

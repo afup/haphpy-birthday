@@ -24,3 +24,8 @@ haphpy_delete:
         en: "/delete"
         fr: "/delete"
     defaults: { _controller: AppBundle:Default:delete }
+
+
+view_contribution:
+    path: "contribution/view"
+    defaults: { _controller: AppBundle:Default:viewContribution }

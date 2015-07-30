@@ -3,6 +3,7 @@
 namespace AFUP\HaphpyBirthdayBundle\Service;
 
 use AFUP\HaphpyBirthdayBundle\Entity\Contribution;
+use AFUP\HaphpyBirthdayBundle\HttpFoundation\File\File;
 use Doctrine\ORM\EntityManagerInterface;
 
 /**
@@ -72,5 +73,19 @@ class ContributionPersister
 
         $this->entityManager->persist($contribution);
         $this->entityManager->flush();
+    }
+
+
+    /**
+     * @param Contribution $contribution
+     *
+     * @return \SplFileInfo
+     */
+    public function getFileInfo(Contribution $contribution)
+    {
+        if ($contribution->isNew()) {
+            return null;
+        }
+        return new File($this->pathGenerator->generateAbsolutePath($contribution));
     }
 }

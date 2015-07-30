@@ -74,7 +74,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 haphpy-step">
+                <div class="col-sm-12 col-md-4 haphpy-step haphpy-step-2">
                     {% if contribution.isNew %}
                         <h3>
                             {% set color = haphpy.color %}
@@ -85,6 +85,9 @@
                         {{ form_widget(form.file, {disabled: user ? false : true}) }}
                     {% else %}
                         <h3>{{ 'step.submitted.thanks'|trans }}</h3>
+                        {% if contribution_file and contribution_file.isImage() %}
+                            <img src="{{ path('view_contribution') }}" />
+                        {% endif %}
                     {% endif %}
                 </div>
 
