@@ -3,6 +3,7 @@
 namespace AFUP\HaphpyBirthdayBundle\Controller;
 
 use AFUP\HaphpyBirthdayBundle\Entity\Contribution;
+use AFUP\HaphpyBirthdayBundle\HttpFoundation\File\File;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -57,14 +58,15 @@ class MediaController extends Controller
         }
 
         $absolutePath = $this->get('haphpy.path_generator')->generateAbsolutePath($contribution);
+        $file = new File($absolutePath);
 
         $headers = [
-            'Cache-Control' => 'private',
-            'Content-type' => mime_content_type($absolutePath),
-            'Content-Length' => filesize($absolutePath),
+            'Cache-Control'             => 'private',
+            'Content-type'              => $file->getMimeTypeForHtmlPlayer(),
+            'Content-Length'            => $file->getSize(),
             'Content-Transfer-Encoding' => 'binary',
         ];
 
-        return new Response(file_get_contents($absolutePath), 200, $headers);
+        return new Response(file_get_contents($file->getRealPath()), 200, $headers);
     }
 }
