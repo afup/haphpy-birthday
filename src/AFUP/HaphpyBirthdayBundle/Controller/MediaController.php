@@ -9,7 +9,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 /**
  * Media Controller
@@ -57,16 +56,15 @@ class MediaController extends Controller
             return new Response('Access denied', 403);
         }
 
-        $absolutePath = $this->get('haphpy.path_generator')->generateAbsolutePath($contribution);
-        $file = new File($absolutePath);
+        $this->get('haphpy.file_attacher')->attachTo($contribution);
 
         $headers = [
             'Cache-Control'             => 'private',
-            'Content-type'              => $file->getMimeTypeForHtmlPlayer(),
-            'Content-Length'            => $file->getSize(),
+            'Content-type'              => $contribution->getFile()->getMimeTypeForHtmlPlayer(),
+            'Content-Length'            => $contribution->getFile()->getSize(),
             'Content-Transfer-Encoding' => 'binary',
         ];
 
-        return new Response(file_get_contents($file->getRealPath()), 200, $headers);
+        return new Response(file_get_contents($contribution->getFile()->getRealPath()), 200, $headers);
     }
 }

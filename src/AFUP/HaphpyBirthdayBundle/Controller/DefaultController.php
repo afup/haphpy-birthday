@@ -3,6 +3,7 @@
 namespace AFUP\HaphpyBirthdayBundle\Controller;
 
 use AFUP\HaphpyBirthdayBundle\Entity\Contribution;
+use AFUP\HaphpyBirthdayBundle\HttpFoundation\File\File;
 use AFUP\HaphpyBirthdayBundle\Form\Type\ContributionType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -48,6 +49,8 @@ class DefaultController extends Controller
 
             return $this->redirectToRoute('haphpy_index', ['locale' => $request->getLocale()]);
         }
+
+        $this->get('haphpy.file_attacher')->attachTo($contribution);
 
         return [
             'user'         => $user,

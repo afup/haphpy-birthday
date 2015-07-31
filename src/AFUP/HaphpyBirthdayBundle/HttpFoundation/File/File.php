@@ -22,4 +22,17 @@ class File extends \Symfony\Component\HttpFoundation\File\File
 
         return $mimeType;
     }
+
+    /**
+     * Get the top level type of the MIME
+     *
+     * @return string
+     */
+    public function getGenericMimeType()
+    {
+        $mimeType = parent::getMimeType();
+        $mimeType = explode('/', $mimeType);
+
+        return $mimeType[0];
+    }
 }
