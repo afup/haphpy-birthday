@@ -354,6 +354,7 @@ ul.error-list {
 
 /** Contributions **/
 #contributions {
+    padding-top: 80px;
     background-image: url(../images/galaxy.png);
     color: #ddd;
 }
@@ -369,6 +370,7 @@ ul.error-list {
 /** About Page **/
 #final-video {
     background-image: url(../images/galaxy_core.png);
+    padding-top: 80px;
 }
 
 #final-video h2 {

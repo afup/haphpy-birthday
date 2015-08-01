@@ -86,6 +86,7 @@
                 </a>
             </div>
         </div>
+        {% block header %}
         <header id="header">
             {% if warning_message %}
                 <div id="warning-message">
@@ -98,7 +99,9 @@
             </div>
             <h1>{{ 'haphpy.punchline'|trans|raw }}</h1>
         </header>
+        {% endblock %}
 
+        {% block gauge %}
         <section id="gauge-section">
             <div class="container">
                 <div class="row">
@@ -135,6 +138,7 @@
                 </div>
             </div>
         </section>
+        {% endblock %}
 
         {% block content %}
 
