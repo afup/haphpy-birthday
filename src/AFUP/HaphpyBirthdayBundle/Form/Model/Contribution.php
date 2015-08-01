@@ -13,7 +13,7 @@ class Contribution
 {
     /**
      * @Assert\File(
-     *     maxSize="6Mi",
+     *     maxSize="25Mi",
      *     mimeTypes = {
      *         "video/quicktime",
      *         "video/mp4",
