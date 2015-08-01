@@ -68,7 +68,7 @@ class ContributionPersister
         }
 
         unlink($this->pathGenerator->generateAbsolutePath($contribution));
-        
+
         $this->entityManager->remove($contribution);
         $this->entityManager->flush();
     }
