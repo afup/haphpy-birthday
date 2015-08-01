@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "11cb663fe5fb7a6fd011fa7b4ffeab65",
+    "hash": "29f064b5d8c3905d7e439cffea6f6cc6",
     "packages": [
         {
             "name": "besimple/i18n-routing-bundle",
@@ -2895,6 +2895,50 @@
             "time": "2015-06-06 23:31:24"
         },
         {
+            "name": "woecifaun/symfony2-coding-standard",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/woecifaun/Symfony2-coding-standard.git",
+                "reference": "5822c860ebcf17fa5e1fbcbf23115cf7421bf611"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/woecifaun/Symfony2-coding-standard/zipball/5822c860ebcf17fa5e1fbcbf23115cf7421bf611",
+                "reference": "5822c860ebcf17fa5e1fbcbf23115cf7421bf611",
+                "shasum": ""
+            },
+            "require": {
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "suggest": {
+                "m6web/coke": "PHP CodeSniffer configurator"
+            },
+            "type": "library",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mikael Randy",
+                    "role": "maintainer"
+                }
+            ],
+            "description": "Symfony2 PHP CodeSniffer Coding Standard",
+            "keywords": [
+                "CodeSniffer",
+                "Standard",
+                "Symfony2",
+                "m6web",
+                "phpcs"
+            ],
+            "support": {
+                "source": "https://github.com/woecifaun/Symfony2-coding-standard",
+                "issues": "https://github.com/woecifaun/Symfony2-coding-standard/issues"
+            },
+            "time": "2015-08-01 09:35:17"
+        },
+        {
             "name": "woecifaun/translation-bridge-bundle",
             "version": "v0.0.1",
             "source": {
@@ -2994,7 +3038,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "hwi/oauth-bundle": 20
+        "hwi/oauth-bundle": 20,
+        "woecifaun/symfony2-coding-standard": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

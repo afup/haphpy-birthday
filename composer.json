@@ -24,7 +24,8 @@
         "m6web/coke": "~2.1",
         "m6web/symfony2-coding-standard": "~3.0",
         "hwi/oauth-bundle": "0.4.*@dev",
-        "woecifaun/translation-bridge-bundle": "~0.0"
+        "woecifaun/translation-bridge-bundle": "~0.0",
+        "woecifaun/Symfony2-coding-standard": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
@@ -68,6 +69,10 @@
         "translation-bridge": {
             "type": "vcs",
             "url": "https://github.com/woecifaun/translation-bridge-bundle"
+        },
+        "symfony-coding-standards": {
+            "type": "vcs",
+            "url": "https://github.com/woecifaun/Symfony2-coding-standard"
         }
     }
 }
