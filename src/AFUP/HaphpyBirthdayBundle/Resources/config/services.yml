@@ -14,6 +14,10 @@ services:
         class: AFUP\HaphpyBirthdayBundle\Service\ContributionPersister
         arguments: [@doctrine.orm.entity_manager, @haphpy.path_generator]
 
+    haphpy.file_attacher:
+        class: AFUP\HaphpyBirthdayBundle\Service\FileAttacher
+        arguments: [@haphpy.path_generator]
+
     haphpy.contribution_repository:
         class: Doctrine\ORM\EntityRepository
         factory_service: doctrine.orm.default_entity_manager

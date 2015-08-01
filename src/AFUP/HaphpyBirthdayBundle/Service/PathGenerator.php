@@ -41,10 +41,10 @@ class PathGenerator
     public function generateAbsolutePath(Contribution $contribution, File $file = null)
     {
         if (null === $file) {
-            return $this->directory.$contribution->getFileName();
+            return $this->directory.DIRECTORY_SEPARATOR.$contribution->getFileName();
         }
 
-        return $this->directory.$this->generateRelativePath($contribution, $file);
+        return $this->directory.DIRECTORY_SEPARATOR.$this->generateRelativePath($contribution, $file);
     }
 
     /**
@@ -55,8 +55,7 @@ class PathGenerator
      */
     public function generateRelativePath(Contribution $contribution, File $file)
     {
-        $path  = $this->directory.DIRECTORY_SEPARATOR;
-        $path .= $contribution->getAuthProvider().DIRECTORY_SEPARATOR;
+        $path  = $contribution->getAuthProvider().DIRECTORY_SEPARATOR;
         $path .= $contribution->getIdentifier();
         $path .= '.'.($file->guessExtension() ? : $file->getExtension());
 
