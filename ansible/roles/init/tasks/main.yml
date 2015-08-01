@@ -41,4 +41,14 @@
   when: hostname is defined
 
 - name: Update /etc/hosts
-  lineinfile: dest=/etc/hosts regexp='^127\.0\.0\.1' line='127.0.0.1 localhost {{ hostname }}' owner=root group=root mode=0644
+  lineinfile: >
+    dest=/etc/hosts
+    regexp='^127\.0\.0\.1'
+    line='127.0.0.1 localhost {{ hostname }}'
+    owner=root
+    group=root
+    mode=0644
+
+- name: bash profile
+  template: src=bash_profile.tpl dest=/home/vagrant/.bash_profile
+  sudo: yes
