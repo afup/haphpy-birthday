@@ -436,6 +436,13 @@ ul.error-list {
     color: #ffffff;
 }
 
+.contribution a {
+    color: #ffffff;
+}
+
+.contribution a:hover {
+    color: #f34141;
+}
 .contribution span {
     margin-right: 0.5em;
 }

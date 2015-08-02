@@ -22,8 +22,7 @@
             <div class="row">
                 {% for contribution in contributions %}
                     <div class="col-sm-12 col-md-6 col-lg-3 contribution">
-                        <span class="fa haphpy-icon-{{ contribution.authProvider }}"></span>
-                        {{ contribution.visibleName }}
+                        {{ haphpy.social_link(contribution) }}
                     </div>
                 {% endfor %}
             </div>
