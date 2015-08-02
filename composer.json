@@ -25,7 +25,8 @@
         "m6web/symfony2-coding-standard": "~3.0",
         "hwi/oauth-bundle": "0.4.*@dev",
         "woecifaun/translation-bridge-bundle": "~0.0",
-        "woecifaun/Symfony2-coding-standard": "dev-master"
+        "woecifaun/Symfony2-coding-standard": "dev-master",
+        "symfony/var-dumper": "^2.7"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
