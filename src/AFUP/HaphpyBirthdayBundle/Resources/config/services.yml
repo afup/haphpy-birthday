@@ -13,3 +13,22 @@ services:
     haphpy.contribution_persister:
         class: AFUP\HaphpyBirthdayBundle\Service\ContributionPersister
         arguments: [@doctrine.orm.entity_manager, @haphpy.path_generator]
+
+    haphpy.file_attacher:
+        class: AFUP\HaphpyBirthdayBundle\Service\FileAttacher
+        arguments: [@haphpy.path_generator]
+
+    haphpy.contribution_repository:
+        class: Doctrine\ORM\EntityRepository
+        factory_service: doctrine.orm.default_entity_manager
+        factory_method: getRepository
+        arguments:
+            - AFUP\HaphpyBirthdayBundle\Entity\Contribution
+
+    haphpy.pugs:
+        class: AFUP\HaphpyBirthdayBundle\Model\Pugs
+        arguments: ["%pug_list%"]
+
+    haphpy.gauge:
+        class: AFUP\HaphpyBirthdayBundle\Model\Gauge
+        arguments: [@haphpy.contribution_repository, @haphpy.pugs, "%haphpy_steps%"]

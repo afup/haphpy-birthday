@@ -21,9 +21,12 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "phpunit/phpunit": "~4.5",
         "besimple/i18n-routing-bundle": "~2.3",
-        "m6web/coke": "~1.2",
-        "m6web/Symfony2-coding-standard": "~1.1",
-        "hwi/oauth-bundle": "0.4.*@dev"
+        "m6web/coke": "~2.1",
+        "m6web/symfony2-coding-standard": "~3.0",
+        "hwi/oauth-bundle": "0.4.*@dev",
+        "woecifaun/translation-bridge-bundle": "~0.0",
+        "woecifaun/Symfony2-coding-standard": "dev-master",
+        "symfony/var-dumper": "^2.7"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
@@ -61,6 +64,16 @@
         },
         "branch-alias": {
             "dev-master": "2.6-dev"
+        }
+    },
+    "repositories": {
+        "translation-bridge": {
+            "type": "vcs",
+            "url": "https://github.com/woecifaun/translation-bridge-bundle"
+        },
+        "symfony-coding-standards": {
+            "type": "vcs",
+            "url": "https://github.com/woecifaun/Symfony2-coding-standard"
         }
     }
 }

@@ -1,0 +1,38 @@
+<div class="col-sm-12 col-md-4 haphpy-step ">
+    <div class="text-center">
+        {{ 'step.authenticate.logged_in'|trans({
+                '%authProvider%': user.authProvider,
+                '%username%': user.visibleName
+            })|raw
+        }}
+    </div>
+</div>
+
+<div class="col-sm-12 col-md-4 haphpy-step">
+        <h3>{{ 'step.submitted.thanks'|trans }}</h3>
+        <div>
+        {% if contribution.file.genericMimeType == 'image' %}
+            <img src="{{ path('media_serve', {
+                auth: user.authProvider,
+                identifier: user.username
+            }) }}" class="fitting-media">
+        {% endif %}
+        {% if contribution.file.genericMimeType == 'video' %}
+            <video controls class="fitting-media">
+                <source src="{{ path('media_serve', {
+                    auth: user.authProvider,
+                    identifier: user.username
+                }) }}" type="{{ contribution.file.mimeTypeForHtmlPlayer }}">
+                This video is not supported by browsers.
+            </video>
+        {% endif %}
+        </div>
+</div>
+
+<div class="col-sm-12 col-md-4 haphpy-step">
+        <div class="text-center">
+            <a href="{{ path('haphpy_delete') }}" class="btn btn-primary">
+                {{ 'step.submitted.remove_button'|trans }}
+            </a>
+        </div>
+</div>

@@ -1,17 +1,165 @@
 <html>
     <head>
-        <title>{{ 'head.title'|trans }}</title>
+        <meta charset="UTF-8" />
+        {% include 'WoecifaunTranslationBridgeBundle::alternates.html.twig' %}
+
+        <title>{% block title %}{{ 'head.title'|trans }}{% endblock %}</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:100,400,300,700,900|Roboto+Condensed:400,300,700|Inconsolata:400' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="/assets/css/elaostrap.css" />
         <link rel="stylesheet" type="text/css" href="/assets/css/haphpy.css" />
+        <meta name="description" content="{{ 'head.description'|trans }}" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
     </head>
-    <body>
+    <body class="has-header">
+        <div id="mobile-nav">
+            <div class="mobile-nav-title">{{ 'menu.mobile.navigation'|trans }}</div>
+            <nav>
+            </nav>
+        </div>
+        <div class="navbar fixed">
+            <div class="navbar-inner">
+                <a href="{{ path('haphpy_index') }}" class="navbar-logo">HaPHPy Birthday</a>
+                <nav id="main-nav" class="pull-right">
+                    <ul>
+                        <li><a href="{{ path('haphpy_index') ~ '#contribute' }}">{{ 'menu.index.label'|trans }}</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                {{ 'menu.contributions.label'|trans }}
+                                <span class="fa fa-angle-down"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="{{ path('haphpy_contributions') ~ '#contributions' }}">
+                                        {{ 'menu.contributions.people'|trans }}
+                                    </a>
+                                    <a href="{{ path('haphpy_contributions') ~ '#php-user-groups' }}">
+                                        {{ 'menu.contributions.pugs'|trans }}
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ path('haphpy_about') }}">{{ 'menu.about.label'|trans }}</a></li>
+                        {% include 'AppBundle::translationBridge.html.twig' %}
+                        <li class="dropdown">
+                            {% if user is not null%}
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <span class="fa haphpy-icon-{{ user.authProvider }}"></span>
+                                    {{ user.visibleName }}
+                                    <span class="fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ path('logout') }}">{{ 'menu.user.logout'|trans }}</a>
+                                    </li>
+                                </ul>
+                            {% else %}
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    {{ 'menu.user.login'|trans }}
+                                    <span class="fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ path('github_connect') }}">
+                                            <span class="fa haphpy-icon-github"></span>
+                                            {{ 'menu.user.github'|trans }}
+                                        </a>
+                                        <a href="{{ path('twitter_connect') }}">
+                                            <span class="fa haphpy-icon-twitter"></span>
+                                            {{ 'menu.user.twitter'|trans }}
+                                        </a>
+                                        <a href="{{ path('facebook_connect') }}">
+                                            <span class="fa haphpy-icon-facebook"></span>
+                                            {{ 'menu.user.facebook'|trans }}
+                                        </a>
+                                    </li>
+                                </ul>
+                            {% endif %}
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" class="mobile-nav-toggle">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </a>
+            </div>
+        </div>
         <header id="header">
-            <img src="/assets/images/haphpy-birthday.svg" id="haphpy-logo">
+            {% if warning_message %}
+                <div id="warning-message">
+                    <div class="progress-bar-info progress-bar-striped active">{{ warning_message }}</div>
+                </div>
+            {% endif %}
+
+            <div id="haphpy-logo">
+                <img src="/assets/images/haphpy-birthday.svg">
+            </div>
+            <h1>{{ 'haphpy.punchline'|trans|raw }}</h1>
         </header>
+
+        <section id="gauge-section">
+            <div class="container">
+                <div class="row">
+                    <div id="gauge-contributors" class="col-sm-12 col-lg-6">
+                        <a href="{{ path('haphpy_contributions') }}" class="stand-out">
+                            <span>{{ gauge.amount }}</span> {{ 'gauge.contributions'|trans }}
+                        </a>
+                    </div>
+                    <div id="gauge-remaining-days" class="col-sm-12 col-lg-6">
+                        {% set days = (limit_date|date('U') - 'now'|date('U'))|date('z')  %}
+                        <span>{{ days }} </span>{{ 'gauge.remaining_days'|trans }}
+                    </div>
+                </div>
+                <div id="gauge">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped active"
+                            data-placement="right"
+                            data-toggle="tooltip"
+                            title=""
+                            style="width:{{ gauge.percent }}%;"
+                            data-original-title="{{ gauge.amount }} contributions"
+                        >
+                        </div>
+                    </div>
+                    <div class="gauge-steps">
+                    {% for step in gauge.steps %}
+                        {% set step_percent = ((step.value / gauge.getStepsMaxValue) * 100)|round %}
+                        <div class="gauge-step" style="left:{{ step_percent }}%;">
+                            <span class="gauge-step-dot">&nbsp;</span>
+                            <span class="gauge-step-name">{{ ('gauge.step.' ~ step.name)|trans }}</span>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
 
         {% block content %}
 
         {% endblock %}
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 no-padding-bottom">
+                        <a href="https://github.com/afup/haphpy-birthday">
+                            <span class="fa haphpy-icon-github"></span>
+                            {{ 'footer.github'|trans }}
+                        </a>
+                    </div>
+                    <div class="col-sm-4 no-padding-bottom text-center">
+                        <span class="fa fa-envelope"></span>team<span class="arobase">haphpy-birthday.net</span>
+                    </div>
+                    <div class="col-sm-4 no-padding-bottom text-right">
+                        <a href="https://github.com/afup/haphpy-birthday/graphs/contributors">
+                            {{ 'footer.by_community'|trans|raw }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <script src="/assets/js/main.js"></script>
     </body>

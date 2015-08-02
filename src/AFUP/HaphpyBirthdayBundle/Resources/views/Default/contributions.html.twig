@@ -1,0 +1,67 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% import "AppBundle:Macro:style.html.twig" as haphpy %}
+
+{% block title %}{{ parent() }} - {{ 'contributions.title'|trans }}{% endblock %}
+
+{% block content %}{% spaceless %}
+    <section id="contributions" class="page-section dark-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h2>
+                        {{ contributions|length }} {{ 'contributions.contributors_list'|trans }}
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row">
+                {% for contribution in contributions %}
+                    <div class="col-sm-12 col-md-6 col-lg-3 contribution">
+                        <span class="fa haphpy-icon-{{ contribution.authProvider }}"></span>
+                        {{ contribution.identifier }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section" id="php-user-groups">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h2>
+                        {{ userGroups|length }} {{ 'contributions.php_user_groups'|trans }}
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                {% for group in userGroups|shuffle %}
+                    <div class="col-sm-12 col-md-6 col-lg-4 user-group">
+                        <div class="user-group-image">
+                            <a href="{{ group.website }}">
+                                <img src="/assets/images/php-user-group/{{ group.picture }}">
+                            </a>
+                        </div>
+                        <div class="user-group-data">
+                            <h4 title="{{ group.full_name }}">
+                                <a href="{{ group.website }}">
+                                    {{ group.displayed_name }}</h4>
+                                </a>
+                            <div class="user-group-location">
+                                {% if group.country %}
+                                    <span>{{ group.country }}</span>{% if group.city %}, {{ group.city }}{% endif %}
+                                {% endif %}
+                            </div>
+                            {% if group.twitter %}
+                                <a href="https://twitter.com/{{ group.twitter }}" class="user-group-twitter">
+                                    <span class="fa haphpy-icon-twitter"></span> {{ group.twitter }}
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endspaceless %}{% endblock %}

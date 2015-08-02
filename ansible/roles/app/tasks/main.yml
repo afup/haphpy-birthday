@@ -3,6 +3,15 @@
 - name: Creates Contribution Media directory
   file: path=/var/haphpy/contributions state=directory group=www-data mode=0770
 
+- name: Creates GitHub contributions media directory
+  file: path=/var/haphpy/contributions/github state=directory group=www-data mode=0770
+
+- name: Creates Facebook contributions media directory
+  file: path=/var/haphpy/contributions/facebook state=directory group=www-data mode=0770
+
+- name: Creates Twitter contributions media directory
+  file: path=/var/haphpy/contributions/twitter state=directory group=www-data mode=0770
+
 - name: Add vagrant user to www-data
   user: name=vagrant groups=www-data append=yes
   #when: vagrant environment @TODO

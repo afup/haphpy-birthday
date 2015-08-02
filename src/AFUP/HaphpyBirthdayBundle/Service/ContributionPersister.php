@@ -4,6 +4,7 @@ namespace AFUP\HaphpyBirthdayBundle\Service;
 
 use AFUP\HaphpyBirthdayBundle\Entity\Contribution;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * Contribution Persister
@@ -41,17 +42,35 @@ class ContributionPersister
      * and perist Contribution info to database
      *
      * @param Contribution $contribution
-     * @param \SplFileInfo $file
+     * @param UploadedFile $file
      */
-    public function persist(Contribution $contribution, \SplFileInfo $file)
+    public function persist(Contribution $contribution, UploadedFile $file)
     {
         // File
         $path = $this->pathGenerator->generateAbsolutePath($contribution, $file);
+        $relativePath = $this->pathGenerator->generateRelativePath($contribution, $file);
         $file->move(dirname($path), basename($path));
 
         // Data persistence
         $contribution->setModifiedAt(new \DateTime());
+        $contribution->setFileName($relativePath);
+
         $this->entityManager->persist($contribution);
+        $this->entityManager->flush();
+    }
+
+    /**
+     * @param Contribution $contribution
+     */
+    public function remove(Contribution $contribution)
+    {
+        if (!$contribution->getFileName()) {
+            return;
+        }
+
+        unlink($this->pathGenerator->generateAbsolutePath($contribution));
+
+        $this->entityManager->remove($contribution);
         $this->entityManager->flush();
     }
 }

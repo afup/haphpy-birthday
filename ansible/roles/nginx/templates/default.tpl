@@ -2,18 +2,24 @@ server {
     listen  80;
 
     root {{ doc_root }};
-    index index.html index.php;
-
     server_name {{ servername }};
 
+    # strip app.php/ prefix if it is present
+    rewrite ^/app\.php/?(.*)$ /$1 permanent;
+
     location / {
-        try_files $uri $uri/ /app.php?$query_string;
+        index app.php;
+        try_files $uri @rewrite;
     }
 
-    location ~ ^/app_dev\.php(/|$) {
+    location @rewrite {
+        rewrite ^(.*)$ /app.php/$1 last;
+    }
+
+    location ~ ^/app(_\w+)?\.php(/|$) {
+        include fastcgi_params;
         fastcgi_pass unix:/var/run/php5-fpm.sock;
         fastcgi_split_path_info ^(.+\.php)(/.*)$;
-        include fastcgi_params;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         fastcgi_param HTTPS off;
     }
@@ -23,13 +29,5 @@ server {
     error_page 500 502 503 504 /50x.html;
         location = /50x.html {
         root /usr/share/nginx/www;
-    }
-
-    location ~ \.php$ {
-        fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        fastcgi_pass unix:/var/run/php5-fpm.sock;
-        fastcgi_index index.php;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        include fastcgi_params;
     }
 }

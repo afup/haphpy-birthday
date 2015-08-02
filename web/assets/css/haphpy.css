@@ -1,14 +1,235 @@
-/** header **/
-
-header#header {
-    padding: 5%;
+/** General **/
+.haphpy-icon-github:before {
+    content: "\f09b";
 }
 
-#haphpy-logo {
+.haphpy-icon-facebook:before {
+    content: "\f082";
+}
+
+.haphpy-icon-twitter:before {
+    content: "\f099";
+}
+
+.text-highlight {
+    color: #f34141;
+}
+
+.fitting-media {
     width: 100%;
 }
 
-/** Steps */
+video {
+    width: 100%;
+}
+
+a.differ {
+    color: #333;
+}
+
+a.differ:hover {
+    color: #f34141;
+}
+
+a.stand-out {
+    color: #000;
+}
+
+a.stand-out:hover {
+    color: #f34141;
+}
+
+.arobase:before {
+    content: "@";
+}
+
+/** Menu **/
+#login-state span.fa {
+    margin-right: 0.4em;
+}
+
+.translation-bridge-switcher ul.dropdown-menu {
+    min-width: 0;
+}
+
+.translation-bridge-switcher a.dropdown-toggle {
+    text-transform: uppercase;
+}
+
+/** Header **/
+
+header#header {
+    padding: 80px 0 0 0;
+    background: url(../images/sparkles.jpg) center center no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+header#header div {
+    padding: 2%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+#haphpy-logo img {
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    #haphpy-logo {
+        display: none;
+    }
+}
+
+header h1 {
+    color: #000000;
+    font-weight: 100;
+    font-size: 30px;
+    margin: 0 0 2em 0;
+}
+
+@media screen and (max-width: 767px) {
+    header h1 {
+        margin: 1em 0;
+    }
+}
+
+header h1 sup {
+    text-transform: none;
+}
+
+
+header#header #warning-message {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+header#header #warning-message div {
+    line-height: 1em;
+    -webkit-animation:progress-bar-stripes 2s linear infinite;
+    animation:progress-bar-stripes 2s linear infinite;
+    padding: 0.2em;
+    text-transform: none;
+}
+
+@media screen and (min-width: 361px) {
+    header#header #warning-message div {
+        position: absolute;
+        display: inline-block;
+        line-height: 1em;
+        top: 0.8em;
+        left: 6em;
+        border-radius: 0.1em;
+        padding: 0.2em;
+        text-transform: none;
+        transform: rotate(-7deg);
+        box-shadow: 0 10px 15px 6px rgba(0,0,0,0.3);
+    }
+}
+
+/** Gauge **/
+#gauge-section {
+    padding-top: 2em;
+}
+
+#gauge-contributors, #gauge-remaining-days {
+    color: #000000;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+#gauge-contributors span, #gauge-remaining-days span {
+    font-size: 200%;
+}
+
+#gauge {
+    position: relative;
+    padding-top: 8px;
+    margin-bottom: 5em;
+}
+
+#gauge .progress {
+    border-radius: 4px;
+}
+
+#gauge .progress-bar {
+    border-radius: 0 4px 4px 0;
+}
+
+.gauge-step {
+    position: absolute;
+    top: 0;
+    line-height: 24px;
+    margin-left: -12px;
+}
+
+.gauge-step:last-child {
+    margin-left: -16px;
+}
+
+.gauge-step-dot {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 8px;
+}
+
+.gauge-step-name {
+    display: inline;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 16px 24px 0 0;
+    white-space: nowrap;
+}
+
+/** Main content **/
+section.page-section {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background: center center no-repeat;
+    background-size: cover;
+}
+
+section.dark-background {
+    color: #ccc;
+}
+
+section.dark-background h2,
+section.dark-background h4 {
+    color: #ffffff;
+}
+
+section a.differ {
+    color: #ffffff;
+}
+
+section a.differ:hover {
+    color: #f34141;
+}
+
+section h2 {
+    font-weight: 100;
+}
+
+/** Home Page */
+#introduction {
+    background-image: url(../images/galaxy.png);
+    color: #ddd;
+    font-size: 150%;
+    text-align: center;
+}
+
+#introduction p {
+    margin: 2em 0;
+    line-height: 1.5em;
+}
+
 .haphpy-step {
     position: relative;
 }
@@ -17,7 +238,6 @@ header#header {
     width: 2em;
     height: 2em;
     border-radius: 50%;
-    background-color: lime;
     color: white;
     text-align: center;
     display: inline-block;
@@ -29,9 +249,27 @@ header#header {
         margin-left: 0;
     }
 }
+
 .haphpy-step h3 {
     line-height: 2em;
     text-transform: none;
+}
+.haphpy-step .btn {
+    margin-bottom: 1em;
+}
+
+/** Authentication **/
+a.auth-button span{
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    color: white;
+    background: red;
+    text-align: center;
+    display: inline-block;
+    line-height: 2em;
+    font-size: 180%;
+    margin-top: 2em;
 }
 
 /** Form **/
@@ -58,4 +296,106 @@ ul.error-list {
     font-weight: 400;
     cursor: pointer;
     margin: 0;
+}
+
+#examples {
+    color: #ddd;
+    background-image: url(../images/code.jpg);
+}
+
+#examples h2 {
+    color: white;
+}
+
+#examples h5 {
+    color: #ddd;
+}
+
+/** User Groups **/
+#php-user-groups {
+    background: white;
+}
+
+.user-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-group-image {
+    width: 5em;
+    height: 5em;
+    position: relative;
+}
+
+.user-group-image img {
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.user-group-data {
+    width: calc(100% - 5em);
+    padding: 0 0 0 1em;
+}
+
+.user-group-data h4 {
+    line-height: 1.2;
+    margin: -0.2em 0 0 0;
+}
+
+/** Contributions **/
+#contributions {
+    background-image: url(../images/galaxy.png);
+    color: #ddd;
+}
+
+#contributions h3 {
+    color: white;
+}
+
+.contribution span {
+    margin-right: 0.5em;
+}
+
+/** About Page **/
+#final-video {
+    background-image: url(../images/galaxy_core.png);
+}
+
+#final-video h2 {
+    text-align: center;
+    text-transform: none;
+    margin: 2em 0;
+}
+
+#about-contributions h2 {
+    color: #f34141;
+    text-align: center;
+    text-transform: none;
+    margin: 2em 0;
+}
+
+#about-misc {
+    background-image: url(../images/galaxy.png);
+}
+
+/** License **/
+#creative-commons-icons {
+    text-align: center;
+}
+
+#creative-commons-icons svg {
+    width: 80%;
+}
+
+.cc-icon {
+    fill: #ddd;
+}
+
+/** Footer **/
+footer#footer {
+    margin-top: 0;
 }

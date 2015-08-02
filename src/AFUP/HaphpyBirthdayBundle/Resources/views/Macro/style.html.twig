@@ -1,15 +1,46 @@
+{#
+green              19d175   25,  209, 17
+red elaostrap      f34141   243, 65,  65
+light blue         00b8e6   0,   184, 230
+orange             ffad33   255, 173, 51
+purple             ad5cff   173, 92,  255
+blue               4775ff   71,  117, 255
+pink               e65cb8   230, 92,  184
+lime               8ae62e   138, 230, 46
+gray               a6a6a6   166, 166, 166
+desaturated blue   44576a   68,  87,  10
+#}
+
 {% macro color() %}{% spaceless %}
     {% set colors = [
-        '#19d175',
-        '#f34141',
-        '#00b8e6',
-        '#ffad33',
-        '#ad5cff',
-        '#4775ff',
-        '#e65cb8',
-        '#8ae62e',
-        '#a6a6a6',
-        '#44576a'
+        '19d175',
+        'f34141',
+        '00b8e6',
+        'ffad33',
+        'ad5cff',
+        '4775ff',
+        'e65cb8',
+        '8ae62e',
+        'a6a6a6',
+        '44576a'
     ] %}
-    {{ random(colors) }}
+    {{ '#' ~ random(colors) }}
+{% endspaceless %}{% endmacro %}
+
+{% macro highlight() %}{% spaceless %}
+    {% set colors = [
+        '25,209,17',
+        '243,65,65',
+        '0,184,230',
+        '255,173,51',
+        '173,92,255',
+        '71,117,255',
+        '230,92,184',
+        '138,230,46',
+        '166,166,166',
+        '68,87,106'
+    ] %}
+    {% set color = random(colors) %}
+
+    style="border-bottom: solid rgba({{ color }},0.7);box-shadow: inset 0 -6px 0 rgba({{ color }},0.7);"
 {% endspaceless %}{% endmacro %}

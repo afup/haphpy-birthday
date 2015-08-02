@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new AFUP\HaphpyBirthdayBundle\AppBundle(),
             new BeSimple\I18nRoutingBundle\BeSimpleI18nRoutingBundle(),
             new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
+            new Woecifaun\Bundle\TranslationBridgeBundle\WoecifaunTranslationBridgeBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -12,6 +12,18 @@ github_login:
 github_connect:
     path:     /connect/github
 
+twitter_login:
+    pattern:  /login/check-twitter
+
+twitter_connect:
+    path:     /connect/twitter
+
+facebook_login:
+    pattern:  /login/check-facebook
+
+facebook_connect:
+    path:     /connect/facebook
+
 logout:
     path:  /logout
 

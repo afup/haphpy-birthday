@@ -1,5 +1,6 @@
 AFUP\HaphpyBirthdayBundle\Entity\Contribution:
     type: entity
+    repositoryClass: AFUP\HaphpyBirthdayBundle\Entity\ContributionRepository
     table: contribution
     id:
         id:
@@ -11,6 +12,9 @@ AFUP\HaphpyBirthdayBundle\Entity\Contribution:
             length: 100
             column: auth_provider
         identifier:
+            type:   string
+            length: 255
+        fileName:
             type:   string
             length: 255
         creditWanted:

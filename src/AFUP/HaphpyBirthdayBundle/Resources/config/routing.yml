@@ -2,4 +2,25 @@ haphpy_index:
     locales:
         en: "/en/"
         fr: "/fr/"
+        es: "/es/"
     defaults: { _controller: AppBundle:Default:index }
+
+haphpy_contributions:
+    locales:
+        en: "/en/contributions"
+        fr: "/fr/contributions"
+        es: "/es/contribuciones"
+    defaults: { _controller: AppBundle:Default:contributions }
+
+haphpy_about:
+    locales:
+        en: "/en/about"
+        fr: "/fr/a-propos"
+        es: "/es/acerca-de"
+    defaults: { _controller: AppBundle:Default:about }
+
+haphpy_delete:
+    locales:
+        en: "/delete"
+        fr: "/delete"
+    defaults: { _controller: AppBundle:Default:delete }

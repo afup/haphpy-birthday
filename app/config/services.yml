@@ -4,3 +4,8 @@ services:
         arguments: [@haphpy.contribution_persister]
         tags:
             -  { name: console.command }
+
+    twig.extension.array:
+       class: Twig_Extensions_Extension_Array
+       tags:
+            - { name: twig.extension }

@@ -3,12 +3,14 @@
 namespace AFUP\HaphpyBirthdayBundle\Controller;
 
 use AFUP\HaphpyBirthdayBundle\Entity\Contribution;
+use AFUP\HaphpyBirthdayBundle\HttpFoundation\File\File;
 use AFUP\HaphpyBirthdayBundle\Form\Type\ContributionType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Woecifaun\Bundle\TranslationBridgeBundle\Configuration\TranslationBridge;
 
 /**
  * Default Controller
@@ -19,6 +21,7 @@ class DefaultController extends Controller
      * @param Request $request
      *
      * @Template()
+     * @TranslationBridge()
      *
      * @return array for template
      */
@@ -47,9 +50,76 @@ class DefaultController extends Controller
             return $this->redirectToRoute('haphpy_index', ['locale' => $request->getLocale()]);
         }
 
+        $this->get('haphpy.file_attacher')->attachTo($contribution);
+
+        return [
+            'user'         => $user,
+            'form'         => $form->createView(),
+            'gauge'        => $this->get('haphpy.gauge'),
+            'contribution' => $contribution,
+        ];
+    }
+
+    /**
+     * @param Request $request
+     *
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function deleteAction(Request $request)
+    {
+        $user         = $this->getUser();
+        $contribution = $this->getOrGenerateContribution($user);
+
+        if ($contribution->getFileName()) {
+            $this->get('haphpy.contribution_persister')->remove($contribution);
+        }
+
+        return $this->redirectToRoute('haphpy_index', ['locale' => $request->getLocale()]);
+    }
+
+    /**
+     * @param Request $request
+     *
+     * @Template()
+     * @TranslationBridge()
+     *
+     * @return array for template
+     */
+    public function contributionsAction(Request $request)
+    {
+        $user          = $this->getUser();
+        $contributions = $this
+            ->get('haphpy.contribution_repository')
+            ->findPublicContributionsAlphabetically();
+
+        $userGroups = $this
+            ->get('haphpy.pugs')
+            ->getUserGroups()
+        ;
+
+        return [
+            'user'          => $user,
+            'contributions' => $contributions,
+            'userGroups'    => $userGroups,
+            'gauge'         => $this->get('haphpy.gauge'),
+        ];
+    }
+
+    /**
+     * @param Request $request
+     *
+     * @Template()
+     * @TranslationBridge()
+     *
+     * @return array for template
+     */
+    public function aboutAction(Request $request)
+    {
+        $user = $this->getUser();
+
         return [
             'user' => $user,
-            'form' => $form->createView(),
+            'gauge' => $this->get('haphpy.gauge'),
         ];
     }
 
@@ -91,7 +161,7 @@ class DefaultController extends Controller
                 ->getRepository('AFUP\HaphpyBirthdayBundle\Entity\Contribution')
                 ->findOneBy([
                     'authProvider' => $user->getAuthProvider(),
-                    'identifier'   => $user->getUsername()
+                    'identifier'   => $user->getUsername(),
                 ]);
 
             if ($contribution) {

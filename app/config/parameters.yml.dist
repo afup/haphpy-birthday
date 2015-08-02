@@ -14,18 +14,43 @@ parameters:
     mailer_user:       ~
     mailer_password:   ~
 
-    locale:            en
-
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-    # Accepted language for the site
-    accepted_languages:
-        - fr
-        - en
+    locale:            en
 
-    # Third party authentication
-    github_secret:     githubClientSecret
+    # Accepted languages for the site
+    accepted_languages:
+        - en
+        - fr
+        - es
+
+    # Translation bridge bundle
+    woecifaun.translationBridge.appLocales: "%accepted_languages%"
+
+    # Third party authenticationm
+    github_client_id:   fake_github_client_id
+    github_secret:      fake_github_secret
+    twitter_client_id:  fake_twitter_client_id
+    twitter_secret:     fake_twitter_secret
+    facebook_client_id: fake_facebook_client_id
+    facebook_secret:    fake_facebook_secret
 
     # media directory for contributions storage
-    contribution_dir: /var/haphpy/contributions
+    contribution_dir:  /var/haphpy/contributions
+
+    # Limit date for media contribution
+    limit_date: '2015-10-31 23:59:59 UTC'
+
+    # Expected steps and goal for the quantity of contributions
+    haphpy_steps:
+        - {name: min, value: 100}
+        - {name: joy, value: 250}
+        - {name: top, value: 500}
+
+    # PHP user groups config
+    pug_list: "%kernel.root_dir%/../src/AFUP/HaphpyBirthdayBundle/Resources/config/php-user-groups.yml"
+
+    # Display a warning message in the top if not null (used for demo)
+    warning_message: ~
+

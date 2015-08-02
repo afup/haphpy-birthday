@@ -29,6 +29,9 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        limit_date:      "%limit_date%"
+        warning_message: %warning_message%
 
 # Assetic Configuration
 assetic:
@@ -79,5 +82,13 @@ hwi_oauth:
     resource_owners:
         github:
             type:          github
-            client_id:     c57426d2c766b5ddf0e9
+            client_id:     "%github_client_id%"
             client_secret: "%github_secret%"
+        twitter:
+            type:          twitter
+            client_id:     "%twitter_client_id%"
+            client_secret: "%twitter_secret%"
+        facebook:
+            type:          facebook
+            client_id:     "%facebook_client_id%"
+            client_secret: "%facebook_secret%"

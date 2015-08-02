@@ -2,6 +2,8 @@
 
 namespace AFUP\HaphpyBirthdayBundle\Entity;
 
+use AFUP\HaphpyBirthdayBundle\HttpFoundation\File\File;
+
 /**
  * Contribution
  *
@@ -62,6 +64,11 @@ class Contribution
      * @var bool
      */
     private $validated;
+
+    /**
+     * @var File
+     */
+    private $file;
 
     /**
      * Construct
@@ -262,6 +269,30 @@ class Contribution
     public function setModifiedAt(\DateTime $modifiedAt)
     {
         $this->modifiedAt = $modifiedAt;
+
+        return $this;
+    }
+
+    /**
+     * Gets the File.
+     *
+     * @return File
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    /**
+     * Sets the file.
+     *
+     * @param File $file
+     *
+     * @return self
+     */
+    public function setFile(File $file)
+    {
+        $this->file = $file;
 
         return $this;
     }

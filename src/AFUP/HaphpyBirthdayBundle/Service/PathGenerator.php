@@ -34,19 +34,31 @@ class PathGenerator
      * Generate file path relative to contributed media directory
      *
      * @param Contribution $contribution
-     * @param SplFileInfo  $file
+     * @param File         $file
      *
      * @return string
      */
-    public function generateAbsolutePath(Contribution $contribution, File $file)
+    public function generateAbsolutePath(Contribution $contribution, File $file = null)
     {
-        return
-            $this->directory
-            .DIRECTORY_SEPARATOR
-            .$contribution->getAuthProvider()
-            .DIRECTORY_SEPARATOR
-            .$contribution->getIdentifier()
-            .'.'
-            .($file->guessExtension() ? : $file->getExtension());
+        if (null === $file) {
+            return $this->directory.DIRECTORY_SEPARATOR.$contribution->getFileName();
+        }
+
+        return $this->directory.DIRECTORY_SEPARATOR.$this->generateRelativePath($contribution, $file);
+    }
+
+    /**
+     * @param Contribution $contribution
+     * @param File         $file
+     *
+     * @return string
+     */
+    public function generateRelativePath(Contribution $contribution, File $file)
+    {
+        $path  = $contribution->getAuthProvider().DIRECTORY_SEPARATOR;
+        $path .= $contribution->getIdentifier();
+        $path .= '.'.($file->guessExtension() ? : $file->getExtension());
+
+        return $path;
     }
 }
