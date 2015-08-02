@@ -357,14 +357,16 @@ ul.error-list {
 
 #submission-success a.page-link {
     color: black;
-    background-color: rgba(255,255,255,0);
-    padding: 0.5em;
+    background-color: rgba(255,255,255,0.5);
+    padding: 0.15em;
     transition: background-color 0.5s;
+    border-radius: 2px;
+    font-size: 90%;
 }
 
 
 #submission-success a.page-link:hover {
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,1);
 }
 
 #submission-success .row:first-child {
@@ -380,6 +382,7 @@ ul.error-list {
     line-height: 1.5em;
     padding-bottom: 1em;
     padding-top: 1em;
+    margin-bottom: 5%;
 }
 
 #submission-success h1 + div.row {
