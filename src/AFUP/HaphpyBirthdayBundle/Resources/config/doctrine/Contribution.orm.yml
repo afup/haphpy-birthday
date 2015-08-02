@@ -14,6 +14,10 @@ AFUP\HaphpyBirthdayBundle\Entity\Contribution:
         identifier:
             type:   string
             length: 255
+        visibleName:
+            type:   string
+            length: 255
+            column: visible_name
         fileName:
             type:   string
             length: 255

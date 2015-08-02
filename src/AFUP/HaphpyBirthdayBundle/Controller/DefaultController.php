@@ -191,6 +191,7 @@ class DefaultController extends Controller
             $contribution = new Contribution();
             $contribution->setAuthProvider($user->getAuthProvider());
             $contribution->setIdentifier($user->getUsername());
+            $contribution->setVisibleName($user->getVisibleName());
 
             return $contribution;
         }

@@ -54,11 +54,11 @@ class UserProvider extends OAuthUserProvider
         switch ($authProviderName) {
             case 'github':
                 $username    = $response->getResponse()['login'];
-                $visibleName = $username;
+                $visibleName = $response->getResponse()['name'];
                 break;
             case 'twitter':
                 $username    = $response->getResponse()['screen_name'];
-                $visibleName = $username;
+                $visibleName = $response->getResponse()['name'];
                 break;
             case 'facebook':
                 $username    = $response->getResponse()['id'];
