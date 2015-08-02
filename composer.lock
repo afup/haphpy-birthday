@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "29f064b5d8c3905d7e439cffea6f6cc6",
+    "hash": "d867691cb901ed6abc6435ea5e3de64a",
     "packages": [
         {
             "name": "besimple/i18n-routing-bundle",
@@ -2670,16 +2670,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.6.9",
+            "version": "v2.6.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "b06539573ccf64dd3a62852685f052553d02c5ba"
+                "reference": "c6ab380a577e7bfb8db6e6f3105f470f97c83235"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/b06539573ccf64dd3a62852685f052553d02c5ba",
-                "reference": "b06539573ccf64dd3a62852685f052553d02c5ba",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/c6ab380a577e7bfb8db6e6f3105f470f97c83235",
+                "reference": "c6ab380a577e7bfb8db6e6f3105f470f97c83235",
                 "shasum": ""
             },
             "require": {
@@ -2783,7 +2783,66 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-05-29 22:55:07"
+            "time": "2015-07-26 10:44:22"
+        },
+        {
+            "name": "symfony/var-dumper",
+            "version": "v2.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "e8903ebba5eb019f5886ffce739ea9e3b7519579"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/e8903ebba5eb019f5886ffce739ea9e3b7519579",
+                "reference": "e8903ebba5eb019f5886ffce739ea9e3b7519579",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7"
+            },
+            "suggest": {
+                "ext-symfony_debug": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Resources/functions/dump.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\VarDumper\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony mechanism for exploring and dumping PHP variables",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "debug",
+                "dump"
+            ],
+            "time": "2015-07-28 15:18:12"
         },
         {
             "name": "twig/extensions",
