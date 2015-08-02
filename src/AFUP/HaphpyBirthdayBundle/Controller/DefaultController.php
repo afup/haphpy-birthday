@@ -42,12 +42,9 @@ class DefaultController extends Controller
             $this->get('haphpy.contribution_persister')
                 ->persist($contribution, $formContribution->file);
 
-            $this->addFlash(
-                'notice',
-                'form.notice.submission_success'
-            );
+            $this->addFlash('submission-success', true);
 
-            return $this->redirectToRoute('haphpy_index', ['locale' => $request->getLocale()]);
+            return $this->redirectToRoute('haphpy_submitted', ['locale' => $request->getLocale()]);
         }
 
         $this->get('haphpy.file_attacher')->attachTo($contribution);
@@ -56,6 +53,31 @@ class DefaultController extends Controller
             'user'         => $user,
             'form'         => $form->createView(),
             'gauge'        => $this->get('haphpy.gauge'),
+            'contribution' => $contribution,
+        ];
+    }
+
+    /**
+     * @param Request $request
+     *
+     * @Template()
+     * @TranslationBridge()
+     *
+     * @return array for template
+     */
+    public function submittedAction(Request $request)
+    {
+        $success = $this->container->get('session')->getFlashBag()->get('submission-success');
+
+        if (!$success) {
+            return $this->redirectToRoute('haphpy_index', ['locale' => $request->getLocale()]);
+        }
+
+        $user         = $this->getUser();
+        $contribution = $this->getOrGenerateContribution($user);
+
+        return [
+            'user'         => $user,
             'contribution' => $contribution,
         ];
     }

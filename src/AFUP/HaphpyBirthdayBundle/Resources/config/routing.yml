@@ -5,6 +5,13 @@ haphpy_index:
         es: "/es/"
     defaults: { _controller: AppBundle:Default:index }
 
+haphpy_submitted:
+    locales:
+        en: "/en/thanks"
+        fr: "/fr/merci"
+        es: "/es/gracias"
+    defaults: { _controller: AppBundle:Default:submitted }
+
 haphpy_contributions:
     locales:
         en: "/en/contributions"

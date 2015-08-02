@@ -244,7 +244,7 @@ section h2 {
     width: 2em;
     height: 2em;
     border-radius: 50%;
-    color: white;
+    color: #ffffff;
     text-align: center;
     display: inline-block;
     margin-left: -0.5em;
@@ -269,7 +269,7 @@ a.auth-button span{
     width: 2em;
     height: 2em;
     border-radius: 50%;
-    color: white;
+    color: #ffffff;
     background: red;
     text-align: center;
     display: inline-block;
@@ -310,16 +310,86 @@ ul.error-list {
 }
 
 #examples h2 {
-    color: white;
+    color: #ffffff;
 }
 
 #examples h5 {
     color: #ddd;
 }
 
+/** Submission success page **/
+#video-success {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url(../images/audienc.jpg) no-repeat;
+    background-size: cover;
+}
+
+#video-hue {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background:
+        radial-gradient(circle, rgba(243,65,65,0.15), transparent 50%),
+        linear-gradient(to bottom left, rgba(255,105,180,0.25), transparent, rgba(255,140,0,0.25)),
+        linear-gradient(to right, rgba(30,144,255,0.25), rgba(243,65,65,0.15), rgba(143,188,143,0.25))
+    ;
+    background-size: cover;
+}
+
+#submission-success {
+    margin-top: 2em;
+    color: white;
+}
+
+#submission-success a.page-link {
+    color: black;
+    background-color: rgba(255,255,255,0);
+    padding: 0.5em;
+    transition: background-color 0.5s;
+}
+
+
+#submission-success a.page-link:hover {
+    background-color: rgba(255,255,255,0.5);
+}
+
+#submission-success .row:first-child {
+    margin-bottom: 10%;
+}
+
+#submission-success h1 {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 100;
+    border-top: 2px #ffffff solid;
+    border-bottom: 2px #ffffff solid;
+    line-height: 1.5em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+#submission-success h1 + div.row {
+    padding-top: 30px;
+}
+
+
 /** User Groups **/
 #php-user-groups {
-    background: white;
+    background: #ffffff;
 }
 
 .user-group {
@@ -360,7 +430,7 @@ ul.error-list {
 }
 
 #contributions h3 {
-    color: white;
+    color: #ffffff;
 }
 
 .contribution span {

@@ -13,6 +13,7 @@
         <meta name="format-detection" content="telephone=no">
     </head>
     <body class="has-header">
+        {% block nav %}
         <div id="mobile-nav">
             <div class="mobile-nav-title">{{ 'menu.mobile.navigation'|trans }}</div>
             <nav>
@@ -86,6 +87,7 @@
                 </a>
             </div>
         </div>
+        {% endblock %}
         {% block header %}
         <header id="header">
             {% if warning_message %}
@@ -144,6 +146,7 @@
 
         {% endblock %}
 
+        {% block footer %}
         <footer id="footer">
             <div class="container">
                 <div class="row">
@@ -154,7 +157,7 @@
                         </a>
                     </div>
                     <div class="col-sm-4 no-padding-bottom text-center">
-                        <span class="fa fa-envelope"></span>team<span class="arobase">haphpy-birthday.net</span>
+                        <span class="fa fa-envelope"></span> team<span class="arobase">haphpy-birthday.net</span>
                     </div>
                     <div class="col-sm-4 no-padding-bottom text-right">
                         <a href="https://github.com/afup/haphpy-birthday/graphs/contributors">
@@ -164,6 +167,7 @@
                 </div>
             </div>
         </footer>
+        {% endblock %}
 
         <script src="/assets/js/main.js"></script>
     </body>
