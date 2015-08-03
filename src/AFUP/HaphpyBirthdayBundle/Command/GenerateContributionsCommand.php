@@ -4,12 +4,12 @@ namespace AFUP\HaphpyBirthdayBundle\Command;
 
 use AFUP\HaphpyBirthdayBundle\Service\ContributionPersister;
 use AFUP\HaphpyBirthdayBundle\Entity\Contribution;
+use AFUP\HaphpyBirthdayBundle\Model\UploadedFile;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * Generate fake contribution entities and media
@@ -53,11 +53,9 @@ class GenerateContributionsCommand extends Command
      *
      * @var string
      */
-    private $extensions = [
-        'jpg',
-        'jpeg',
-        'mp4',
-        'mov',
+    private $files = [
+        'jpg' => '/vagrant/web/assets/images/ilovephp.jpg',
+        'mp4' => '/vagrant/web/assets/videos/php-saved-my-life.mp4',
     ];
 
     /**
@@ -65,14 +63,14 @@ class GenerateContributionsCommand extends Command
      *
      * @var string
      */
-    private $credits = ['credited','anonymous'];
+    private $credits = ['credited', 'anonymous'];
 
     /**
      * Moderation list
      *
      * @var string
      */
-    private $moderation = ['pending','validated','rejected'];
+    private $moderation = ['pending', 'validated', 'rejected'];
 
     /**
      * Construct
@@ -114,16 +112,18 @@ class GenerateContributionsCommand extends Command
             $properties = array_slice($properties, 0, $quantity);
         }
 
-        $path = '/var/haphpy/contributions/fake.jpg';
-
         foreach ($properties as $tmpContribution) {
             $contribution = new Contribution();
             $contribution->setAuthProvider($tmpContribution['authProvider']);
             $contribution->setIdentifier($tmpContribution['identifier']);
+            $contribution->setVisibleName($tmpContribution['identifier']);
             $contribution->setCreditWanted($tmpContribution['creditWanted']);
+            $contribution->setFileName($tmpContribution['fileName']);
 
-            fopen($path, 'w');
-            $file = new File($path);
+            $path = $this->files[substr($tmpContribution['fileName'], -3)];
+
+            copy($path, '/var/haphpy/contributions/'.$tmpContribution['fileName']);
+            $file = new UploadedFile('/var/haphpy/contributions/'.$tmpContribution['fileName'], 'lol');
 
             $this->contributionPersister->persist($contribution, $file);
         }
@@ -138,17 +138,22 @@ class GenerateContributionsCommand extends Command
     {
         $properties = [];
 
+        $buildArray = function ($identifier, $provider) {
+            return [
+                'identifier'   => $identifier,
+                'authProvider' => $provider,
+                'creditWanted' => (bool) array_rand([false, true]),
+                'fileName'     => $provider.'/'.$identifier.'.'.array_rand($this->files),
+            ];
+        };
+
         foreach ($this->syllables as $syl1) {
             foreach ($this->syllables as $syl2) {
                 foreach ($this->syllables as $syl3) {
                     foreach ($this->syllables as $syl4) {
                         foreach ($this->authProviders as $provider) {
-                            $properties[] = [
-                                'identifier'   => $syl1.$syl2.$syl3.$syl4,
-                                'authProvider' => $provider,
-                                'creditWanted' => array_rand([true, false])
-                            ]
-                            ;
+                            $identifier = $syl1.$syl2.$syl3.$syl4;
+                            $properties[] = $buildArray($identifier, $provider);
                         }
                     }
                 }
