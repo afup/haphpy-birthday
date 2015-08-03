@@ -94,10 +94,14 @@ form:
             et sur la liste des contributeurs affichée sur ce site
         no:     Merci mais je préfère rester anonyme
         choose: "Souhaitez-vous être crédité ?"
-    notice:
-        submission_success: Nous vous remercions pour votre contribution !
     submit:
         label: Envoyer
+
+success:
+    uploaded: Votre contribution a bien été envoyée.
+    thanks:   Merci de partager votre amour pour la communauté PHP.
+    link:
+        contributions: Voir la liste des contributions.
 
 # Contributions page
 contributions:

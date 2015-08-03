@@ -88,10 +88,14 @@ form:
         yes:    Yes, I want my name to appear in the video credits and on this website contributors list
         no:     No, I prefer to stay anonymous
         choose: Do you want to be credited?
-    notice:
-        submission_success: Thank you for your contribution!
     submit:
         label: send
+
+success:
+    uploaded: Your contribution has been uploaded.
+    thanks:   Thank you for sharing your love to the PHP community.
+    link:
+        contributions: See the list of contributions
 
 # Contributions page
 contributions:
