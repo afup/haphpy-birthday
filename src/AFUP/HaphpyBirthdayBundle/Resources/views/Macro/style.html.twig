@@ -44,3 +44,13 @@ desaturated blue   44576a   68,  87,  10
 
     style="border-bottom: solid rgba({{ color }},0.7);box-shadow: inset 0 -6px 0 rgba({{ color }},0.7);"
 {% endspaceless %}{% endmacro %}
+
+{% macro social_link(contribution) %}{% spaceless %}
+    {% set linkable = (contribution.authProvider in ['github', 'twitter']) %}
+    {% if linkable %}
+        <a href="{{ 'https://' ~ contribution.authProvider ~ '.com/' ~ contribution.identifier }}">
+    {% endif %}
+    <span class="fa haphpy-icon-{{ contribution.authProvider }}"></span>
+    {{ contribution.visibleName }}
+    {% if linkable %}</a>{% endif %}
+{% endspaceless %}{% endmacro %}

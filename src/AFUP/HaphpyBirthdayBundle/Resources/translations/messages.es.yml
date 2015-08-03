@@ -85,10 +85,14 @@ form:
         yes:    Si, quiero que mi nombre aparezca en los créditos del video y en la lista de contribuidores de este sitio
         no:     No, prefiero permanecer anónimo
         choose: ¿Quieres recibir crédito?
-    notice:
-        submission_success: ¡Gracias por tu contribución!
     submit:
         label: enviar
+
+success:
+    uploaded: Your contribution has been uploaded.
+    thanks:   Thank you for sharing your love to the PHP community.
+    link:
+        contributions: See the list of contributions
 
 # Contributions page
 contributions:

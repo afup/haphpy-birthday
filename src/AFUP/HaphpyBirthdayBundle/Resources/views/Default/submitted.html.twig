@@ -1,0 +1,52 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% import "AppBundle:Macro:style.html.twig" as haphpy %}
+
+{% block title %}{{ parent() }} - {{ 'index.title'|trans }}{% endblock %}
+
+{% block nav %}{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block gauge %}{% endblock %}
+
+{% block content %}
+    <video autoplay  poster="/assets/images/applause.jpg" id="video-success" loop>
+        <source src="/assets/videos/applause.webm" type="video/webm">
+        <source src="/assets/videos/applause.mp4" type="video/mp4">
+    </video>
+    <div id="video-hue"></div>
+    <section id="submission-success">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <a href="{{ path('haphpy_index') }}">
+                        <img src="/assets/images/haphpy-birthday.svg" class="fitting-media">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    {{ 'success.uploaded'|trans|raw }}
+                </div>
+            </div>
+            <h1>{{ 'success.thanks'|trans|raw }}</h1>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://haphpy-birthday.net" data-text="I sent my contribution to the HaPHPy Birthday movie! :-) #20YearsOfPHP" data-via="HaPHPy20" data-hashtags="PHP" data-count="none">Tweet</a>
+                    <script>
+                        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                    </script>
+                    <div class="fb-share-button" data-href="http://haphpy-birthday.net" data-layout="button"></div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 text-right">
+                    <a href="{{ path('haphpy_contributions') ~ '#contributions' }}" class="page-link">
+                        {{ 'success.link.contributions'|trans }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block footer %}{% endblock %}

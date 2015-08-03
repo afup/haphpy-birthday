@@ -31,11 +31,18 @@ class Contribution
 
     /**
      * The identifier
-     * depends on the Auth Provider
+     * depends on the Auth Provider (OAuth username)
      *
      * @var string
      */
     private $identifier;
+
+    /**
+     * Visible name of contributor
+     *
+     * @var string
+     */
+    private $visibleName;
 
     /**
      * Whether or not the person wants to be credited
@@ -293,6 +300,30 @@ class Contribution
     public function setFile(File $file)
     {
         $this->file = $file;
+
+        return $this;
+    }
+
+    /**
+     * Gets the visible name of contributor.
+     *
+     * @return string
+     */
+    public function getVisibleName()
+    {
+        return $this->visibleName;
+    }
+
+    /**
+     * Sets the visible name of contributor.
+     *
+     * @param string $visibleName the visible name
+     *
+     * @return self
+     */
+    public function setVisibleName($visibleName)
+    {
+        $this->visibleName = $visibleName;
 
         return $this;
     }

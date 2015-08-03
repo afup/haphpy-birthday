@@ -30,15 +30,6 @@
         <div class="container">
             <h2>{{ 'step.title'|trans }}</h2>
             <div class="row">
-                <div class="col-sm-12 col-md-12">
-                    {% for flashMessage in app.session.flashbag.get('notice') %}
-                        <div class="alert alert-success">
-                            {{ flashMessage|trans|raw }}
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="row">
                 {% if contribution.fileName %}
                     {% include 'AppBundle:Default:contributed.html.twig' %}
                 {% else %}
