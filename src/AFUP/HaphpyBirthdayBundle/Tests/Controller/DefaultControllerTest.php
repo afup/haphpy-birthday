@@ -27,17 +27,13 @@ class DefaultControllerTest extends WebTestCase
     public function testIndex()
     {
         $client = static::createClient();
-        $locales = [
-            'fr' => 'Bonjour',
-            'en' => 'Hi',
-        ];
+        $locales = ['fr', 'en'];
 
-        foreach ($locales as $locale => $translation) {
+        foreach ($locales as $locale) {
             $crawler = $client->request('GET', "/$locale/");
 
-            $this->assertTrue(
-                $crawler->filter('html:contains("'.$translation.'")')->count() > 0
-            );
+            $navbarLogo = $crawler->filter('a.navbar-logo')->first()->text();
+            $this->assertEquals($navbarLogo, 'HaPHPy Birthday');
         }
     }
 }

@@ -48,10 +48,10 @@ class ContributionPersister
     {
         // File
         $path = $this->pathGenerator->generateAbsolutePath($contribution, $file);
-        $relativePath = $this->pathGenerator->generateRelativePath($contribution, $file);
         $file->move(dirname($path), basename($path));
 
         // Data persistence
+        $relativePath = $this->pathGenerator->generateRelativePath($contribution, $file);
         $contribution->setModifiedAt(new \DateTime());
         $contribution->setFileName($relativePath);
 
@@ -68,7 +68,7 @@ class ContributionPersister
             return;
         }
 
-        unlink($this->pathGenerator->generateAbsolutePath($contribution));
+        unlink($this->pathGenerator->getFileAbsolutePath($contribution));
 
         $this->entityManager->remove($contribution);
         $this->entityManager->flush();
