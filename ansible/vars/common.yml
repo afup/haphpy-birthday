@@ -4,4 +4,7 @@
     sys_packages: ["vim","git"]
     dist: precise
     php_packages: ["php5-cli","php5-curl","php5-fpm","php5-intl","php5-mysql"]
+    php_conf_path: /etc/php5/fpm
     pecl_packages: []
+    # Upload File Max Size in MegaBytes (used by Nginx & php.ini)
+    upload_max_size: 30

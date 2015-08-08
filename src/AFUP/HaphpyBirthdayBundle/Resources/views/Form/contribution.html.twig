@@ -1,4 +1,6 @@
-{{ form_start(form) }}
+{{ form_start(form, {
+    action: url('haphpy_index') ~ '#contribute'
+}) }}
 {{ form_errors(form) }}
 
 {{ form_widget(form._token) }}

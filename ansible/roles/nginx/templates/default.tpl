@@ -1,6 +1,8 @@
 server {
     listen  80;
 
+    client_max_body_size {{ upload_max_size }}m;
+
     root {{ doc_root }};
     server_name {{ servername }};
 
