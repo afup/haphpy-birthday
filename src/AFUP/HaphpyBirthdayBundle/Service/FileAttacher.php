@@ -40,7 +40,7 @@ class FileAttacher
             return false;
         }
 
-        $absPath = $this->pathGenerator->generateAbsolutePath($contribution);
+        $absPath = $this->pathGenerator->getFileAbsolutePath($contribution);
         $file    = new File($absPath);
 
         $contribution->setFile($file);

@@ -38,12 +38,8 @@ class PathGenerator
      *
      * @return string
      */
-    public function generateAbsolutePath(Contribution $contribution, File $file = null)
+    public function generateAbsolutePath(Contribution $contribution, File $file)
     {
-        if (null === $file) {
-            return $this->directory.DIRECTORY_SEPARATOR.$contribution->getFileName();
-        }
-
         return $this->directory.DIRECTORY_SEPARATOR.$this->generateRelativePath($contribution, $file);
     }
 
@@ -60,5 +56,17 @@ class PathGenerator
         $path .= '.'.($file->guessExtension() ? : $file->getExtension());
 
         return $path;
+    }
+
+    /**
+     * Generate file path relative to contributed media directory
+     *
+     * @param Contribution $contribution
+     *
+     * @return string
+     */
+    public function getFileAbsolutePath(Contribution $contribution)
+    {
+        return $this->directory.DIRECTORY_SEPARATOR.$contribution->getFileName();
     }
 }
