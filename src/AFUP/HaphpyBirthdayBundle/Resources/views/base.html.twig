@@ -124,7 +124,8 @@
                         </a>
                     </div>
                     <div id="gauge-remaining-days" class="col-sm-12 col-lg-6">
-                        {% set days = (limit_date|date('U') - 'now'|date('U'))|date('z')  %}
+                        {% set days = limit_date|date('U') - 'now'|date('U')  %}
+                        {% set days = days < 0 ? 0 : days|date('z')  %}
                         <span>{{ days }} </span>{{ 'gauge.remaining_days'|trans }}
                     </div>
                 </div>

@@ -27,7 +27,18 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $user         = $this->getUser();
+        $user = $this->getUser();
+
+        // if limit date is over, we don't handle form
+        $limitDate = new \DateTime($this->container->getParameter('limit_date'));
+        if ($limitDate < (new \DateTime())) {
+            return [
+                'user'  => $user,
+                'gauge' => $this->get('haphpy.gauge'),
+            ];
+        }
+
+        // Otherwise we go with the form
         $contribution = $this->getOrGenerateContribution($user);
 
         $formContribution = $this->get('haphpy.form.contribution_converter')
@@ -47,6 +58,7 @@ class DefaultController extends Controller
             return $this->redirectToRoute('haphpy_submitted', ['locale' => $request->getLocale()]);
         }
 
+        // When getting the page, link file to contribution (for display purpose)
         $this->get('haphpy.file_attacher')->attachTo($contribution);
 
         return [

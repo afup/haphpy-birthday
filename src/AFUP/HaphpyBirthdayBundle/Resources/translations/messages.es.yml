@@ -2,6 +2,7 @@ haphpy:
     punchline: Add your contribution to the commemorative movie celebrating 20 years of PHP
     date_format:
         full: 'd/m/Y, H:i:s T'
+        date: 'd/m/Y'
 
 head:
     title:       HaPHPy 20th Birthday to you PHP!
@@ -52,22 +53,22 @@ index:
     introduction: >
         <p>HaPHPy Birthday is a collaborative movie <span %highlight1%>celebrating 20 years of
         the PHP language</span> and its users involvement.</p>
-        <p>Before the 30th of October, <span %highlight2%>upload a very short video</span>
+        <p>Before the %limit_date%, <span %highlight2%>upload a very short video</span>
         or picture showing how much you love PHP or its community. Media can be selfies, placards,
         group photos, self expression, fun pics…<br />anything imaginable and positive.</p>
         <p>Eventually, people contributions will be <span %highlight3%>gathered
         in a short mosaic movie</span> released under a Creative&nbsp;Commons&nbsp;Licence.</p>
 
-    authentication:
-        github:
-            button:
-                label: Autenticación con GitHub
-        twitter:
-            button:
-                label: Autenticación con Twitter
-        facebook:
-            button:
-                label: Autenticación con Facebook
+    time_over:
+        title:    Contribution time is over!
+        editing:  Contribution was possible until the %limit_date%. We are now editing the final movie.
+        premiere: >
+            The premiere will be held during the opening keynote of the
+            <a href="http://forumphp.org">Forum PHP</a>, on the %premiere_date%.
+        release: >
+            The collaborative movie will be released straight after the premiere on <a href="https://www.youtube.com/user/afupPHP">
+            afup's YouTube channel</a>.
+            It will be visible on this awesome website too. 😜
 
     examples:
         title:            Ejemplos de archivos que pueden ser parte de la película final
@@ -82,8 +83,8 @@ index:
 
 form:
     credit_wanted:
-        yes:    Si, quiero que mi nombre aparezca en los créditos del video y en la lista de contribuidores de este sitio
-        no:     No, prefiero permanecer anónimo
+        yes:    Si, quiero que mi nombre aparezca en los créditos del video y en la lista de contribuidores de este sitio.
+        no:     No, prefiero permanecer anónimo.
         choose: ¿Quieres recibir crédito?
     submit:
         label: enviar
