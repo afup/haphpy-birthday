@@ -2,6 +2,7 @@ haphpy:
     punchline: Ajoutez votre contribution à la vidéo collaborative célébrant 20 ans de PHP
     date_format:
         full: 'd/m/Y, H:i:s T'
+        date: 'd/m/Y'
 
 head:
     title:       HaPHPy Birthday
@@ -58,23 +59,25 @@ index:
     introduction: >
         <p>HaPHPy Birthday est une vidéo collaborative <span %highlight1%>commémorant les 20 ans
         du langage PHP</span> ainsi que l'investissement de ses utilisateurs.</p>
-        <p>Jusqu'au 31 octobre, <span %highlight2%>envoyez une courte vidéo</span>
+        <p>Jusqu'au %limit_date%, <span %highlight2%>envoyez une courte vidéo</span>
         ou une image montrant votre amour pour le PHP ou sa communauté. Les médias peuvent être des <i>selfies</i>,
         pancartes, photos de groupe, expressions personnelles, images drôles… Tout message positif est
         bienvenue.</p>
         <p>Finalement, les contributions seront <span %highlight3%>rassemblées dans une petite
         vidéo mosaïque</span> sous licence Creative&nbsp;Commons.</p>
 
-    authentication:
-        github:
-            button:
-                label: Authentification GitHub
-        twitter:
-            button:
-                label: Authentification Twitter
-        facebook:
-            button:
-                label: Authentification Facebook
+    time_over:
+        title:    La période de contribution est terminée !
+        editing: >
+            L'envoie de contributions n'était possible que jusqu'au %limit_date%.
+            La création de la vidéo collaborative est en cours.
+        premiere: >
+            La grande première aura lieu pendant la <i>keynote</i> d'ouverture du
+            <a href="http://forumphp.org">Forum PHP</a>, le %premiere_date%.
+        release: >
+            La vidéo collaborative sera diffusée sur la <a href="https://www.youtube.com/user/afupPHP">
+            chaîne YouTube de l'afup</a> dès la fin de la keynote d'ouverture.
+            Elle sera également visible sur ce magnifique site. 😜
 
     examples:
         title:            Exemples de contributions possibles
@@ -91,8 +94,8 @@ form:
     credit_wanted:
         yes: >
             Oui, je souhaite que mon nom apparaisse dans le générique de la vidéo
-            et sur la liste des contributeurs affichée sur ce site
-        no:     Merci mais je préfère rester anonyme
+            et sur la liste des contributeurs affichée sur ce site.
+        no:     Merci mais je préfère rester anonyme.
         choose: "Souhaitez-vous être crédité ?"
     submit:
         label: Envoyer

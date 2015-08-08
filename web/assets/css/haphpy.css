@@ -15,6 +15,10 @@
     color: #f34141;
 }
 
+.text-highlight a {
+    color: #f34141;
+}
+
 .fitting-media {
     width: 100%;
 }
@@ -315,6 +319,15 @@ ul.error-list {
 
 #examples h5 {
     color: #ddd;
+}
+
+/** Contribution time is over **/
+#contribution-over .container {
+    text-align: center;
+}
+
+#contribution-over h2 {
+    text-transform: none;
 }
 
 /** Submission success page **/

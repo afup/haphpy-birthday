@@ -40,7 +40,8 @@ parameters:
     contribution_dir:  /var/haphpy/contributions
 
     # Limit date for media contribution
-    limit_date: '2015-10-31 23:59:59 UTC'
+    limit_date:    '2015-10-31 23:59:59 UTC'
+    premiere_date: '2015-11-23'
 
     # Expected steps and goal for the quantity of contributions
     haphpy_steps:

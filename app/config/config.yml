@@ -31,6 +31,7 @@ twig:
     strict_variables: "%kernel.debug%"
     globals:
         limit_date:      "%limit_date%"
+        premiere_date:   "%premiere_date%"
         warning_message: %warning_message%
 
 # Assetic Configuration

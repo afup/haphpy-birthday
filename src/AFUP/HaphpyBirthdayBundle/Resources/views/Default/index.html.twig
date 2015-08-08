@@ -7,6 +7,8 @@
 {% block title %}{{ parent() }} - {{ 'index.title'|trans }}{% endblock %}
 
 {% block content %}
+    {% set limit_as_date = limit_date|date('haphpy.date_format.date'|trans) %}
+    {% set premiere_as_date = premiere_date|date('haphpy.date_format.date'|trans) %}
     <section class="page-section" id="introduction">
         <div class="container">
             <div class="row">
@@ -16,6 +18,7 @@
                     {% set highlight3 = haphpy.highlight %}
                     {{ 'index.introduction'|trans(
                             {
+                                '%limit_date%': limit_as_date,
                                 '%highlight1%': highlight1,
                                 '%highlight2%': highlight2,
                                 '%highlight3%': highlight3,
@@ -26,18 +29,42 @@
             </div>
         </div>
     </section>
-    <section class="page-section" id="contribute">
-        <div class="container">
-            <h2>{{ 'step.title'|trans }}</h2>
-            <div class="row">
-                {% if contribution.fileName %}
-                    {% include 'AppBundle:Default:contributed.html.twig' %}
-                {% else %}
-                    {% include 'AppBundle:Form:contribution.html.twig' %}
-                {% endif %}
+    {% if limit_date|date('U') < 'now'|date('U') %}
+        {% set limit_as_full = limit_date|date('haphpy.date_format.date'|trans) %}
+        <section class="page-section" id="contribution-over">
+            <div class="container">
+                <h2>{{ 'index.time_over.title'|trans|raw }}</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        {{ 'index.time_over.editing'|trans({
+                            '%limit_date%': limit_as_full
+                        })|raw }}
+                    </div>
+                </div>
+                <h2 class="text-highlight">{{ 'index.time_over.premiere'|trans({
+                    '%premiere_date%': premiere_as_date
+                })|raw }}</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        {{ 'index.time_over.release'|trans|raw }}
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    {% else %}
+        <section class="page-section" id="contribute">
+            <div class="container">
+                <h2>{{ 'step.title'|trans }}</h2>
+                <div class="row">
+                    {% if contribution.fileName %}
+                        {% include 'AppBundle:Default:contributed.html.twig' %}
+                    {% else %}
+                        {% include 'AppBundle:Form:contribution.html.twig' %}
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+    {% endif %}
 
     <section class="page-section" id="examples">
         <div class="container">
