@@ -1,5 +1,24 @@
 ---
 
+- name: Copy Apache vhost
+  sudo: yes
+  template:
+    src:   vhost.conf
+    dest:  /etc/apache2/sites-available/haphpy.conf
+    group: www-data
+    mode:  0770
+  notify: restart apache2
+
+- name: Enable Apache vhost
+  sudo: yes
+  file: >
+    src=/etc/apache2/sites-available/haphpy.conf
+    dest=/etc/apache2/sites-enabled/haphpy.conf
+    state=link
+    group=www-data
+    mode=0770
+  notify: restart apache2
+
 - name: Creates Contribution Media directory
   file: path=/var/haphpy/contributions state=directory group=www-data mode=0770
 

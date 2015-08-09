@@ -1,0 +1,68 @@
+---
+
+- name: Add zend repository
+  sudo: true
+  shell: echo "deb http://repos.zend.com/zend-server/early-access/php7/repos ubuntu/" >> /etc/apt/sources.list
+
+- name: Update apt
+  sudo: yes
+  apt: update_cache=yes
+
+- name: Install needed packages
+  sudo: yes
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - aspell
+    - aspell-en
+    - icu-devtools
+    - libaspell-dev
+    - libaspell15
+    - libcurl4-openssl-dev
+    - libfreetype6-dev
+    - libgmp-dev
+    - libgmpxx4ldbl
+    - libicu-dev
+    - libmariadbclient-dev
+    - libmcrypt-dev
+    - libmcrypt4
+    - libpng12-dev
+    - libpspell-dev
+    - librecode-dev
+    - librecode0
+    - libstdc++-4.8-dev
+    - libxml2-dev
+    - libxpm4
+
+- name: Install php7
+  sudo: yes
+  apt: pkg=php7-nightly state=latest force=yes
+
+- name: Copy libphp7.so
+  sudo: yes
+  shell: cp /usr/local/php7/libphp7.so /usr/lib/apache2/modules/
+
+- name: Copy php7.load
+  sudo: yes
+  shell: cp /usr/local/php7/php7.load /etc/apache2/mods-available/
+
+- name: Load libphp7.so
+  sudo: yes
+  template:
+    src:  httpd.conf
+    dest: "/etc/apache2/conf-enabled/httpd.conf"
+  notify: restart apache2
+
+- name: Place PHP configuration file in place.
+  template:
+    src: php.ini.j2
+    dest: "/usr/local/php7/etc/php.ini"
+  notify:
+    - restart apache2
+
+- name: Add php7 cli to $PATH
+  sudo: yes
+  file: >
+    src=/usr/local/php7/bin/php
+    dest=/usr/local/bin/php
+    state=link
+  notify: restart apache2

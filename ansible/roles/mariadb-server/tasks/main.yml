@@ -1,0 +1,65 @@
+---
+
+- name: repositories key
+  apt_key: >
+    url=http://keyserver.ubuntu.com/pks/lookup?op=get&fingerprint=on&search=0xcbcb082a1bb943db
+    state=present
+  sudo: yes
+
+- name: repositories
+  apt_repository: >
+    repo="{{ item }}"
+    state=present
+    update_cache=yes
+  with_items:
+    - deb http://ftp.igh.cnrs.fr/pub/mariadb/repo/10.0/debian {{ ansible_distribution_release }} main
+  sudo: yes
+
+- name: packages
+  apt: >
+    name={{ item }}
+    state=present
+  with_items:
+    - python-software-properties
+    - python-mysqldb
+    - mariadb-server
+  sudo: yes
+
+- name: services
+  service: >
+    name={{ item }}
+    state=started
+    enabled=yes
+  with_items:
+    - mysql
+  sudo: yes
+
+- name: login auto
+  shell: >
+    grep "password = " /etc/mysql/debian.cnf | head -1 | cut -d '=' -f2 | tr -d ' '
+  register: elao_mysql_login_auto
+  when: elao_mysql_login_auto and (elao_mysql_users|length > 0 or elao_mysql_databases|length > 0)
+  sudo: yes
+
+- name: users
+  mysql_user: >
+    name={{ item.name }}
+    password={{ item.password }}
+    priv={{ item.priv }}
+    host={{ item.host }}
+    login_user={{ elao_mysql_login_user }}
+    login_password={{ elao_mysql_login_auto.stdout|default('') if elao_mysql_login_auto else elao_mysql_login_password }}
+    login_host={{ elao_mysql_login_host }}
+    state=present
+  with_items: elao_mysql_users
+  when: elao_mysql_users|length > 0
+
+- name: databases
+  mysql_db: >
+    name={{ item.name }}
+    login_user={{ elao_mysql_login_user }}
+    login_password={{ elao_mysql_login_auto.stdout|default('') if elao_mysql_login_auto else elao_mysql_login_password }}
+    login_host={{ elao_mysql_login_host }}
+    state=present
+  with_items: elao_mysql_databases
+  when: elao_mysql_databases|length > 0
