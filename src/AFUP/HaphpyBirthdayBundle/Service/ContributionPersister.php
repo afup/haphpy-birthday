@@ -46,12 +46,14 @@ class ContributionPersister
      */
     public function persist(Contribution $contribution, UploadedFile $file)
     {
+        // Paths
+        $absolutePath = $this->pathGenerator->generateAbsolutePath($contribution, $file);
+        $relativePath = $this->pathGenerator->generateRelativePath($contribution, $file);
+
         // File
-        $path = $this->pathGenerator->generateAbsolutePath($contribution, $file);
-        $file->move(dirname($path), basename($path));
+        $file->move(dirname($absolutePath), basename($absolutePath));
 
         // Data persistence
-        $relativePath = $this->pathGenerator->generateRelativePath($contribution, $file);
         $contribution->setModifiedAt(new \DateTime());
         $contribution->setFileName($relativePath);
 
