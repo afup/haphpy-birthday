@@ -65,10 +65,10 @@ a.stand-out:hover {
 header#header {
     padding: 80px 0 0 0;
     background:
-        radial-gradient(circle, #f34141, transparent 50%),
-        linear-gradient(to bottom left, HotPink, transparent, DarkOrange),
+        radial-gradient(circle, #f34141, rgba(243,65,65,0) 50%),
+        linear-gradient(to bottom left, HotPink, rgba(255,122,90,0), DarkOrange),
         linear-gradient(to right, DarkSeaGreen, #f34141, DodgerBlue)
-        ;
+    ;
     background-color: #f34141;
     margin-bottom: 0;
 }
