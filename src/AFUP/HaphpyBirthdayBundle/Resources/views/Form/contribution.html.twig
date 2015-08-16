@@ -7,35 +7,37 @@
 
 {{ form_widget(form._token) }}
 
-<div class="col-sm-12 col-md-4 haphpy-step ">
-    <h3>
-        {% set color = haphpy.color %}
-        <span class="haphpy-step-number" style="background-color:{{ color }};">1</span>
-        <span style="color:{{ color }};">{{ 'step.authenticate.title'|trans }}</span>
-    </h3>
+<h2>{{ 'step.title'|trans }}</h2>
+<div class="row">
+    <div class="col-sm-12 col-md-4 haphpy-step ">
+        <h3>
+            {% set color = haphpy.color %}
+            <span class="haphpy-step-number" style="background-color:{{ color }};">1</span>
+            <span style="color:{{ color }};">{{ 'step.authenticate.title'|trans }}</span>
+        </h3>
 
-    <div class="text-center">
-        {% if user is not null %}
-            {{ 'step.authenticate.logged_in'|trans({
-                    '%authProvider%': user.authProvider,
-                    '%username%': user.visibleName
-                })|raw
-            }}
-        {% else %}
-            <a href="{{ path('github_connect') }}" class="auth-button">
-                <span class="fa haphpy-icon-github" style="background-color:#201f1f;"></span>
-            </a>
-            <a href="{{ path('twitter_connect') }}" class="auth-button">
-                <span class="fa haphpy-icon-twitter" style="background-color:#55acee;"></span>
-            </a>
-            <a href="{{ path('facebook_connect') }}" class="auth-button">
-                <span class="fa haphpy-icon-facebook" style="background-color:#3b5998;"></span>
-            </a>
-        {% endif %}
+        <div class="text-center">
+            {% if user is not null %}
+                {{ 'step.authenticate.logged_in'|trans({
+                        '%authProvider%': user.authProvider,
+                        '%username%': user.visibleName
+                    })|raw
+                }}
+            {% else %}
+                <a href="{{ path('github_connect') }}" class="auth-button">
+                    <span class="fa haphpy-icon-github" style="background-color:#201f1f;"></span>
+                </a>
+                <a href="{{ path('twitter_connect') }}" class="auth-button">
+                    <span class="fa haphpy-icon-twitter" style="background-color:#55acee;"></span>
+                </a>
+                <a href="{{ path('facebook_connect') }}" class="auth-button">
+                    <span class="fa haphpy-icon-facebook" style="background-color:#3b5998;"></span>
+                </a>
+            {% endif %}
+        </div>
     </div>
-</div>
 
-<div class="col-sm-12 col-md-4 haphpy-step">
+    <div class="col-sm-12 col-md-4 haphpy-step">
         <h3>
             {% set color = haphpy.color %}
             <span class="haphpy-step-number" style="background-color:{{ color }};">2</span>
@@ -43,10 +45,9 @@
         </h3>
         {{ form_errors(form.file) }}
         {{ form_widget(form.file, {disabled: user ? false : true}) }}
-</div>
+    </div>
 
-<div class="col-sm-12 col-md-4 haphpy-step">
-
+    <div class="col-sm-12 col-md-4 haphpy-step">
         <h3>
             {% set color = haphpy.color %}
             <span class="haphpy-step-number" style="background-color:{{ color }};">3</span>
@@ -61,5 +62,5 @@
         <div class="text-center">
             <input type="submit" name="submit" value="{{ 'form.submit.label'|trans }}" class="btn btn-primary" {{ user ? '' : ' disabled' }}/>
         </div>
+    </div>
 </div>
-

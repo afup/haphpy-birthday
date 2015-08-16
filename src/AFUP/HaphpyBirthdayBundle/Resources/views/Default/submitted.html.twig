@@ -2,7 +2,7 @@
 
 {% import "AppBundle:Macro:style.html.twig" as haphpy %}
 
-{% block title %}{{ parent() }} - {{ 'index.title'|trans }}{% endblock %}
+{% block title %}{{ parent() }} - {{ 'success.title'|trans }}{% endblock %}
 
 {% block nav %}{% endblock %}
 
@@ -40,6 +40,9 @@
                     <div class="fb-share-button" data-href="http://haphpy-birthday.net" data-layout="button"></div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 text-right">
+                    <a href="{{ path('haphpy_index') ~ '#contribute' }}" class="page-link">
+                        {{ 'success.link.my_contribution'|trans }}
+                    </a>
                     <a href="{{ path('haphpy_contributions') ~ '#contributions' }}" class="page-link">
                         {{ 'success.link.contributions'|trans }}
                     </a>
