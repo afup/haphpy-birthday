@@ -65,10 +65,10 @@ a.stand-out:hover {
 header#header {
     padding: 80px 0 0 0;
     background:
-        radial-gradient(circle, #f34141, transparent 50%),
-        linear-gradient(to bottom left, HotPink, transparent, DarkOrange),
+        radial-gradient(circle, #f34141, rgba(243,65,65,0) 50%),
+        linear-gradient(to bottom left, HotPink, rgba(255,122,90,0), DarkOrange),
         linear-gradient(to right, DarkSeaGreen, #f34141, DodgerBlue)
-        ;
+    ;
     background-color: #f34141;
     margin-bottom: 0;
 }
@@ -84,30 +84,6 @@ header#header div {
     filter: drop-shadow( 2px 2px 1px rgba(0,0,0,0.3));
     -webfilter: drop-shadow( 2px 2px 1px rgba(0,0,0,0.3));
 }
-
-@media screen and (max-width: 767px) {
-    #haphpy-logo {
-        display: none;
-    }
-}
-
-header h1 {
-    color: #000000;
-    font-weight: 100;
-    font-size: 30px;
-    margin: 0 0 2em 0;
-}
-
-@media screen and (max-width: 767px) {
-    header h1 {
-        margin: 1em 0;
-    }
-}
-
-header h1 sup {
-    text-transform: none;
-}
-
 
 header#header #warning-message {
     position: relative;
@@ -140,24 +116,33 @@ header#header #warning-message div {
 }
 
 /** Gauge **/
+#gauge-section h1 {
+    color: #000000;
+    font-weight: 100;
+    font-size: 30px;
+    margin-bottom: 2em;
+    text-transform: none;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    header h1 {
+        margin: 1em 0;
+    }
+}
+
+header h1 sup {
+    text-transform: none;
+}
+
 #gauge-section {
     padding-top: 2em;
-}
-
-#gauge-contributors, #gauge-remaining-days {
-    color: #000000;
-    text-align: center;
-    padding-bottom: 1em;
-}
-
-#gauge-contributors span, #gauge-remaining-days span {
-    font-size: 200%;
 }
 
 #gauge {
     position: relative;
     padding-top: 8px;
-    margin-bottom: 5em;
+    margin-bottom: 3em;
 }
 
 #gauge .progress {
@@ -193,9 +178,16 @@ header#header #warning-message div {
     display: inline;
     position: absolute;
     right: 0;
-    top: 0;
-    padding: 16px 24px 0 0;
-    white-space: nowrap;
+    top: -24px;
+}
+
+#gauge-contributors, #gauge-remaining-days {
+    color: #000000;
+    text-align: center;
+}
+
+#gauge-contributors span, #gauge-remaining-days span {
+    font-size: 200%;
 }
 
 /** Main content **/
@@ -288,9 +280,18 @@ ul.error-list {
 }
 
 .haphpy-radio {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
+    font-weight: 400;
+    display: table;
+}
+
+.haphpy-radio > div {
+    display: table-row;
+}
+
+.haphpy-radio > div input, .haphpy-radio > div label {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
 }
 
 .haphpy-radio input {
@@ -302,11 +303,15 @@ ul.error-list {
 }
 
 .haphpy-radio label {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     padding-left: 0.5em;
     font-weight: 400;
     cursor: pointer;
     margin: 0;
 }
+
+/** examples **/
 
 #examples {
     color: #ddd;
@@ -319,6 +324,37 @@ ul.error-list {
 
 #examples h5 {
     color: #ddd;
+}
+
+.sixteen-nine {
+    position: relative;
+}
+.sixteen-nine:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 56.25%;
+}
+.sixteen-nine > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    box-shadow: 0 3px 6px 2px rgba(0,0,0,0.3);
+}
+
+.sixteen-nine > .content-image {
+    background-position: center center;
+    background-size: cover;
+}
+
+.sixteen-nine > .content-video .fitting-media {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /** Contribution time is over **/

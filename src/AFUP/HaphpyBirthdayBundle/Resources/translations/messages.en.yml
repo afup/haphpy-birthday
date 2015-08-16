@@ -1,5 +1,5 @@
 haphpy:
-    punchline: Add your contribution to the commemorative movie celebrating 20 years of PHP
+    punchline: Add your contribution to the collaborative movie celebrating 20 years of PHP
     date_format:
         full: 'd/m/Y, H:i:s T'
         date: 'd/m/Y'
@@ -46,9 +46,6 @@ step:
         contributions_examples: See some contributions examples
     submit:
         title: Submit your contribution
-    submitted:
-        remove_button: Remove my contribution
-        thanks: You have already contributed, thanks !
 
 #Home Page
 index:
@@ -73,6 +70,18 @@ index:
             afup's YouTube channel</a>.
             It will be visible on this awesome website too. 😜
 
+    contributed:
+        title: Thank you for your participation!
+        thanks: You contributed as <span class="fa haphpy-icon-%authProvider%"></span>&nbsp;%username%.
+        media_warning: >
+            This is how your media will appear in the final movie, on its own or in a mosaic sequence.
+        media_change: >
+            If you think your media is not displayed as its best, just remove it and upload it again once modified.
+        media_specs_link: >
+            Medias specifications
+        remove_button: Remove my contribution
+
+
     examples:
         title:            Examples of media that can be part of the final movie
         php_asset:        Media showing a PHP Asset
@@ -93,10 +102,12 @@ form:
         label: send
 
 success:
+    title:    Thank you for your participation!
     uploaded: Your contribution has been uploaded.
     thanks:   Thank you for sharing your love to the PHP community.
     link:
         contributions: See the list of contributions
+        my_contribution: Check my contribution
 
 # Contributions page
 contributions:

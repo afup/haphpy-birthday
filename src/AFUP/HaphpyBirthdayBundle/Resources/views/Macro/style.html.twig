@@ -42,7 +42,7 @@ desaturated blue   44576a   68,  87,  10
     ] %}
     {% set color = random(colors) %}
 
-    style="border-bottom: solid rgba({{ color }},0.7);box-shadow: inset 0 -6px 0 rgba({{ color }},0.7);"
+    style="box-shadow: inset 0 -6px 0 rgba({{ color }},0.25);"
 {% endspaceless %}{% endmacro %}
 
 {% macro social_link(contribution) %}{% spaceless %}

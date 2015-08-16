@@ -1,5 +1,5 @@
 haphpy:
-    punchline: Ajoutez votre contribution à la vidéo collaborative célébrant 20 ans de PHP
+    punchline: Participez à la vidéo collaborative célébrant 20 ans de PHP
     date_format:
         full: 'd/m/Y, H:i:s T'
         date: 'd/m/Y'
@@ -48,10 +48,6 @@ step:
         contributions_examples: Voir des exemples de contributions
     submit:
         title: Envoie ta contribution
-    submitted:
-        remove_button: Supprimer ma contribution
-        thanks: Vous avez déjà contribué, merci !
-
 
 # Home page
 index:
@@ -79,6 +75,17 @@ index:
             chaîne YouTube de l'afup</a> dès la fin de la keynote d'ouverture.
             Elle sera également visible sur ce magnifique site. 😜
 
+    contributed:
+        title: Merci pour votre participation !
+        thanks: Vous avez contribué en tant que <span class="fa haphpy-icon-%authProvider%"></span>&nbsp;%username%.
+        media_warning: >
+            Voici la manière dont votre media apparaitra dans la vidéo finale, seul ou dans une mosaïque.
+        media_change: >
+            Si votre média ne s'affiche pas comme vous le souhaitez, supprimez le et renvoyez une version modifiée.
+        media_specs_link: >
+            caractéristiques des médias.
+        remove_button: Supprimer ma contribution
+
     examples:
         title:            Exemples de contributions possibles
         php_asset:        Contenu montrant des objets PHP
@@ -101,10 +108,12 @@ form:
         label: Envoyer
 
 success:
+    title:    Merci pour votre participation !
     uploaded: Votre contribution a bien été envoyée.
     thanks:   Merci de partager votre amour pour la communauté PHP.
     link:
         contributions: Voir la liste des contributions.
+        my_contribution: Vérifier ma contribution
 
 # Contributions page
 contributions:

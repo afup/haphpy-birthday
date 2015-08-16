@@ -52,14 +52,11 @@
     {% else %}
         <section class="page-section" id="contribute">
             <div class="container">
-                <h2>{{ 'step.title'|trans }}</h2>
-                <div class="row">
-                    {% if contribution.fileName %}
-                        {% include 'AppBundle:Default:contributed.html.twig' %}
-                    {% else %}
-                        {% include 'AppBundle:Form:contribution.html.twig' %}
-                    {% endif %}
-                </div>
+                {% if contribution.fileName %}
+                    {% include 'AppBundle:Default:contributed.html.twig' %}
+                {% else %}
+                    {% include 'AppBundle:Form:contribution.html.twig' %}
+                {% endif %}
             </div>
         </section>
     {% endif %}
