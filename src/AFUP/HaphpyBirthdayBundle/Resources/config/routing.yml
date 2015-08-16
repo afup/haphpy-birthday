@@ -28,6 +28,7 @@ haphpy_about:
 
 haphpy_delete:
     locales:
-        en: "/delete"
-        fr: "/delete"
+        en: "en/delete"
+        fr: "fr/supprimer"
+        es: "es/borrar"
     defaults: { _controller: AppBundle:Default:delete }
