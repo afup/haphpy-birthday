@@ -85,30 +85,6 @@ header#header div {
     -webfilter: drop-shadow( 2px 2px 1px rgba(0,0,0,0.3));
 }
 
-@media screen and (max-width: 767px) {
-    #haphpy-logo {
-        display: none;
-    }
-}
-
-header h1 {
-    color: #000000;
-    font-weight: 100;
-    font-size: 30px;
-    margin: 0 0 2em 0;
-}
-
-@media screen and (max-width: 767px) {
-    header h1 {
-        margin: 1em 0;
-    }
-}
-
-header h1 sup {
-    text-transform: none;
-}
-
-
 header#header #warning-message {
     position: relative;
     max-width: 1140px;
@@ -140,24 +116,33 @@ header#header #warning-message div {
 }
 
 /** Gauge **/
+#gauge-section h1 {
+    color: #000000;
+    font-weight: 100;
+    font-size: 30px;
+    margin-bottom: 2em;
+    text-transform: none;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    header h1 {
+        margin: 1em 0;
+    }
+}
+
+header h1 sup {
+    text-transform: none;
+}
+
 #gauge-section {
     padding-top: 2em;
-}
-
-#gauge-contributors, #gauge-remaining-days {
-    color: #000000;
-    text-align: center;
-    padding-bottom: 1em;
-}
-
-#gauge-contributors span, #gauge-remaining-days span {
-    font-size: 200%;
 }
 
 #gauge {
     position: relative;
     padding-top: 8px;
-    margin-bottom: 5em;
+    margin-bottom: 3em;
 }
 
 #gauge .progress {
@@ -193,9 +178,16 @@ header#header #warning-message div {
     display: inline;
     position: absolute;
     right: 0;
-    top: 0;
-    padding: 16px 24px 0 0;
-    white-space: nowrap;
+    top: -24px;
+}
+
+#gauge-contributors, #gauge-remaining-days {
+    color: #000000;
+    text-align: center;
+}
+
+#gauge-contributors span, #gauge-remaining-days span {
+    font-size: 200%;
 }
 
 /** Main content **/

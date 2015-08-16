@@ -126,25 +126,13 @@
             <div id="haphpy-logo">
                 <img src="/assets/images/haphpy-birthday.svg">
             </div>
-            <h1>{{ 'haphpy.punchline'|trans|raw }}</h1>
         </header>
         {% endblock %}
 
         {% block gauge %}
         <section id="gauge-section">
             <div class="container">
-                <div class="row">
-                    <div id="gauge-contributors" class="col-sm-12 col-lg-6">
-                        <a href="{{ path('haphpy_contributions') }}" class="stand-out">
-                            <span>{{ gauge.amount }}</span> {{ 'gauge.contributions'|trans }}
-                        </a>
-                    </div>
-                    <div id="gauge-remaining-days" class="col-sm-12 col-lg-6">
-                        {% set days = limit_date|date('U') - 'now'|date('U')  %}
-                        {% set days = days < 0 ? 0 : days|date('z')  %}
-                        <span>{{ days }} </span>{{ 'gauge.remaining_days'|trans }}
-                    </div>
-                </div>
+                <h1>{{ 'haphpy.punchline'|trans|raw }}</h1>
                 <div id="gauge">
                     <div class="progress">
                         <div class="progress-bar progress-bar-info progress-bar-striped active"
@@ -164,6 +152,18 @@
                             <span class="gauge-step-name">{{ ('gauge.step.' ~ step.name)|trans }}</span>
                         </div>
                     {% endfor %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="gauge-contributors" class="col-sm-12 col-lg-6">
+                        <a href="{{ path('haphpy_contributions') }}" class="stand-out">
+                            <span>{{ gauge.amount }}</span> {{ 'gauge.contributions'|trans }}
+                        </a>
+                    </div>
+                    <div id="gauge-remaining-days" class="col-sm-12 col-lg-6">
+                        {% set days = limit_date|date('U') - 'now'|date('U')  %}
+                        {% set days = days < 0 ? 0 : days|date('z')  %}
+                        <span>{{ days }} </span>{{ 'gauge.remaining_days'|trans }}
                     </div>
                 </div>
             </div>
