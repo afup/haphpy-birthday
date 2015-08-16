@@ -288,9 +288,18 @@ ul.error-list {
 }
 
 .haphpy-radio {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
+    font-weight: 400;
+    display: table;
+}
+
+.haphpy-radio > div {
+    display: table-row;
+}
+
+.haphpy-radio > div input, .haphpy-radio > div label {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
 }
 
 .haphpy-radio input {
@@ -302,11 +311,15 @@ ul.error-list {
 }
 
 .haphpy-radio label {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     padding-left: 0.5em;
     font-weight: 400;
     cursor: pointer;
     margin: 0;
 }
+
+/** examples **/
 
 #examples {
     color: #ddd;

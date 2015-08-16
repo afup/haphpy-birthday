@@ -1,11 +1,13 @@
 {%- block choice_widget_expanded -%}
     <div {{ block('widget_container_attributes') }}>
+    <div class="haphpy-radio">
     {%- for child in form %}
-        <div class="haphpy-radio">
+        <div>
             {{- form_widget(child, {'disabled': disabled}) -}}
             {{- form_label(child) -}}
         </div>
     {% endfor -%}
+    </div>
     </div>
 {%- endblock choice_widget_expanded -%}
 
