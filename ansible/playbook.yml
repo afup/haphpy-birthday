@@ -6,15 +6,11 @@
     servername: haphpy-birthday.dev www.haphpy-birthday.dev 192.168.33.99
     timezone: UTC
   vars_files:
-    - vars/mariadb.yml
     - vars/common.yml
-    - [ "vars/nginxphp.yml", "vars/ws_defaults.yml" ]
   roles:
     - init
-    - php5-cli
-    - nginx
-    - php5-fpm
-    - mariadb
+    - mariadb-server
+    - apache
+    - php7
     - composer
-    - phpcommon
     - app

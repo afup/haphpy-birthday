@@ -28,13 +28,13 @@ Vagrant.configure("2") do |config|
         v.customize [
             "modifyvm", :id,
             "--name", "haphpy-birthday",
-            "--memory", 512,
+            "--memory", 1024,
             "--natdnshostresolver1", "on",
             "--cpus", 1,
         ]
     end
 
-    config.vm.box = "ubuntu/trusty64"
+    config.vm.box = "debian/jessie64"
 
     config.vm.network :private_network, ip: "192.168.33.99"
     config.ssh.forward_agent = true

@@ -1,0 +1,12 @@
+---
+
+elao_mysql_users:
+  - { name: 'afup', password: 'afup', priv: 'haphpy.*:ALL', host: 'localhost' }
+elao_mysql_databases:
+  - { name: haphpy }
+
+elao_mysql_login_user:     root
+elao_mysql_login_password: null
+elao_mysql_login_host:     localhost
+
+elao_mysql_login_auto: false

@@ -1,0 +1,21 @@
+---
+
+- name: Install Apache 2
+  sudo: yes
+  apt: pkg=apache2 state=latest
+
+- name: Config apache2
+  template:
+    src:  apache2.conf
+    dest: "/etc/apache2/apache2.conf"
+  notify: restart apache2
+
+- name: Mod prefork module
+  template:
+    src:  mpm_event.load
+    dest: "/etc/apache2/mods-available/mpm_event.load"
+  notify: restart apache2
+
+- name: Enable Mod Rewrite
+  sudo: yes
+  shell: a2enmod rewrite
