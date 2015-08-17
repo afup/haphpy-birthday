@@ -30,16 +30,6 @@ afup_luxembourg:
     country:        Luxembourg
     city:           ~
 
-afup_lyon:
-    displayed_name: afup Lyon
-    full_name:      afup Lyon (Lyon PHP Users Group)
-    parent:         afup
-    picture:        afup-lyon.svg
-    website:        http://lyon.afup.org
-    twitter:        afup_lyon
-    country:        France
-    city:           Lyon
-
 afup_nantes:
     displayed_name: afup Nantes
     full_name:      afup Nantes (Nantes PHP Users Group)
@@ -49,16 +39,6 @@ afup_nantes:
     twitter:        ~
     country:        France
     city:           Nantes
-
-afup_paris:
-    displayed_name: afup Paris
-    full_name:      afup Paris (Paris PHP Users Group)
-    parent:         afup
-    picture:        afup.svg
-    website:        http://paris.afup.org
-    twitter:        afup_paris
-    country:        France
-    city:           Paris
 
 afup_toulouse:
     displayed_name: afup Toulouse
@@ -74,7 +54,7 @@ chiphp:
     displayed_name: Chicago PHP
     full_name:      Chicago PHP User Group
     parent:         ~
-    picture:        chi-php.png
+    picture:        chi-php.svg
     website:        http://www.meetup.com/Chicago-PHP-User-Group/
     twitter:        ChiPHPUG
     country:        USA
@@ -89,6 +69,26 @@ hampshire:
     twitter:        phphants
     country:        UK
     city:           Hampshire
+
+lyon:
+    displayed_name: afup Lyon
+    full_name:      afup Lyon (Lyon PHP Users Group)
+    parent:         afup
+    picture:        afup-lyon.svg
+    website:        http://lyon.afup.org
+    twitter:        afup_lyon
+    country:        France
+    city:           Lyon
+
+paris:
+    displayed_name: afup Paris
+    full_name:      afup Paris (Paris PHP Users Group)
+    parent:         afup
+    picture:        afup-paris.svg
+    website:        http://paris.afup.org
+    twitter:        afup_paris
+    country:        France
+    city:           Paris
 
 phppb:
     displayed_name: PHP-PB
