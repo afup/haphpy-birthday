@@ -1,12 +1,12 @@
 haphpy:
-    punchline: Add your contribution to the collaborative movie celebrating 20 years of PHP
+    punchline: Agrega tu contribución a la película conmemorativa celebrando los 20 años de PHP
     date_format:
         full: 'd/m/Y, H:i:s T'
         date: 'd/m/Y'
 
 head:
     title:       HaPHPy 20th Birthday to you PHP!
-    description: Haphpy Birthday: A collaborative movie gathering gratefulness media for the 20th PHP birthday.
+    description: Haphpy Birthday: Una película colaborativa que reune multimedia de agradecimiento por los 20 años de PHP.
 
 gauge:
     contributions:  contribuciones hasta ahora
@@ -21,21 +21,21 @@ menu:
         label: ¡Contribuye!
     contributions:
         label:  Contribuidores
-        people: People
-        pugs:   PHP User Groups
+        people: Individuos
+        pugs:   Grupos de usuarios PHP
     about:
         label: Acerca de
     mobile:
         navigation: navegación
     user:
-        login:    Log in
-        logout:   Log out
+        login:    Ingresar
+        logout:   Salir
         facebook: Facebook
         github:   GitHub
         twitter:  Twitter
 
 step:
-    title: Upload your contribution!
+    title: ¡Sube tu contribución!
     authenticate:
         title: Autentícate
         logged_in: >
@@ -49,37 +49,37 @@ step:
 
 # Home page
 index:
-    title:        Contribute!
+    title:        ¡Contribuye!
     introduction: >
-        <p>HaPHPy Birthday is a collaborative movie <span %highlight1%>celebrating 20 years of
-        the PHP language</span> and its users involvement.</p>
-        <p>Before the %limit_date%, <span %highlight2%>upload a very short video</span>
-        or picture showing how much you love PHP or its community. Media can be selfies, placards,
-        group photos, self expression, fun pics…<br />anything imaginable and positive.</p>
-        <p>Eventually, people contributions will be <span %highlight3%>gathered
-        in a short mosaic movie</span> released under a Creative&nbsp;Commons&nbsp;Licence.</p>
+        <p>HaPHPy Birthday es una película colaborativa <span %highlight1%>que celebra los 20 años de
+        del lenguaje PHP</span> y la participación de sus usuarios.</p>
+        <p>Antes del %limit_date%, <span %highlight2%>sube un video muy pequeño</span>
+        o una película que muestre cuanto amas a PHP y su comunidad. Los archivos pueden ser selfies, pancartas,
+        fotos grupales, fotos de libre expresión, divertidas…<br />cualquier cosa imaginable y positiva.</p>
+        <p>Eventualmente, las contribuciones de las personas se <span %highlight3%>reunirán
+        en una película de mosaico corta</span> liberada bajo la licencia Creative&nbsp;Commons.</p>
 
     time_over:
-        title:    Contribution time is over!
-        editing:  Contribution was possible until the %limit_date%. We are now editing the final movie.
+        title:    ¡Se acabó el tiempo para contribuir!
+        editing:  Las contribuciones eran posibles hasta el %limit_date%. Ahora estamos editando la película final.
         premiere: >
-            The premiere will be held during the opening keynote of the
-            <a href="http://forumphp.org">Forum PHP</a>, on the %premiere_date%.
+            El estreno se llevará a cabo durante el discurso de apertura de
+            <a href="http://forumphp.org">Foro PHP</a>, el %premiere_date%.
         release: >
-            The collaborative movie will be released straight after the premiere on <a href="https://www.youtube.com/user/afupPHP">
-            afup's YouTube channel</a>.
-            It will be visible on this awesome website too. 😜
+            La película colaborativa se liberará inmediatemente después de su estreno en <a href="https://www.youtube.com/user/afupPHP">
+            el canal de YouTube de afup</a>.
+            También estará disponible desde este increible sitio. 😜
 
     contributed:
-        title: Thank you for your participation!
-        thanks: You contributed as <span class="fa haphpy-icon-%authProvider%"></span>&nbsp;%username%.
+        title: ¡Gracias por tu participación!
+        thanks: Contribuiste como <span class="fa haphpy-icon-%authProvider%"></span>&nbsp;%username%.
         media_warning: >
-            This is how your media will appear in the final movie, on its own or in a mosaic sequence.
+            Así es como tu archivo aparecerá en la película final, sólo o en una secuencia de mosaico.
         media_change: >
-            If you think your media is not displayed as its best, just remove it and upload it again once modified.
+            Si crees que tu archivo no se muestra de la mejor forma, elimínalo y súbelo de nuevo después de modificarlo.
         media_specs_link: >
-            Medias specifications
-        remove_button: Remove my contribution
+            Especificaciones de los archivos
+        remove_button: Elimina mi contribución
 
     examples:
         title:            Ejemplos de archivos que pueden ser parte de la película final
@@ -101,12 +101,12 @@ form:
         label: enviar
 
 success:
-    title:    Thank you for your participation!
-    uploaded: Your contribution has been uploaded.
-    thanks:   Thank you for sharing your love to the PHP community.
+    title:    ¡Gracias por tu participación!
+    uploaded: Tu contribución se ha subido.
+    thanks:   Gracias por compartir tu amor por la comunidad de PHP.
     link:
-        contributions: See the list of contributions
-        my_contribution: Check my contribution
+        contributions: Revisa la lista de contribuciones
+        my_contribution: Reviso mi contribución
 
 # Contributions page
 contributions:
@@ -116,22 +116,22 @@ contributions:
 
 # About page
 about:
-    title: General information
+    title: Información general
     final_video:
-        premiere: The premiere is scheduled for the 23<sup>th</sup> November 2015, at the Forum&nbsp;PHP in Paris.
+        premiere: El estreno está programado para el 23 de Noviembre de 2015, en el Foro&nbsp;PHP en París.
         text: >
         specs: >
             <p>Se espera que el tamaño final del video tenga una duración de 3 a 5 minutos.</p>
-            <p>The rendered format will be 1080p25 mp4 video, having the following specs: 1920px × 1080px,
-            25fps, progressive scan, h264 video codec and AAC audio codec.</p>
+            <p>El formato de salida será un video mp4 de 1080p25, con las siguientes especificaciones: 1920px × 1080px,
+            25fps, scaneo progresivo, codec de video h264 y codec de audio AAC.</p>
         availability: >
             <p>Después se alojará en el canal de
             <a href="https://www.youtube.com/user/afupPHP" class="differ">Youtube de afup</a>
             y estará visible en el sitio Web. También será descargable.</p>
         licence: >
-            <p>To prevent the use of people contributions, the final movie will be released under a
+            <p>Para evitar el uso de las contribuciones, la película final se liberará bajo la licencia
             <a class="differ" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
-            Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+            Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a>.</p>
 
     contributions:
         limit: >
@@ -191,8 +191,14 @@ about:
         title: Reconocimientos
         elaostrap: El estilo está basado en <a href="https://github.com/JeremyFagis/ElaoStrap" class="differ">elaostrap</a> de Jeremy Fagis.
         php_ug:    Los grupos de usuario de PHP fueron contactados gracias a <a href="http://php.ug/" class="differ">php.ug</a>.
+        galaxy:    >
+            Las ilustraciones de fondo de las dependencias de Composer son gracias a
+            <a href="https://github.com/anvaka" class="differ"><span class="fa haphpy-icon-github"></span> Andrei Kashcha</a>
+            con su increible trabajo con la
+            <a href="https://anvaka.github.io/pm/#/galaxy/composer?cx=7031&cy=-1&cz=2428&lx=-0.0759&ly=0.5682&lz=0.0225&lw=0.8191&ml=150&s=1.75&l=1&v=2015-07-20T04-26-49Z"
+            class="differ">Visualización de Galaxias de Código</a>.
         fanzutti:  Ejemplos con la ayuda de <a href="http://www.florafanzutti.com" class="differ">Flora Fanzutti</a>.
 
 footer:
     github: Repositorio en GitHub
-    by_community: Made by the PHP community with <span class="fa fa-heart"></span>
+    by_community: Hecho por la comunidad de PHP con <span class="fa fa-heart"></span>
