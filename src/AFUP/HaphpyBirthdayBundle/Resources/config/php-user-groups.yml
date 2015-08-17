@@ -120,6 +120,16 @@ phpnw:
     country:        UK
     city:           Manchester
 
+phpsurrey:
+    displayed_name: PHP Surrey
+    full_name:      PHP Surrey
+    parent:         ~
+    picture:        phpsurrey.png
+    website:        http://phpsurrey.uk
+    twitter:        phpsurrey
+    country:        UK
+    city:           Guildford
+
 sweetlakephp:
     displayed_name: SweetlakePHP
     full_name:      SweetlakePHP
