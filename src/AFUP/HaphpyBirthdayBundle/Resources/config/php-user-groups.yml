@@ -50,6 +50,16 @@ afup_toulouse:
     country:        France
     city:           Paris
 
+austinphp:
+    displayed_name: austinphp
+    full_name:      Austin PHP User Group
+    parent:         ~
+    picture:        austinphp.png
+    website:        http://www.meetup.com/austinphp/
+    twitter:        austinphp
+    country:        USA
+    city:           Austin
+
 chiphp:
     displayed_name: Chicago PHP
     full_name:      Chicago PHP User Group
