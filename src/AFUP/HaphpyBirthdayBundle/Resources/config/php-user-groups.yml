@@ -1,5 +1,15 @@
 ---
 
+austinphp:
+    displayed_name: austinphp
+    full_name:      Austin PHP User Group
+    parent:         ~
+    picture:        austinPHPlogo.svg
+    website:        http://www.meetup.com/austinphp/
+    twitter:        austinphp
+    country:        USA
+    city:           Austin
+
 afup:
     displayed_name: afup
     full_name:      Association Française des Utilisateurs de PHP (French PHP Users Group)
