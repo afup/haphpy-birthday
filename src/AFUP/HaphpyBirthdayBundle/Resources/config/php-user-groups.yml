@@ -60,6 +60,16 @@ austinphp:
     country:        USA
     city:           Austin
 
+brusselsphp:
+    displayed_name: BrusselsPHP
+    full_name:      Brussels PHP User Group
+    parent:         ~
+    picture:        brusselsphp.png
+    website:        http://www.brusselsphp.be/
+    twitter:        brusselsphp
+    country:        Belgium
+    city:           Brussels
+
 chiphp:
     displayed_name: Chicago PHP
     full_name:      Chicago PHP User Group
