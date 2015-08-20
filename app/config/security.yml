@@ -19,6 +19,7 @@ security:
                 login_path:   /login
                 use_forward:  false
                 failure_path: /login
+                default_target_path: "/#contribute"
 
                 oauth_user_provider:
                     service: haphpy.user_provider
