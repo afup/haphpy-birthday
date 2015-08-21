@@ -55,3 +55,4 @@ parameters:
     # Display a warning message in the top if not null (used for demo)
     warning_message: ~
 
+    ga_enabled: false
