@@ -43,6 +43,8 @@ parameters:
     limit_date:    '2015-10-31 23:59:59 UTC'
     premiere_date: '2015-11-23'
 
+    ga_ua: null
+
     # Expected steps and goal for the quantity of contributions
     haphpy_steps:
         - {name: min, value: 100}
