@@ -199,6 +199,11 @@ about:
             class="differ">Visualización de Galaxias de Código</a>.
         fanzutti:  Ejemplos con la ayuda de <a href="http://www.florafanzutti.com" class="differ">Flora Fanzutti</a>.
 
+# Contribution page
+public_contribution:
+    title: A contribution by %name%
+    contributor: Contributed by <span class="fa haphpy-icon-%authProvider%"></span> %identifier%
+
 footer:
     github: Repositorio en GitHub
     by_community: Hecho por la comunidad de PHP con <span class="fa fa-heart"></span>

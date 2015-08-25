@@ -207,6 +207,11 @@ about:
             class="differ">Code Galaxies Vizualization</a>.
         fanzutti:  Exemples de contributions avec le concours technique de <a href="http://www.florafanzutti.com" class="differ">Flora Fanzutti</a>.
 
+# Contribution page
+public_contribution:
+    title: Une contribution de %name%
+    contributor: Contribué par <span class="fa haphpy-icon-%authProvider%"></span> %identifier%
+
 footer:
     github: Dépôt GitHub
     by_community: Un projet de la communauté PHP <span class="fa fa-heart"></span>

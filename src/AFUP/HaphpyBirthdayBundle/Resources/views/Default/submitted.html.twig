@@ -1,6 +1,6 @@
 {% extends 'AppBundle::base.html.twig' %}
 
-{% import "AppBundle:Macro:style.html.twig" as haphpy %}
+{% import "AppBundle:Macro:helpers.html.twig" as haphpy %}
 
 {% block title %}{{ parent() }} - {{ 'success.title'|trans }}{% endblock %}
 
@@ -11,7 +11,7 @@
 {% block gauge %}{% endblock %}
 
 {% block content %}
-    <video autoplay  poster="/assets/images/applause.jpg" id="video-success" loop>
+    <video autoplay poster="/assets/images/applause.jpg" id="video-success" loop>
         <source src="/assets/videos/applause.webm" type="video/webm">
         <source src="/assets/videos/applause.mp4" type="video/mp4">
     </video>

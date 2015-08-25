@@ -5,6 +5,15 @@ haphpy_index:
         es: "/es/"
     defaults: { _controller: AppBundle:Default:index }
 
+haphpy_contribution_user:
+    locales:
+        en: "/en/contribution/{authProvider}/{identifier}"
+        fr: "/fr/contribution/{authProvider}/{identifier}"
+        es: "/es/contribucion/{authProvider}/{identifier}"
+    defaults: { _controller: AppBundle:Default:contribution }
+    requirements:
+        authProvider:  "g|f|t"
+
 haphpy_submitted:
     locales:
         en: "/en/thanks"

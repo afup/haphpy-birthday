@@ -23,6 +23,10 @@
     width: 100%;
 }
 
+html, body {
+    background-image: linear-gradient(to bottom, white 50%, #d2d2d2 50%);
+    min-height: 100%;
+}
 video {
     width: 100%;
 }
@@ -115,14 +119,19 @@ header#header #warning-message div {
     }
 }
 
-/** Gauge **/
-#gauge-section h1 {
+/** Punchline **/
+h1.punchline {
     color: #000000;
     font-weight: 100;
     font-size: 30px;
     margin-bottom: 2em;
     text-transform: none;
     text-align: center;
+}
+
+/** Gauge **/
+#gauge-section {
+    padding-top: 2em;
 }
 
 @media screen and (max-width: 767px) {
@@ -133,10 +142,6 @@ header#header #warning-message div {
 
 header h1 sup {
     text-transform: none;
-}
-
-#gauge-section {
-    padding-top: 2em;
 }
 
 #gauge {
@@ -196,6 +201,7 @@ section.page-section {
     padding-bottom: 2em;
     background: center center no-repeat;
     background-size: cover;
+    background-color: #f8f8f8;
 }
 
 section.dark-background {
@@ -537,6 +543,20 @@ ul.error-list {
 
 .cc-icon {
     fill: #ddd;
+}
+
+/** Public Contribution section **/
+section#contribution-punchline {
+    margin-top: 80px;
+    padding-bottom: 0;
+}
+
+section#contribution-punchline h1 {
+    margin-bottom: 1em;
+}
+
+section#contribution {
+    color: #666;
 }
 
 /** Footer **/

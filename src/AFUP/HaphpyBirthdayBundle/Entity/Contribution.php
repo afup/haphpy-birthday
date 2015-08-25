@@ -327,4 +327,14 @@ class Contribution
 
         return $this;
     }
+
+    /**
+     * Get Auth Provider Id (g for GitHub, f for Facebook…)
+     *
+     * @return string
+     */
+    public function getAuthProviderId()
+    {
+        return $this->authProvider ? substr($this->authProvider, 0, 1) : null;
+    }
 }

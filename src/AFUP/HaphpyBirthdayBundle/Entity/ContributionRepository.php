@@ -42,4 +42,26 @@ class ContributionRepository extends EntityRepository
             ->getQuery()
             ->getSingleScalarResult();
     }
+
+    /**
+     * Find a Contribution based on authProvider / identifier
+     *
+     * @param  string $authProvider the OAuth service (GitHub, Twitter…)
+     * @param  string $identifier   the user uniqid for the OAuth provider
+     *
+     * @return Contribution
+     */
+    public function findOneContributionByContributor($authProvider, $identifier)
+    {
+        $queryBuilder = $this->createQueryBuilder('contribution')
+            ->select('contribution')
+            ->where('contribution.authProvider = :provider')
+            ->andWhere('contribution.identifier =  :identifier')
+            ->setParameter('provider', $authProvider)
+            ->setParameter('identifier', $identifier);
+
+        return $queryBuilder
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
 }
