@@ -1,5 +1,5 @@
 haphpy:
-    punchline: Agrega tu contribución a la película conmemorativa celebrando los 20 años de PHP
+    punchline: Agrega tu contribución a la película de colaboración celebrando los 20 años de PHP
     date_format:
         full: 'd/m/Y, H:i:s T'
         date: 'd/m/Y'
@@ -202,6 +202,7 @@ about:
 # Contribution page
 public_contribution:
     title: A contribution by %name%
+    punchline:   La película de colaboración celebrando los 20 años de PHP
     contributor: Contributed by <span class="fa haphpy-icon-%authProvider%"></span> %identifier%
 
 footer:

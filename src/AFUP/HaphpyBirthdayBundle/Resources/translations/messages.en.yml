@@ -202,6 +202,7 @@ about:
 # Contribution page
 public_contribution:
     title: A contribution by %name%
+    punchline:   The collaborative movie celebrating 20 years of PHP
     contributor: Contributed by <span class="fa haphpy-icon-%authProvider%"></span> %identifier%
 
 footer:
