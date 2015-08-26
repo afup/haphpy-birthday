@@ -1,0 +1,37 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% import "AppBundle:Macro:helpers.html.twig" as haphpy %}
+
+{% block title %}{% spaceless %}
+    {{ parent() }} - {{ 'public_contribution.title'|trans({'%name%': contribution.visibleName}) }}
+{% endspaceless %}{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block gauge %}{% endblock %}
+
+{% block content %}{% spaceless %}
+    <section id="contribution-punchline" class="page-section">
+        <div class="container">
+            <h1 class="punchline">{{ 'public_contribution.punchline'|trans }}</h1>
+        </div>
+    </section>
+
+    <section id="contribution" class="page-section dark-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    {{ haphpy.media_container(contribution) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    {{ 'public_contribution.contributor'|trans({
+                        '%authProvider%': contribution.authProvider,
+                        '%identifier%':    contribution.visibleName
+                    })|raw }}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endspaceless %}{% endblock %}

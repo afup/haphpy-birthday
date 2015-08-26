@@ -1,6 +1,6 @@
 {% extends 'AppBundle::base.html.twig' %}
 
-{% import "AppBundle:Macro:style.html.twig" as haphpy %}
+{% import "AppBundle:Macro:helpers.html.twig" as haphpy %}
 
 {% block title %}{{ parent() }} - {{ 'success.title'|trans }}{% endblock %}
 
@@ -11,7 +11,7 @@
 {% block gauge %}{% endblock %}
 
 {% block content %}
-    <video autoplay  poster="/assets/images/applause.jpg" id="video-success" loop>
+    <video autoplay poster="/assets/images/applause.jpg" id="video-success" loop>
         <source src="/assets/videos/applause.webm" type="video/webm">
         <source src="/assets/videos/applause.mp4" type="video/mp4">
     </video>
@@ -33,14 +33,23 @@
             <h1>{{ 'success.thanks'|trans|raw }}</h1>
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-6">
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://haphpy-birthday.net" data-text="I sent my contribution to the HaPHPy Birthday movie! :-) #20YearsOfPHP" data-via="HaPHPy20" data-hashtags="PHP" data-count="none">Tweet</a>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-hashtags="PHP" data-url="{{ url('haphpy_contribution_user', {
+                        authProvider: contribution.authProviderId,
+                        identifier:   contribution.identifier
+                    }) }}" data-text="I participated to the HaPHPy Birthday movie! #20YearsOfPHP" data-via="HaPHPy20">Tweet</a>
                     <script>
                         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
                     </script>
-                    <div class="fb-share-button" data-href="http://haphpy-birthday.net" data-layout="button"></div>
+                    <div class="fb-share-button" data-href="{{ url('haphpy_contribution_user', {
+                        authProvider: contribution.authProviderId,
+                        identifier:   contribution.identifier
+                    }) }}" data-layout="button"></div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 text-right">
-                    <a href="{{ path('haphpy_index') ~ '#contribute' }}" class="page-link">
+                    <a href="{{ path('haphpy_contribution_user', {
+                        authProvider: contribution.authProviderId,
+                        identifier:   contribution.identifier
+                    }) }}" class="page-link">
                         {{ 'success.link.my_contribution'|trans }}
                     </a>
                     <a href="{{ path('haphpy_contributions') ~ '#contributions' }}" class="page-link">

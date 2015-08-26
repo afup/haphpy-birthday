@@ -1,6 +1,6 @@
 {% extends 'AppBundle::base.html.twig' %}
 
-{% import "AppBundle:Macro:style.html.twig" as haphpy %}
+{% import "AppBundle:Macro:helpers.html.twig" as haphpy %}
 
 {% block title %}{{ parent() }} - {{ 'contributions.title'|trans }}{% endblock %}
 
@@ -22,7 +22,13 @@
             <div class="row">
                 {% for contribution in contributions %}
                     <div class="col-sm-12 col-md-6 col-lg-3 contribution">
-                        {{ haphpy.social_link(contribution) }}
+                        <a href="{{ url('haphpy_contribution_user', {
+                            authProvider: contribution.authProviderId,
+                            identifier:   contribution.identifier
+                        }) }}">
+                            <span class="fa haphpy-icon-{{ contribution.authProvider }}"></span>
+                            {{ contribution.visibleName }}
+                        </a>
                     </div>
                 {% endfor %}
             </div>

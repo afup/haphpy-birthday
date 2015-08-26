@@ -54,3 +54,27 @@ desaturated blue   44576a   68,  87,  10
     {{ contribution.visibleName }}
     {% if linkable %}</a>{% endif %}
 {% endspaceless %}{% endmacro %}
+
+{% macro media_container(contribution) %}{% spaceless %}
+    <div class="sixteen-nine">
+        {% if contribution.file.genericMimeType == 'image' %}
+        <div class="content content-image" style="background-image: url({{ path('media_serve', {
+                authProvider: contribution.authProviderId,
+                identifier:   contribution.identifier
+            }) }});">
+        </div>
+        {% endif %}
+        {% if contribution.file.genericMimeType == 'video' %}
+        <div class="content content-video">
+            <video controls class="fitting-media">
+                <source src="{{ path('media_serve', {
+                    authProvider: contribution.authProviderId,
+                    identifier:   contribution.identifier
+                }) }}" type="{{ contribution.file.mimeTypeForHtmlPlayer }}">
+                This video is not supported by browsers.
+            </video>
+        </div>
+        {% endif %}
+    </div>
+{% endspaceless %}{% endmacro %}
+

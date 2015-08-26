@@ -29,25 +29,6 @@
     </div>
 
     <div class="col-sm-12 col-md-8">
-        <div class="sixteen-nine">
-            {% if contribution.file.genericMimeType == 'image' %}
-            <div class="content content-image" style="background-image: url({{ path('media_serve', {
-                    auth: user.authProvider,
-                    identifier: user.username
-                }) }});">
-            </div>
-            {% endif %}
-            {% if contribution.file.genericMimeType == 'video' %}
-            <div class="content content-video">
-                <video controls class="fitting-media">
-                    <source src="{{ path('media_serve', {
-                        auth: user.authProvider,
-                        identifier: user.username
-                    }) }}" type="{{ contribution.file.mimeTypeForHtmlPlayer }}">
-                    This video is not supported by browsers.
-                </video>
-            </div>
-            {% endif %}
-        </div>
+        {{ haphpy.media_container(contribution)}}
     </div>
 </div>

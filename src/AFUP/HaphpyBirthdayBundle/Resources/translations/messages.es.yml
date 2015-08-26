@@ -1,5 +1,5 @@
 haphpy:
-    punchline: Agrega tu contribución a la película conmemorativa celebrando los 20 años de PHP
+    punchline: Agrega tu contribución a la película de colaboración celebrando los 20 años de PHP
     date_format:
         full: 'd/m/Y, H:i:s T'
         date: 'd/m/Y'
@@ -198,6 +198,12 @@ about:
             <a href="https://anvaka.github.io/pm/#/galaxy/composer?cx=7031&cy=-1&cz=2428&lx=-0.0759&ly=0.5682&lz=0.0225&lw=0.8191&ml=150&s=1.75&l=1&v=2015-07-20T04-26-49Z"
             class="differ">Visualización de Galaxias de Código</a>.
         fanzutti:  Ejemplos con la ayuda de <a href="http://www.florafanzutti.com" class="differ">Flora Fanzutti</a>.
+
+# Contribution page
+public_contribution:
+    title: A contribution by %name%
+    punchline:   La película de colaboración celebrando los 20 años de PHP
+    contributor: Contributed by <span class="fa haphpy-icon-%authProvider%"></span> %identifier%
 
 footer:
     github: Repositorio en GitHub

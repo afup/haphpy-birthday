@@ -6,6 +6,7 @@ use AFUP\HaphpyBirthdayBundle\Entity\Contribution;
 use AFUP\HaphpyBirthdayBundle\HttpFoundation\File\File;
 use AFUP\HaphpyBirthdayBundle\Form\Type\ContributionType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -65,6 +66,32 @@ class DefaultController extends Controller
             'user'         => $user,
             'form'         => $form->createView(),
             'gauge'        => $this->get('haphpy.gauge'),
+            'contribution' => $contribution,
+        ];
+    }
+
+    /**
+     * @param Request      $request
+     * @param Contribution $contribution
+     *
+     * @Template()
+     * @ParamConverter(converter="public_contribution")
+     * @TranslationBridge(placeholders={
+     *     "authProvider" = "contribution.authProviderId",
+     *     "identifier"   = "contribution.identifier"
+     * })
+     *
+     * @return array for template
+     */
+    public function contributionAction(Request $request, Contribution $contribution)
+    {
+        $user = $this->getUser();
+
+        // When getting the page, link file to contribution (for display purpose)
+        $this->get('haphpy.file_attacher')->attachTo($contribution);
+
+        return [
+            'user'         => $user,
             'contribution' => $contribution,
         ];
     }
