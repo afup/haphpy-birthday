@@ -31,7 +31,7 @@ class UserProvider extends OAuthUserProvider
      * Construct
      *
      * @param SessionInterface $session
-     * @param AdminChecker     $adminChecker
+     * @param AdminEnabler     $adminEnabler
      */
     public function __construct(SessionInterface $session, AdminEnabler $adminEnabler)
     {

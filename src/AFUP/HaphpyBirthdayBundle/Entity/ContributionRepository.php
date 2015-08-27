@@ -64,4 +64,21 @@ class ContributionRepository extends EntityRepository
             ->getQuery()
             ->getOneOrNullResult();
     }
+
+    /**
+     * Get every contribution from Persistence
+     *
+     * @return Contribution[]
+     */
+    public function getAllContributions()
+    {
+        $queryBuilder = $this->createQueryBuilder('contribution')
+            ->select('contribution')
+            ->orderBy('contribution.visibleName', 'ASC')
+            ->addOrderBy('contribution.authProvider', 'ASC');
+
+        return $queryBuilder
+            ->getQuery()
+            ->getResult();
+    }
 }

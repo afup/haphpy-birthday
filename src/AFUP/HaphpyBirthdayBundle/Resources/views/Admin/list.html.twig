@@ -1,0 +1,32 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% import "AppBundle:Macro:helpers.html.twig" as haphpy %}
+
+{% block title %}{{ parent() }} - {{ 'index.title'|trans }}{% endblock %}
+
+{% block gauge %}{% endblock %}
+
+{% block content %}
+    <section class="page-section" id="admin-list">
+    <div class="container">
+        <table id="admin-list">
+        {% for contribution in contributions %}
+            <tr>
+                <td>
+                    <span class="fa haphpy-icon-{{ contribution.authProvider }}"></span>{{ contribution.identifier }}
+                </td>
+                <td>
+                    {{ contribution.visibleName }}
+                </td>
+                <td>
+                    {{ contribution.creditWanted}}
+                </td>
+                <td>
+                    {{ contribution.validated ? 1 : 0 }}
+                </td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+    </section>
+{% endblock %}
