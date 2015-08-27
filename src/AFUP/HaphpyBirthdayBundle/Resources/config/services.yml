@@ -1,9 +1,9 @@
 services:
     haphpy.user_provider:
         class: AFUP\HaphpyBirthdayBundle\Model\UserProvider
-        arguments: [@session, @haphpy.admin_checker]
+        arguments: [@session, @haphpy.admin_enabler]
 
-    haphpy.admin_checker:
+    haphpy.admin_enabler:
         class: AFUP\HaphpyBirthdayBundle\Service\AdminEnabler
         arguments: ['%admins%']
 
