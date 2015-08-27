@@ -24,6 +24,10 @@ AFUP\HaphpyBirthdayBundle\Entity\Contribution:
         creditWanted:
             type:   boolean
             column: credit_wanted
+        moderationState:
+            type:   boolean
+            column: moderation_state
+            nullable: true
         createdAt:
             type:   datetime
             column: created_at

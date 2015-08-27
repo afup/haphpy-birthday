@@ -52,6 +52,16 @@ class Contribution
     private $creditWanted;
 
     /**
+     * Whether or not contribution is accepted
+     * null:  not moderated but visible anyway (we trust people first)
+     * true:  accepted thus visible
+     * false: rejected, it won't be part of the project
+     *
+     * @var bool
+     */
+    private $moderationState = null;
+
+    /**
      * The time assets was uploaded
      *
      * @var \DateTime
@@ -336,5 +346,17 @@ class Contribution
     public function getAuthProviderId()
     {
         return $this->authProvider ? substr($this->authProvider, 0, 1) : null;
+    }
+
+    /**
+     * Gets whether or not contribution is accepted thus visible to audience
+     *
+     * @return bool
+     */
+    public function isDisplayable()
+    {
+        // a Contribution is visible as long it is not explicitly rejected
+        // meaning when the moderationState is not set to false
+        return $this->moderationState !== false;
     }
 }
