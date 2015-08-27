@@ -34,7 +34,7 @@ class FileAttacher
      *
      * @return false|void
      */
-    public function attachTo(Contribution $contribution)
+    public function attachFileTo(Contribution $contribution)
     {
         if (!$contribution->getFileName()) {
             return false;

@@ -32,7 +32,7 @@ class MediaController extends Controller
      */
     public function serveMediaAction(Request $request, Contribution $contribution)
     {
-        $this->get('haphpy.file_attacher')->attachTo($contribution);
+        $this->get('haphpy.file_attacher')->attachFileTo($contribution);
 
         $headers = [
             'Cache-Control'             => 'private',
