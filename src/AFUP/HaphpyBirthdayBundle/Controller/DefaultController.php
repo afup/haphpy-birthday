@@ -60,7 +60,7 @@ class DefaultController extends Controller
         }
 
         // When getting the page, link file to contribution (for display purpose)
-        $this->get('haphpy.file_attacher')->attachTo($contribution);
+        $this->get('haphpy.file_attacher')->attachFileTo($contribution);
 
         return [
             'user'         => $user,
@@ -88,7 +88,7 @@ class DefaultController extends Controller
         $user = $this->getUser();
 
         // When getting the page, link file to contribution (for display purpose)
-        $this->get('haphpy.file_attacher')->attachTo($contribution);
+        $this->get('haphpy.file_attacher')->attachFileTo($contribution);
 
         return [
             'user'         => $user,
