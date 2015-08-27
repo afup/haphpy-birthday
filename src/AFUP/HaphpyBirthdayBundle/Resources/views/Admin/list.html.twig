@@ -6,12 +6,30 @@
 
 {% block gauge %}{% endblock %}
 
+{% block header %}{% endblock %}
+
 {% block content %}
     <section class="page-section" id="admin-list">
     <div class="container">
-        <table id="admin-list">
+        <table id="admin-list" class="table table-striped">
+            <tr>
+                <th></th>
+                <th>User</th>
+                <th>Visible Name</th>
+                <th>Mime</th>
+                <th class="text-center">Credited</th>
+                <th class="text-center">Visible</th>
+            </tr>
         {% for contribution in contributions %}
             <tr>
+                <td>
+                    <a href="{{ url('haphpy_contribution_user', {
+                        authProvider: contribution.authProviderId,
+                        identifier:   contribution.identifier
+                    }) }}">
+                        <span class="fa fa-eye"></span>
+                    </a>
+                </td>
                 <td>
                     <span class="fa haphpy-icon-{{ contribution.authProvider }}"></span>{{ contribution.identifier }}
                 </td>
@@ -19,10 +37,15 @@
                     {{ contribution.visibleName }}
                 </td>
                 <td>
-                    {{ contribution.creditWanted}}
+                    {{ contribution.file.mimeType }}
                 </td>
-                <td>
-                    {{ contribution.validated ? 1 : 0 }}
+                <td class="text-center">
+                    <span class="fa fa-{{ contribution.creditWanted ? 'star' : 'star-o' }}"></span>
+                </td>
+                <td class="text-center">
+                    {% set icon = contribution.displayable ? 'check' : 'times' %}
+                    {% set color = contribution.moderated ? (contribution.displayable ? 'color-success' : 'color-danger') : 'color-light' %}
+                    <span class="fa fa-{{ icon }} {{ color }}"></span>
                 </td>
             </tr>
         {% endfor %}

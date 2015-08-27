@@ -37,6 +37,10 @@ class AdminController extends Controller
             ->get('haphpy.contribution_repository')
             ->getAllContributions();
 
+        foreach ($contributions as $contribution) {
+            $this->get('haphpy.file_attacher')->attachFileTo($contribution);
+        }
+
         return [
             'user'          => $user,
             'contributions' => $contributions,

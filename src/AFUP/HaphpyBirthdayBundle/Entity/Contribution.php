@@ -359,4 +359,14 @@ class Contribution
         // meaning when the moderationState is not set to false
         return $this->moderationState !== false;
     }
+
+    /**
+     * Gets whether or not contribution is moderated
+     *
+     * @return bool
+     */
+    public function isModerated()
+    {
+        return $this->moderationState !== null;
+    }
 }
