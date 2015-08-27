@@ -3,6 +3,7 @@
 namespace AFUP\HaphpyBirthdayBundle\Model;
 
 use AFUP\HaphpyBirthdayBundle\Model\User;
+use AFUP\HaphpyBirthdayBundle\Service\AdminEnabler;
 use HWI\Bundle\OAuthBundle\Security\Core\User\OAuthUserProvider;
 use HWI\Bundle\OAuthBundle\OAuth\Response\UserResponseInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -20,13 +21,22 @@ class UserProvider extends OAuthUserProvider
     protected $session;
 
     /**
+     * Service granting ROLE_ADMIN to user if in admin list
+     *
+     * @var AdminEnabler
+     */
+    protected $adminEnabler;
+
+    /**
      * Construct
      *
      * @param SessionInterface $session
+     * @param AdminChecker     $adminChecker
      */
-    public function __construct(SessionInterface $session)
+    public function __construct(SessionInterface $session, AdminEnabler $adminEnabler)
     {
         $this->session = $session;
+        $this->adminEnabler = $adminEnabler;
     }
 
     /**
@@ -40,6 +50,7 @@ class UserProvider extends OAuthUserProvider
             $user->setAuthProvider($this->session->get('owner'));
             $user->setVisibleName($this->session->get('visibleName'));
         }
+        $this->adminEnabler->grantRoleAdmin($user);
 
         return $user;
     }
