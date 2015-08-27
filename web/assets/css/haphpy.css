@@ -47,6 +47,18 @@ a.stand-out:hover {
     content: "@";
 }
 
+.color-success {
+    color: green;
+}
+
+.color-danger {
+    color: red;
+}
+
+.color-light {
+    color: #a0a0a0;
+}
+
 /** Menu **/
 #login-state span.fa {
     margin-right: 0.4em;
@@ -553,6 +565,11 @@ section#contribution-punchline h1 {
 
 section#contribution {
     color: #666;
+}
+
+/** Admin list **/
+section#admin-list {
+    margin-top: 80px;
 }
 
 /** Footer **/

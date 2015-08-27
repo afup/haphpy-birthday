@@ -12,6 +12,13 @@ use HWI\Bundle\OAuthBundle\Security\Core\User\OAuthUser;
 class User extends OAuthUser
 {
     /**
+     * Whether the current user is granted ROLE_ADMIN
+     *
+     * @var bool
+     */
+    private $isAdmin;
+
+    /**
      * @var string
      */
     private $authProvider;
@@ -67,5 +74,27 @@ class User extends OAuthUser
         $this->visibleName = $visibleName;
 
         return $this;
+    }
+
+    /**
+     * Grant ROLE_ADMIN to user
+     */
+    public function grantRoleAdmin()
+    {
+        $this->isAdmin = true;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getRoles()
+    {
+        $roles = ['ROLE_USER', 'ROLE_OAUTH_USER'];
+
+        if ($this->isAdmin) {
+            array_push($roles, 'ROLE_ADMIN');
+        }
+
+        return $roles;
     }
 }
