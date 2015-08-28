@@ -150,6 +150,16 @@ phpsurrey:
     country:        UK
     city:           Guildford
 
+php.gent:
+    displayed_name: PHP.gent
+    full_name:      PHP.gent
+    parent:         ~
+    picture:        phpgent.png
+    website:        http://php.gent
+    twitter:        phpgent
+    country:        BE
+    city:           Ghent
+
 sweetlakephp:
     displayed_name: SweetlakePHP
     full_name:      SweetlakePHP
