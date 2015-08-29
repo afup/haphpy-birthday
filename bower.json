@@ -1,0 +1,10 @@
+{
+  "name": "afup/haphpy-birthday",
+  "homepage": "https://github.com/afup/haphpy-birthday",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "dropify": "git://github.com/JeremyFagis/dropify#0.1.3",
+    "fontawesome": "4.4.0"
+  }
+}

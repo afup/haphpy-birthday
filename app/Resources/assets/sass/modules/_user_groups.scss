@@ -1,0 +1,58 @@
+/** User Groups **/
+#php-user-groups {
+  background: #ffffff;
+}
+
+.user-group {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+}
+
+.user-group-image {
+  width: 5em;
+  height: 5em;
+  position: relative;
+}
+
+.user-group-image img {
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.user-group-data {
+  width: calc(100% - 5em);
+  padding: 0 0 0 1em;
+}
+
+.user-group-data h4 {
+  line-height: 1.2;
+  margin: -0.2em 0 0 0;
+}
+
+/** Contributions **/
+#contributions {
+  padding-top: 80px;
+  background-image: url(../images/galaxy.png);
+  color: #ddd;
+}
+
+#contributions h3 {
+  color: #ffffff;
+}
+
+.contribution a {
+  color: #ffffff;
+}
+
+.contribution a:hover {
+  color: #f34141;
+}
+.contribution span {
+  margin-right: 0.5em;
+}

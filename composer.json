@@ -26,7 +26,14 @@
         "hwi/oauth-bundle": "0.4.*@dev",
         "woecifaun/translation-bridge-bundle": "~0.0",
         "woecifaun/Symfony2-coding-standard": "dev-master",
-        "symfony/var-dumper": "^2.7"
+        "symfony/var-dumper": "^2.7",
+        "codegyre/robo": "dev-master@dev",
+        "natxet/CssMin": "3.0.x",
+        "leafo/scssphp": "0.2.0",
+        "patchwork/jsqueeze": "2.0.x",
+        "beelab/bowerphp": "0.3.*@beta",
+        "agallou/robo-hash": "^0.0.1",
+        "agallou/grunt-hash-assets-bundle": "^0.1.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
@@ -49,7 +56,8 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles",
+            "./bin/robo install"
         ]
     },
     "config": {

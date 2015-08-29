@@ -5,8 +5,7 @@
 
         <title>{% block title %}{{ 'head.title'|trans }}{% endblock %}</title>
         <link href='http://fonts.googleapis.com/css?family=Roboto:100,400,300,700,900|Roboto+Condensed:400,300,700|Inconsolata:400' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="/assets/css/elaostrap.css" />
-        <link rel="stylesheet" type="text/css" href="/assets/css/haphpy.css" />
+        <link rel="stylesheet" href="{{ grunt_asset('css/main.css') }}" />
         <meta name="description" content="{{ 'head.description'|trans }}" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -198,6 +197,6 @@
         </footer>
         {% endblock %}
 
-        <script src="/assets/js/main.js"></script>
+        <script src="{{ grunt_asset('js/main.js') }}"></script>
     </body>
 </html>

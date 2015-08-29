@@ -1,0 +1,46 @@
+/** examples **/
+
+#examples {
+  color: #ddd;
+  background-image: url(../images/code.jpg);
+}
+
+#examples h2 {
+  color: #ffffff;
+}
+
+#examples h5 {
+  color: #ddd;
+}
+
+.sixteen-nine {
+  position: relative;
+}
+.sixteen-nine:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 56.25%;
+}
+.sixteen-nine > .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  box-shadow: 0 3px 6px 2px rgba(0,0,0,0.3);
+}
+
+.sixteen-nine > .content-image {
+  background-position: center center;
+  background-size: cover;
+}
+
+.sixteen-nine > .content-video .fitting-media {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
