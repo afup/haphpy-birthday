@@ -141,9 +141,11 @@ class RoboFile extends \Robo\Tasks
     {
         $this->_copyDir('app/Resources/assets/icons', 'web/assets/icons');
         $this->_copyDir('app/Resources/assets/images', 'web/assets/images');
+        $this->_copyDir('bower_components/ElaoStrap/dist/images', 'web/assets/images');
         $this->_copyDir('app/Resources/assets/videos', 'web/assets/videos');
         $this->_copyDir('bower_components/ElaoStrap/dist/fonts/elaostrap', 'web/assets/fonts/elaostrap');
         $this->_copyDir('bower_components/fontawesome/fonts', 'web/assets/fonts/font-awesome');
         $this->_copyDir('bower_components/dropify/dist/fonts', 'web/assets/fonts/dropify');
+
     }
 }
