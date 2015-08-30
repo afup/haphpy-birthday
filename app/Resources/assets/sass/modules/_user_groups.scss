@@ -40,19 +40,20 @@
   padding-top: 80px;
   background-image: url(../images/galaxy.png);
   color: #ddd;
-}
 
-#contributions h3 {
-  color: #ffffff;
+  h3 {
+    color: #ffffff;
+  }
 }
 
 .contribution a {
   color: #ffffff;
-}
 
-.contribution a:hover {
-  color: #f34141;
-}
-.contribution span {
-  margin-right: 0.5em;
+  &:hover {
+    color: #f34141;
+  }
+
+  span {
+    margin-right: 0.5em;
+  }
 }

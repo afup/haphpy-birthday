@@ -1,8 +1,11 @@
 /** Contribution time is over **/
-#contribution-over .container {
-  text-align: center;
-}
 
-#contribution-over h2 {
-  text-transform: none;
+#contribution-over {
+  .container {
+    text-align: center;
+  }
+
+  h2 {
+    text-transform: none;
+  }
 }

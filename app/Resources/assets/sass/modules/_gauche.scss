@@ -16,14 +16,14 @@ header h1 sup {
   position: relative;
   padding-top: 8px;
   margin-bottom: 3em;
-}
 
-#gauge .progress {
-  border-radius: 4px;
-}
+  .progress {
+    border-radius: 4px;
+  }
 
-#gauge .progress-bar {
-  border-radius: 0 4px 4px 0;
+  .progress-bar {
+    border-radius: 0 4px 4px 0;
+  }
 }
 
 .gauge-step {
@@ -31,10 +31,9 @@ header h1 sup {
   top: 0;
   line-height: 24px;
   margin-left: -12px;
-}
-
-.gauge-step:last-child {
-  margin-left: -16px;
+  &:last-child {
+    margin-left: -16px;
+  }
 }
 
 .gauge-step-dot {

@@ -2,10 +2,11 @@
   margin-right: 0.4em;
 }
 
-.translation-bridge-switcher ul.dropdown-menu {
-  min-width: 0;
-}
-
-.translation-bridge-switcher a.dropdown-toggle {
-  text-transform: uppercase;
+.translation-bridge-switcher {
+  ul.dropdown-menu {
+    min-width: 0;
+  }
+  a.dropdown-toggle {
+    text-transform: uppercase;
+  }
 }

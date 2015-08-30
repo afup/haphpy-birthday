@@ -6,31 +6,31 @@ ul.error-list {
 .haphpy-radio {
   font-weight: 400;
   display: table;
-}
 
-.haphpy-radio > div {
-  display: table-row;
-}
+  > div {
+    display: table-row;
+  }
 
-.haphpy-radio > div input, .haphpy-radio > div label {
-  display: table-cell;
-  vertical-align: middle;
-  height: 100%;
-}
+  > div input, .haphpy-radio > div label {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+  }
 
-.haphpy-radio input {
-  cursor: pointer;
-}
+  input {
+    cursor: pointer;
+  }
 
-.haphpy-radio input:checked+label {
-  color: #000000; /* black highlights better in elaostrap */
-}
+  input:checked+label {
+    color: #000000; /* black highlights better in elaostrap */
+  }
 
-.haphpy-radio label {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 0.5em;
-  font-weight: 400;
-  cursor: pointer;
-  margin: 0;
+  label {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+    font-weight: 400;
+    cursor: pointer;
+    margin: 0;
+  }
 }

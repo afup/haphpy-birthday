@@ -36,40 +36,39 @@
 #submission-success {
   margin-top: 2em;
   color: white;
-}
 
-#submission-success a.page-link {
-  color: black;
-  background-color: rgba(255,255,255,0.5);
-  padding: 0.15em;
-  margin-left: 0.2em;
-  margin-right: 0.2em;
-  transition: background-color 0.5s;
-  border-radius: 2px;
-  font-size: 90%;
-}
+  a.page-link {
+    color: black;
+    background-color: rgba(255,255,255,0.5);
+    padding: 0.15em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    transition: background-color 0.5s;
+    border-radius: 2px;
+    font-size: 90%;
+  }
 
+  a.page-link:hover {
+    background-color: rgba(255,255,255,1);
+  }
 
-#submission-success a.page-link:hover {
-  background-color: rgba(255,255,255,1);
-}
+  .row:first-child {
+    margin-bottom: 10%;
+  }
 
-#submission-success .row:first-child {
-  margin-bottom: 10%;
-}
+  h1 {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 100;
+    border-top: 2px #ffffff solid;
+    border-bottom: 2px #ffffff solid;
+    line-height: 1.5em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    margin-bottom: 5%;
+  }
 
-#submission-success h1 {
-  color: #ffffff;
-  text-align: center;
-  font-weight: 100;
-  border-top: 2px #ffffff solid;
-  border-bottom: 2px #ffffff solid;
-  line-height: 1.5em;
-  padding-bottom: 1em;
-  padding-top: 1em;
-  margin-bottom: 5%;
-}
-
-#submission-success h1 + div.row {
-  padding-top: 30px;
+  h1 + div.row {
+    padding-top: 30px;
+  }
 }

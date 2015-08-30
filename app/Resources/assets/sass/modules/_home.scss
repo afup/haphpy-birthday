@@ -3,15 +3,11 @@
   color: #ddd;
   font-size: 150%;
   text-align: center;
-}
 
-#introduction p {
-  margin: 2em 0;
-  line-height: 1.5em;
-}
-
-.haphpy-step {
-  position: relative;
+  p {
+    margin: 2em 0;
+    line-height: 1.5em;
+  }
 }
 
 .haphpy-step-number {
@@ -30,10 +26,15 @@
   }
 }
 
-.haphpy-step h3 {
-  line-height: 2em;
-  text-transform: none;
-}
-.haphpy-step .btn {
-  margin-bottom: 1em;
+.haphpy-step {
+  position: relative;
+
+  h3 {
+    line-height: 2em;
+    text-transform: none;
+  }
+
+  .btn {
+    margin-bottom: 1em;
+  }
 }
