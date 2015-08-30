@@ -56,6 +56,7 @@ class RoboFile extends \Robo\Tasks
         $this
             ->taskScss(['app/Resources/assets/sass/main.scss' => 'app/cache/assets/sass/main_sass.css'])
             ->addImportPath('app/Resources/assets/sass')
+            ->addImportPath('bower_components/compass-mixins/lib/')
             ->run();
 
         $this
