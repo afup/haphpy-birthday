@@ -16,7 +16,7 @@ class RoboFile extends \Robo\Tasks
 
         $this
             ->taskWatch()
-            ->monitor(array('app/Resources/assets/sass/main.scss'), $buildCss)
+            ->monitor(array('app/Resources/assets/sass/'), $buildCss)
             ->run()
             ;
     }
