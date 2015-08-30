@@ -4,6 +4,8 @@ class RoboFile extends \Robo\Tasks
 {
     use Agallou\RoboHash\loadTasks;
 
+    private $appBundleAssetsPath = 'src/AFUP/HaphpyBirthdayBundle/Resources/assets/';
+
     public function watch()
     {
         $this->build();
@@ -16,7 +18,7 @@ class RoboFile extends \Robo\Tasks
 
         $this
             ->taskWatch()
-            ->monitor(array('app/Resources/assets/sass/'), $buildCss)
+            ->monitor(array($this->appBundleAssetsPath.'sass/'), $buildCss)
             ->run()
             ;
     }
@@ -55,8 +57,8 @@ class RoboFile extends \Robo\Tasks
     protected function _buildCss()
     {
         $this
-            ->taskScss(['app/Resources/assets/sass/main.scss' => 'app/cache/assets/sass/main_sass.css'])
-            ->addImportPath('app/Resources/assets/sass')
+            ->taskScss([$this->appBundleAssetsPath.'sass/main.scss' => 'app/cache/assets/sass/main_sass.css'])
+            ->addImportPath($this->appBundleAssetsPath.'sass')
             ->addImportPath('bower_components/compass-mixins/lib/')
             ->run();
 
@@ -141,10 +143,11 @@ class RoboFile extends \Robo\Tasks
 
     protected function _buildOtherAssets()
     {
-        $this->_copyDir('app/Resources/assets/icons', 'web/assets/icons');
-        $this->_copyDir('app/Resources/assets/images', 'web/assets/images');
+        $this->_copyDir($this->appBundleAssetsPath.'icons', 'web/assets/icons');
+        $this->_copyDir($this->appBundleAssetsPath.'images', 'web/assets/images');
+        $this->_copyDir($this->appBundleAssetsPath.'php-user-group', 'web/assets/images/php-user-group');
         $this->_copyDir('bower_components/ElaoStrap/dist/images', 'web/assets/images');
-        $this->_copyDir('app/Resources/assets/videos', 'web/assets/videos');
+        $this->_copyDir($this->appBundleAssetsPath.'videos', 'web/assets/videos');
         $this->_copyDir('bower_components/ElaoStrap/dist/fonts/elaostrap', 'web/assets/fonts/elaostrap');
         $this->_copyDir('bower_components/fontawesome/fonts', 'web/assets/fonts/font-awesome');
         $this->_copyDir('bower_components/dropify/dist/fonts', 'web/assets/fonts/dropify');
