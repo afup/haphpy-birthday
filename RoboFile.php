@@ -29,6 +29,7 @@ class RoboFile extends \Robo\Tasks
 
     protected function getDeps()
     {
+        $this->_mkdir('bower_components/');
         $this->_cleanDir('bower_components/');
         $this->taskBowerInstall('./bin/bowerphp')->run();
 
