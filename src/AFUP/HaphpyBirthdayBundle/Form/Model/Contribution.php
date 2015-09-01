@@ -2,17 +2,18 @@
 
 namespace AFUP\HaphpyBirthdayBundle\Form\Model;
 
+use AFUP\HaphpyBirthdayBundle\Validator\Constraints\HaphpyMedia as AssertHaphpyMedia;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * User
+ * Contribution
  *
  * @author Faun <woecifaun@gmail.com>
  */
 class Contribution
 {
     /**
-     * @Assert\File(
+     * @AssertHaphpyMedia(
      *     maxSize="25Mi",
      *     mimeTypes = {
      *         "video/quicktime",
@@ -20,7 +21,11 @@ class Contribution
      *         "image/jpg",
      *         "image/jpeg",
      *         "image/png",
-     *     }
+     *     },
+     *     minWidth=800,
+     *     minHeight=450,
+     *     maxRatio=2,
+     *     minRatio=1.5
      * )
      * @Assert\NotNull()
      */
