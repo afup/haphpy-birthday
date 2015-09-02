@@ -46,4 +46,22 @@ class AdminController extends Controller
             'contributions' => $contributions,
         ];
     }
+
+    /**
+     * @param Request      $request
+     * @param Contribution $contribution
+     *
+     * @Route("/toggle-acceptance/{authProvider}/{identifier}", name="haphpy_admin_toggle")
+     * @Template()
+     * @ParamConverter(converter="contribution")
+     *
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function toggleVisibilityAction(Request $request, Contribution $contribution)
+    {
+        $contribution->setAccepted(!$contribution->isAccepted());
+        $this->get('haphpy.contribution_persister')->updatePersistence($contribution);
+
+        return $this->redirectToRoute('haphpy_admin_index');
+    }
 }
