@@ -16,6 +16,7 @@
                 <th></th>
                 <th>User</th>
                 <th>Visible Name</th>
+                <th>File Size</th>
                 <th>Mime</th>
                 <th class="text-center">Credited</th>
                 <th class="text-center">Accepted</th>
@@ -31,10 +32,13 @@
                     </a>
                 </td>
                 <td>
-                    <span class="fa haphpy-icon-{{ contribution.authProvider }}"></span>{{ contribution.identifier }}
+                    {{ haphpy.social_link(contribution, contribution.identifier) }}
                 </td>
                 <td>
                     {{ contribution.visibleName }}
+                </td>
+                <td>
+                    {{ contribution.file.size|file_size }}
                 </td>
                 <td>
                     {{ contribution.file.mimeType }}

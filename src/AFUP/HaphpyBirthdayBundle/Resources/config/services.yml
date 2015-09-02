@@ -50,3 +50,9 @@ services:
             - { name: request.param_converter, converter: public_contribution }
         calls:
             - [ setEntityManager, [@doctrine] ]
+
+    haphpy.twig_extension:
+        class: AFUP\HaphpyBirthdayBundle\Twig\AppExtension
+        public: false
+        tags:
+            - { name: twig.extension }
