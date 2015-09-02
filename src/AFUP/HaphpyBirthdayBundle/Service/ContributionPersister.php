@@ -62,6 +62,17 @@ class ContributionPersister
     }
 
     /**
+     * Update the data store entry for an existing Contribution
+     *
+     * @param  Contribution $contribution
+     */
+    public function updatePersistence(Contribution $contribution)
+    {
+        $this->entityManager->persist($contribution);
+        $this->entityManager->flush();
+    }
+
+    /**
      * @param Contribution $contribution
      */
     public function remove(Contribution $contribution)

@@ -37,6 +37,13 @@ services:
         class: AFUP\HaphpyBirthdayBundle\Model\Gauge
         arguments: [@haphpy.contribution_repository, @haphpy.pugs, "%haphpy_steps%"]
 
+    haphy.param_converter.contribution:
+        class: AFUP\HaphpyBirthdayBundle\ParamConverter\ContributionParamConverter
+        tags:
+            - { name: request.param_converter, converter: contribution }
+        calls:
+            - [ setEntityManager, [@doctrine] ]
+
     haphy.param_converter.public_contribution:
         class: AFUP\HaphpyBirthdayBundle\ParamConverter\PublicContributionParamConverter
         tags:

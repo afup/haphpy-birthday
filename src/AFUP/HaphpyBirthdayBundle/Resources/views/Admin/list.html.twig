@@ -18,7 +18,7 @@
                 <th>Visible Name</th>
                 <th>Mime</th>
                 <th class="text-center">Credited</th>
-                <th class="text-center">Visible</th>
+                <th class="text-center">Accepted</th>
             </tr>
         {% for contribution in contributions %}
             <tr>
@@ -43,9 +43,14 @@
                     <span class="fa fa-{{ contribution.creditWanted ? 'star' : 'star-o' }}"></span>
                 </td>
                 <td class="text-center">
-                    {% set icon = contribution.displayable ? 'check' : 'times' %}
-                    {% set color = contribution.moderated ? (contribution.displayable ? 'color-success' : 'color-danger') : 'color-light' %}
-                    <span class="fa fa-{{ icon }} {{ color }}"></span>
+                    {% set icon = contribution.accepted ? 'check' : 'times' %}
+                    {% set color = contribution.moderated ? (contribution.accepted ? 'color-success' : 'color-danger') : 'color-light' %}
+                    <a href="{{ path('haphpy_admin_toggle', {
+                        authProvider: contribution.authProvider,
+                        identifier:   contribution.identifier
+                    }) }}">
+                        <span class="fa fa-{{ icon }} {{ color }}"></span>
+                    </a>
                 </td>
             </tr>
         {% endfor %}

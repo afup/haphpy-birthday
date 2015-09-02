@@ -9,23 +9,12 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
- * PublicContributionParamConverter
+ * ContributionParamConverter
  *
- * Retrieve a contribution based on authProvider id and identifier
+ * Retrieve a contribution based on authProvider and identifier
  */
-class PublicContributionParamConverter implements ParamConverterInterface
+class ContributionParamConverter implements ParamConverterInterface
 {
-    /**
-     * List of Authentification Providers
-     *
-     * @var []
-     */
-    private $authProviders = [
-        'f' => 'facebook',
-        'g' => 'github',
-        't' => 'twitter',
-    ];
-
     /**
      * activate ParamConverter for project
      *
@@ -44,7 +33,7 @@ class PublicContributionParamConverter implements ParamConverterInterface
      * @param Request        $request
      * @param ParamConverter $configuration
      *
-     * @throws NotFoundHttpException if Project not found
+     * @throws NotFoundHttpException if Contribution not found
      *
      * @return boolean
      */
@@ -52,7 +41,6 @@ class PublicContributionParamConverter implements ParamConverterInterface
     {
         $identifier   = $request->attributes->get('identifier');
         $authProvider = $request->attributes->get('authProvider');
-        $authProvider = $this->authProviders[$authProvider];
 
         $contribution = $this->entityManager
                         ->getRepository('AFUP\HaphpyBirthdayBundle\Entity\Contribution')
