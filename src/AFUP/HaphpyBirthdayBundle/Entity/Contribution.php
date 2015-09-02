@@ -358,9 +358,9 @@ class Contribution
      *
      * @param bool $accepted
      */
-    public function setAccepted(bool $accepted)
+    public function setAccepted($accepted)
     {
-        $this->accepted = $accepted;
+        $this->accepted = (bool) $accepted;
     }
 
     /**
