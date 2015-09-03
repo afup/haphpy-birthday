@@ -28,7 +28,7 @@
         <meta name="msapplication-TileColor" content="#f34141">
         <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
         <meta name="theme-color" content="#f34141">
-        {% include 'AppBundle::Common/ga.html.twig' %}
+        {% block stats %}{% include 'AppBundle::Common/ga.html.twig' %}{% endblock %}
     </head>
     <body class="has-header">
         <div id="fb-root"></div>
