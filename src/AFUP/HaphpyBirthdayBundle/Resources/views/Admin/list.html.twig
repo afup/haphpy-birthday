@@ -8,9 +8,16 @@
 
 {% block header %}{% endblock %}
 
+{% block stats %}{% endblock %}
+
 {% block content %}
     <section class="page-section" id="admin-list">
     <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                Currently {{ contributions|length }} contributions
+            </div>
+        </div>
         <table id="admin-list" class="table table-striped">
             <tr>
                 <th></th>
