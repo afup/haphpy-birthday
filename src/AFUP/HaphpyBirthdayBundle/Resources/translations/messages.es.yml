@@ -211,9 +211,10 @@ footer:
 
 twitter_card:
     contribution:
+        # Twitter title should be less than 70 characters
         title: Another contribution to the HaPHPy Birthday movie.
+        # Twitter description should be less than 200 characters
         description: >
-            Haphpy Birthday: The collaborative movie celebrating 20 years PHP. Before the 31st of October,
-            people can upload a very short media showing love to PHP or its community. Uploaded media can be
-            selfies, placards, group photos, fun pics… Eventually, medias will be gathered in a short mosaic
-            movie released under a Creative Commons Licence.
+            Participate to the collaborative movie celebrating 20 years of PHP.
+            Show your gratitude uploading selfie, group picture, placard, fun pic…
+            In November, search for your contribution in the movie.

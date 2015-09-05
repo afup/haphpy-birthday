@@ -219,9 +219,10 @@ footer:
 
 twitter_card:
     contribution:
-        title: Une nouvelle contribution au projet HaPHPy Birthday.
+        # Twitter title should be less than 70 characters
+        title: Une nouvelle contribution pour le projet HaPHPy Birthday.
+        # Twitter description should be less than 200 characters
         description: >
-            Haphpy Birthday: La vidéo collaborative célébrant 20 ans de PHP. Avant le 31 octobre,
-            vous pouvez uploader un média affichant votre passion pour le PHP ou sa communauté. Vous pouvez envoyer
-            des selfies, pancartes, photos de groupes, images drôles… Les médias seront finalement rassemblés
-            dans une courte vidéo mosaïque distribuée sous licence Creative Commons.
+            Vous aussi participez à la vidéo collaborative célébrant 20 ans de PHP.
+            Montrez votre gratitude en envoyant selfie, photo de groupe, pancarte, image drôle…
+            En novembre, cherchez vous dans la vidéo.
