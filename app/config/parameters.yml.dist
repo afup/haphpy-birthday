@@ -6,8 +6,6 @@ parameters:
     database_name:     haphpy
     database_user:     afup
     database_password: afup
-    # You should uncomment this if you want use pdo_sqlite
-    # database_path: "%kernel.root_dir%/data.db3"
 
     mailer_transport:  smtp
     mailer_host:       127.0.0.1
@@ -19,9 +17,9 @@ parameters:
         - fake_admin
 
     # A secret key that's used to generate certain security-related tokens
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    secret: ThisTokenIsNotSoSecretChangeIt
 
-    locale:            en
+    locale: en
 
     # Accepted languages for the site
     accepted_languages:
@@ -46,6 +44,9 @@ parameters:
     # Limit date for media contribution
     limit_date:    '2015-10-31 23:59:59 UTC'
     premiere_date: '2015-11-23'
+
+    # Twitter account id
+    twitter_account: "haPHPy20"
 
     ga_ua: null
 

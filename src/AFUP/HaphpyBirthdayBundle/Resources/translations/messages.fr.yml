@@ -193,7 +193,7 @@ about:
             text: >
                 <p>Le compte twitter du projet est <a href="https://twitter.com/haphpy20" class="differ">@haphpy20</a></p>
                 <p>N'hésitez pas à parler du projet à vos amis ou sur les réseaux sociaux.</p>
-                <p>Hashtag : #haPHPy20</p>
+                <p>Hashtag : #20YearsOfPHP</p>
 
     thanks:
         title: Remerciements
@@ -216,3 +216,12 @@ public_contribution:
 footer:
     github: Dépôt GitHub
     by_community: Un projet de la communauté PHP <span class="fa fa-heart"></span>
+
+twitter_card:
+    contribution:
+        title: Une nouvelle contribution au projet HaPHPy Birthday.
+        description: >
+            Haphpy Birthday: La vidéo collaborative célébrant 20 ans de PHP. Avant le 31 octobre,
+            vous pouvez uploader un média affichant votre passion pour le PHP ou sa communauté. Vous pouvez envoyer
+            des selfies, pancartes, photos de groupes, images drôles… Les médias seront finalement rassemblés
+            dans une courte vidéo mosaïque distribuée sous licence Creative Commons.
