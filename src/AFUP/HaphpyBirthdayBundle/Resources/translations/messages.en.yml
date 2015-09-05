@@ -185,7 +185,7 @@ about:
                 <p>The project has a dedicated Twitter account:
                 <a href="https://twitter.com/haphpy20" class="differ">@haphpy20</a>.</p>
                 <p>Don't hesitate to share the project with your friends as well as on the social networks.</p>
-                <p>Hashtag: #haPHPy20</p>
+                <p>Hashtag: #20YearsOfPHP</p>
 
     thanks:
         title: Acknowledgements
@@ -208,3 +208,12 @@ public_contribution:
 footer:
     github:       GitHub repository
     by_community: Made by the PHP community with <span class="fa fa-heart"></span>
+
+twitter_card:
+    contribution:
+        title: Another contribution to the HaPHPy Birthday movie.
+        description: >
+            Haphpy Birthday: The collaborative movie celebrating 20 years PHP. Before the 31st of October,
+            people can upload a very short media showing love to PHP or its community. Uploaded media can be
+            selfies, placards, group photos, fun pics… Eventually, medias will be gathered in a short mosaic
+            movie released under a Creative Commons Licence.

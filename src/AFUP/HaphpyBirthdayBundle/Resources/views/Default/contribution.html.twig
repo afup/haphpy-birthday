@@ -10,6 +10,17 @@
 
 {% block gauge %}{% endblock %}
 
+{% block twitter_card %}{% if contribution.file.genericMimeType == 'image' %}
+{% include 'AppBundle::Common/twitter_card.html.twig' with {
+    twitter_card_title: 'twitter_card.contribution.title'|trans,
+    twitter_card_description: 'twitter_card.contribution.description'|trans,
+    twitter_card_image: url('media_serve', {
+        authProvider: contribution.authProviderId,
+        identifier:   contribution.identifier
+    }),
+} %}
+{% endif %}{% endblock %}
+
 {% block content %}{% spaceless %}
     <section id="contribution-punchline" class="page-section">
         <div class="container">
