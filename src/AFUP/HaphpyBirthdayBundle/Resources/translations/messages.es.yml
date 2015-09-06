@@ -185,7 +185,7 @@ about:
                 <p>El proyecto tiene una cuenta de Twitter:
                 <a href="https://twitter.com/haphpy20" class="differ">@haphpy20</a>.</p>
                 <p>No dudes en compartir el proyecto con tus amigos así como en redes sociales.</p>
-                <p>Hashtag: #haPHPy20</p>
+                <p>Hashtag: #20YearsOfPHP</p>
 
     thanks:
         title: Reconocimientos
@@ -208,3 +208,13 @@ public_contribution:
 footer:
     github: Repositorio en GitHub
     by_community: Hecho por la comunidad de PHP con <span class="fa fa-heart"></span>
+
+twitter_card:
+    contribution:
+        # Twitter title should be less than 70 characters
+        title: Another contribution to the HaPHPy Birthday movie.
+        # Twitter description should be less than 200 characters
+        description: >
+            Participate to the collaborative movie celebrating 20 years of PHP.
+            Show your gratitude uploading selfie, group picture, placard, fun pic…
+            In November, search for your contribution in the movie.
