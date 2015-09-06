@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new BeSimple\I18nRoutingBundle\BeSimpleI18nRoutingBundle(),
             new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
             new Woecifaun\Bundle\TranslationBridgeBundle\WoecifaunTranslationBridgeBundle(),
+            new Agallou\GruntHashAssetsBundle\GruntHashAssetsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

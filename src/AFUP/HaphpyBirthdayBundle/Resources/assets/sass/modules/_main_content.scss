@@ -1,0 +1,28 @@
+section.page-section {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background: center center no-repeat;
+  background-size: cover;
+  background-color: #f8f8f8;
+}
+
+section.dark-background {
+  color: #ccc;
+}
+
+section.dark-background h2,
+section.dark-background h4 {
+  color: #ffffff;
+}
+
+section a.differ {
+  color: #ffffff;
+}
+
+section a.differ:hover {
+  color: #f34141;
+}
+
+section h2 {
+  font-weight: 100;
+}

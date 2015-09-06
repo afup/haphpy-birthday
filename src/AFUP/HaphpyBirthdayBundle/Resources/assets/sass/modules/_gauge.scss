@@ -1,0 +1,63 @@
+#gauge-section {
+  padding-top: 2em;
+}
+
+@media screen and (max-width: 767px) {
+  header h1 {
+    margin: 1em 0;
+  }
+}
+
+header h1 sup {
+  text-transform: none;
+}
+
+#gauge {
+  position: relative;
+  padding-top: 8px;
+  margin-bottom: 3em;
+
+  .progress {
+    border-radius: 4px;
+  }
+
+  .progress-bar {
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+.gauge-step {
+  position: absolute;
+  top: 0;
+  line-height: 24px;
+  margin-left: -12px;
+  &:last-child {
+    margin-left: -16px;
+  }
+}
+
+.gauge-step-dot {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  border-color: #ddd;
+  border-style: solid;
+  border-width: 8px;
+}
+
+.gauge-step-name {
+  display: inline;
+  position: absolute;
+  right: 0;
+  top: -24px;
+}
+
+#gauge-contributors, #gauge-remaining-days {
+  color: #000000;
+  text-align: center;
+}
+
+#gauge-contributors span, #gauge-remaining-days span {
+  font-size: 200%;
+}

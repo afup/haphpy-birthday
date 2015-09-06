@@ -19,3 +19,6 @@
 
 # PHPStorm
 .idea/
+
+web/assets/
+bower_components/

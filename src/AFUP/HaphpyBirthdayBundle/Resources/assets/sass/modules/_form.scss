@@ -1,0 +1,36 @@
+/** Form **/
+ul.error-list {
+  padding: 0;
+}
+
+.haphpy-radio {
+  font-weight: 400;
+  display: table;
+
+  > div {
+    display: table-row;
+  }
+
+  > div input, .haphpy-radio > div label {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+  }
+
+  input {
+    cursor: pointer;
+  }
+
+  input:checked+label {
+    color: #000000; /* black highlights better in elaostrap */
+  }
+
+  label {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+    font-weight: 400;
+    cursor: pointer;
+    margin: 0;
+  }
+}
