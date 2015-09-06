@@ -59,7 +59,7 @@ class Contribution
      *
      * @var bool
      */
-    private $moderationState = null;
+    private $accepted = null;
 
     /**
      * The time assets was uploaded
@@ -74,13 +74,6 @@ class Contribution
      * @var \DateTime
      */
     private $modifiedAt;
-
-    /**
-     * if the uploaded is validated
-     *
-     * @var bool
-     */
-    private $validated;
 
     /**
      * @var File
@@ -353,11 +346,21 @@ class Contribution
      *
      * @return bool
      */
-    public function isDisplayable()
+    public function isAccepted()
     {
         // a Contribution is visible as long it is not explicitly rejected
-        // meaning when the moderationState is not set to false
-        return $this->moderationState !== false;
+        // meaning when $this->accepted is not set to false
+        return $this->accepted !== false;
+    }
+
+    /**
+     * Sets whether or not contribution is accepted thus visible to audience
+     *
+     * @param bool $accepted
+     */
+    public function setAccepted($accepted)
+    {
+        $this->accepted = (bool) $accepted;
     }
 
     /**
@@ -367,6 +370,6 @@ class Contribution
      */
     public function isModerated()
     {
-        return $this->moderationState !== null;
+        return $this->accepted !== null;
     }
 }

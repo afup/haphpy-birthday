@@ -19,7 +19,7 @@ class ContributionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('file')
+            ->add('file', 'file')
             ->add('creditWanted', 'choice', [
                 'expanded'    => true,
                 'choices'     => [
