@@ -1,6 +1,6 @@
 # PHP User Groups
 
-> Disclaimer: Apparently, the way User Group should be written (appending __s__ to user or not) is not normalized and depends on each group itself. Therefore, all the possible spellings can appear in the following document and in the rest of the project. :bowtie: 
+> Disclaimer: Apparently, the way User Group should be written (appending __s__ to user or not) is not normalized and depends on each group itself. Therefore, all the possible spellings can appear in the following document and in the rest of the project. :bowtie:
 
 __The participation of the PHP User Groups to this project is essential__. As a mirror and bridge between PHP users and the language ecosystem, they play a key role in gathering people. They consequently deserve to be thanked as well.
 
@@ -12,14 +12,14 @@ To be featured in the video, any PHP User Group (or similar) can submit a [pull 
 
 1. Add an entry with the users group information in `src/AFUP/HaphpyBirthdayBundle/Resources/config/php-user-groups.yml`
 
-2. Add a picture for the project website in `web/assets/images/php-user-group`
+2. Add a picture for the project website in `src/AFUP/HaphpyBirthdayBundle/Resources/assets/php-user-group`
   * Image will be used on the contributions page in the [user groups section](http://haphpy-birthday.net/en/contributions#php-user-groups)
   * Image name must match information in the user group yaml file
   * Preferred formats are
     * SVG
     * PNG transparent if possible as the background can evolve.
     * JPEG in square area
-    * For PNG or JPEG, provide a picture which longest dimension is 100 pixels. For instance a portrait image will be 100px high and a landscape one will be 100px wide.
+    * For PNG or JPEG, provide a picture which longest dimension is 150 pixels. For instance a portrait image will be 150px high and a landscape one will be 150px wide.
 
 3. If the picture you provided for the website is not in a SVG format, please send a raster image with the following dimensions (1920 × 1080 px) to team@haphpy-birthday●net.
 
