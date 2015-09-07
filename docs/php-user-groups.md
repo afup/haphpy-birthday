@@ -1,19 +1,20 @@
 # PHP User Groups
 
-> Disclaimer: Apparently, the way User Group should be written (appending __s__ to user or not) is not normalized and depends on each group itself. Therefore, all the possible spellings can appear in the following document and in the rest of the project. :bowtie:
+__The support of the PHP User Groups is essential to the project__. As a mirror and bridge between PHP users and the language ecosystem, they play a key role in gathering people. They consequently deserve to be thanked as well.
 
-__The participation of the PHP User Groups to this project is essential__. As a mirror and bridge between PHP users and the language ecosystem, they play a key role in gathering people. They consequently deserve to be thanked as well.
+## Supporting the project
 
-## Participating
+### Be part of the list of the PHP user groups supporting the project
 
-### Contributing to the video
+![soflophp_onsite](https://cloud.githubusercontent.com/assets/5421942/9723035/4af75568-55b9-11e5-8d5a-e28b649a99d8.png)
 
-To be featured in the video, any PHP User Group (or similar) can submit a [pull request](https://help.github.com/articles/using-pull-requests/):
+
+Every user group encouraging the project will be featured in the [list of the groups supporting the project](http://haphpy-birthday.net/en/contributions#php-user-groups) and in the final movie. In order to show your support, just submit a [pull request](https://help.github.com/articles/using-pull-requests/) with the following elements:
 
 1. Add an entry with the users group information in `src/AFUP/HaphpyBirthdayBundle/Resources/config/php-user-groups.yml`
 
 2. Add a picture for the project website in `src/AFUP/HaphpyBirthdayBundle/Resources/assets/php-user-group`
-  * Image will be used on the contributions page in the [user groups section](http://haphpy-birthday.net/en/contributions#php-user-groups)
+  * Image will be used on the contributions page in the user groups section
   * Image name must match information in the user group yaml file
   * Preferred formats are
     * SVG
