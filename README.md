@@ -1,4 +1,5 @@
-![haphpy-birthday](https://cloud.githubusercontent.com/assets/5421942/8129742/720530c2-110c-11e5-870c-1c293960d87a.png)
+![haphpy-mosaic](https://cloud.githubusercontent.com/assets/5421942/9723076/409ca888-55ba-11e5-991e-504525941d93.jpg)
+
 
 HaPHPy Birthday is about creating a community movie celebrating 20 years of the PHP language and its users involvement.
 
