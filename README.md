@@ -10,7 +10,7 @@ Eventually, the provided videos and pictures will be gathered in a short mosaic 
 
 
 ## Documentation
-* [Participating as a PHP User Group](docs/php-user-groups.md)
+* [Supporting the project as a PHP User Group](docs/php-user-groups.md)
 * [Languages & Translations](docs/languages-and-translations.md)
 * [Installing Development Environment](docs/install.md)
 
