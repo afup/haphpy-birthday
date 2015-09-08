@@ -179,3 +179,14 @@ zgphp:
     twitter:        zgphp
     country:        Croatia
     city:           Zagreb
+
+
+phpwvl:
+    displayed_name: PHP-WVL
+    full_name:      PHP West-Vlaanderen
+    parent:         ~
+    picture:        phpwvl.png
+    website:        http://php-wvl.be
+    twitter:        phpwvl
+    country:        BE
+    city:           Roeselare
