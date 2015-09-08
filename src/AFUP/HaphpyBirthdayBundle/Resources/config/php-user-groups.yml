@@ -189,3 +189,13 @@ zgphp:
     twitter:        zgphp
     country:        Croatia
     city:           Zagreb
+
+comphppuebla:
+    displayed_name: PHP Puebla
+    full_name:      PHP Puebla User Group
+    parent:
+    picture:        comphppuebla.svg
+    website:        http://www.comunidadphppuebla.com/
+    twitter:        ComPHPPuebla
+    country:        México
+    city:           Puebla
