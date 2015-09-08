@@ -157,8 +157,18 @@ php.gent:
     picture:        phpgent.png
     website:        http://php.gent
     twitter:        phpgent
-    country:        BE
+    country:        Belgium
     city:           Ghent
+
+phpwvl:
+    displayed_name: PHP-WVL
+    full_name:      PHP West-Vlaanderen
+    parent:         ~
+    picture:        phpwvl.png
+    website:        http://php-wvl.be
+    twitter:        phpwvl
+    country:        Belgium
+    city:           Roeselare
 
 sweetlakephp:
     displayed_name: SweetlakePHP
@@ -179,14 +189,3 @@ zgphp:
     twitter:        zgphp
     country:        Croatia
     city:           Zagreb
-
-
-phpwvl:
-    displayed_name: PHP-WVL
-    full_name:      PHP West-Vlaanderen
-    parent:         ~
-    picture:        phpwvl.png
-    website:        http://php-wvl.be
-    twitter:        phpwvl
-    country:        BE
-    city:           Roeselare
