@@ -218,6 +218,13 @@ footer:
     by_community: Un projet de la communauté PHP <span class="fa fa-heart"></span>
 
 twitter_card:
+    home:
+        # Twitter title should be less than 70 characters
+        title: La vidéo collaborative célébrant 20 ans de PHP
+        # Twitter description should be less than 200 characters
+        description: >
+            Rejoins ceux qui ont montré leur amour pour PHP et sa communauté; Upload
+            un selfie, une photo de groupe… et fais partie de la vidéo collaborative.
     contribution:
         # Twitter title should be less than 70 characters
         title: Une nouvelle contribution pour le projet HaPHPy Birthday.
