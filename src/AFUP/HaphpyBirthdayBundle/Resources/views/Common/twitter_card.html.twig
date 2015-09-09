@@ -1,8 +1,18 @@
 {% spaceless %}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@{{ twitter_account }}">
-{% if contribution is defined and contribution.filename and contribution.authProvider == 'twitter' %}
-    <meta name="twitter:creator" content="@{{ contribution.identifier }}">
+
+{% if twitter_card_creator is defined %}
+    {% set creator = twitter_card_creator %}
+{% endif %}
+{% if creator is not defined
+   and contribution is defined
+   and contribution.filename
+   and contribution.authProvider == 'twitter' %}
+    {% set creator = contribution.identifier %}
+{% endif %}
+{% if creator is defined and creator %}
+    <meta name="twitter:creator" content="@{{ creator }}">
 {% endif %}
 <meta name="twitter:title" content="{{ twitter_card_title }}">
 <meta name="twitter:description" content="{{ twitter_card_description }}">
