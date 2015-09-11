@@ -199,3 +199,13 @@ comphppuebla:
     twitter:        ComPHPPuebla
     country:        México
     city:           Puebla
+
+istanbulphp:
+    displayed_name: Istanbul PHP
+    full_name:      Istanbul PHP User Group
+    parent:
+    picture:        istanbulphp.png
+    website:        http://meetup.com/IstanbulPHP/
+    twitter:        IstanbulPHP
+    country:        Turkey
+    city:           Istanbul
