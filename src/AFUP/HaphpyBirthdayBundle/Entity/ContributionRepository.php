@@ -22,6 +22,8 @@ class ContributionRepository extends EntityRepository
         $queryBuilder = $this->createQueryBuilder('contribution')
             ->select('contribution')
             ->where('contribution.creditWanted = true')
+            // see Contribution class for acceptance logic
+            ->andWhere('contribution.accepted = true OR contribution.accepted IS NULL')
             ->orderBy('contribution.identifier', 'ASC')
             ->addOrderBy('contribution.authProvider', 'ASC');
 
@@ -35,10 +37,12 @@ class ContributionRepository extends EntityRepository
      *
      * @return int
      */
-    public function getContributionsQuantity()
+    public function getAcceptedContributionsQuantity()
     {
         return $this->createQueryBuilder('contribution')
             ->select('count(contribution.id)')
+            // see Contribution class for acceptance logic
+            ->where('contribution.accepted = true OR contribution.accepted IS NULL')
             ->getQuery()
             ->getSingleScalarResult();
     }

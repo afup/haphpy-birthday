@@ -79,6 +79,14 @@ index:
             Si crees que tu archivo no se muestra de la mejor forma, elimínalo y súbelo de nuevo después de modificarlo.
         media_specs_link: >
             Especificaciones de los archivos
+        media_rejected: >
+            Sorry, but your media has not been accepted.
+        media_rejected_reason: >
+            It could be for specs reason (size, aspect ratio, unsupported format…)
+            of because the content didn't meet the community spirit (offensive or inappropriate material…).
+        media_rejected_contact: >
+            If you understand why you can simply replace your contribution. Otherwise you can contact
+            the project team at the following email address:
         remove_button: Elimina mi contribución
 
     examples:

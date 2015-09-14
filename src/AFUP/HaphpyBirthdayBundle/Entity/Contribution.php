@@ -211,31 +211,6 @@ class Contribution
     }
 
     /**
-     * Get the value of if the uploaded is validated
-     *
-     * @return bool
-     */
-    public function isValidated()
-    {
-        return $this->validated;
-    }
-
-    /**
-     * Set the value of if the uploaded is validated
-     *
-     * @param bool $validated
-     *
-     * @return self
-     */
-    public function setValidated($validated)
-    {
-        $this->validated = $validated;
-
-        return $this;
-    }
-
-
-    /**
      * Gets the value of id.
      *
      * @return int

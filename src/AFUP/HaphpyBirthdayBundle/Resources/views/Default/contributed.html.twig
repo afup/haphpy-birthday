@@ -10,6 +10,7 @@
                 }}
             </p>
             <hr />
+            {% if contribution.isAccepted %}
             <p>
                 {{ 'index.contributed.media_warning'|trans }}
             </p>
@@ -17,8 +18,24 @@
                 {{ 'index.contributed.media_change'|trans }}
             </p>
             <a href="{{ path('haphpy_about') ~ '#about-contributions' }}">
-                <span class="fa fa-info-circle"></span>{{ 'index.contributed.media_specs_link'|trans }}
+                <span class="fa fa-info-circle"></span> {{ 'index.contributed.media_specs_link'|trans }}
             </a>
+            {% else %}
+            <p>
+                {{ 'index.contributed.media_rejected'|trans }}
+            </p>
+            <p>
+                {{ 'index.contributed.media_rejected_reason'|trans }}
+            </p>
+            <p>
+                {{ 'index.contributed.media_rejected_contact'|trans }}
+            </p>
+            <p>
+                <div class="nowrap">
+                    <span class="fa fa-envelope"></span> team@haphpy-birthday.net
+                </div>
+            </p>
+            {% endif %}
             <hr />
             <p>
                 <a href="{{ path('haphpy_delete') }}" class="btn btn-primary">

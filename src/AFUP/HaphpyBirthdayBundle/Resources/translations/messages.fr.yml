@@ -84,6 +84,14 @@ index:
             Si votre média ne s'affiche pas comme vous le souhaitez, supprimez le et renvoyez une version modifiée.
         media_specs_link: >
             caractéristiques des médias.
+        media_rejected: >
+            Désolé votre média n'a pas été accepté.
+        media_rejected_reason: >
+            Cela peut être dû à ses caractéristiques (taille, proportions, format inconnu…)
+            ou parce que le contenu ne correspond pas à l'état d'esprit de la communauté.
+        media_rejected_contact: >
+            Si la raison vous parait claire, vous pouvez simplement changer votre contribution.
+            Dans le cas contraire, n'hésitez pas à contacter l'équipe du projet à l'addresse suivante:
         remove_button: Supprimer ma contribution
 
     examples:

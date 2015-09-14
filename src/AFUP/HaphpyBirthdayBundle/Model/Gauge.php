@@ -5,7 +5,8 @@ namespace AFUP\HaphpyBirthdayBundle\Model;
 use AFUP\HaphpyBirthdayBundle\Entity\ContributionRepository;
 
 /**
- * User
+ * Gauge of the current contributions
+ * Indicating the different levels
  *
  * @author Faun <woecifaun@gmail.com>
  */
@@ -41,8 +42,9 @@ class Gauge
      */
     public function __construct(ContributionRepository $contributionRepository, Pugs $pugs, $steps)
     {
-        $this->amount  = $contributionRepository->getContributionsQuantity() + count($pugs->getUserGroups());
-        $this->steps   = $steps;
+        $this->amount = $contributionRepository->getAcceptedContributionsQuantity()
+                        + count($pugs->getUserGroups());
+        $this->steps  = $steps;
     }
 
     /**
