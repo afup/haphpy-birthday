@@ -79,6 +79,14 @@ index:
             If you think your media is not displayed as its best, just remove it and upload it again once modified.
         media_specs_link: >
             Medias specifications
+        media_rejected: >
+            Sorry, but your media has not been accepted.
+        media_rejected_reason: >
+            It could be for specs reason (size, aspect ratio, unsupported format…)
+            of because the content didn't meet the community spirit (offensive or inappropriate material…).
+        media_rejected_contact: >
+            If you understand why you can simply replace your contribution. Otherwise you can contact
+            the project team at the following email address:
         remove_button: Remove my contribution
 
 
