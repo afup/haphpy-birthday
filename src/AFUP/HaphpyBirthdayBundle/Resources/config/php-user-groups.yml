@@ -219,3 +219,13 @@ istanbulphp:
     twitter:        IstanbulPHP
     country:        Turkey
     city:           Istanbul
+
+phpbenelux:
+    displayed_name: PHPBenelux
+    full_name:      PHPBenelux
+    parent:
+    picture:        phpbenelux.png
+    website:        https://phpbenelux.eu
+    twitter:        PHPBenelux
+    country:        Belgium, the Netherlands and Luxembourg
+    city:           
