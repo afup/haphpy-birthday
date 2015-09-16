@@ -30,6 +30,16 @@ afup_luxembourg:
     country:        Luxembourg
     city:           ~
 
+afup_marseille:
+    displayed_name: afup Marseille
+    full_name:      afup Marseille (Marseille PHP Users Group)
+    parent:         afup
+    picture:        afup.svg
+    website:        http://marseille.afup.org
+    twitter:        AFUP_Marseille
+    country:        France
+    city:           Marseille
+
 afup_nantes:
     displayed_name: afup Nantes
     full_name:      afup Nantes (Nantes PHP Users Group)
