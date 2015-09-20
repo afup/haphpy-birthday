@@ -229,3 +229,13 @@ phpbenelux:
     twitter:        PHPBenelux
     country:        Belgium, the Netherlands and Luxembourg
     city:           
+
+php-tr:
+    displayed_name: PHP-TR
+    full_name:      Turkey PHP User Group
+    parent:
+    picture:        php-tr.png
+    website:        https://www.facebook.com/groups/tr.developers/
+    twitter:        php_tr
+    country:        Turkey
+    city:           Istanbul
