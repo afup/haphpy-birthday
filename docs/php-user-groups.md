@@ -6,7 +6,7 @@ __The support of the PHP User Groups is essential to the project__. As a mirror 
 
 ### Be part of the list of the PHP user groups supporting the project
 
-![soflophp_onsite](https://cloud.githubusercontent.com/assets/5421942/9723035/4af75568-55b9-11e5-8d5a-e28b649a99d8.png)
+![pug-24](https://cloud.githubusercontent.com/assets/5421942/9989658/c2606a4e-605a-11e5-85cd-ce84d2edc82a.png)
 
 
 Every user group encouraging the project will be featured in the [list of the groups supporting the project](http://haphpy-birthday.net/en/contributions#php-user-groups) and in the final movie. In order to show your support, just submit a [pull request](https://help.github.com/articles/using-pull-requests/) with the following elements:
