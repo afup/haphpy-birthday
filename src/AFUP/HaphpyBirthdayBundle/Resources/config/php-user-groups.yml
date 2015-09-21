@@ -228,7 +228,7 @@ phpbenelux:
     website:        https://phpbenelux.eu
     twitter:        PHPBenelux
     country:        Belgium, the Netherlands and Luxembourg
-    city:           
+    city:
 
 php-tr:
     displayed_name: PHP-TR
@@ -243,8 +243,8 @@ php-tr:
 phpugffm:
     displayed_name: PHPUGFFM
     full_name:      PHP-Usergroup Frankfurt/Main
-    parent:       
-    picture:        phpugffm.svg
+    parent:
+    picture:        phpugffm.png
     website:        http://phpugffm.de
     twitter:        phpugffm
     country:        Germany
