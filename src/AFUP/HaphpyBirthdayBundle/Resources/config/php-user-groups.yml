@@ -239,3 +239,13 @@ php-tr:
     twitter:        php_tr
     country:        Turkey
     city:           Istanbul
+
+phpugffm:
+    displayed_name: PHPUGFFM
+    full_name:      PHP-Usergroup Frankfurt/Main
+    parent:       
+    picture:        phpugffm.svg
+    website:        http://phpugffm.de
+    twitter:        phpugffm
+    country:        Germany
+    city:           Frankfurt/Main
