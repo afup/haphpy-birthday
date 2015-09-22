@@ -47,5 +47,18 @@
 
     <div class="col-sm-12 col-md-8">
         {{ haphpy.media_container(contribution)}}
+        <div class="social-buttons text-center">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-hashtags="PHP" data-url="{{ url('haphpy_contribution_user', {
+                authProvider: contribution.authProviderId,
+                identifier:   contribution.identifier
+            }) }}" data-text="I participated to the HaPHPy Birthday movie! #20YearsOfPHP" data-via="HaPHPy20">Tweet</a>
+            <script>
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+            </script>
+            <div class="fb-share-button" data-href="{{ url('haphpy_contribution_user', {
+                authProvider: contribution.authProviderId,
+                identifier:   contribution.identifier
+            }) }}" data-layout="button"></div>
+        </div>
     </div>
 </div>
