@@ -28,7 +28,7 @@
         </div>
     </section>
 
-    <section id="contribution" class="page-section dark-background">
+    <section id="contribution" class="page-section">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
@@ -36,11 +36,22 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                <div class="col-sm-12 col-md-6 col-lg-6">
                     {{ 'public_contribution.contributor'|trans({
                         '%authProvider%': contribution.authProvider,
-                        '%identifier%':    contribution.visibleName
+                        '%identifier%':   contribution.visibleName
                     })|raw }}
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 text-right">
+                    {% set url = url('haphpy_contribution_user', {
+                        authProvider: contribution.authProviderId,
+                        identifier:   contribution.identifier
+                    }) %}
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-hashtags="PHP" data-url="{{ url }}" data-text="Check out this contribution to the HaPHPy Birthday! #20YearsOfPHP" data-via="HaPHPy20">Tweet</a>
+                    <script>
+                        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                    </script>
+                    <div class="fb-share-button" data-href="{{ url }}" data-layout="button"></div>
                 </div>
             </div>
         </div>

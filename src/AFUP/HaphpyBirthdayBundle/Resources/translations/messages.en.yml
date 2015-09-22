@@ -18,7 +18,8 @@ gauge:
 
 menu:
     index:
-        label: Contribute!
+        contribute:      Contribute!
+        my_contribution: My contribution
     contributions:
         label:  Contributors
         people: People

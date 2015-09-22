@@ -18,7 +18,8 @@ gauge:
 
 menu:
     index:
-        label: ¡Contribuye!
+        contribute:      ¡Contribuye!
+        my_contribution: My contribution
     contributions:
         label:  Contribuidores
         people: Individuos
