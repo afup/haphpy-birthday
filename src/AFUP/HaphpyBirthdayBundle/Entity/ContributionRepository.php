@@ -24,7 +24,7 @@ class ContributionRepository extends EntityRepository
             ->where('contribution.creditWanted = true')
             // see Contribution class for acceptance logic
             ->andWhere('contribution.accepted = true OR contribution.accepted IS NULL')
-            ->orderBy('contribution.identifier', 'ASC')
+            ->orderBy('contribution.visibleName', 'ASC')
             ->addOrderBy('contribution.authProvider', 'ASC');
 
         return $queryBuilder
