@@ -20,7 +20,8 @@ gauge:
 
 menu:
     index:
-        label: Participer !
+        contribute:      Participer !
+        my_contribution: Ma contribution
     contributions:
         label:  Contributeurs
         people: Personnes
