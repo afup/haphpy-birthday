@@ -249,3 +249,13 @@ phpugffm:
     twitter:        phpugffm
     country:        Germany
     city:           Frankfurt/Main
+
+amsterdamphp:
+    displayed_name: AmsterdamPHP
+    full_name:      AmsterdamPHP
+    parent:
+    picture:        amsterdamphp.png
+    website:        http://php.amsterdam
+    twitter:        amsterdamphp
+    country:        Netherlands
+    city:           Amsterdam
