@@ -259,3 +259,13 @@ amsterdamphp:
     twitter:        amsterdamphp
     country:        Netherlands
     city:           Amsterdam
+
+meetphp:
+    displayed_name: meet.php
+    full_name:      meet.php
+    parent:
+    picture:        meetphp.svg
+    website:        http://meetphp.pl
+    twitter:        meetphp
+    country:        Poland
+    city:           Poznan
