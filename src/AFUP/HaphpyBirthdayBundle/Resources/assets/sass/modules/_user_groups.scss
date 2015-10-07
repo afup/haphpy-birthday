@@ -54,6 +54,13 @@
     color: #f34141;
   }
 
+  &:visited {
+    color: #f34141;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
   span {
     margin-right: 0.5em;
   }
