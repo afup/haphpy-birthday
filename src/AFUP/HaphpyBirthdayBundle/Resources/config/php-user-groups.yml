@@ -269,3 +269,13 @@ meetphp:
     twitter:        meetphp
     country:        Poland
     city:           Poznan
+
+vilniusphp:
+    displayed_name: Vilnius PHP
+    full_name:      Vilnius PHP User Group
+    parent:
+    picture:        vilniusphp.png
+    website:        http://www.vilniusphp.lt
+    twitter:        vilniusphp
+    country:        Lithuania
+    city:           Vilnius
