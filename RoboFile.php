@@ -71,14 +71,13 @@ class RoboFile extends \Robo\Tasks
             ->run()
         ;
 
-        // $this
-        //     ->taskMinify('app/cache/main.css')
-        //     ->to('web/assets/css/main.css')
-        //     ->run()
-        // ;
+        $this
+            ->taskMinify('app/cache/main.css')
+            ->to('web/assets/css/main.css')
+            ->run()
+        ;
 
-        // $this->taskHash('web/assets/css/main.css')->to('web/assets/css/')->run();
-        $this->taskHash('app/cache/main.css')->to('web/assets/css/')->run();
+        $this->taskHash('web/assets/css/main.css')->to('web/assets/css/')->run();
     }
 
     protected function _buildJs()

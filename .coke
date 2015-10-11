@@ -5,7 +5,7 @@
 # standard-path=path/to/PHPCS/Standards/
 
 # Standard used by PHP CodeSniffer (required)
-standard=vendor/woecifaun/symfony2-coding-standard/Symfony2
+standard=vendor/m6web/symfony2-coding-standard/Symfony2
 
 # Verbose mode (optional - default: false)
 # verbose=true

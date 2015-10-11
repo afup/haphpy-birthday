@@ -22,10 +22,9 @@
         "phpunit/phpunit": "~4.5",
         "besimple/i18n-routing-bundle": "~2.3",
         "m6web/coke": "~2.1",
-        "m6web/symfony2-coding-standard": "~3.0",
+        "m6web/symfony2-coding-standard": "~3.1",
         "hwi/oauth-bundle": "0.4.*@dev",
         "woecifaun/translation-bridge-bundle": "~0.0",
-        "woecifaun/Symfony2-coding-standard": "dev-master",
         "symfony/var-dumper": "^2.7",
         "codegyre/robo": "dev-master@dev",
         "natxet/CssMin": "3.0.x",
@@ -78,10 +77,6 @@
         "translation-bridge": {
             "type": "vcs",
             "url": "https://github.com/woecifaun/translation-bridge-bundle"
-        },
-        "symfony-coding-standards": {
-            "type": "vcs",
-            "url": "https://github.com/woecifaun/Symfony2-coding-standard"
         }
     }
 }
