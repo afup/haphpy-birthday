@@ -279,3 +279,13 @@ vilniusphp:
     twitter:        vilniusphp
     country:        Lithuania
     city:           Vilnius
+
+kaunasphp:
+    displayed_name: Kaunas PHP
+    full_name:      Kaunas PHP
+    parent:
+    picture:        kaunasphp.png
+    website:        http://www.kaunasphp.lt
+    twitter:        kaunasphp
+    country:        Lithuania
+    city:           Kaunas
