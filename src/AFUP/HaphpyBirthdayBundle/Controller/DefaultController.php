@@ -93,6 +93,7 @@ class DefaultController extends Controller
         return [
             'user'         => $user,
             'contribution' => $contribution,
+            'gauge'        => $this->get('haphpy.gauge'),
         ];
     }
 
@@ -118,6 +119,7 @@ class DefaultController extends Controller
         return [
             'user'         => $user,
             'contribution' => $contribution,
+            'gauge'        => $this->get('haphpy.gauge'),
         ];
     }
 
@@ -162,6 +164,7 @@ class DefaultController extends Controller
             'user'          => $user,
             'contributions' => $contributions,
             'userGroups'    => $userGroups,
+            'gauge'         => $this->get('haphpy.gauge'),
         ];
     }
 
@@ -179,6 +182,7 @@ class DefaultController extends Controller
 
         return [
             'user' => $user,
+            'gauge' => $this->get('haphpy.gauge'),
         ];
     }
 

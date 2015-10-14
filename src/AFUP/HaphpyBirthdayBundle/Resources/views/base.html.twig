@@ -57,7 +57,14 @@
         </div>
         <div class="navbar fixed">
             <div class="navbar-inner">
-                <a href="{{ path('haphpy_index') }}" class="navbar-logo">HaPHPy Birthday</a>
+                <a href="{{ path('haphpy_index') }}" class="navbar-logo">
+                    HaPHPy Birthday
+                    {% if gauge is defined and gauge is not null %}
+                    <span id="count-badge" title="{{ 'menu.count_badge.title'|trans({
+                        '%count%': gauge.amount
+                    }) }}">{{ gauge.amount }}</span>
+                    {% endif %}
+                </a>
                 <nav id="main-nav" class="pull-right">
                     <ul>
                         <li>

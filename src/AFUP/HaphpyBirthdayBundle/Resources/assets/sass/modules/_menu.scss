@@ -1,3 +1,19 @@
+#count-badge {
+  display: inline-block;
+  background-color: $secondary-color;
+  font-size: 50%;
+  font-weight: 700;
+  text-align:center;
+  width: 1.6em;
+  height: 1.6em;
+  line-height: 1.6em;
+  border-radius: 50%;
+  padding:0;
+  margin:0;
+  color: #ffffff;
+  @include transform(translate(-50%, -50%));
+}
+
 #login-state span.fa {
   margin-right: 0.4em;
 }

@@ -19,6 +19,8 @@ gauge:
         top: 😍
 
 menu:
+    count_badge:
+        title: "%count% contributions"
     index:
         contribute:      Participer !
         my_contribution: Ma contribution
