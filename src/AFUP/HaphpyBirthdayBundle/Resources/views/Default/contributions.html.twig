@@ -8,6 +8,15 @@
 
 {% block gauge %}{% endblock %}
 
+{% block twitter_card %}
+{% include 'AppBundle::Common/twitter_card.html.twig' with {
+    twitter_card_creator: twitter_account,
+    twitter_card_title: 'twitter_card.home.title'|trans,
+    twitter_card_description: 'twitter_card.home.description'|trans,
+    twitter_card_image: asset('assets/images/haphpy-mosaic-960.jpg', absolute = true),
+} %}
+{% endblock %}
+
 {% block content %}{% spaceless %}
     <section id="contributions" class="page-section dark-background">
         <div class="container">
