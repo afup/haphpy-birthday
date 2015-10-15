@@ -289,3 +289,13 @@ kaunasphp:
     twitter:        kaunasphp
     country:        Lithuania
     city:           Kaunas
+
+phpers:
+    displayed_name: PHPers
+    full_name:      PHPers
+    parent:
+    picture:        phpers.jpg
+    website:        http://phpers.pl/
+    twitter:        PHPersPL
+    country:        Poland
+    city:           ~
