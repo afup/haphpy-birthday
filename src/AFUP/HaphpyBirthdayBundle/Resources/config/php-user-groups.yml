@@ -140,6 +140,16 @@ phpem:
     country:        UK
     city:           ~
 
+php.limburg.be:
+    displayed_name: PHP Limburg BE
+    full_name:      PHP Limburg BE
+    parent:         ~
+    picture:        phplimbe.jgp
+    website:        http://www.meetup.com/PHP-Limburg-BE/
+    twitter:        phplimbe
+    country:        Belgium
+    city:           Hasselt
+
 phpnw:
     displayed_name: PHPNW
     full_name:      PHP North West
