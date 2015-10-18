@@ -299,3 +299,13 @@ phpers:
     twitter:        PHPersPL
     country:        Poland
     city:           ~
+
+moroccophp:
+    displayed_name: MoroccoPHP
+    full_name:      MoroccoPHP
+    parent:
+    picture:        mphp.svg
+    website:        http://moroccophp.github.io/
+    twitter:        MoroccoPHP
+    country:        Morocco
+    city:           ~
