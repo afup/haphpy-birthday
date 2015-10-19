@@ -97,6 +97,14 @@ index:
             Dans le cas contraire, n'hésitez pas à contacter l'équipe du projet à l'addresse suivante:
         remove_button: Supprimer ma contribution
 
+    win:
+        coolest_contribution: >
+            À gagner, <span %highlight1%>cet elePHPant unique au monde</span>, fait à la main, pour la
+            <span %highlight2%>contribution personnelle</span> la plus cool, la plus dégentée, la plus
+            PHP…
+        subjective_decision: >
+            ⚠️ La décision sera totalement subjective. 😜
+
     examples:
         title:            Exemples de contributions possibles
         php_asset:        Contenu montrant des objets PHP

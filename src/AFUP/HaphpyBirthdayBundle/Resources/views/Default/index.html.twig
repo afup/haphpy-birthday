@@ -25,6 +25,25 @@
                     }}
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <img src="{{ asset('assets/images/win-elephpant.jpg') }}" class="fitting-media"/>
+                </div>
+                <div class="col-sm-12 col-md-8">
+                    <p>
+                    {{ 'index.win.coolest_contribution'|trans(
+                        {
+                            '%highlight1%': highlight1,
+                            '%highlight2%': highlight2,
+                        }
+                    )|raw }}
+                    </p>
+                    <p>
+                    {{ 'index.win.subjective_decision'|trans }}
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
     {% if limit_date|date('U') < 'now'|date('U') %}

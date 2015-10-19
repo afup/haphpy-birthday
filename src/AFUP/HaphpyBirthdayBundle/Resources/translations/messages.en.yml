@@ -92,6 +92,12 @@ index:
             the project team at the following email address:
         remove_button: Remove my contribution
 
+    win:
+        coolest_contribution: >
+            At stake, <span %highlight1%>this unique handmade elePHPant</span> for the
+            coolest/craziest/phpish <span %highlight2%>personal contribution</span>…
+        subjective_decision: >
+            ⚠️ Decision is totally subjective. 😜
 
     examples:
         title:            Examples of media that can be part of the final movie

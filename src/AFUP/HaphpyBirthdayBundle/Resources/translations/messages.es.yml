@@ -92,6 +92,13 @@ index:
             the project team at the following email address:
         remove_button: Elimina mi contribución
 
+    win:
+        coolest_contribution: >
+            At stake, <span %highlight1%>this unique handmade elePHPant</span> for the
+            coolest/craziest/phpish <span %highlight2%>personal contribution</span>…
+        subjective_decision: >
+            ⚠️ Decision is totally subjective. 😜
+
     examples:
         title:            Ejemplos de archivos que pueden ser parte de la película final
         php_asset:        Archivos mostrando un objeto de PHP
