@@ -224,6 +224,7 @@ public_contribution:
 
 footer:
     github:       GitHub repository
+    powered_by:   Powered by
     by_community: Made by the PHP community with <span class="fa fa-heart"></span>
 
 twitter_card:

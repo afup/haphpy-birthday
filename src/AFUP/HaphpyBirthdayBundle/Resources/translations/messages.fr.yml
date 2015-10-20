@@ -234,6 +234,7 @@ public_contribution:
 
 footer:
     github: Dépôt GitHub
+    powered_by:   Propulsé par
     by_community: Un projet de la communauté PHP <span class="fa fa-heart"></span>
 
 twitter_card:

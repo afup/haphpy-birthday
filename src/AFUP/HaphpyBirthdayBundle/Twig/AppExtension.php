@@ -20,6 +20,16 @@ class AppExtension extends \Twig_Extension
     /**
      * {@inheritdoc}
      */
+    public function getFunctions()
+    {
+        return [
+            new \Twig_SimpleFunction('php_version', [$this, 'phpVersion']),
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getName()
     {
         return 'app_extension';
@@ -44,5 +54,15 @@ class AppExtension extends \Twig_Extension
         $pre = $pre[$exp - 1].($si ? "" : "i");
 
         return sprintf("%.1f %sB", $bytes / pow($unit, $exp), $pre);
+    }
+
+    /**
+     * Return php version
+     *
+     * @return string the version of PHP executing the script
+     */
+    public function phpVersion()
+    {
+        return phpversion();
     }
 }

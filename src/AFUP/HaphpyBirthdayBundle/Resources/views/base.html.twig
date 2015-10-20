@@ -206,7 +206,10 @@
                         </a>
                     </div>
                     <div class="col-sm-4 no-padding-bottom text-center">
-                        <span class="fa fa-envelope"></span> team<span class="arobase">haphpy-birthday.net</span>
+                        <div class="logo-container" title="{{ php_version() }}">
+                            <span>{{ 'footer.powered_by'|trans }}</span>
+                            {% include 'AppBundle::Common/php7.svg.twig' %}
+                        </div>
                     </div>
                     <div class="col-sm-4 no-padding-bottom text-right">
                         <a href="https://github.com/afup/haphpy-birthday/graphs/contributors">
