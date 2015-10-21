@@ -319,3 +319,13 @@ malangphp:
     twitter:        MalangPHP
     country:        Indonesia
     city:           Malang
+
+phpwarks:
+    displayed_name: PHP Warwickshire
+    full_name:      PHP Warwickshire
+    parent:
+    picture:        phpwarks.jpg
+    website:        http://phpwarks.co.uk
+    twitter:        phpwarks
+    country:        UK
+    city:           Warwickshire
