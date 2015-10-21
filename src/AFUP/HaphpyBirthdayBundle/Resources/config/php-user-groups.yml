@@ -309,3 +309,13 @@ moroccophp:
     twitter:        MoroccoPHP
     country:        Morocco
     city:           ~
+
+malangphp:
+    displayed_name: MalangPHP
+    full_name:      Malang PHP User Group
+    parent:
+    picture:        malangphp.svg
+    website:        https://www.facebook.com/groups/mphug/
+    twitter:        MalangPHP
+    country:        Indonesia
+    city:           Malang
