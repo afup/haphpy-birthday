@@ -329,3 +329,13 @@ phpwarks:
     twitter:        phpwarks
     country:        UK
     city:           Warwickshire
+
+phpminds:
+    displayed_name: PHP Minds
+    full_name:      PHP Minds
+    parent:
+    picture:        phpminds.svg
+    website:        http://phpminds.org
+    twitter:        phpminds
+    country:        UK
+    city:           Nottingham
