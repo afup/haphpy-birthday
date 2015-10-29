@@ -349,3 +349,13 @@ phpminds:
     twitter:        phpminds
     country:        UK
     city:           Nottingham
+
+phpwgtn:
+    displayed_name: PHP Wellington
+    full_name:      PHP User Group Wellington
+    parent:
+    picture:        phpwgtn.png
+    website:        http://www.meetup.com/PHP-Usergroup-Wellington
+    twitter:        phpwgtn
+    country:        New Zealand
+    city:           Wellington
