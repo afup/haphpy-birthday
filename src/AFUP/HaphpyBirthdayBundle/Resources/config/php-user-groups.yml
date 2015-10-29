@@ -369,3 +369,13 @@ phpugmunich:
     twitter:        phpugmunich
     country:        Germany
     city:           München
+
+phpakl:
+   displayed_name: PHP Auckland
+   full_name:      The Auckland PHP Meetup Group
+   parent:
+   picture:        phpakl.png
+   website:        http://www.meetup.com/php-auckland/
+   twitter:        phpakl
+   country:        New Zealand
+   city:           Auckland
