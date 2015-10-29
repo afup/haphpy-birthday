@@ -359,3 +359,13 @@ phpwgtn:
     twitter:        phpwgtn
     country:        New Zealand
     city:           Wellington
+
+phpugmunich:
+    displayed_name: PHP UG Munich
+    full_name:      PHP User Group Munich
+    parent:
+    picture:        phpugmunich.jpg
+    website:        http://www.meetup.com/phpugmunich/
+    twitter:        phpugmunich
+    country:        Germany
+    city:           München
