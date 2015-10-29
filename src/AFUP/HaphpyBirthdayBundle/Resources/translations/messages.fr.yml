@@ -7,7 +7,7 @@ haphpy:
 head:
     title:       HaPHPy Birthday
     description: >
-        Haphpy Birthday : La vidéo collaborative rassemblant des medias pleins de reconnaissance
+        Haphpy Birthday : La vidéo collaborative rassemblant des médias pleins de reconnaissance
         pour les 20 ans de PHP.
 
 gauge:
@@ -100,7 +100,7 @@ index:
     win:
         coolest_contribution: >
             À gagner, <span %highlight1%>cet elePHPant unique au monde</span>, fait à la main, pour la
-            <span %highlight2%>contribution personnelle</span> la plus cool, la plus dégentée, la plus
+            <span %highlight2%>contribution personnelle</span> la plus cool, la plus déjantée, la plus
             PHP…
         subjective_decision: >
             ⚠️ La décision sera totalement subjective. 😜
@@ -114,7 +114,7 @@ index:
         express_yourself: Exprimez-vous !
         beyond:           >
             Ou toute idée sortie de votre imagination pour célébrer le
-            20<sup>ième</sup> anniversaire de PHP ou sa communauté.
+            20<sup>e</sup> anniversaire de PHP ou sa communauté.
 
 form:
     credit_wanted:
@@ -168,7 +168,7 @@ about:
             <p>La vidéo commémorative finale ne contiendra pas de publicité. Les sociétés
             ne sont pas autorisées à utiliser le présent projet comme support publicitaire.</p>
             <p>Une société peut utiliser, via le réseau social de son choix, une
-            contribution ; le média envoyé ne devra pas explicitement faire de la pubilicité en faveur de la société.
+            contribution ; le média envoyé ne devra pas explicitement faire de la pubilicité en faveur de la société.
             Par exemple, la vidéo ou l'image fournie ne peut se limiter au logo de la compagnie.</p>
         specs:
             video_title: Vidéos
@@ -177,8 +177,8 @@ about:
                 <ul>
                     <li>5 secondes maximum</li>
                     <li>Full HD (1920px × 1080px)</li>
-                    <li>Fréquence d'images minimum: 25fps</li>
-                    <li>Codec vidéo: h264 ou tout codec ouvert.</li>
+                    <li>Fréquence d'images minimum : 25fps</li>
+                    <li>Codec vidéo : h264 ou tout codec ouvert.</li>
                     <li>Le son de la vidéo pourra être remplacé/atténué par la piste son globale.</li>
                 </ul>
             picture_title: Images
@@ -210,7 +210,7 @@ about:
         communicating:
             title: Communication
             text: >
-                <p>Le compte twitter du projet est <a href="https://twitter.com/haphpy20" class="differ">@haphpy20</a></p>
+                <p>Le compte Twitter du projet est <a href="https://twitter.com/haphpy20" class="differ">@haphpy20</a></p>
                 <p>N'hésitez pas à parler du projet à vos amis ou sur les réseaux sociaux.</p>
                 <p>Hashtag : #20YearsOfPHP</p>
 
