@@ -1,12 +1,12 @@
-![haphpy-mosaic](https://cloud.githubusercontent.com/assets/5421942/9723076/409ca888-55ba-11e5-991e-504525941d93.jpg)
-
-
 __HaPHPy Birthday is a collaborating movie celebrating 20 years of PHP, the spirit of its community and the work of the core team.__
 
 Until the 31<sup>st</sup> of October, anyone can upload a very short video/picture showing how much s•he loves PHP or its community. Uploaded media can be selfies, placards, group photos, self expression, fun pics… anything imaginable and positive.
 
 Eventually, the provided videos and pictures will be gathered in a short mosaic movie released under a Creative Commons Licence.
 
+![haphpy-mosaic](https://cloud.githubusercontent.com/assets/5421942/9723076/409ca888-55ba-11e5-991e-504525941d93.jpg)
+
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/afup/haphpy-birthday.svg)](http://isitmaintained.com/project/afup/haphpy-birthday "Average time to resolve an issue") [![Percentage of issues still open](http://isitmaintained.com/badge/open/afup/haphpy-birthday.svg)](http://isitmaintained.com/project/afup/haphpy-birthday "Percentage of issues still open")
 
 ## Documentation
 * [Supporting the project as a PHP User Group](docs/php-user-groups.md)
