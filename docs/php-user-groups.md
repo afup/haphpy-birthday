@@ -9,7 +9,7 @@ __The support of the PHP User Groups is essential to the project__. As a mirror 
 ![pug-24](https://cloud.githubusercontent.com/assets/5421942/9989658/c2606a4e-605a-11e5-85cd-ce84d2edc82a.png)
 
 
-Every user group encouraging the project will be featured in the [list of the groups supporting the project](http://haphpy-birthday.net/en/contributions#php-user-groups) and in the final movie. In order to show your support, just submit a [pull request](https://help.github.com/articles/using-pull-requests/) with the following elements:
+Every user group encouraging the project will be featured in the [list of the groups supporting the project](http://haphpy-birthday.net/en/contributions#php-user-groups) and in the final movie. In order to show your support, submit a [pull request](https://help.github.com/articles/using-pull-requests/) (or send an email to woecifaun [at] gmail) with the following elements:
 
 1. Add an entry with the users group information in `src/AFUP/HaphpyBirthdayBundle/Resources/config/php-user-groups.yml`
 
