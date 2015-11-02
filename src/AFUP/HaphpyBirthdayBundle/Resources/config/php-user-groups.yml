@@ -489,3 +489,13 @@ phpsc:
     twitter:        PHP_SC
     country:        Brazil
     city:           ~
+
+kristiansand:
+   displayed_name: KristiansandPHP
+   full_name:      KristiansandPHP
+   parent:
+   picture:        kristiansand.svg
+   website:        http://kristiansandphp.org/
+   twitter:        KristiansandPHP
+   country:        Norway
+   city:           Kristiansand
