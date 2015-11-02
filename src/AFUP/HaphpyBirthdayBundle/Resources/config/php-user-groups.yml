@@ -379,3 +379,13 @@ phpakl:
    twitter:        phpakl
    country:        New Zealand
    city:           Auckland
+
+phpugdd:
+   displayed_name: PHPUGDD
+   full_name:      PHP USERGROUP DRESDEN
+   parent:
+   picture:        phpugdd.png
+   website:        http://www.phpug-dresden.org/
+   twitter:        phpugdd
+   country:        Germany
+   city:           Dresden
