@@ -160,6 +160,16 @@ phpnw:
     country:        UK
     city:           Manchester
 
+phprio:
+    displayed_name: PHPRio
+    full_name:      PHPRio (Rio de Janeiro PHP Users Group)
+    parent:
+    picture:        phprio.png
+    website:        http://phprio.org
+    twitter:        phprio
+    country:        Brazil
+    city:           Rio de Janeiro
+
 phpsurrey:
     displayed_name: PHP Surrey
     full_name:      PHP Surrey
