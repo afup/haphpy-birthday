@@ -60,6 +60,16 @@ afup_toulouse:
     country:        France
     city:           Paris
 
+atlantaphp:
+    displayed_name: AtlantaPHP
+    full_name:      AtlantaPHP User Group
+    parent:         ~
+    picture:        atlantaphp.png
+    website:        http://atlantaphp.org
+    twitter:        AtlantaPHP
+    country:        USA
+    city:           Atlanta
+
 austinphp:
     displayed_name: austinphp
     full_name:      Austin PHP User Group
