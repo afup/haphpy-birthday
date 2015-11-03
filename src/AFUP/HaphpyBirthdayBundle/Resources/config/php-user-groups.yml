@@ -409,3 +409,13 @@ phpugdd:
    twitter:        phpugdd
    country:        Germany
    city:           Dresden
+
+phpsrbija:
+   displayed_name: PHP Srbija
+   full_name:      PHP Srbija
+   parent:
+   picture:        phpsrbija.png
+   website:        http://phpsrbija.rs/
+   twitter:        phpsrbija
+   country:        Serbia
+   city:           Belgrade
