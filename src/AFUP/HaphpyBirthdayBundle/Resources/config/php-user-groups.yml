@@ -429,3 +429,13 @@ pug_more:
    twitter:        pug_more
    country:        Italy
    city:           Modena, Reggio Emilia
+
+phpwomen:
+   displayed_name: PHPWomen
+   full_name:      PHPWomen
+   parent:         ~
+   picture:        phpwomen.png
+   website:        https://phpwomen.org/
+   twitter:        PHPWomen
+   country:        International
+   city:           ~
