@@ -419,3 +419,13 @@ phpsrbija:
    twitter:        phpsrbija
    country:        Serbia
    city:           Belgrade
+
+pug_more:
+   displayed_name: PUG MoRe
+   full_name:      Programmers User Group of Modena and Reggio Emilia
+   parent:
+   picture:        pug_more.png
+   website:        http://more.grusp.org/
+   twitter:        pug_more
+   country:        Italy
+   city:           Modena, Reggio Emilia
