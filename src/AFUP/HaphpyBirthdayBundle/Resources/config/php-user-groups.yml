@@ -439,3 +439,13 @@ phpwomen:
    twitter:        PHPWomen
    country:        International
    city:           ~
+
+phpbelfast:
+   displayed_name: PHP Belfast
+   full_name:      PHP Belfast
+   parent:         ~
+   picture:       phpbelfast-logo.png
+   website:        http://phpbelfast.com
+   twitter:        phpbelfast
+   country:        Northern Ireland (UK)
+   city:           ~
