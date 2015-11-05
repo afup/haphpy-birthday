@@ -445,7 +445,7 @@ sdphp:
    full_name:      San Diego PHP User Group
    parent:         ~
    picture:        sdphp.png
-   website:        https://sdphp.org/
+   website:        http://sdphp.org/
    twitter:        sdphp
    country:        USA
    city:           San Diego
