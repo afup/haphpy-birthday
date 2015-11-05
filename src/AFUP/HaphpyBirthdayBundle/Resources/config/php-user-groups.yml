@@ -439,3 +439,14 @@ phpwomen:
    twitter:        PHPWomen
    country:        International
    city:           ~
+
+sdphp:
+   displayed_name: SDPHP
+   full_name:      San Diego PHP User Group
+   parent:         ~
+   picture:        sdphp.png
+   website:        https://sdphp.org/
+   twitter:        sdphp
+   country:        USA
+   city:           San Diego
+
