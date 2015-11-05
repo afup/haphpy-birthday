@@ -450,3 +450,12 @@ sdphp:
    country:        USA
    city:           San Diego
 
+phpbelfast:
+   displayed_name: PHP Belfast
+   full_name:      PHP Belfast
+   parent:         ~
+   picture:        phpbelfast-logo.png
+   website:        http://phpbelfast.com
+   twitter:        phpbelfast
+   country:        Northern Ireland (UK)
+   city:           ~
