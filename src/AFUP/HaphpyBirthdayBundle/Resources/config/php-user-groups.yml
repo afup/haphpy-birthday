@@ -100,6 +100,16 @@ chiphp:
     country:        USA
     city:           Chicago
 
+dorset:
+    displayed_name: PHP Dorset
+    full_name:      PHP Dorset
+    parent:         ~
+    picture:        phpdorset.png
+    website:        http://www.phpdorset.co.uk/
+    twitter:        phpdorset
+    country:        UK
+    city:           Dorset
+
 hampshire:
     displayed_name: PHP Hampshire
     full_name:      PHP Hampshire
