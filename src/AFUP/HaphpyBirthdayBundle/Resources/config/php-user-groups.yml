@@ -479,3 +479,13 @@ phpbelfast:
    twitter:        phpbelfast
    country:        Northern Ireland (UK)
    city:           ~
+
+phpsc:
+    displayed_name: PHPSC
+    full_name:      Santa Catarina PHP User Group
+    parent:         ~
+    picture:        phpsc.png
+    website:        http://phpsc.com.br/
+    twitter:        PHP_SC
+    country:        Brazil
+    city:           ~
