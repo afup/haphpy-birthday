@@ -80,6 +80,16 @@ austinphp:
     country:        USA
     city:           Austin
 
+brightonphp:
+    displayed_name: BrightonPHP
+    full_name:      Brighton PHP User Group
+    parent:         ~
+    picture:        brightonphp.png
+    website:        http://brightonphp.org/
+    twitter:        brightonphp
+    country:        UK
+    city:           Brighton
+
 brusselsphp:
     displayed_name: BrusselsPHP
     full_name:      Brussels PHP User Group
