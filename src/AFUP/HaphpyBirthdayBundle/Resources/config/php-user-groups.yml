@@ -230,6 +230,16 @@ phpwvl:
     country:        Belgium
     city:           Roeselare
 
+soflophp:
+    displayed_name: SoFloPHP
+    full_name:      South Florida PHP User Group
+    parent:         ~
+    picture:        soflophp.png
+    website:        http://www.soflophp.org
+    twitter:        soflophp
+    country:        USA
+    city:           South Florida
+
 sweetlakephp:
     displayed_name: SweetlakePHP
     full_name:      SweetlakePHP
