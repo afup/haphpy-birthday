@@ -459,6 +459,16 @@ pug_more:
    twitter:        pug_more
    country:        Italy
    city:           Modena, Reggio Emilia
+ 
+pugroma:
+    displayed_name: PUG Roma
+    full_name:      PHP User Group Roma
+    parent:         ~
+    picture:        pugroma.png
+    website:        http://roma.grusp.org/
+    twitter:        pug_roma
+    country:        Italy
+    city:           Rome
 
 phpwomen:
    displayed_name: PHPWomen
