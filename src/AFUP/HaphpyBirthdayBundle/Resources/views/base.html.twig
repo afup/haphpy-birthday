@@ -38,6 +38,8 @@
         {% endblock %}
         {% block stats %}{% include 'AppBundle::Common/ga.html.twig' %}{% endblock %}
     </head>
+
+
     <body class="has-header">
         <div id="fb-root"></div>
         <script>
@@ -59,73 +61,11 @@
             <div class="navbar-inner">
                 <a href="{{ path('haphpy_index') }}" class="navbar-logo">
                     HaPHPy Birthday
-                    {% if gauge is defined and gauge is not null %}
-                    <span id="count-badge" title="{{ 'menu.count_badge.title'|trans({
-                        '%count%': gauge.amount
-                    }) }}">{{ gauge.amount }}</span>
-                    {% endif %}
                 </a>
                 <nav id="main-nav" class="pull-right">
                     <ul>
-                        <li>
-                            <a href="{{ path('haphpy_index') ~ '#contribute' }}">
-                                {% set label = (contribution is defined and contribution.filename is not null) ? 'my_contribution' : 'contribute' %}
-                                {{ ('menu.index.' ~ label)|trans }}
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                {{ 'menu.contributions.label'|trans }}
-                                <span class="fa fa-angle-down"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="{{ path('haphpy_contributions') ~ '#contributions' }}">
-                                        {{ 'menu.contributions.people'|trans }}
-                                    </a>
-                                    <a href="{{ path('haphpy_contributions') ~ '#php-user-groups' }}">
-                                        {{ 'menu.contributions.pugs'|trans }}
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
                         <li><a href="{{ path('haphpy_about') }}">{{ 'menu.about.label'|trans }}</a></li>
                         {% include 'AppBundle::translationBridge.html.twig' %}
-                        <li class="dropdown">
-                            {% if user is not null%}
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <span class="fa haphpy-icon-{{ user.authProvider }}"></span>
-                                    {{ user.visibleName }}
-                                    <span class="fa fa-angle-down"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{{ path('logout') }}">{{ 'menu.user.logout'|trans }}</a>
-                                    </li>
-                                </ul>
-                            {% else %}
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    {{ 'menu.user.login'|trans }}
-                                    <span class="fa fa-angle-down"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{{ path('github_connect') }}">
-                                            <span class="fa haphpy-icon-github"></span>
-                                            {{ 'menu.user.github'|trans }}
-                                        </a>
-                                        <a href="{{ path('twitter_connect') }}">
-                                            <span class="fa haphpy-icon-twitter"></span>
-                                            {{ 'menu.user.twitter'|trans }}
-                                        </a>
-                                        <a href="{{ path('facebook_connect') }}">
-                                            <span class="fa haphpy-icon-facebook"></span>
-                                            {{ 'menu.user.facebook'|trans }}
-                                        </a>
-                                    </li>
-                                </ul>
-                            {% endif %}
-                        </li>
                     </ul>
                 </nav>
                 <a href="#" class="mobile-nav-toggle">
@@ -199,19 +139,13 @@
         <footer id="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-4 no-padding-bottom">
+                    <div class="col-sm-6 no-padding-bottom">
                         <a href="https://github.com/afup/haphpy-birthday">
                             <span class="fa haphpy-icon-github"></span>
                             {{ 'footer.github'|trans }}
                         </a>
                     </div>
-                    <div class="col-sm-4 no-padding-bottom text-center">
-                        <div class="logo-container" title="{{ php_version() }}">
-                            <span>{{ 'footer.powered_by'|trans }}</span>
-                            {% include 'AppBundle::Common/php7.svg.twig' %}
-                        </div>
-                    </div>
-                    <div class="col-sm-4 no-padding-bottom text-right">
+                    <div class="col-sm-6 no-padding-bottom text-right">
                         <a href="https://github.com/afup/haphpy-birthday/graphs/contributors">
                             {{ 'footer.by_community'|trans|raw }}
                         </a>

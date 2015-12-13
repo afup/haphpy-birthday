@@ -2,134 +2,94 @@
 
 {% import "AppBundle:Macro:helpers.html.twig" as haphpy %}
 
-{% block title %}{{ parent() }} - {{ 'index.title'|trans }}{% endblock %}
+{% block title %}{{ parent() }} - {{ 'contributions.title'|trans }}{% endblock %}
 
-{% block content %}
-    {% set limit_as_date = limit_date|date('haphpy.date_format.date'|trans) %}
-    {% set premiere_as_date = premiere_date|date('haphpy.date_format.date'|trans) %}
-    <section class="page-section" id="introduction">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-12">
-                    {% set highlight1 = haphpy.highlight %}
-                    {% set highlight2 = haphpy.highlight %}
-                    {% set highlight3 = haphpy.highlight %}
-                    {{ 'index.introduction'|trans(
-                            {
-                                '%limit_date%': limit_as_date,
-                                '%highlight1%': highlight1,
-                                '%highlight2%': highlight2,
-                                '%highlight3%': highlight3,
-                            }
-                        )|raw
-                    }}
-                </div>
-            </div>
+{% block header %}{% endblock %}
 
-            <div class="row">
-                <div class="col-sm-12 col-md-4">
-                    <img src="{{ asset('assets/images/win-elephpant.jpg') }}" class="fitting-media"/>
-                </div>
-                <div class="col-sm-12 col-md-8">
-                    <p>
-                    {{ 'index.win.coolest_contribution'|trans(
-                        {
-                            '%highlight1%': highlight1,
-                            '%highlight2%': highlight2,
-                        }
-                    )|raw }}
-                    </p>
-                    <p>
-                    {{ 'index.win.subjective_decision'|trans }}
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    {% if limit_date|date('U') < 'now'|date('U') %}
-        {% set limit_as_full = limit_date|date('haphpy.date_format.date'|trans) %}
-        <section class="page-section" id="contribution-over">
-            <div class="container">
-                <h2>{{ 'index.time_over.title'|trans|raw }}</h2>
-                <div class="row">
-                    <div class="col-md-12">
-                        {{ 'index.time_over.editing'|trans({
-                            '%limit_date%': limit_as_full
-                        })|raw }}
-                    </div>
-                </div>
-                <h2 class="text-highlight">{{ 'index.time_over.premiere'|trans({
-                    '%premiere_date%': premiere_as_date
-                })|raw }}</h2>
-                <div class="row">
-                    <div class="col-md-12">
-                        {{ 'index.time_over.release'|trans|raw }}
-                    </div>
-                </div>
-            </div>
-        </section>
-    {% else %}
-        <section class="page-section" id="contribute">
-            <div class="container">
-                {% if contribution.fileName %}
-                    {% include 'AppBundle:Default:contributed.html.twig' %}
-                {% else %}
-                    {% include 'AppBundle:Form:contribution.html.twig' %}
-                {% endif %}
-            </div>
-        </section>
-    {% endif %}
+{% block gauge %}{% endblock %}
 
-    <section class="page-section" id="examples">
-        <div class="container">
-            <h2 id="contribution-examples">{{ 'index.examples.title'|trans }}</h2>
-            <div class="row">
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <h5>{{ 'index.examples.message'|trans }}</h5>
-                    <div class="video-container">
-                        <video controls poster="/assets/images/ilovephp.jpg">
-                            <source src="/assets/videos/ilovephp.webm" type='video/webm;codecs="vp8, vorbis"'>
-                            <source src="/assets/videos/ilovephp.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                        </video>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <h5>{{ 'index.examples.express_yourself'|trans }}</h5>
-                    <div class="video-container">
-                        <img src="/assets/images/phpisart.png" class="fitting-media">
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <h5>{{ 'index.examples.php_acronym'|trans }}</h5>
-                    <div class="video-container">
-                        <video controls>
-                            <source src="/assets/videos/people.webm" type='video/webm;codecs="vp8, vorbis"'>
-                            <source src="/assets/videos/people.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                        </video>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <h5>{{ 'index.examples.tribute'|trans }}</h5>
-                    <div class="video-container">
-                        <img src="/assets/images/phpbiscuits.jpg" class="fitting-media">
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <h5>{{ 'index.examples.php_asset'|trans }}</h5>
-                    <div class="video-container">
-                        <video controls poster="/assets/images/php-saved-my-life.jpg">
-                            <source src="/assets/videos/php-saved-my-life.webm" type='video/webm;codecs="vp8, vorbis"'>
-                            <source src="/assets/videos/php-saved-my-life.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                        </video>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <h5>…</h5>
-                    <div class="video-container">
-                        {{ 'index.examples.beyond'|trans|raw }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+{% block twitter_card %}
+{% include 'AppBundle::Common/twitter_card.html.twig' with {
+    twitter_card_creator: twitter_account,
+    twitter_card_title: 'twitter_card.home.title'|trans,
+    twitter_card_description: 'twitter_card.home.description'|trans,
+    twitter_card_image: asset('assets/images/haphpy-mosaic-960.jpg', absolute = true),
+} %}
 {% endblock %}
+
+{% block content %}{% spaceless %}
+    <section id="youtube">
+        <div class="container">
+            <div class="sixteen-nine">
+                <div class="content">
+                    <iframe src="https://www.youtube-nocookie.com/embed/tHlCsZf3nmA?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contributions" class="page-section dark-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h2>
+                        {{ contributions|length }} {{ 'contributions.contributors_list'|trans }}
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row">
+                {% for contribution in contributions %}
+                    <div class="col-sm-12 col-md-6 col-lg-3 contribution">
+                        <a href="{{ url('haphpy_contribution_user', {
+                            authProvider: contribution.authProviderId,
+                            identifier:   contribution.identifier
+                        }) }}">
+                            <span class="fa haphpy-icon-{{ contribution.authProvider }}"></span>
+                            {{ contribution.visibleName }}
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section" id="php-user-groups">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h2>
+                        {{ userGroups|length }} {{ 'contributions.php_user_groups'|trans }}
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                {% for group in userGroups|shuffle %}
+                    <div class="col-sm-12 col-md-6 col-lg-4 user-group">
+                        <div class="user-group-image">
+                            <a href="{{ group.website }}">
+                                <img src="/assets/images/php-user-group/{{ group.picture }}">
+                            </a>
+                        </div>
+                        <div class="user-group-data">
+                            <h4 title="{{ group.full_name }}">
+                                <a href="{{ group.website }}">
+                                    {{ group.displayed_name }}</h4>
+                                </a>
+                            <div class="user-group-location">
+                                {% if group.country %}
+                                    <span>{{ group.country }}</span>{% if group.city %}, {{ group.city }}{% endif %}
+                                {% endif %}
+                            </div>
+                            {% if group.twitter %}
+                                <a href="https://twitter.com/{{ group.twitter }}" class="user-group-twitter">
+                                    <span class="fa haphpy-icon-twitter"></span> {{ group.twitter }}
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endspaceless %}{% endblock %}

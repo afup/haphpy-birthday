@@ -14,30 +14,9 @@ haphpy_contribution_user:
     requirements:
         authProvider:  "g|f|t"
 
-haphpy_submitted:
-    locales:
-        en: "/en/thanks"
-        fr: "/fr/merci"
-        es: "/es/gracias"
-    defaults: { _controller: AppBundle:Default:submitted }
-
-haphpy_contributions:
-    locales:
-        en: "/en/contributions"
-        fr: "/fr/contributions"
-        es: "/es/contribuciones"
-    defaults: { _controller: AppBundle:Default:contributions }
-
 haphpy_about:
     locales:
         en: "/en/about"
         fr: "/fr/a-propos"
         es: "/es/acerca-de"
     defaults: { _controller: AppBundle:Default:about }
-
-haphpy_delete:
-    locales:
-        en: "en/delete"
-        fr: "fr/supprimer"
-        es: "es/borrar"
-    defaults: { _controller: AppBundle:Default:delete }
