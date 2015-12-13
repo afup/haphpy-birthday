@@ -9,36 +9,3 @@
     line-height: 1.5em;
   }
 }
-
-.haphpy-step-number {
-  width: 2em;
-  height: 2em;
-  border-radius: 50%;
-  color: #ffffff;
-  text-align: center;
-  display: inline-block;
-  margin-left: -0.5em;
-}
-
-@media screen and (max-width: 767px) {
-  .haphpy-step-number {
-    margin-left: 0;
-  }
-}
-
-.haphpy-step {
-  position: relative;
-
-  h3 {
-    line-height: 2em;
-    text-transform: none;
-  }
-
-  .btn {
-    margin-bottom: 1em;
-  }
-}
-
-.social-buttons {
-  margin-top: 1em;
-}
