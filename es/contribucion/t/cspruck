@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="alternate" hreflang="en" href="../../../en/contribution/t/cspruck" /><link rel="alternate" hreflang="fr" href="../../../fr/contribution/t/cspruck" /><link rel="alternate" hreflang="es" href="cspruck" />
+        <title>HaPHPy 20th Birthday to you PHP! - A contribution by Chris Spruck</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:100,400,300,700,900|Roboto+Condensed:400,300,700|Inconsolata:400' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../../../assets/css/main.46840897.css" />
+        <meta name="description" content="Haphpy Birthday: Una película colaborativa que reune multimedia de agradecimiento por los 20 años de PHP." />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
+        <link rel="apple-touch-icon" sizes="57x57" href="../../../assets/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../../../assets/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../../../assets/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../../../assets/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../assets/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../../../assets/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../../../assets/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="../../../assets/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../../../assets/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/icons/favicon-16x16.png">
+        <link rel="manifest" href="../../../assets/icons/manifest.json">
+        <meta name="msapplication-TileColor" content="#f34141">
+        <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#f34141">
+        <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@haPHPy20"><meta name="twitter:creator" content="@cspruck"><meta name="twitter:title" content="This is a contribution to the HaPHPy Birthday movie."><meta name="twitter:description" content="Participate to the collaborative movie celebrating 20 years of PHP. Show your gratitude uploading selfie, group picture, placard, fun pic… In November, search for your contribution in the movie.
+"><meta name="twitter:image" content="http://haphpy-birthday.net/media/t/cspruck">        <!-- We do use Google Analytics. Like Google we aren't evil ;-). Seriously, we just use it to check the effiency of the project communication. Maximum of unnecessary data harvesting has been unchecked. Thanks, for digging the code.  -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-66648876-1', {'siteSpeedSampleRate': 100});
+    ga('send', 'pageview');
+
+</script>
+    </head>
+
+
+    <body class="has-header">
+        <div id="fb-root"></div>
+        <script>
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4&appId=1641729459377170";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+                <div id="mobile-nav">
+            <div class="mobile-nav-title">navegación</div>
+            <nav>
+            </nav>
+        </div>
+        <div class="navbar fixed">
+            <div class="navbar-inner">
+                <a href="../../index.html" class="navbar-logo">
+                    HaPHPy Birthday
+                </a>
+                <nav id="main-nav" class="pull-right">
+                    <ul>
+                        <li class="dropdown translation-bridge-switcher"><a href="cspruck#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            es
+            <span class="fa fa-angle-down"></span></a><ul class="dropdown-menu"><li><a href="../../../en/contribution/t/cspruck"  hreflang="en">en</a></li><li><a href="../../../fr/contribution/t/cspruck"  hreflang="fr">fr</a></li></ul></li>                    </ul>
+                </nav>
+                <a href="cspruck#" class="mobile-nav-toggle">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </a>
+            </div>
+        </div>
+                
+        
+        <section id="contribution-punchline" class="page-section"><div class="container"><h1 class="punchline">La película de colaboración celebrando los 20 años de PHP</h1></div></section><section id="contribution" class="page-section"><div class="container"><div class="row"><div class="col-sm-12 col-md-12 col-lg-12"><div class="sixteen-nine"><div class="content content-image" style="background-image: url(../../../media/t/cspruck);"></div></div></div></div><div class="row"><div class="col-sm-12 col-md-6 col-lg-6">
+                    Contributed by <span class="fa haphpy-icon-twitter"></span> Chris Spruck
+                </div><div class="col-sm-12 col-md-6 col-lg-6 text-right"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-hashtags="PHP" data-url="http://haphpy-birthday.net/es/contribucion/t/cspruck" data-text="Check out this contribution to the HaPHPy Birthday! #20YearsOfPHP" data-via="HaPHPy20">Tweet</a><script>
+                        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                    </script><div class="fb-share-button" data-href="http://haphpy-birthday.net/es/contribucion/t/cspruck" data-layout="button"></div></div></div></div></section>
+                <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 no-padding-bottom">
+                        <a href="https://github.com/afup/haphpy-birthday">
+                            <span class="fa haphpy-icon-github"></span>
+                            Repositorio en GitHub
+                        </a>
+                    </div>
+                    <div class="col-sm-6 no-padding-bottom text-right">
+                        <a href="https://github.com/afup/haphpy-birthday/graphs/contributors">
+                            Hecho por la comunidad de PHP con <span class="fa fa-heart"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="../../../assets/js/main.66b3a063.js"></script>
+    </body>
+</html>
